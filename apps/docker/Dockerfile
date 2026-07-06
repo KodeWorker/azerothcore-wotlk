@@ -91,7 +91,7 @@ ARG AHBOT_REF="master"
 RUN git clone --depth 1 --branch "$AHBOT_REF" "$AHBOT_REPO" /azerothcore/modules/mod-ah-bot
 
 ARG BGAUTOQUEUE_REPO="https://github.com/azerothcore/mod-bg-auto-queue.git"
-ARG BGAUTOQUEUE_REF="master"
+ARG BGAUTOQUEUE_REF="main"
 
 # Fetch mod-bg-auto-queue directly, so the build doesn't depend on the module
 # being checked out under modules/mod-bg-auto-queue on the host.
