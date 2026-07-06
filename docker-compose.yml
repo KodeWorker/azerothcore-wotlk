@@ -50,7 +50,7 @@ services:
       AC_WORLD_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_world"
       AC_CHARACTER_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_characters"
       # Address clients use to reach the world server (acore_auth.realmlist.address)
-      REALM_IP: "${DOCKER_REALM_IP:-192.168.50.4}"
+      REALM_IP: "${DOCKER_REALM_IP:-127.0.0.1}"
     volumes:
       - ${DOCKER_VOL_ETC:-./env/dist/etc}:/azerothcore/env/dist/etc
       # [osxfs optimization]: https://stackoverflow.com/a/63437557/1964544
