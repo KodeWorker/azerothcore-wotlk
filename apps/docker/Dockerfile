@@ -83,6 +83,20 @@ ARG PLAYERBOTS_REF="feat/zhTW-translation"
 # module being checked out under modules/mod-playerbots on the host.
 RUN git clone --depth 1 --branch "$PLAYERBOTS_REF" "$PLAYERBOTS_REPO" /azerothcore/modules/mod-playerbots
 
+ARG AHBOT_REPO="https://github.com/azerothcore/mod-ah-bot.git"
+ARG AHBOT_REF="master"
+
+# Fetch mod-ah-bot directly, so the build doesn't depend on the module being
+# checked out under modules/mod-ah-bot on the host.
+RUN git clone --depth 1 --branch "$AHBOT_REF" "$AHBOT_REPO" /azerothcore/modules/mod-ah-bot
+
+ARG BGAUTOQUEUE_REPO="https://github.com/azerothcore/mod-bg-auto-queue.git"
+ARG BGAUTOQUEUE_REF="master"
+
+# Fetch mod-bg-auto-queue directly, so the build doesn't depend on the module
+# being checked out under modules/mod-bg-auto-queue on the host.
+RUN git clone --depth 1 --branch "$BGAUTOQUEUE_REF" "$BGAUTOQUEUE_REPO" /azerothcore/modules/mod-bg-auto-queue
+
 ARG CACHEBUST=1
 
 WORKDIR /azerothcore/build
@@ -222,6 +236,17 @@ COPY --chown=$DOCKER_USER:$DOCKER_USER \
 COPY --chown=$DOCKER_USER:$DOCKER_USER \
      --from=build \
      /azerothcore/modules/mod-playerbots modules/mod-playerbots
+
+# Same as above, but for mod-ah-bot (see AHBOT_REPO / AHBOT_REF above).
+COPY --chown=$DOCKER_USER:$DOCKER_USER \
+     --from=build \
+     /azerothcore/modules/mod-ah-bot modules/mod-ah-bot
+
+# Same as above, but for mod-bg-auto-queue (see BGAUTOQUEUE_REPO /
+# BGAUTOQUEUE_REF above).
+COPY --chown=$DOCKER_USER:$DOCKER_USER \
+     --from=build \
+     /azerothcore/modules/mod-bg-auto-queue modules/mod-bg-auto-queue
 
 COPY --chown=$DOCKER_USER:$DOCKER_USER\
      --from=build \
