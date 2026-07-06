@@ -51,4 +51,19 @@ fi
 
 echo "Starting $ACORE_COMPONENT..."
 
+# The realmlist address isn't a config file value -- it's a row in the
+# acore_auth DB -- so it can't be overridden via an AC_* env var like other
+# options. If REALM_IP is set, run db-import to completion and then point
+# the realm at it, instead of exec'ing straight into dbimport.
+if [[ "$ACORE_COMPONENT" == "dbimport" && -n "${REALM_IP:-}" ]]; then
+    "$@"
+
+    IFS=';' read -r DB_HOST DB_PORT DB_USER DB_PASS DB_NAME <<< "$AC_LOGIN_DATABASE_INFO"
+    echo "Setting realmlist address to $REALM_IP"
+    mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USER" -p"$DB_PASS" "$DB_NAME" \
+        -e "UPDATE realmlist SET address = '$REALM_IP' WHERE id = 1;"
+
+    exit 0
+fi
+
 exec "$@"
