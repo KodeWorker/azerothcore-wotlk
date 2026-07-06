@@ -76,6 +76,13 @@ COPY deps /azerothcore/deps
 COPY src /azerothcore/src
 COPY modules /azerothcore/modules
 
+ARG PLAYERBOTS_REPO="https://github.com/KodeWorker/mod-playerbots.git"
+ARG PLAYERBOTS_REF="feat/zhTW-translation"
+
+# Fetch our mod-playerbots fork directly, so the build doesn't depend on the
+# module being checked out under modules/mod-playerbots on the host.
+RUN git clone --depth 1 --branch "$PLAYERBOTS_REF" "$PLAYERBOTS_REPO" /azerothcore/modules/mod-playerbots
+
 ARG CACHEBUST=1
 
 WORKDIR /azerothcore/build
@@ -208,6 +215,13 @@ COPY --chown=$DOCKER_USER:$DOCKER_USER \
 
 COPY --chown=$DOCKER_USER:$DOCKER_USER \
     modules modules
+
+# The mod-playerbots source isn't necessarily present on the host, so pull
+# the copy that was cloned during the build stage (see PLAYERBOTS_REPO /
+# PLAYERBOTS_REF above) to make its SQL updates available to db-import.
+COPY --chown=$DOCKER_USER:$DOCKER_USER \
+     --from=build \
+     /azerothcore/modules/mod-playerbots modules/mod-playerbots
 
 COPY --chown=$DOCKER_USER:$DOCKER_USER\
      --from=build \

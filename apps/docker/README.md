@@ -13,6 +13,15 @@ It's all bundled with [Docker Desktop](https://docs.docker.com/get-docker/),
 though if you're using Linux you can install them through your distribution's
 package manage or by using the [documentation from docker](https://docs.docker.com/engine/install/)
 
+### Building with mod-playerbots
+
+The worldserver, authserver, db-import, and tools images clone
+[KodeWorker/mod-playerbots](https://github.com/KodeWorker/mod-playerbots.git)
+during the build, so the module doesn't need to be checked out under
+`modules/mod-playerbots` on the host. Override the source with the
+`DOCKER_PLAYERBOTS_REPO` / `DOCKER_PLAYERBOTS_REF` environment variables
+(e.g. in a `.env` file) to build against a different fork or branch.
+
 ### Running the Build
 
 1. Build containers with command

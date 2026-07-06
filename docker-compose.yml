@@ -37,6 +37,8 @@ services:
         USER_ID: ${DOCKER_USER_ID:-1000}
         GROUP_ID: ${DOCKER_GROUP_ID:-1000}
         DOCKER_USER: ${DOCKER_USER:-acore}
+        PLAYERBOTS_REPO: ${DOCKER_PLAYERBOTS_REPO:-https://github.com/KodeWorker/mod-playerbots.git}
+        PLAYERBOTS_REF: ${DOCKER_PLAYERBOTS_REF:-feat/zhTW-translation}
     environment:
       AC_DATA_DIR: "/azerothcore/env/dist/data"
       AC_LOGS_DIR: "/azerothcore/env/dist/logs"
@@ -62,6 +64,8 @@ services:
         USER_ID: ${DOCKER_USER_ID:-1000}
         GROUP_ID: ${DOCKER_GROUP_ID:-1000}
         DOCKER_USER: ${DOCKER_USER:-acore}
+        PLAYERBOTS_REPO: ${DOCKER_PLAYERBOTS_REPO:-https://github.com/KodeWorker/mod-playerbots.git}
+        PLAYERBOTS_REF: ${DOCKER_PLAYERBOTS_REF:-feat/zhTW-translation}
     networks:
       - ac-network
     stdin_open: true
@@ -104,6 +108,8 @@ services:
         USER_ID: ${DOCKER_USER_ID:-1000}
         GROUP_ID: ${DOCKER_GROUP_ID:-1000}
         DOCKER_USER: ${DOCKER_USER:-acore}
+        PLAYERBOTS_REPO: ${DOCKER_PLAYERBOTS_REPO:-https://github.com/KodeWorker/mod-playerbots.git}
+        PLAYERBOTS_REF: ${DOCKER_PLAYERBOTS_REF:-feat/zhTW-translation}
     networks:
       - ac-network
     tty: true
@@ -153,6 +159,8 @@ services:
         USER_ID: ${DOCKER_USER_ID:-1000}
         GROUP_ID: ${DOCKER_GROUP_ID:-1000}
         DOCKER_USER: ${DOCKER_USER:-acore}
+        PLAYERBOTS_REPO: ${DOCKER_PLAYERBOTS_REPO:-https://github.com/KodeWorker/mod-playerbots.git}
+        PLAYERBOTS_REF: ${DOCKER_PLAYERBOTS_REF:-feat/zhTW-translation}
     working_dir: /azerothcore/env/client/
     volumes:
       # this is not the directory of the extracted data! It's the client folder used by the extractors
