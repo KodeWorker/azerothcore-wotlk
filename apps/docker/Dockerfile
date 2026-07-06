@@ -200,6 +200,11 @@ LABEL description="AzerothCore World Server"
 ENV ACORE_COMPONENT=worldserver
 # Don't run database migrations. We can leave that up to the db-import container
 ENV AC_UPDATES_ENABLE_DATABASES=0
+# Playerbots has its own separate auto-updater flag not covered by
+# AC_UPDATES_ENABLE_DATABASES above. Without this, worldserver tries to run
+# the Playerbots DB updater itself, but its SQL source (modules/mod-playerbots)
+# only exists in the db-import image, so it can't find it and shuts down.
+ENV AC_PLAYERBOTS_UPDATES_ENABLE_DATABASES=0
 # This disables user prompts. The console is still active, however
 ENV AC_DISABLE_INTERACTIVE=1
 ENV AC_CLOSE_IDLE_CONNECTIONS=0
