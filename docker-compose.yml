@@ -42,7 +42,7 @@ services:
         AHBOT_REPO: ${DOCKER_AHBOT_REPO:-https://github.com/azerothcore/mod-ah-bot.git}
         AHBOT_REF: ${DOCKER_AHBOT_REF:-master}
         BGAUTOQUEUE_REPO: ${DOCKER_BGAUTOQUEUE_REPO:-https://github.com/azerothcore/mod-bg-auto-queue.git}
-        BGAUTOQUEUE_REF: ${DOCKER_BGAUTOQUEUE_REF:-master}
+        BGAUTOQUEUE_REF: ${DOCKER_BGAUTOQUEUE_REF:-main}
     environment:
       AC_DATA_DIR: "/azerothcore/env/dist/data"
       AC_LOGS_DIR: "/azerothcore/env/dist/logs"
@@ -50,7 +50,7 @@ services:
       AC_WORLD_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_world"
       AC_CHARACTER_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_characters"
       # Address clients use to reach the world server (acore_auth.realmlist.address)
-      REALM_IP: "${DOCKER_REALM_IP:-127.0.0.1}"
+      REALM_IP: "${DOCKER_REALM_IP:-192.168.50.4}"
     volumes:
       - ${DOCKER_VOL_ETC:-./env/dist/etc}:/azerothcore/env/dist/etc
       # [osxfs optimization]: https://stackoverflow.com/a/63437557/1964544
@@ -75,7 +75,7 @@ services:
         AHBOT_REPO: ${DOCKER_AHBOT_REPO:-https://github.com/azerothcore/mod-ah-bot.git}
         AHBOT_REF: ${DOCKER_AHBOT_REF:-master}
         BGAUTOQUEUE_REPO: ${DOCKER_BGAUTOQUEUE_REPO:-https://github.com/azerothcore/mod-bg-auto-queue.git}
-        BGAUTOQUEUE_REF: ${DOCKER_BGAUTOQUEUE_REF:-master}
+        BGAUTOQUEUE_REF: ${DOCKER_BGAUTOQUEUE_REF:-main}
     networks:
       - ac-network
     stdin_open: true
@@ -91,8 +91,8 @@ services:
       AC_CHARACTER_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_characters"
       AC_PLAYERBOTS_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_playerbots"
       # Overrides AiPlayerbot.MinRandomBots / AiPlayerbot.MaxRandomBots from playerbots.conf
-      AC_AI_PLAYERBOT_MIN_RANDOM_BOTS: "${DOCKER_MIN_RANDOM_BOTS:-500}"
-      AC_AI_PLAYERBOT_MAX_RANDOM_BOTS: "${DOCKER_MAX_RANDOM_BOTS:-500}"
+      AC_AI_PLAYERBOT_MIN_RANDOM_BOTS: "${DOCKER_MIN_RANDOM_BOTS:-150}"
+      AC_AI_PLAYERBOT_MAX_RANDOM_BOTS: "${DOCKER_MAX_RANDOM_BOTS:-300}"
     ports:
       - ${DOCKER_WORLD_EXTERNAL_PORT:-8085}:8085
       - ${DOCKER_SOAP_EXTERNAL_PORT:-7878}:7878
@@ -126,7 +126,7 @@ services:
         AHBOT_REPO: ${DOCKER_AHBOT_REPO:-https://github.com/azerothcore/mod-ah-bot.git}
         AHBOT_REF: ${DOCKER_AHBOT_REF:-master}
         BGAUTOQUEUE_REPO: ${DOCKER_BGAUTOQUEUE_REPO:-https://github.com/azerothcore/mod-bg-auto-queue.git}
-        BGAUTOQUEUE_REF: ${DOCKER_BGAUTOQUEUE_REF:-master}
+        BGAUTOQUEUE_REF: ${DOCKER_BGAUTOQUEUE_REF:-main}
     networks:
       - ac-network
     tty: true
@@ -181,7 +181,7 @@ services:
         AHBOT_REPO: ${DOCKER_AHBOT_REPO:-https://github.com/azerothcore/mod-ah-bot.git}
         AHBOT_REF: ${DOCKER_AHBOT_REF:-master}
         BGAUTOQUEUE_REPO: ${DOCKER_BGAUTOQUEUE_REPO:-https://github.com/azerothcore/mod-bg-auto-queue.git}
-        BGAUTOQUEUE_REF: ${DOCKER_BGAUTOQUEUE_REF:-master}
+        BGAUTOQUEUE_REF: ${DOCKER_BGAUTOQUEUE_REF:-main}
     working_dir: /azerothcore/env/client/
     volumes:
       # this is not the directory of the extracted data! It's the client folder used by the extractors
@@ -217,8 +217,8 @@ services:
       AC_WORLD_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_world"
       AC_CHARACTER_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_characters"
       # Overrides AiPlayerbot.MinRandomBots / AiPlayerbot.MaxRandomBots from playerbots.conf
-      AC_AI_PLAYERBOT_MIN_RANDOM_BOTS: "${DOCKER_MIN_RANDOM_BOTS:-500}"
-      AC_AI_PLAYERBOT_MAX_RANDOM_BOTS: "${DOCKER_MAX_RANDOM_BOTS:-500}"
+      AC_AI_PLAYERBOT_MIN_RANDOM_BOTS: "${DOCKER_MIN_RANDOM_BOTS:-150}"
+      AC_AI_PLAYERBOT_MAX_RANDOM_BOTS: "${DOCKER_MAX_RANDOM_BOTS:-300}"
     networks:
       - ac-network
     ports:
