@@ -23,7 +23,7 @@ INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALU
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2096 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2096,'zhTW','金幣達人','你好，恭喜你成功收集到了達拉然噴泉的所有硬幣！為了表彰你的成就，我準備把這枚達拉然泰坦神鐵徽記贈予你——這可是一枚我們只獎勵給狂熱硬幣收集者的禮物。$B$B希望你會喜歡我這份特殊的禮物，現在，它是你的了！$B$B真摯地問候您。$B耶比託·喬巴斯');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2136 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2136,'zhTW','英雄的榮耀！','尊敬的勇士，$B$B你在諾森德英勇戰鬥的身影以及所獲得的成就已經傳到了龍眠神殿。$B$B你的勇敢不容忽視，請你務必接受這份禮物，讓我們並肩作戰，徹底逐盡諾森德的惡魔。$B$B雅立史卓莎，生命的縛誓者');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2136,'zhTW','英雄的榮耀！','尊敬的勇士，$B$B你在北裂境英勇戰鬥的身影以及所獲得的成就已經傳到了龍眠神殿。$B$B你的勇敢不容忽視，請你務必接受這份禮物，讓我們並肩作戰，徹底逐盡北裂境的惡魔。$B$B雅立史卓莎，生命的縛誓者');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2143 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2143,'zhTW','帶領騎兵隊','我發現你和你的坐騎們相處得好像挺不錯的嘛，我每天都要對著這些牲畜簡直煩躁死了。我想，你不會介意替我照看下這隻白色幼龍吧？我只是抽不出空暇的時間來照顧這麼多的坐騎了。$B$B梅·法蘭西斯');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2144 AND `Locale` = 'zhTW';
@@ -69,6 +69,6 @@ INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALU
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4603 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4603,'zhTW','冰冠堡壘征服者的榮耀','$N，$B$B當巫妖王的影響力日漸薄弱的時候，有不少昔日在他麾下很強力的人脫離了他的控制。$B$B這隻被我們捕獲的冰霜巨龍就是一個很好的例子。它有強烈的自主意識，並且我們還有更多的這種巨龍。$B$B我們當中的一個人雖然在一次戰鬥中光榮地失去了一隻胳膊，不過依然能將牠駕馭得很好——很明顯，牠被馴服得很好，並且給了他們自信。$B$B請接受這隻來自黯刃騎士團的禮物，在這場偉大的戰鬥中有你們陪同，真的很榮幸。$B$B榮譽屬於你們。$B大領主達里安·莫格萊尼');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4784 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4784,'zhTW','銀色領地的紋章收集者','朋友，你在諾森德所取得的成就令人不得不注目。$B$B用獲取的紋章在達拉然兌換到各種強力的裝備，然後武裝自己，不是件很快樂的事麼？$B$B我們就在達拉然的銀色領地，在那兒，每種紋章都有對應的兌換師，來看看吧。$B$B我們期待你的到來！');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4784,'zhTW','銀色領地的紋章收集者','朋友，你在北裂境所取得的成就令人不得不注目。$B$B用獲取的紋章在達拉然兌換到各種強力的裝備，然後武裝自己，不是件很快樂的事麼？$B$B我們就在達拉然的銀色領地，在那兒，每種紋章都有對應的兌換師，來看看吧。$B$B我們期待你的到來！');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4785 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4785,'zhTW','奪日者聖殿的紋章收集者','朋友，你在諾森德所取得的成就讓人不得不注意。$B$B用獲取的紋章在達拉然換取對應的裝備，武裝自己來更強大，不是每個人都樂意的麼？$B$B在達拉然的奪日者聖殿，你能找到每一種紋章所對應的兌換師，在他的身上，你能收穫許多。$B$B期待你的到來！');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4785,'zhTW','奪日者聖殿的紋章收集者','朋友，你在北裂境所取得的成就讓人不得不注意。$B$B用獲取的紋章在達拉然換取對應的裝備，武裝自己來更強大，不是每個人都樂意的麼？$B$B在達拉然的奪日者聖殿，你能找到每一種紋章所對應的兌換師，在他的身上，你能收穫許多。$B$B期待你的到來！');
