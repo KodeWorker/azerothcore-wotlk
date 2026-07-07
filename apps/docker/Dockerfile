@@ -200,11 +200,12 @@ LABEL description="AzerothCore World Server"
 ENV ACORE_COMPONENT=worldserver
 # Don't run database migrations. We can leave that up to the db-import container
 ENV AC_UPDATES_ENABLE_DATABASES=0
-# Playerbots has its own separate auto-updater flag not covered by
-# AC_UPDATES_ENABLE_DATABASES above. Without this, worldserver tries to run
-# the Playerbots DB updater itself, but its SQL source (modules/mod-playerbots)
-# only exists in the db-import image, so it can't find it and shuts down.
-ENV AC_PLAYERBOTS_UPDATES_ENABLE_DATABASES=0
+# Unlike the 3 core databases above, acore_playerbots is never touched by
+# db-import -- it's created by a DatabaseScript that only registers itself
+# when worldserver loads the Playerbots module (see
+# mod-playerbots/src/Script/Playerbots.cpp), so worldserver has to run this
+# migration itself. This requires the module's SQL source, copied below.
+ENV AC_PLAYERBOTS_UPDATES_ENABLE_DATABASES=1
 # This disables user prompts. The console is still active, however
 ENV AC_DISABLE_INTERACTIVE=1
 ENV AC_CLOSE_IDLE_CONNECTIONS=0
@@ -212,6 +213,14 @@ ENV AC_CLOSE_IDLE_CONNECTIONS=0
 COPY --chown=$DOCKER_USER:$DOCKER_USER \
      --from=build \
      /azerothcore/env/dist/bin/worldserver /azerothcore/env/dist/bin/worldserver
+
+# The mod-playerbots source isn't necessarily present on the host, so pull
+# the copy that was cloned during the build stage (see PLAYERBOTS_REPO /
+# PLAYERBOTS_REF above) to make its SQL updates available for the
+# self-migration described above.
+COPY --chown=$DOCKER_USER:$DOCKER_USER \
+     --from=build \
+     /azerothcore/modules/mod-playerbots modules/mod-playerbots
 
 VOLUME /azerothcore/env/dist/etc
 
