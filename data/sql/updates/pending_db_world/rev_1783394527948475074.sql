@@ -451,9 +451,9 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 259 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (259,'zhTW','完成了這一步，我們就可以開始下一階段的計劃。在擁有了自己的國家和這個地區的前沿基地之後，我們就可以為第三次入侵作準備了。$B$B不久，軍團的首領將會表彰我們，讓從天而降的烈焰吞噬整個世界！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 260 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (260,'zhTW','希爾斯布萊德城鎮文件$B$B希爾斯布萊德的人民發誓將永遠效忠於偉大的鐵爐堡國王麥格尼·銅鬚和暴風城國王安度因·烏瑞恩所建立的聯盟。$B$B此檔是為管理奧特蘭克地區的城市而建立，併為國王和聯盟的納稅人服務。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (260,'zhTW','希爾斯布萊德城鎮文件$B$B希爾斯布萊德的人民發誓將永遠效忠於偉大的鐵爐堡國王麥格尼·銅鬚和暴風城國王安度因·烏瑞恩所建立的聯盟。$B$B此檔是為管理奧特蘭克地區的城市而建立，並為國王和聯盟的納稅人服務。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 261 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (261,'zhTW','希爾斯布萊德城鎮文件$B$B希爾斯布萊德的人民發誓將永遠效忠於偉大的鐵爐堡國王麥格尼·銅鬚和暴風城國王安度因·烏瑞恩所建立的聯盟。$B$B此檔是為管理奧特蘭克地區的城市而建立，併為國王和聯盟的納稅人服務。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (261,'zhTW','希爾斯布萊德城鎮文件$B$B希爾斯布萊德的人民發誓將永遠效忠於偉大的鐵爐堡國王麥格尼·銅鬚和暴風城國王安度因·烏瑞恩所建立的聯盟。$B$B此檔是為管理奧特蘭克地區的城市而建立，並為國王和聯盟的納稅人服務。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 262 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (262,'zhTW','教師盧瑟福·博塞德$B債務已還清。$B$B鐵匠埃沃裡·維林塔$B債務已還清。$B$B書記員霍拉斯·懷特斯蒂$B債務已還清。$B$B議員吉利斯$B債務已還清。$B$B議員胡克斯$B債務已還清。$B$B農夫蓋斯$B債務已還清。$B$B農夫雷恩$B欠款，收穫時以農作物償還。$B$B農夫萊恩$B欠款。租地被收回。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 263 AND `locale` = 'zhTW';
@@ -529,7 +529,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 299 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (299,'zhTW','他可以藉此召喚完全由水組成的生物：水元素——原本只有肯瑞託的大法師才具有這種能力。$B$B這個戰士來到了帝國的核心地帶祖爾格拉布，向國王展示他的能力。顯然，他迅速成為了全帝國關注的焦點。古拉巴什的國王也被他的能力折服，立刻給他封了一個榮譽職位：“控潮者”，而他原來的名字則逐漸被遺忘了。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 300 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (300,'zhTW','接下來的很多年裡，控潮者都在為古拉巴什帝國效力，他在戰鬥中召喚水元素助陣，為了帝國改變荊棘谷的水流。不過時間久了，控潮者開始喜歡隱居獨處，他離開皇宮的時間也越來越久。$B$B控潮者對古拉巴什帝國隱瞞了一個秘密——海潮之石在賦予他強大能力的同時還對他施加了一個詛咒。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (300,'zhTW','接下來得很多年裡，控潮者都在為古拉巴什帝國效力，他在戰鬥中召喚水元素助陣，為了帝國改變荊棘谷的水流。不過時間久了，控潮者開始喜歡隱居獨處，他離開皇宮的時間也越來越久。$B$B控潮者對古拉巴什帝國隱瞞了一個秘密——海潮之石在賦予他強大能力的同時還對他施加了一個詛咒。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 301 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (301,'zhTW','隨著時間的流逝，控潮者的身體開始漸漸消失。隨著潮汐的每次漲落，他都會失落一部分肉身——身體一會兒出現一會兒消失——直到臨死時，他來到了最初找到石頭的那片海灘，步入大海，從此消失。$B$B又經歷了好幾代的時間之後，海潮之石再一次被衝到荊棘谷的海岸上，又被另一個控潮者拾得，然後這個巨魔又將它帶到祖爾格拉布去。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 302 AND `locale` = 'zhTW';
@@ -823,7 +823,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 506 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (506,'zhTW','恭喜您！$B$B您已經成為了這隻地鼠的新主人！雖然它看起來很害羞，但我們確信您會發現它非常可愛，而且具有出色的能力。$B$B在接下來的幾頁中，您將找到關於地鼠的詳細資訊：$B$B$B再一次對您表示祝賀。您是絕對不會對它失望的。$B$B——瑪維格·銅栓$B地鼠有限公司',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 507 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (507,'zhTW','——第十三天$B塞拉摩附近的軍隊活動開始變得頻繁起來。許多人匆忙地離開了城市，朝西邊去了。$B$B——第十四天$B更多的軍隊離開了城市。我跟蹤了一支小隊，看見他們在離開塞拉摩之後很快脫去了制服。也許他們是被驅逐出去了？$B$B——第十五天$B我聽到一些塞拉摩計程車兵在討論，說是今天有些衛兵要離開他們的崗位。看來我的猜測是正確的。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (507,'zhTW','——第十三天$B塞拉摩附近的軍隊活動開始變得頻繁起來。許多人匆忙地離開了城市，朝西邊去了。$B$B——第十四天$B更多的軍隊離開了城市。我跟蹤了一支小隊，看見他們在離開塞拉摩之後很快脫去了制服。也許他們是被驅逐出去了？$B$B——第十五天$B我聽到一些塞拉摩的士兵在討論，說是今天有些衛兵要離開他們的崗位。看來我的猜測是正確的。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 527 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (527,'zhTW','失血麻雀：卸貨單$B$B（20）酒桶。目的地：塞拉摩$B（50）麵粉袋。目的地：塞拉摩$B（2）地精工具箱。目的地：棘齒城$B（30）棉衣。目的地：塞拉摩$B（4）香料。目的地：塞拉摩$B（3）乘客。目的地：塞拉摩',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 528 AND `locale` = 'zhTW';
@@ -893,7 +893,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 641 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (641,'zhTW','唯一能阻止他們探索這片大陸的只有古老而強大的龍了。雖然這些身形巨大而蜿蜒的生物總是過著遁世隱居的生活，但它們會為防止任何潛在的威脅波及這片大陸而做出努力。暗夜精靈們認為這些龍正是這個世界的守護者，並且最好不要打擾它們和它們的秘密。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 642 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (642,'zhTW','無疑，正是暗夜精靈的好奇心使他們和具有強大能力的神祗們相遇，並且成為了好朋友。例如塞納留斯，一位在原始森林中頗有勢力的半神。塞納留斯很喜歡這些好奇的暗夜精靈，並花了許多時間教他們認識這個美麗而富饒的大自然。天性喜好寧靜的卡多雷也對卡利姆多的森林產生出了共鳴一般的感覺，併為大自然的和諧感到欣喜。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (642,'zhTW','無疑，正是暗夜精靈的好奇心使他們和具有強大能力的神祗們相遇，並且成為了好朋友。例如塞納留斯，一位在原始森林中頗有勢力的半神。塞納留斯很喜歡這些好奇的暗夜精靈，並花了許多時間教他們認識這個美麗而富饒的大自然。天性喜好寧靜的卡多雷也對卡利姆多的森林產生出了共鳴一般的感覺，並為大自然的和諧感到欣喜。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 643 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (643,'zhTW','隨著看似無盡的時間的流失，暗夜精靈的文明無論是在土地還是文化上都有了長足的發展。他們的廟宇，道路以及居所正逐漸遍佈整塊黑暗大陸。暗夜精靈們美麗而天賦鼎異的女王艾薩拉在永恆之井的岸邊建立起了一座龐大而雄偉的宮殿，並帶著她最寵幸的僕人們住進了這座金碧輝煌的宮殿中。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 644 AND `locale` = 'zhTW';
@@ -921,7 +921,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 673 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (673,'zhTW','正是古爾丹應該為氏族中的薩滿之道的逐漸沒落而負全部的責任。對力量的渴求與試圖控制一切的野心使他徹底拜倒在這些誘惑前。在基爾加丹的幫助下，古爾丹開始了他對諸多氏族的統治。曾經高貴的獸人們就此而墮落了，成為了一群沒有心智的野蠻人。自惡魔的血液被注入了他們的身體之後，獸人們比以前更加野蠻和殘忍了。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 674 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (674,'zhTW','儘管基爾加丹在耐奧祖身上遭遇了失敗之後立刻轉向古爾丹仍是墮落，但他仍然非常憎惡那位老薩滿，併發誓一定要讓耐奧祖履行他們之間的合約。基爾加丹最終抓住了耐奧祖，並使用了一系列殘酷的刑罰來折磨他，迫使這位老薩滿就範。耐奧祖只求一死，但基爾加丹提醒他，合約仍然束縛著兩人。基爾加丹最終還是殺死了他，但這僅僅是在肉體上，這位老薩滿的靈魂在進入扭曲虛空之前卻被基爾加丹擒獲了。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (674,'zhTW','儘管基爾加丹在耐奧祖身上遭遇了失敗之後立刻轉向古爾丹仍是墮落，但他仍然非常憎惡那位老薩滿，並發誓一定要讓耐奧祖履行他們之間的合約。基爾加丹最終抓住了耐奧祖，並使用了一系列殘酷的刑罰來折磨他，迫使這位老薩滿就範。耐奧祖只求一死，但基爾加丹提醒他，合約仍然束縛著兩人。基爾加丹最終還是殺死了他，但這僅僅是在肉體上，這位老薩滿的靈魂在進入扭曲虛空之前卻被基爾加丹擒獲了。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 675 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (675,'zhTW','基爾加丹將耐奧祖的靈魂封入了一塊由扭曲虛空採集來的冰塊中。然而在被封入冰塊時，耐奧祖從中汲取到更多的力量。肉體上的傷害與如此強大力量的灌注使得耐奧祖徹底變了。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 676 AND `locale` = 'zhTW';
@@ -1207,7 +1207,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 1434 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1434,'zhTW','希姆雷爾·暗齒$B$B當黑暗之鑰的瘋狂佔據希姆雷爾時，只有死者的尖叫可以使他平靜。$B$B希姆雷爾總是在競技場旁坐著。願我們的血腥搏殺可以平息他心中的怒氣。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1435 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1435,'zhTW','奧弗加特·石拳$B$B喪命於黑暗守護者奧弗加特錘下的挑戰者不計其數。$B$B西部兵營計程車兵們在他走過時卑躬屈膝。他們之中有誰敢直視奧弗加特的雙眼並看到黑暗之鑰的秘密呢？',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1435,'zhTW','奧弗加特·石拳$B$B喪命於黑暗守護者奧弗加特錘下的挑戰者不計其數。$B$B西部兵營的士兵們在他走過時卑躬屈膝。他們之中有誰敢直視奧弗加特的雙眼並看到黑暗之鑰的秘密呢？',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1436 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1436,'zhTW','佩沃爾·鐵足$B$B黑暗守護者佩沃爾是我們最為尊重的信徒。他攜帶黑暗之鑰的時間遠遠超過其他黑暗守護者，這使他付出了驚人的代價。$B$B他的犧牲讓我們感到惋惜，對他的懷念會一直留在我們心中……自從黑暗佔據了他。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1470 AND `locale` = 'zhTW';
@@ -1495,7 +1495,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 1853 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1853,'zhTW','雖然在梣谷巡邏的任務使泰蘭妲忙碌不已，但她仍然感到孤單寂寞。在德魯伊們沉睡著的幾百年中，泰蘭妲感到惡魔的第二次入侵不會太遠了。她預感到燃燒軍團仍然存在，預？？到他們正在天外無邊的黑暗中策劃著對暗夜精靈和艾澤拉斯的復仇。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1854 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1854,'zhTW','達斯雷瑪領導的高等精靈離開了卡利姆多併成功穿越了波濤洶湧的大漩渦。他們的船隊在這破碎的世界中徘徊了許多年，在旅行中發現了無數神奇的奧秘與失落的國度。達斯雷瑪為自己取了個“逐日者”的稱號，不懈地尋找著一個蘊藏著大量魔法能量的地方來為他的子民建造一個新的家園。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1854,'zhTW','達斯雷瑪領導的高等精靈離開了卡利姆多並成功穿越了波濤洶湧的大漩渦。他們的船隊在這破碎的世界中徘徊了許多年，在旅行中發現了無數神奇的奧秘與失落的國度。達斯雷瑪為自己取了個“逐日者”的稱號，不懈地尋找著一個蘊藏著大量魔法能量的地方來為他的子民建造一個新的家園。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1855 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1855,'zhTW','他的船隊最終在某塊大陸的海岸邊上靠了岸——那塊大陸後來被稱為洛丹倫。在向內陸推進的過程中，高等精靈們在安靜的提瑞斯法林地裡建立了他們的安身之所。幾年後，他們中的許多人開始發狂。據說那是因為有些惡靈正沉睡在提瑞斯法林地的下面，不過這個傳說從來也沒有被證實過。高等精靈不得不捲起鋪蓋，向北移居到了另一片充滿能量的土地上。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1856 AND `locale` = 'zhTW';
@@ -1611,7 +1611,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 1911 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1911,'zhTW','一個龐大的黑暗身影出現在諾森德上空，燃燒軍團的首領——惡魔之王薩格拉斯出現在艾格文眼前，周身散發著地獄般的能量。他告戒年輕的守護者，提瑞斯法會的時代就要結束了，這個世界將會被燃燒軍團征服。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1912 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1912,'zhTW','驕傲的艾格文相信自己有能力對抗這個神一般的惡魔，她釋放全身的力量攻擊薩格拉斯的軀體。大大出乎她意料的是，艾格文很輕鬆地擊倒了惡魔之王，併成功地摧毀了薩格拉斯的軀體。由於怕薩格拉斯的靈魂仍然徘徊不止，天真的艾格文將他的軀體殘骸封印在了一個當永恆之井爆炸時沉沒到海底的遠古大廳中。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1912,'zhTW','驕傲的艾格文相信自己有能力對抗這個神一般的惡魔，她釋放全身的力量攻擊薩格拉斯的軀體。大大出乎她意料的是，艾格文很輕鬆地擊倒了惡魔之王，並成功地摧毀了薩格拉斯的軀體。由於怕薩格拉斯的靈魂仍然徘徊不止，天真的艾格文將他的軀體殘骸封印在了一個當永恆之井爆炸時沉沒到海底的遠古大廳中。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1913 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1913,'zhTW','艾格文沒有意識到她所做的恰恰就是薩格拉斯所預期的。她在不經意間定下了艾澤拉斯世界的命運，因為薩格拉斯的靈魂已經在他的軀體死亡的瞬間潛入了艾格文孱弱的身體中。在年輕的守護者毫不知情的情況下，薩格拉斯將在她靈魂的黑暗面中潛伏很長時間。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1914 AND `locale` = 'zhTW';
@@ -1685,7 +1685,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 1948 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1948,'zhTW','由於耐奧祖的拒絕合作而受挫的基爾加丹很快開始尋找另一個能將他的同胞交與燃燒軍團掌握的獸人。狡詐的惡魔領主最終找到了一個令他滿意的忠實門徒——耐奧祖那野心勃勃的學生，古爾丹。基爾加丹承諾將會給予古爾丹無盡的力量，並以此來換取他絕對的忠誠。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1949 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1949,'zhTW','這個年輕的獸人漸漸成為了惡魔魔法的貪婪學徒，成為了有史以來世界上最強的術士。他向其他的年輕獸人傳授這種神秘的妖術，併力求根除獸人氏族中高貴的薩滿教傳統。古爾丹向他的同胞們展示了一種新的魔法，一種可怕的、散發著死亡氣息的能量。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1949,'zhTW','這個年輕的獸人漸漸成為了惡魔魔法的貪婪學徒，成為了有史以來世界上最強的術士。他向其他的年輕獸人傳授這種神秘的妖術，並力求根除獸人氏族中高貴的薩滿教傳統。古爾丹向他的同胞們展示了一種新的魔法，一種可怕的、散發著死亡氣息的能量。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1950 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (1950,'zhTW','基爾加丹力求對獸人有著絕對的控制權，因此他幫助古爾丹建立了影子議會，這是一個秘密的宗派組織，其作用是操縱獸人氏族並利用巫術魔法在德拉諾大陸上擴張。當越來越多的獸人開始修習巫術魔法時，安寧而生機勃勃的德拉諾世界開始變得黑暗和枯萎。隨著時間的流逝，遼闊的草原留給獸人們繁衍生息的土地已漸漸萎縮，到處都是紅色的荒土。惡魔的能量正在慢慢地毀滅這個世界。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 1959 AND `locale` = 'zhTW';
@@ -1783,7 +1783,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2005 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2005,'zhTW','基爾加丹控制著耐奧祖那被不斷折磨的無助靈魂，並給他最後一次為燃燒軍團服務的機會，否則就讓他忍受永恆的折磨。耐奧祖又一次不顧後果地接受了惡魔提出的條件，他的靈魂被放入了一顆經過精心雕琢的冰塊中，這塊從扭曲虛空的遠方採集的冰塊如鑽石般堅硬。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2006 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2006,'zhTW','在被裝入這個冰冷的容器之後，耐奧祖感到他的思想擴充套件了數萬倍。被惡魔的混亂力量扭曲的耐奧祖成為了一個幽靈般的生物，從那一刻起，獸人薩滿祭司耐奧祖永遠消失，而巫妖之王誕生了。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2006,'zhTW','在被裝入這個冰冷的容器之後，耐奧祖感到他的思想擴展了數萬倍。被惡魔的混亂力量扭曲的耐奧祖成為了一個幽靈般的生物，從那一刻起，獸人薩滿祭司耐奧祖永遠消失，而巫妖之王誕生了。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2007 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2007,'zhTW','忠於耐奧祖的死亡騎士和影月氏族的追隨者也被惡魔的力量轉化了。邪惡的術士們被撕成碎片並變成了骷髏般的巫妖，惡魔們用這種方法來保證即使在死後，耐奧祖的跟隨者們也會死心塌地地為他服務。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2008 AND `locale` = 'zhTW';
@@ -1837,7 +1837,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2041 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2041,'zhTW','蛛網怪的蜘蛛之王控制著龐大的部隊，並且擁有覆蓋了諾森德一半疆域的地下隧道網路。他們的游擊戰術令巫妖王疲於奔命卻一無所得。最終，耐奧祖艱難地贏得了對蛛網怪的戰爭，在狂暴的恐懼魔王和無數不死生物戰士的進攻下，蜘蛛王國艾卓-尼魯布變成了一片廢墟。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2042 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2042,'zhTW','雖然蛛網怪對耐奧祖的精神力量免疫，但他強大的通靈能力使他能夠操縱蜘蛛戰士的屍體並讓他們為他作戰，併為這些蜘蛛戰士修建了適合他們的堡壘和建築物。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2042,'zhTW','雖然蛛網怪對耐奧祖的精神力量免疫，但他強大的通靈能力使他能夠操縱蜘蛛戰士的屍體並讓他們為他作戰，並為這些蜘蛛戰士修建了適合他們的堡壘和建築物。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2043 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2043,'zhTW','在一統諾森德大陸之後，巫妖王準備著手執行他真正的任務。巫妖王將他的意念延伸到了人類的領土，並且召喚所有願意聆聽他的聲音的黑暗靈魂……',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2044 AND `locale` = 'zhTW';
@@ -1867,7 +1867,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2056 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2056,'zhTW','巫妖王的計劃運作得十分成功。許多洛丹倫北部的村民幾乎是瞬間就被感染了。與在諾森德一樣，被瘟疫接觸的人類死去，然後變成對巫妖王唯命是從的奴隸。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2057 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2057,'zhTW','克爾蘇加德領導的信徒急切地希望死去併為他們的主人服務，他們希望透過這種方式變成不死之身。隨著瘟疫逐漸擴散，洛丹倫北部出現了越來越多的殭屍，克爾蘇加德管理著這支日益龐大的部隊，並稱他們為“天災”——不久之後，它就會踏進洛丹倫的大門，並把人類從這個世界上永遠抹掉。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2057,'zhTW','克爾蘇加德領導的信徒急切地希望死去並為他們的主人服務，他們希望透過這種方式變成不死之身。隨著瘟疫逐漸擴散，洛丹倫北部出現了越來越多的殭屍，克爾蘇加德管理著這支日益龐大的部隊，並稱他們為“天災”——不久之後，它就會踏進洛丹倫的大門，並把人類從這個世界上永遠抹掉。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2063 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2063,'zhTW','經過數月的漫長準備，克爾蘇加德率領他的詛咒教派向洛丹倫發起了第一輪攻擊，釋放了亡靈瘟疫。烏瑟爾和他的聖騎士們調查了受瘟疫感染的地區，希望能找到一種解救的辦法。他們不斷地努力，但是瘟疫仍然在擴散，甚至威脅到了聯盟的統一。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2064 AND `locale` = 'zhTW';
@@ -2069,7 +2069,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2296 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2296,'zhTW','大地之母的眼睛，注視著她用呼吸創造的世界。她的右眼，安舍（太陽），給予這片土地溫暖和光明。她的左眼，姆莎（月亮），給予那些躁動不安的生物以和平與睡眠。這就是雙眼的力量，每隔半天，大地之母就會閉起一隻眼睛。就這樣，她為這個初生的世界不斷進行著日夜的更替。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2297 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2297,'zhTW','當大地之母的右眼掃過金色的黎明時，她輕柔的手就開始在肥沃的原野上拂動。她的手臂拂過的地方就有高貴的人從土地中出現。舒哈魯（牛頭人）為此向他們摯愛的母親表示感謝。在充滿黎明之光的廣袤平原上，大地之母的孩子為她的優雅而祈禱，併發誓永遠稱頌她的名字，直到世界墜入永恆黑暗的那一天。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2297,'zhTW','當大地之母的右眼掃過金色的黎明時，她輕柔的手就開始在肥沃的原野上拂動。她的手臂拂過的地方就有高貴的人從土地中出現。舒哈魯（牛頭人）為此向他們摯愛的母親表示感謝。在充滿黎明之光的廣袤平原上，大地之母的孩子為她的優雅而祈禱，並發誓永遠稱頌她的名字，直到世界墜入永恆黑暗的那一天。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2298 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2298,'zhTW','隨著大地的孩在黎明平原上行走，他們聽到了來自大地中心的黑暗低語。它向那些孩子灌輸征伐的思想和欺騙別人的方法。許多舒哈魯因此墮入黑暗，並開始變得邪惡。他們拋棄了自己的兄弟，無知地穿行在原野上。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2299 AND `locale` = 'zhTW';
@@ -2083,7 +2083,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2303 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2303,'zhTW','為了逃脫，偉大的雄鹿躍向空中。他的逃脫本應非常順利，但是他的鹿角卻掛住了天上的星星。雖然他不斷蹬踢掙扎，但是阿帕羅卻無法從天堂中掙脫。此時正在追逐安希的姆莎發現了他，她看到萬能的雄鹿在奮力掙扎，並對他一見鍾情。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2304 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2304,'zhTW','聰明的月亮與偉大的雄鹿做了筆交易——如果他愛她，並能夠為她結束孤獨的生活，她就可以解救他。$B$B姆沙愛著阿帕羅，併為他生下了一個孩子。這個孩子作為半神降生於夜晚的森林中。他被起名為塞納留斯，他漫步於正在覺醒的世界和天堂王國之間，漫步在佈滿星辰的大道上。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2304,'zhTW','聰明的月亮與偉大的雄鹿做了筆交易——如果他愛她，並能夠為她結束孤獨的生活，她就可以解救他。$B$B姆沙愛著阿帕羅，並為他生下了一個孩子。這個孩子作為半神降生於夜晚的森林中。他被起名為塞納留斯，他漫步於正在覺醒的世界和天堂王國之間，漫步在佈滿星辰的大道上。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2305 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2305,'zhTW','隨著時間的流逝，塞納留斯長成了和他父親一樣偉岸的生物。他成為了星辰和森林的兄弟，這個偉大的獵手徘徊在世界的遠端，吟唱著黎明的和諧歌聲。所有的生物都在他的優雅和美麗面前彎腰——沒有什麼能比月亮和白色雄鹿的兒子更加完美。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2306 AND `locale` = 'zhTW';
@@ -2115,7 +2115,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2375 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2375,'zhTW','戰鬥繼續著，雷德帕斯隊長率領民兵英勇奮戰。如果不是隊長被死亡騎士馬杜克的黑暗魔法控制的話，這場戰鬥有可能獲勝的。$B$B在戰鬥中，馬杜克騎馬來到雷德帕斯面前，他使用黑暗魔法撕碎了雷德帕斯的意志，將他的靈魂扭曲成了一個邪惡的陰影。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2376 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2376,'zhTW','墮落的雷德帕斯隊長將他的邪惡力量傳染給達隆郡的守軍，那些被感染計程車兵立刻背叛了他們的同胞，並開始屠殺他們。最後他們轉向達隆郡裡，屠殺了那些躲在家中的民眾。$B$B剩餘的亡靈部隊和墮落的雷德帕斯隊長離開了已成廢墟的達隆郡，投入了洛丹倫的戰場。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2376,'zhTW','墮落的雷德帕斯隊長將他的邪惡力量傳染給達隆郡的守軍，那些被感染的士兵立刻背叛了他們的同胞，並開始屠殺他們。最後他們轉向達隆郡裡，屠殺了那些躲在家中的民眾。$B$B剩餘的亡靈部隊和墮落的雷德帕斯隊長離開了已成廢墟的達隆郡，投入了洛丹倫的戰場。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2377 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2377,'zhTW','達隆郡的歷史$B$B達隆郡是一座位於洛丹倫南部山脈中的村莊，這個名字來源於其西面的達隆米爾湖。鎮中的居民樸實而又勤勞，達隆郡在洛丹倫歷史上一直都是默默無聞的，直到第二次惡魔戰爭的開始。$B$B在戰鬥期間，無數英雄從這裡誕生，無數英雄在這裡隕落。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2378 AND `locale` = 'zhTW';
@@ -2127,7 +2127,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2381 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2381,'zhTW','戰鬥繼續著，雷德帕斯隊長率領民兵英勇奮戰。如果不是隊長被死亡騎士馬杜克的黑暗魔法控制的話，這場戰鬥有可能獲勝的。$B$B在戰鬥中，馬杜克騎馬來到雷德帕斯面前，他使用黑暗魔法撕碎了雷德帕斯的意志，將他的靈魂扭曲成了一個邪惡的陰影。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2382 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2382,'zhTW','墮落的雷德帕斯隊長將他的邪惡力量傳染給達隆郡的守軍，那些被感染計程車兵立刻背叛了他們的同胞，並開始屠殺他們。最後他們轉向達隆郡裡，屠殺了那些躲在家中的民眾。$B$B剩餘的亡靈部隊和墮落的雷德帕斯隊長離開了已成廢墟的達隆郡，投入了洛丹倫的戰場。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2382,'zhTW','墮落的雷德帕斯隊長將他的邪惡力量傳染給達隆郡的守軍，那些被感染的士兵立刻背叛了他們的同胞，並開始屠殺他們。最後他們轉向達隆郡裡，屠殺了那些躲在家中的民眾。$B$B剩餘的亡靈部隊和墮落的雷德帕斯隊長離開了已成廢墟的達隆郡，投入了洛丹倫的戰場。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2383 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2383,'zhTW','掠奪者霍古斯的命運$B$B掠奪者霍古斯在達隆郡之戰中陣亡。但是他身上的邪惡氣息仍然存在。獲勝的天災軍團將他的頭顱從達隆郡的廢墟中帶走，用其在仍然活著的生靈中散播恐懼的氣氛。$B$B幾天之後，這群拿著頭顱的天災軍團士兵被白銀之手騎士團擊潰，霍古斯的頭顱也被扔入了黑木湖中。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2384 AND `locale` = 'zhTW';
@@ -2139,9 +2139,9 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2390 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2390,'zhTW','約瑟夫·雷德帕斯的命運$B$B約瑟夫·雷德帕斯在達隆郡一戰中陣亡。他的靈魂已經墮落，被扭曲成了另一個模樣，這個新的亡靈在洛丹倫散播著更多的邪惡。$B$B在安多哈爾東部的蓋羅恩農場，墮落的雷德帕斯最終被聯盟部隊擊敗。他的盾牌依然留在那座被瘟疫感染的農場穀倉旁邊，天災軍團也不斷向那個邪惡的地方聚集。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2391 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2391,'zhTW','卡林·雷德帕斯的命運$B$B約瑟夫·雷德帕斯隊長的兄弟，卡林·雷德帕斯在達隆郡的戰鬥中倒下了，他身負重傷，但是最終僥倖活了下來。$B$B在大戰過後的幾天，銀色黎明組織發現了奄奄一息的卡林·雷德帕斯，他又渴又累，而且還發著燒，倒在了考林的十字路口附近。他們治療了他的傷勢，並把他帶到了聖光之願禮拜堂。$B$B由於對銀色黎明的感激之情，卡林·雷德帕斯加入了銀色黎明，併為了復仇而與天災軍團展開戰鬥。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2391,'zhTW','卡林·雷德帕斯的命運$B$B約瑟夫·雷德帕斯隊長的兄弟，卡林·雷德帕斯在達隆郡的戰鬥中倒下了，他身負重傷，但是最終僥倖活了下來。$B$B在大戰過後的幾天，銀色黎明組織發現了奄奄一息的卡林·雷德帕斯，他又渴又累，而且還發著燒，倒在了考林的十字路口附近。他們治療了他的傷勢，並把他帶到了聖光之願禮拜堂。$B$B由於對銀色黎明的感激之情，卡林·雷德帕斯加入了銀色黎明，並為了復仇而與天災軍團展開戰鬥。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2410 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2410,'zhTW','卡林·雷德帕斯的命運$B$B約瑟夫·雷德帕斯隊長的兄弟，卡林·雷德帕斯在達隆郡的戰鬥中倒下了，他身負重傷，但是最終僥倖活了下來。$B$B在大戰過後的幾天，銀色黎明組織發現了奄奄一息的卡林·雷德帕斯，他又渴又累，而且還發著燒，倒在了考林的十字路口附近。他們治療了他的傷勢，並把他帶到了聖光之願禮拜堂。$B$B由於對銀色黎明的感激之情，卡林·雷德帕斯加入了銀色黎明，併為了復仇而與天災軍團展開戰鬥。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2410,'zhTW','卡林·雷德帕斯的命運$B$B約瑟夫·雷德帕斯隊長的兄弟，卡林·雷德帕斯在達隆郡的戰鬥中倒下了，他身負重傷，但是最終僥倖活了下來。$B$B在大戰過後的幾天，銀色黎明組織發現了奄奄一息的卡林·雷德帕斯，他又渴又累，而且還發著燒，倒在了考林的十字路口附近。他們治療了他的傷勢，並把他帶到了聖光之願禮拜堂。$B$B由於對銀色黎明的感激之情，卡林·雷德帕斯加入了銀色黎明，並為了復仇而與天災軍團展開戰鬥。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2411 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2411,'zhTW','OoOoOoO OOoOOoo OOOoOoo OOoOooO OOoOOoO OOooooO Oooooo OooOOOO OOoOOOo OOoOOoo OOoOooO OOoOOOo OOooOoO Oooooo OooOOOo OOooooO OOOoooo OOooooO Oooooo OoOoOOo OOooooO OOoOOoo OOoOOoo OOooOoO OOOOooO Oooooo OooOoOO OOoOOOo OOoOooO OOooOOO OOoOooo OOOoOoo OOOooOO Oooooo OOoOOOO OOooOOo Oooooo OooooOO OOoOooo OOooooO OOoOOOO OOOooOO',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2412 AND `locale` = 'zhTW';
@@ -2227,7 +2227,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2467 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2467,'zhTW','為你的靈魂未被放逐到扭曲虛空中而感到慶幸吧，$N。為你能值得我花時間親自書寫這個卷軸感到由衷的慶幸吧。$B$B你所認識的人，以及你曾經關心過的人，都已經不再存在了！你必須學會如何以你現在的狀態“活”下去，我建議你首先學會這件事情。$B$B如果你準備迎接試煉的話，那就到喪鐘鎮的教堂裡來找我。$B$B——黑暗牧師杜斯滕，牧師訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2468 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2468,'zhTW','我希望我的符印可以順利地寄到你手上，$c。森林之魂告訴我你即將到來，所以我立即寄出了這封信。我希望可以與你分享我的經驗，併為你將要在泰達希爾接受的各種重要使命做好準備。$B$B過去的幾年中發生了許多事情，我們要做很多事情來幫助艾澤拉斯世界的其他種族。當你準備好了之後，就到泰達希爾來找我，我會在樹屋的第二層等著你。$B$B——珊達，牧師訓練師',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2468,'zhTW','我希望我的符印可以順利地寄到你手上，$c。森林之魂告訴我你即將到來，所以我立即寄出了這封信。我希望可以與你分享我的經驗，並為你將要在泰達希爾接受的各種重要使命做好準備。$B$B過去的幾年中發生了許多事情，我們要做很多事情來幫助艾澤拉斯世界的其他種族。當你準備好了之後，就到泰達希爾來找我，我會在樹屋的第二層等著你。$B$B——珊達，牧師訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2469 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2469,'zhTW','看來你成長得挺順利，孩子。擺在你面前的考驗很多，當你準備好的時候，我願意和你分享我所有的經驗。你能以多快的速度變得多麼強大，這取決於你。只有當你準備好的時候，我才可以指導你。$B$B有些人進步速度很快，而其他的則慢得多。但是你不要擔心那麼多，當你見到我之後，我們可以進行更多的討論。$B$B——肯傑，牧師訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2471 AND `locale` = 'zhTW';
@@ -2289,7 +2289,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2597 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2597,'zhTW','歡迎來到魔獸世界！年輕的戰士，不要害怕這個陌生而充滿神秘的地方，你會驚奇的發現許多潛伏在陰影中的危險，許多歹徒為了蠅頭小利而準備殺了你……因此提防身邊的危險，隨時做好戰鬥的準備，你才能好好地活著！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2598 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2598,'zhTW','歡迎來到魔獸世界！年輕計程車兵啊，你已經準備好了成為一名聖騎士了嗎？很好……記住要勇敢，擊敗邪惡捍衛正義！最重要的是，要相信上帝，並且你是他的助手……',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2598,'zhTW','歡迎來到魔獸世界！年輕的士兵啊，你已經準備好了成為一名聖騎士了嗎？很好……記住要勇敢，擊敗邪惡捍衛正義！最重要的是，要相信上帝，並且你是他的助手……',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2599 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2599,'zhTW','歡迎來到魔獸世界！你管自己叫做盜賊？別搞笑了，如果你想成為一名真正的盜賊，就讓我看看你有什麼能耐，現在就去搶劫這座村莊給我看看！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2600 AND `locale` = 'zhTW';
@@ -2383,7 +2383,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2770 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2770,'zhTW','長眠於此的是霜狼氏族的第一任酋長，我們敬仰的部落酋長索爾的父親——杜隆坦。他被那些想要讓我們永遠受到奴役的同胞背叛。杜隆坦為了我們的自由而獻出了自己的生命，我們敬仰他，以及他留給我們的珍貴遺產，他偉大的兒子。$B$B德雷克塔爾，霜狼氏族的先知$B$B</BODY>$B</HTML>',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2771 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2771,'zhTW','剝洋蔥：論擊敗雷矛部族的戰略$B——德雷克塔爾著$B$B本指南記錄了大量戰術策略知識。有學識計程車兵總是依靠豐富的作戰經驗行事。本書將成為奧特蘭克山谷的戰場指南。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2771,'zhTW','剝洋蔥：論擊敗雷矛部族的戰略$B——德雷克塔爾著$B$B本指南記錄了大量戰術策略知識。有學識的士兵總是依靠豐富的作戰經驗行事。本書將成為奧特蘭克山谷的戰場指南。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2772 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2772,'zhTW','第一章：前線$B$B瓦解雷矛軍隊跟剝洋蔥很相似。你必須一層層地除去洋蔥外皮，才能得到洋蔥的嫩心。$B$B主要由雷矛巡山人和聯盟哨兵組成的前線陣營都歸上尉管制。一旦前線受到攻擊，巴琳達·斯通赫爾斯上尉將帶領前線陣營加強防守。攻擊上尉，前線陣營即可崩潰。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2773 AND `locale` = 'zhTW';
@@ -2589,7 +2589,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2885 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2885,'zhTW','嗨，$N。我從那本日誌中找到了一些有用的資訊。$B$B關於詹姆斯，我仍然一無所獲。但是我發現了亞蜜利亞家族的一些情況。$B$B雖然她和她的孩子們都在戰火中喪生，但是她的兄弟亞歷山大·考德爾卻僥倖活了下來；他現在在鐵爐堡荒蕪的洞穴中研究燃燒軍團的法術。$B$B她還有一個關係親密的表姊妹迪茲·斯諾班，斯諾班現在是阿拉希盆地的戰場軍需官，通常在奧格瑪走動。$B$B你應該順路拜訪一下他們中的一位吧。我想他們對失蹤的亞蜜利亞的訊息會很感興趣的。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2886 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2886,'zhTW','你好，$N。你或許會對我的研究結果感興趣的。$B$B魯本和裡格利姆……嗯，他們撇下家人去了。即使家人們已經猜到失蹤計程車兵的命運，我想你還是跑一趟親口告訴他們吧。$B$B你可以在幽暗城軍事區找到魯本的前妻喬安娜·懷特豪爾。我不確定她能不能接受這個事實，你說話的口氣可得委婉些。裡格利姆的姑媽在暴風城中做孤兒監護員，那可是格令人敬佩的職務。$B$B無論未來命運如何，祝願您的努力能夠給你帶來幸運。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2886,'zhTW','你好，$N。你或許會對我的研究結果感興趣的。$B$B魯本和裡格利姆……嗯，他們撇下家人去了。即使家人們已經猜到失蹤的士兵的命運，我想你還是跑一趟親口告訴他們吧。$B$B你可以在幽暗城軍事區找到魯本的前妻喬安娜·懷特豪爾。我不確定她能不能接受這個事實，你說話的口氣可得委婉些。裡格利姆的姑媽在暴風城中做孤兒監護員，那可是格令人敬佩的職務。$B$B無論未來命運如何，祝願您的努力能夠給你帶來幸運。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2887 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2887,'zhTW','$N，希望你收到這封信時一切安好。經過仔細研究，我發現了日誌記錄者的一些資訊。$B$B薩姆拉的父親邁爾斯·威爾什帶領被遺忘者和巨魔前往雷霆崖朝拜，你可以在預見之池找到他和他的亡靈隨從。$B$B托爾加撇下他的妹妹埃莉薩去了。埃莉薩整天都呆在達納蘇斯的月神殿，我覺得她簡直是個隱士。$B$B希望你能儘快拜訪他們中的一位，$N。對於托爾加或是薩姆拉的命運，他們或許還矇在鼓裡呢。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2888 AND `locale` = 'zhTW';
@@ -2597,7 +2597,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2889 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2889,'zhTW','你好。我總算擠出時間研究了你在天災那兒找到的信件。儘管這相當耗費精力，但是我已經找到亡者尚在世間的親人了。$B$B麥克斯韋爾有個叫薩瑞娜·克羅姆溫德的姊妹，她在藏寶海灣經營一家武器店。我不清楚這兩人在血緣上有多親，但是如果你路過那兒的話，就去找她談談吧。在動盪不安的日子裡，給個準信兒也是好事。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2890 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2890,'zhTW','我終於找到了那些曾與你搏鬥計程車兵們的資料。線索非常難以追繼，這個家族的家譜記錄實在是非常不完整，不過，我最終還是挖掘到了一些親緣關係。$B$B你能相信嗎？聖光之願禮拜堂的護理者奧林其實是克里斯托弗的兒子。如果他能知道他父親的訊息，想必會安心不少。如果你願意在瘟疫之地為銀色黎明再效力一次的話，拜託，請與他談談吧。這將是一件大善之事。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2890,'zhTW','我終於找到了那些曾與你搏鬥的士兵們的資料。線索非常難以追繼，這個家族的家譜記錄實在是非常不完整，不過，我最終還是挖掘到了一些親緣關係。$B$B你能相信嗎？聖光之願禮拜堂的護理者奧林其實是克里斯托弗的兒子。如果他能知道他父親的訊息，想必會安心不少。如果你願意在瘟疫之地為銀色黎明再效力一次的話，拜託，請與他談談吧。這將是一件大善之事。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2891 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2891,'zhTW','紀念聯盟最高指揮官安度因·洛薩，一個為了捍衛他的國王、他的臣民和他的家園而不惜犧牲一切的英雄……$B讓我們的敵人記住我們的名字，讓我們的夥伴為我們的犧牲而感到榮耀，我們是洛薩之子。——圖拉揚將軍',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2892 AND `locale` = 'zhTW';
@@ -2895,7 +2895,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3068 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3068,'zhTW','（獸人語）部落的榮耀！Lok\'Tar ogar！——就是這幾個字讓我跟部落連結在一起！對任何一個部落的戰士而言，這幾個字是最神聖且基本的真理。$B$B我將我的血肉無條件獻給大酋長，我將完成所有大酋長的意志，我就是大酋長命令下的武器。$B$B從此刻起我活著，直到世界末日英勇赴死——為了部落！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3069 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3069,'zhTW','$N，$B$B如果你正在讀這封信，那就代表你還好好的活著——或者至少還有眼睛可用。$B$B我必須為這樣保密緻歉。阿格瑪要求每封信件再寄出之前都要先被讀過一遍——那裡有太多的叛徒和竊賊了，相信你從懸賞佈告上也看得出來。這裡面有許多棘手的事情，新來的警衛很可能會誤會。$B$B對一個部落計程車兵而言，失敗是絕對的。失敗代表了死亡，而死亡沒有絲毫交涉或詮釋的空間。他們只能夠冀望至少能光榮的死去。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3069,'zhTW','$N，$B$B如果你正在讀這封信，那就代表你還好好的活著——或者至少還有眼睛可用。$B$B我必須為這樣保密緻歉。阿格瑪要求每封信件再寄出之前都要先被讀過一遍——那裡有太多的叛徒和竊賊了，相信你從懸賞佈告上也看得出來。這裡面有許多棘手的事情，新來的警衛很可能會誤會。$B$B對一個部落的士兵而言，失敗是絕對的。失敗代表了死亡，而死亡沒有絲毫交涉或詮釋的空間。他們只能夠冀望至少能光榮的死去。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3070 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3070,'zhTW','但勝利……勝利有許多不同的意義。也許你已經注意到了，庫卡隆先鋒全軍到齊。大酋長派了他的精英守衛來諾森德協助取勝。他們以及你和其他的英雄們，正把巫妖王和他的軍隊推向不可避免的終局。你每克服一項挑戰，我們就更靠近從世上驅逐阿爾薩斯和天災軍團一步。$B$B但這就是我們兩難的局面。因為我們在諾森德的作戰是由年輕的地獄咆哮所主導。每一次的勝利都讓此地的部落軍隊士氣高漲，然後傳遍全艾澤拉斯。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3071 AND `locale` = 'zhTW';
@@ -2927,7 +2927,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3095 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3095,'zhTW','這一次我是在頭腦清醒的狀態下聽到的！那個聲音非常清晰，不過足足有一分鐘的時間，在這陽光明媚的暖和日子裡，我的呼吸居然冷到了霧化的地步。一名牧師注意到了這個情況，立即跪下來進行祈禱。$B$B但是沒有其他人聽到那個聲音。至少目擊者可以證明我並沒有發瘋。也許我應該讓蘭德雷進行一些禱告？$B$B我會讓喬丹和斯崔特對他們招募新兵的尺度進行更細緻的審查。我們的組織中已經充斥了太多毫無信仰可言的人，他們一心只想著毀滅亡靈，那樣是遠遠不夠的！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3096 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3096,'zhTW','指揮官和主教都很合作，其實他們也沒有別的選擇。斯崔特主教對此顯得尤其狂熱，他談到了十字軍的復興，併發誓要揪出組織中的所有意志不堅定者。$B$B我讓他不必操之過急。我並沒有打算要毀滅十字軍，不過我確實對於“組織最虔誠的骨幹力量前往諾森德為聖光而戰”的想法非常讚賞。我擔心他與裡克拉夫的友誼正在慢慢扭曲他的心智。話說回來，他們畢竟還有些用處。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3096,'zhTW','指揮官和主教都很合作，其實他們也沒有別的選擇。斯崔特主教對此顯得尤其狂熱，他談到了十字軍的復興，並發誓要揪出組織中的所有意志不堅定者。$B$B我讓他不必操之過急。我並沒有打算要毀滅十字軍，不過我確實對於“組織最虔誠的骨幹力量前往諾森德為聖光而戰”的想法非常讚賞。我擔心他與裡克拉夫的友誼正在慢慢扭曲他的心智。話說回來，他們畢竟還有些用處。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3097 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3097,'zhTW','我會將十字軍的大部隊留在這裡，繼續剿滅後方的亡靈。我想，當他們結束這曠日持久的戰鬥之後，應該會解甲歸田，從此過上寧靜和平的日子。$B$B聽起來真不錯。一直以來，我們都在這片土地上南征北戰，為了從天災的魔掌中奪回我們的家園，為了讓我們的洛丹倫重歸榮耀，為了讓一切回到天災入侵之前，回到阿爾薩斯弒君之前……回到巫妖王出現之前。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3098 AND `locale` = 'zhTW';
@@ -2983,7 +2983,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3124 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3124,'zhTW','這一次我是在頭腦清醒的狀態下聽到的！那個聲音非常清晰，不過足足有一分鐘的時間，在這陽光明媚的暖和日子裡，我的呼吸居然冷到了霧化的地步。一名牧師注意到了這個情況，立即跪下來進行祈禱。$B$B但是沒有其他人聽到那個聲音。至少目擊者可以證明我並沒有發瘋。也許我應該讓蘭德雷進行一些禱告？$B$B我會讓喬丹和斯崔特對他們招募新兵的尺度進行更細緻的審查。我們的組織中已經充斥了太多毫無信仰可言的人，他們一心只想著毀滅亡靈，那樣是遠遠不夠的！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3125 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3125,'zhTW','指揮官和主教都很合作，其實他們也沒有別的選擇。斯崔特主教對此顯得尤其狂熱，他談到了十字軍的復興，併發誓要揪出組織中的所有意志不堅定者。$B$B我讓他不必操之過急。我並沒有打算要毀滅十字軍，不過我確實對於“組織最虔誠的骨幹力量前往諾森德為聖光而戰”的想法非常讚賞。我擔心他與裡克拉夫的友誼正在慢慢扭曲他的心智。話說回來，他們畢竟還有些用處。$B$B然而街上流傳的說法開始讓我思考。我相信當這支部隊集結起來的時候我會冠以他們一個新的名字。這次行動讓我們有了新的使命，基於過去鬥爭的基礎上。我會和大主教一起祈禱。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3125,'zhTW','指揮官和主教都很合作，其實他們也沒有別的選擇。斯崔特主教對此顯得尤其狂熱，他談到了十字軍的復興，並發誓要揪出組織中的所有意志不堅定者。$B$B我讓他不必操之過急。我並沒有打算要毀滅十字軍，不過我確實對於“組織最虔誠的骨幹力量前往諾森德為聖光而戰”的想法非常讚賞。我擔心他與裡克拉夫的友誼正在慢慢扭曲他的心智。話說回來，他們畢竟還有些用處。$B$B然而街上流傳的說法開始讓我思考。我相信當這支部隊集結起來的時候我會冠以他們一個新的名字。這次行動讓我們有了新的使命，基於過去鬥爭的基礎上。我會和大主教一起祈禱。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3126 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3126,'zhTW','我們的祈禱獲得了回應。高階修士因為聖光之聲的影響而動，再清楚明確不過了。$B$B我們這些北進的人——最忠誠的人——將以“血色先鋒軍”為人知曉。$B$B我們將成為進攻諾森德的先鋒！天災之禍威脅世界之冠，很快就會吞噬整個世界。是時候把戰鬥推進到巫妖王家門口了！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3129 AND `locale` = 'zhTW';
@@ -3037,7 +3037,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3166 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3166,'zhTW','狂熱者基爾凱森$B$B強大的巫妖，直接彙報給巫妖王陛下。他身經百戰，因戰功顯赫而被授予老兵勳章。基爾凱森策劃並主導了一項代號為“血腥攻勢”的、針對聖光之願禮拜堂的大規模襲擊行動。儘管天災軍團佔據了壓倒性的優勢，但是他率領的軍隊很快就遭到了有效的反擊，傷亡慘重。基爾凱森未能躲過瑪克斯韋爾·泰羅索斯男爵的致命一擊，他的殘骸再也無法重新組裝起來。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3167 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3167,'zhTW','來自西諾森德$B$B冰冠冰川的航空偵察中隊彙報，他們與巫妖領主基爾溫特的通訊突然中斷了。中隊的首席情報主管，天災工程師卡洛蒙稱，“我們最後一次看見基爾溫特時，他正駕駛著塔爾拉瑪斯在北風苔原上空執行一項機密任務。診斷儀器顯示他隨身攜帶的通訊水晶運轉正常……但是我們能聽到的……只有死一般的寂靜。”',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3167,'zhTW','來自西諾森德$B$B冰冠冰川的航空偵察中隊彙報，他們與巫妖領主基爾溫特的通訊突然中斷了。中隊的首席情報主管，天災工程師卡洛蒙稱，“我們最後一次看見基爾溫特時，他正駕駛著塔爾拉瑪斯在北風凍原上空執行一項機密任務。診斷儀器顯示他隨身攜帶的通訊水晶運轉正常……但是我們能聽到的……只有死一般的寂靜。”',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3169 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3169,'zhTW','來自東部王國，死亡裂口$B$B教官拉蘇維奧斯在本週早些時候發表宣告，重申了對叛亂以及違抗軍令的懲罰措施。“任何膽敢違背天災軍團的死亡騎士都將遭受比死亡更加殘酷的命運。他們將承受永無止境的痛苦和折磨——我會親自確保這一懲罰措施的順利執行。”',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3171 AND `locale` = 'zhTW';
@@ -3301,7 +3301,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3301 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3301,'zhTW','<這本日記的其它部分已經嚴重損毀，無法閱讀了。>',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3302 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3302,'zhTW','法師問答$B$B問：我的朋友們都說，學習魔法併成為法師會讓我變得瘦弱，女士們也不會喜歡我。這是真的嗎？$B——忐忑不安的吉米·唐森',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3302,'zhTW','法師問答$B$B問：我的朋友們都說，學習魔法並成為法師會讓我變得瘦弱，女士們也不會喜歡我。這是真的嗎？$B——忐忑不安的吉米·唐森',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3303 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3303,'zhTW','答：不要擔心，吉米。你的朋友們所持有的這種偏見，是由極少數又懶惰又不按時攝取營養的法師造成的。你完全可以在保持最佳體能狀態的同時，還擁有充裕的時間去探索宇宙的奧秘。即便是肯瑞託的成員，也都會在緊張而忙碌的工作之餘，透過嚴格的飲食管理和充足的體能鍛鍊，保持非常好的身材。$B而且，哪有女人不喜歡變形術的？',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3304 AND `locale` = 'zhTW';

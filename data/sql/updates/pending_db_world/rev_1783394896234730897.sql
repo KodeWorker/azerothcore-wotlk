@@ -1,13 +1,13 @@
 -- Fill missing zhTW achievement_reward_locale rows, converted from zhCN via OpenCC s2twp,
 -- with known-official zone-name and NPC-name corrections applied
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 13 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (13,'zhTW','80級！','恭喜你在探險的過程中到達了80級，毫無疑問，你把自己所有精力都獻身於同企圖征服艾澤拉斯的惡魔做鬥爭的事業中去了，並且應該做到了不小的成就。$B$B你雖已到達80級，但還不是值得慶賀的時候，更大的挑戰還在等待著你。$B$B繼續戰鬥吧！$B$B羅寧');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (13,'zhTW','80級！','恭喜你在冒險的過程中來到了80級，毫無疑問，你已經把所有的心力都投注在對抗那些企圖征服艾澤拉斯的惡魔上，也算是有了不小的成就。$B$B你雖已到達80級，但還不是值得慶賀的時候，更大的挑戰還在等待著你。$B$B繼續戰鬥吧！$B$B羅寧');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 45 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (45,'zhTW','你環遊了世界！','嘿，夥計！$B$B我認為我已經在這片冰凍荒原找到一些值得慶祝的事情了！對於我這個矮人來說，我在你眼中很明顯地看到探險家才有的激情。$B$B穿上這件戰袍吧。這樣當你的朋友要問路的時候就會想到你了！$B$B別停下腳步！$B$B布萊恩·銅鬚');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (45,'zhTW','你環遊了世界！','嘿，夥計！$B$B我認為我已經在這片冰凍荒原找到一些值得慶祝的事情了！身為矮人的我，一眼就能看出你眼中那股探險家才有的熱情。$B$B穿上這件戰袍吧。這樣當你的朋友要問路的時候就會想到你了！$B$B別停下腳步！$B$B布萊恩·銅鬚');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 614 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (614,'zhTW','為了聯盟！','戰火席捲了我們的家園。只有最勇敢的英雄才敢向部落的要害進行直接的攻擊，而你就是這些英雄中的一員。$B$B你對部落首領的突襲為我們開啟了發動總攻的大門。部落將臣服在聯盟腳下。$B$B你的努力將得到嘉獎，驕傲地繼續前進吧！$B$B為了聯盟！$B$B - 你的國王');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 619 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (619,'zhTW','為了部落！','在這次行動中，偉大的勇士從苦難困苦中昂首站了起來——你就是其中之一。$B$B戰爭隨時都會爆發，你的努力會為我們在艾澤拉斯的征程上畫上濃重的一筆。你的勇敢必須要得到獎勵，請收下這份來自奧格瑪的獎勵，以彰顯你的果敢！$B$B為了部落！$B$B - 大酋長索爾');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (619,'zhTW','為了部落！','在這次行動中，偉大的勇士從苦難中挺身而起——你就是其中之一。$B$B戰爭隨時都會爆發，你的努力會為我們在艾澤拉斯的征程上畫上濃重的一筆。你的勇敢必須要得到獎勵，請收下這份來自奧格瑪的獎勵，以彰顯你的果敢！$B$B為了部落！$B$B - 大酋長索爾');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 876 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (876,'zhTW','我一直在關注著你，孩子。','你長期在競技場中磨練，給你的格鬥技巧帶來了很大的提升，$n。收下這件戰袍，然後穿上它自豪地走上街，讓別人看看你灑過的汗水以及豐收的碩果！$B$B斯卡巴里·謝波德');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1021 AND `Locale` = 'zhTW';
@@ -15,21 +15,21 @@ INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALU
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1250 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1250,'zhTW','臭臭的新家','我聽說了你很喜歡養一些毛茸茸小動物的事，我希望你不會介意為我的臭臭找一個新家吧——它拒絕和我這裡的小動物一起玩耍。$B$B如果你收下，請確保一天餵它兩次。然後，嗯，它貌似對黑貓挺有興趣的，雖然不知道為什麼。$B$B - 布琳妮');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1681 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1681,'zhTW','來自達納蘇斯的問候','你的成就是意義重大且影響深遠的。一直以來飽受折磨的艾澤拉斯因為你的這次行為而擺脫了惡魔的束縛。$B$B只有那些願意花時間去了解我們土地的人才能明白我們的那些勇士為這片大陸前赴後繼的意義，你是其中的一個。很高興你能順利結束你的探險，願艾露恩祝福你。$B$B一切為了聯盟，感謝你，博學者。$B$B - 泰蘭妲·語風');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1681,'zhTW','來自達納蘇斯的問候','你的成就是意義重大且影響深遠的。一直以來飽受折磨的艾澤拉斯因為你的這次行為而擺脫了惡魔的束縛。$B$B只有那些願意花時間去了解我們土地的人才能明白我們的那些勇士前仆後繼守護這片大陸的意義，而你正是其中之一。很高興你能順利結束你的探險，願艾露恩祝福你。$B$B一切為了聯盟，感謝你，博學者。$B$B - 泰蘭妲·語風');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1682 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1682,'zhTW','來自雷霆崖的問候','你的故事被廣為流傳， 猶如一股颶風席捲了整個大陸。那些敢於和惡魔戰鬥的人是我們唯一的期望。$B$B只有那些聽懂風的語言的人才能明白我們欠那些為保護這片大陸而倒下的勇士們多少。希望你能把你探險的故事告訴更多像你這樣活著的年輕人。然後我們就會記起來我們在這個世上有多少需要感謝。$B$B向你致以深深的感謝，博學者，大地母親與你同在。$B$B為了部落！$B$B - 凱恩·血蹄');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1682,'zhTW','來自雷霆崖的問候','你的故事被廣為流傳， 猶如一股颶風席捲了整個大陸。那些敢於和惡魔戰鬥的人是我們唯一的期望。$B$B只有那些聽懂風的語言的人才能明白我們欠那些為保護這片大陸而倒下的勇士們多少。希望你能把探險的故事告訴更多在世的年輕人，讓我們記得這世上還有多少值得感恩的事。$B$B向你致以深深的感謝，博學者，大地母親與你同在。$B$B為了部落！$B$B - 凱恩·血蹄');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1956 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1956,'zhTW','進修','恭喜你順利完成了在達拉然魔法學院的進修工作。為了鼓勵你所獲得的成就，我把這部書籍郵寄給你，希望你能收下。$B$B我想，你應該能知道這份書籍的用途。$B$B向你致以真誠的問候。$B$B羅寧');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2096 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2096,'zhTW','金幣達人','你好，恭喜你成功收集到了達拉然噴泉的所有硬幣！為了表彰你的成就，我準備把這枚達拉然泰坦神鐵徽記贈予你——這可是一枚我們只獎勵給狂熱硬幣收集者的禮物。$B$B希望你會喜歡我這份特殊的禮物，現在，它是你的了！$B$B真摯地問候您。$B耶比託·喬巴斯');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2136 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2136,'zhTW','英雄的榮耀！','尊敬的勇士，$B$B你在諾森德英勇戰鬥的身影以及所獲得的成就已經傳到了龍眠神殿。$B$B你的勇敢不容忽視，請你務必接受這份禮物，和它一起，我們並肩驅逐諾森德的惡魔，一次亦或永遠。$B$B雅立史卓莎，生命的縛誓者');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2136,'zhTW','英雄的榮耀！','尊敬的勇士，$B$B你在諾森德英勇戰鬥的身影以及所獲得的成就已經傳到了龍眠神殿。$B$B你的勇敢不容忽視，請你務必接受這份禮物，讓我們並肩作戰，徹底逐盡諾森德的惡魔。$B$B雅立史卓莎，生命的縛誓者');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2143 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2143,'zhTW','帶領騎兵隊','我發現你和你的坐騎們相處得好像挺不錯的嘛，我每天都要對著這些牲畜簡直煩躁死了。我想，你不會介意替我照看下這隻白色幼龍吧？我只是抽不出空暇的時間來照顧這麼多的坐騎了。$B$B梅·法蘭西斯');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2144 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2144,'zhTW','千奇百怪的漫長旅行','隨著遠方漫天戰鼓的響起，對於你們這些艾澤拉斯的冒險者來說，忘記生命的意義是一件再正常不過的事情。$B$B從另一方面來說，你用你的所作所為來捍衛艾澤拉斯一個高貴種族的尊嚴，並且去記住我們為之奮鬥的東西。不是為了慶祝我們的勝利，也許是我們在另一個方面的勝利更合適。記住你所做過的事情，冒險者。$B$B希望其他人會為你的行為而歡呼。$B$B雅立史卓莎，生命的縛誓者');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2144,'zhTW','千奇百怪的漫長旅行','隨著遠方戰鼓聲聲響起，對艾澤拉斯的冒險者來說，忘記生命的意義是再平常不過的事。$B$B話說回來，你的所作所為捍衛了艾澤拉斯一個高貴種族的尊嚴，也讓我們記住了自己奮戰的理由。這無關乎慶祝勝利，或許在另一個層面上，這才是真正的勝利。記住你所做過的一切，冒險者。$B$B希望其他人會為你的行為而歡呼。$B$B雅立史卓莎，生命的縛誓者');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2145 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2145,'zhTW','千奇百怪的漫長旅行','隨著遠方漫天戰鼓的響起，對於你們這些艾澤拉斯的冒險者來說，忘記生命的意義是一件再正常不過的事情。$B$B從另一方面來說，你用你的所作所為來捍衛艾澤拉斯一個高貴種族的尊嚴，並且去記住我們為之奮鬥的東西。不是為了慶祝我們的勝利，也許是我們在另一個方面的勝利更合適。記住你所做過的事情，冒險者。$B$B希望其他人會為你的行為而歡呼。$B$B雅立史卓莎，生命的縛誓者');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2145,'zhTW','千奇百怪的漫長旅行','隨著遠方戰鼓聲聲響起，對艾澤拉斯的冒險者來說，忘記生命的意義是再平常不過的事。$B$B話說回來，你的所作所為捍衛了艾澤拉斯一個高貴種族的尊嚴，也讓我們記住了自己奮戰的理由。這無關乎慶祝勝利，或許在另一個層面上，這才是真正的勝利。記住你所做過的一切，冒險者。$B$B希望其他人會為你的行為而歡呼。$B$B雅立史卓莎，生命的縛誓者');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2516 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (2516,'zhTW','小寵物獵人','你好！$B$B我知道你已經給了淘氣的臭臭一個溫暖而又舒適的小窩，我希望你更加樂意收留這隻迷你又可愛的小鹿。$B$B這隻小鹿很害羞的，但是我想你用這個附贈的小鹿的鹽塊就能很輕易地和它建立起牢固的友情哦！$B$B - 布琳妮');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 2536 AND `Locale` = 'zhTW';
@@ -55,7 +55,7 @@ INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALU
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4156 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4156,'zhTW','大十字軍的榮耀','親愛的$N，$B$B你在大十字軍競技場的事蹟這麼久以來被反覆傳頌。大十字軍競技場是為了選拔以後進軍冰冠堡壘的勇士而設立的一座競技場，我希望有越來越多的勇士能在這座競技場裡脫穎而出，然後直搗冰冠堡壘。很顯然，你引起了我的注意。$B$B我們需要你的力量來對抗巫妖王。不過這麼些天來，你一直在舉辦慶祝活動，我也不好意思打擾你，現在把這匹最好的戰馬送給你，當天災軍團看到豎立在它後邊的銀白十字軍戰旗時，那膽戰心驚的模樣想必你也很樂意看到吧？$B$B榮耀伴隨著你$B提里奧·弗丁');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4478 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4478,'zhTW','小狗溜溜','這位耐心的朋友，$B$B您願與可能不熟識的人一起下副本，我們對您的偉大表示崇高的敬意。如果你還帶了帶野隊裡的新手，那就更好了。$B$B長話短說，聽說你喜歡組野隊。那麼我們就送您一隻名叫溜溜的小狗，希望它能讓你開心地完成一次野隊之旅。$B$B/抱，$B$B魔獸世界開發團隊');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4478,'zhTW','小狗溜溜','這位耐心的朋友，$B$B您願與可能不熟識的人一起下副本，我們對您的偉大表示崇高的敬意。如果你還帶了野隊裡的新手，那就更好了。$B$B長話短說，聽說你喜歡組野隊。那麼我們就送您一隻名叫溜溜的小狗，希望它能讓你開心地完成一次野隊之旅。$B$B/抱，$B$B魔獸世界開發團隊');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4530 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4530,'zhTW','冰封王座（10人）','勇士們,你們在冰封王座上摧毀了巫妖王，黯刃騎士團佩服你們，這是我們給你的禮物!');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4583 AND `Locale` = 'zhTW';
@@ -65,9 +65,9 @@ INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALU
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4597 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4597,'zhTW','冰封王座（25人）','勇士們,你們在冰封王座上摧毀了巫妖王，黯刃騎士團佩服你們，這是我們給你的禮物!');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4602 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4602,'zhTW','冰冠堡壘征服者的榮耀','$N，$B$B當巫妖王的影響力日漸薄弱的時候，有不少昔日在他麾下很強力的人脫離了他的控制。$B$B這隻被我們捕獲的冰霜巨龍就是一個很好的例子。它有強烈的自主意識，並且我們還有更多的這種巨龍。$B$B我們當中的一個人雖然在一次戰鬥中光榮地失去了一隻胳膊，不過依然能很好的駕馭它——很明顯，它被馴服的很好，並且給了他們自信。$B$B請接受這隻來自黯刃騎士團的禮物，在這場偉大的戰鬥中有你們陪同，真的很榮幸。$B$B榮譽屬於你們。$B大領主達里安·莫格萊尼');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4602,'zhTW','冰冠堡壘征服者的榮耀','$N，$B$B當巫妖王的影響力日漸薄弱的時候，有不少昔日在他麾下很強力的人脫離了他的控制。$B$B這隻被我們捕獲的冰霜巨龍就是一個很好的例子。它有強烈的自主意識，並且我們還有更多的這種巨龍。$B$B我們當中的一個人雖然在一次戰鬥中光榮地失去了一隻胳膊，不過依然能將牠駕馭得很好——很明顯，牠被馴服得很好，並且給了他們自信。$B$B請接受這隻來自黯刃騎士團的禮物，在這場偉大的戰鬥中有你們陪同，真的很榮幸。$B$B榮譽屬於你們。$B大領主達里安·莫格萊尼');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4603 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4603,'zhTW','冰冠堡壘征服者的榮耀','$N，$B$B當巫妖王的影響力日漸薄弱的時候，有不少昔日在他麾下很強力的人脫離了他的控制。$B$B這隻被我們捕獲的冰霜巨龍就是一個很好的例子。它有強烈的自主意識，並且我們還有更多的這種巨龍。$B$B我們當中的一個人雖然在一次戰鬥中光榮地失去了一隻胳膊，不過依然能很好的駕馭它——很明顯，它被馴服的很好，並且給了他們自信。$B$B請接受這隻來自黯刃騎士團的禮物，在這場偉大的戰鬥中有你們陪同，真的很榮幸。$B$B榮譽屬於你們。$B大領主達里安·莫格萊尼');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4603,'zhTW','冰冠堡壘征服者的榮耀','$N，$B$B當巫妖王的影響力日漸薄弱的時候，有不少昔日在他麾下很強力的人脫離了他的控制。$B$B這隻被我們捕獲的冰霜巨龍就是一個很好的例子。它有強烈的自主意識，並且我們還有更多的這種巨龍。$B$B我們當中的一個人雖然在一次戰鬥中光榮地失去了一隻胳膊，不過依然能將牠駕馭得很好——很明顯，牠被馴服得很好，並且給了他們自信。$B$B請接受這隻來自黯刃騎士團的禮物，在這場偉大的戰鬥中有你們陪同，真的很榮幸。$B$B榮譽屬於你們。$B大領主達里安·莫格萊尼');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4784 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (4784,'zhTW','銀色領地的紋章收集者','朋友，你在諾森德所取得的成就令人不得不注目。$B$B用獲取的紋章在達拉然兌換到各種強力的裝備，然後武裝自己，不是件很快樂的事麼？$B$B我們就在達拉然的銀色領地，在那兒，每種紋章都有對應的兌換師，來看看吧。$B$B我們期待你的到來！');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 4785 AND `Locale` = 'zhTW';
