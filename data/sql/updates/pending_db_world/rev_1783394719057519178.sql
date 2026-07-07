@@ -243,7 +243,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 DELETE FROM `gossip_menu_option_locale` WHERE `MenuID` = 7777 AND `OptionID` = 7 AND `Locale` = 'zhTW';
 INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES (7777, 7, 'zhTW', '武器大師', '');
 DELETE FROM `gossip_menu_option_locale` WHERE `MenuID` = 7853 AND `OptionID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES (7853, 0, 'zhTW', '準備好了，薩爾。', '');
+INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES (7853, 0, 'zhTW', '準備好了，索爾。', '');
 DELETE FROM `gossip_menu_option_locale` WHERE `MenuID` = 8129 AND `OptionID` = 2 AND `Locale` = 'zhTW';
 INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES (8129, 2, 'zhTW', '公會管理員', '');
 DELETE FROM `gossip_menu_option_locale` WHERE `MenuID` = 8185 AND `OptionID` = 1 AND `Locale` = 'zhTW';

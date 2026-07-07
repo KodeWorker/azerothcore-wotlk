@@ -663,7 +663,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 1222 AND `GroupID` = 0 AND `ID` = 1 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (1222, 0, 1, 'zhTW', '以拉格納羅斯之名，薩多爾大橋已經被摧毀了，接下來就是巨石水壩！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 1222 AND `GroupID` = 0 AND `ID` = 2 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (1222, 0, 2, 'zhTW', '麥格尼·銅須是個白痴加吹牛大王！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (1222, 0, 2, 'zhTW', '麥格尼·銅鬚是個白痴加吹牛大王！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 1222 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (1222, 1, 0, 'zhTW', '哇哈哈哈哈哈！我要和你同歸於盡！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 1222 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -4289,7 +4289,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 11832 AND `GroupID` = 1 AND `ID` = 1 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (11832, 1, 1, 'zhTW', '月神湖上空將出現一道裂縫。做好準備吧，$n。伊蘭尼庫斯的入侵會給整個世界帶來混亂和戰爭。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 11832 AND `GroupID` = 2 AND `ID` = 2 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (11832, 2, 2, 'zhTW', '他會不擇手段地摧毀瑪法里奧的肉身。我們絕不能讓此事發生……我們必須在泰蘭德到達之前控制住那頭野獸。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (11832, 2, 2, 'zhTW', '他會不擇手段地摧毀瑪法里奧的肉身。我們絕不能讓此事發生……我們必須在泰蘭妲到達之前控制住那頭野獸。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 11832 AND `GroupID` = 3 AND `ID` = 3 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (11832, 3, 3, 'zhTW', '保衛永夜港，英雄……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 11832 AND `GroupID` = 4 AND `ID` = 4 AND `Locale` = 'zhTW';
@@ -4619,7 +4619,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 13020 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (13020, 1, 0, 'zhTW', '求求你們，快跑吧！在我喪失所有理智之前快逃命吧！黑色的火焰在我的心中燃燒！我必須——釋放它！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 13020 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (13020, 2, 0, 'zhTW', '火焰！死亡！毀滅！你們這些凡人，讓奈法里奧斯大人的力量……不——我要抗爭！阿萊克絲塔薩，幫幫我，我必須抗爭到底！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (13020, 2, 0, 'zhTW', '火焰！死亡！毀滅！你們這些凡人，讓奈法里奧斯大人的力量……不——我要抗爭！雅立史卓莎，幫幫我，我必須抗爭到底！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 13020 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (13020, 3, 0, 'zhTW', '奈法里奧斯的仇恨讓我變得空前強大！趕快逃跑吧，凡人！黑石之王的怒氣湧動在我的血脈中！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 13020 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -5299,7 +5299,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15379 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15379, 1, 0, 'zhTW', '暗夜精靈，不要忘記今天犧牲的人們。這些野獸讓我們蒙受了巨大的損失。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15379 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15379, 2, 0, 'zhTW', '阿萊克絲塔薩，賦予我堅定的信念，讓我擊退敵人！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15379, 2, 0, 'zhTW', '雅立史卓莎，賦予我堅定的信念，讓我擊退敵人！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15380 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15380, 0, 0, 'zhTW', '阿納克洛斯，聲東擊西的戰術能讓你和年輕的德魯伊有足夠的時間來封印大門。不要猶豫。現在，讓我們看看它們如何對付這些混亂的魔法。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15380 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -5385,7 +5385,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15491 AND `GroupID` = 9 AND `ID` = 9 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15491, 9, 9, 'zhTW', '燃燒起來了！疼痛……灼熱……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15491 AND `GroupID` = 10 AND `ID` = 10 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15491, 10, 10, 'zhTW', '為什麼？為什麼……會發生這種事？泰蘭德，你在哪兒？當我在月神面前倒下時，你在哪兒？');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15491, 10, 10, 'zhTW', '為什麼？為什麼……會發生這種事？泰蘭妲，你在哪兒？當我在月神面前倒下時，你在哪兒？');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15491 AND `GroupID` = 11 AND `ID` = 11 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15491, 11, 11, 'zhTW', '我……我感到……我再次感受到月神的觸控……她在對我微笑……是的……我……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15491 AND `GroupID` = 12 AND `ID` = 12 AND `Locale` = 'zhTW';
@@ -6723,7 +6723,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 16808 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (16808, 3, 0, 'zhTW', '聯盟竟敢深入我的堡壘？把榮耀堡的戰俘帶出來，讓劊子手們待命！他們會為這次入侵付出生命的代價！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 16808 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (16808, 4, 0, 'zhTW', '薩爾的那個冒牌部落膽敢深入我的堡壘？把薩爾瑪的戰俘帶出來，讓劊子手們待命！他們會為這次入侵付出生命的代價！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (16808, 4, 0, 'zhTW', '索爾的那個冒牌部落膽敢深入我的堡壘？把索爾瑪的戰俘帶出來，讓劊子手們待命！他們會為這次入侵付出生命的代價！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 16809 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (16809, 0, 0, 'zhTW', '都是……你的錯！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 16812 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -7989,7 +7989,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17848 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17848, 1, 0, 'zhTW', '我知道你們要幹什麼，而我將永遠打消你們的念頭！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17848 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17848, 2, 0, 'zhTW', '不能……讓薩爾……逃走。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17848, 2, 0, 'zhTW', '不能……讓索爾……逃走。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17848 AND `GroupID` = 2 AND `ID` = 1 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17848, 2, 1, 'zhTW', '你別想插手這件事！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17848 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -7997,7 +7997,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17848 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17848, 4, 0, 'zhTW', '跑吧，你們這些懦夫！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17848 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17848, 5, 0, 'zhTW', '不能……讓薩爾……逃走。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17848, 5, 0, 'zhTW', '不能……讓索爾……逃走。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17852 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17852, 0, 0, 'zhTW', '沒有人可以打敗我！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17852 AND `GroupID` = 0 AND `ID` = 1 AND `Locale` = 'zhTW';
@@ -8041,7 +8041,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17860 AND `GroupID` = 2 AND `ID` = 2 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17860, 2, 2, 'zhTW', '馬上投降！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17862 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17862, 0, 0, 'zhTW', '薩爾！你不會真的以為可以逃脫吧？你和你的夥伴們很快就要去接受布萊克摩爾的審訊……不過我得先跟你玩玩。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17862, 0, 0, 'zhTW', '索爾！你不會真的以為可以逃脫吧？你和你的夥伴們很快就要去接受布萊克摩爾的審訊……不過我得先跟你玩玩。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17862 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17862, 1, 0, 'zhTW', '你是個奴隸！你永遠都是個奴隸！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17862 AND `GroupID` = 1 AND `ID` = 1 AND `Locale` = 'zhTW';
@@ -8051,7 +8051,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17862 AND `GroupID` = 2 AND `ID` = 1 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17862, 2, 1, 'zhTW', '衛兵……衛兵！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17862 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17862, 3, 0, 'zhTW', '薩爾不可能逃脫！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17862, 3, 0, 'zhTW', '索爾不可能逃脫！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17875 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17875, 0, 0, 'zhTW', '聽候您的吩咐，大人。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17875 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -8251,7 +8251,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17949 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17949, 3, 0, 'zhTW', '塞納留斯與我並肩作戰。伊利丹坐在外域高高的王座上沉思著，恐怕與阿爾薩斯一戰的失利將成為他人生的轉折點。他已經完全瘋了，雷姆洛斯。每天，他都在腦海中數千次地重現那場戰鬥，但是他始終認為自己才是勝利者，他完全擊潰了阿爾薩斯。老朋友，他已經極度癲狂了。我擔心我們接受考驗的時候到了，這一次跟上次在艾薩拉進行的永恆之井戰役可大不一樣。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17949 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17949, 4, 0, 'zhTW', '雷姆洛斯，我正在被拖回夢境……泰蘭德……告訴她……告訴她我很安全。告訴她……告訴她我會回來的……再見……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17949, 4, 0, 'zhTW', '雷姆洛斯，我正在被拖回夢境……泰蘭妲……告訴她……告訴她我很安全。告訴她……告訴她我會回來的……再見……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17955 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (17955, 0, 0, 'zhTW', '%s拿起一片蘑菇在它的“鼻子”旁聞了聞。它看上去很滿足的樣子，把蘑菇吃了下去！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 17955 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -8513,7 +8513,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18063 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18063, 1, 0, 'zhTW', '%s指向對面的病房。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18063 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18063, 2, 0, 'zhTW', '如你所願，薩爾，杜隆坦之子。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18063, 2, 0, 'zhTW', '如你所願，索爾，杜隆坦之子。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18063 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18063, 3, 0, 'zhTW', '%s的感情崩潰了。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18063 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -8521,7 +8521,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18063 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18063, 5, 0, 'zhTW', '我恨他的所作所為。我恨他，因為他把負擔都留給了我。但是現在……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18063 AND `GroupID` = 6 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18063, 6, 0, 'zhTW', '你讓我看到了我可能永遠都不會知道的真相。你和你的朋友們給我帶來了無價的禮物：救贖。薩爾，瑪格漢的救世主，你讓我感到了前所未有的榮耀……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18063, 6, 0, 'zhTW', '你讓我看到了我可能永遠都不會知道的真相。你和你的朋友們給我帶來了無價的禮物：救贖。索爾，瑪格漢的救世主，你讓我感到了前所未有的榮耀……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18063 AND `GroupID` = 7 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18063, 7, 0, 'zhTW', '在今天，我心中的重擔終於可以放下了。我的內心充滿著自豪。我有生以來第一次可以驕傲地說出我的名字，終於可以釋放我心中的憤怒！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18063 AND `GroupID` = 8 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -8557,7 +8557,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18076 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18076, 0, 0, 'zhTW', '不！不！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18076 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18076, 1, 0, 'zhTW', '薩爾……血液的詛咒已經消失。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18076, 1, 0, 'zhTW', '索爾……血液的詛咒已經消失。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18076 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18076, 2, 0, 'zhTW', '由於血之詛咒被消除，格羅姆的眼睛變得暗淡了。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18076 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -8567,11 +8567,11 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18094 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18094, 1, 0, 'zhTW', '有東西激怒了那匹馬，讓我們去看看！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18094 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18094, 2, 0, 'zhTW', '薩爾被困在了教堂裡，他現在逃不掉了！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18094, 2, 0, 'zhTW', '索爾被困在了教堂裡，他現在逃不掉了！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18094 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18094, 3, 0, 'zhTW', '他在這兒，阻止他！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18096 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18096, 0, 0, 'zhTW', '薩爾！出來面對你的命運吧！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18096, 0, 0, 'zhTW', '索爾！出來面對你的命運吧！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18096 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18096, 1, 0, 'zhTW', '夠了。我要把你們全部消滅！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18096 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -8583,7 +8583,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18096 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18096, 4, 0, 'zhTW', '不！主人……不會……高興的。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18096 AND `GroupID` = 4 AND `ID` = 1 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18096, 4, 1, 'zhTW', '薩爾仍將是個奴隸。塔蕾莎會死去。你失敗了。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18096, 4, 1, 'zhTW', '索爾仍將是個奴隸。塔蕾莎會死去。你失敗了。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18096 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18096, 5, 0, 'zhTW', '別高興得太早！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18096 AND `GroupID` = 5 AND `ID` = 1 AND `Locale` = 'zhTW';
@@ -8615,7 +8615,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18141 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18141, 2, 0, 'zhTW', '不用懷疑，你是杜隆坦的後代……我的孫子。德拉卡在和你父親離開我們的世界前告訴我她有了孩子，但是我從沒有想到他們可以生存下來……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18141 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18141, 3, 0, 'zhTW', '薩爾？你只是過去是一個奴隸，孫子！你再也不會是奴隸了！當我最後一次看到杜隆坦的時候，他把還沒出生的兒子的名字都想好了……他是……那麼的自豪……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18141, 3, 0, 'zhTW', '索爾？你只是過去是一個奴隸，孫子！你再也不會是奴隸了！當我最後一次看到杜隆坦的時候，他把還沒出生的兒子的名字都想好了……他是……那麼的自豪……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18141 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18141, 4, 0, 'zhTW', '%s擦去了眼淚。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18141 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -9363,7 +9363,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18723 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18723, 0, 0, 'zhTW', '我相信只要你們給我一點時間，我就能向你們解釋發生了什麼。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18723 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18723, 1, 0, 'zhTW', '法術應該會抹去剛才他們剛剛和我們一起發生的事。他們應該記住的是，如果沒有干預時間，現實會是什麼走向。做得好，薩爾會繼續踏上尋找他的命運以及塔蕾莎的道路了……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18723, 1, 0, 'zhTW', '法術應該會抹去剛才他們剛剛和我們一起發生的事。他們應該記住的是，如果沒有干預時間，現實會是什麼走向。做得好，索爾會繼續踏上尋找他的命運以及塔蕾莎的道路了……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18723 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18723, 2, 0, 'zhTW', '她的命運真讓人遺憾。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18724 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -9569,11 +9569,11 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18887 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18887, 0, 0, 'zhTW', '我自由了！感謝你們！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18887 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18887, 1, 0, 'zhTW', '薩爾，你逃出來了！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18887, 1, 0, 'zhTW', '索爾，你逃出來了！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18887 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18887, 2, 0, 'zhTW', '薩爾，我之前從來沒見過這些人！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18887, 2, 0, 'zhTW', '索爾，我之前從來沒見過這些人！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18887 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18887, 3, 0, 'zhTW', '他們認為你是怪物。可他們才是怪物，你不是。保重，薩爾。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18887, 3, 0, 'zhTW', '他們認為你是怪物。可他們才是怪物，你不是。保重，索爾。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18896 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (18896, 0, 0, 'zhTW', '職能：間諜，拷問者');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 18896 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -10483,9 +10483,9 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19419 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19419, 0, 0, 'zhTW', '%s變得憤怒了！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19438 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19438, 0, 0, 'zhTW', '我的魔法能使我們回到薩爾死之前。但是注意，我控制時間的能力是有限的。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19438, 0, 0, 'zhTW', '我的魔法能使我們回到索爾死之前。但是注意，我控制時間的能力是有限的。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19438 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19438, 1, 0, 'zhTW', '我使時間又一次倒流。如果你不能阻止薩爾死亡，那麼一切都將失去。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19438, 1, 0, 'zhTW', '我使時間又一次倒流。如果你不能阻止索爾死亡，那麼一切都將失去。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19440 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19440, 0, 0, 'zhTW', '你被%s發現了！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19442 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -11335,7 +11335,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 20129 AND `GroupID` = 7 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (20129, 7, 0, 'zhTW', '你看到的這些隧道被稱為時間流。它們的數量是無窮的。當前在你們的現實中存在的那個就是主人所認為的“麻煩點”。這些麻煩點也許有著完全不同的內容，但是它們通常都有著相同的原因。它們的存在是同樣的時間干擾所產生的結果，當你進入其中的一個麻煩點去冒險時，要牢記這一點……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 20129 AND `GroupID` = 8 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (20129, 8, 0, 'zhTW', '這個時間流目前正處於極度的混亂中！我們派了一些人在裡面努力恢復秩序。我所能告訴你的一點資訊就是，薩爾的自由正在危難中。一個被稱為永恆之龍的邪惡組織正在嘗試阻止他的逃脫。我擔心如果沒有來自外界的幫助，一切都將無可挽回。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (20129, 8, 0, 'zhTW', '這個時間流目前正處於極度的混亂中！我們派了一些人在裡面努力恢復秩序。我所能告訴你的一點資訊就是，索爾的自由正在危難中。一個被稱為永恆之龍的邪惡組織正在嘗試阻止他的逃脫。我擔心如果沒有來自外界的幫助，一切都將無可挽回。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 20129 AND `GroupID` = 9 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (20129, 9, 0, 'zhTW', '關於這個時間流，我們只得到了很少的一點情報。薩艾特已經被派遣進去了。從和他的通訊中，我們獲知的情報是永恆之龍再次嘗試改變時間。很可能他們的目標是破壞黑暗之門的開啟？希望不是這樣……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 20129 AND `GroupID` = 10 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -16677,7 +16677,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 26666 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (26666, 0, 0, 'zhTW', '酋長，刀下留人。他還有利用價值。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 26666 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (26666, 1, 0, 'zhTW', '還記得你找到的那本矮人日記嗎？呃，它的主人很可能就是我們追捕布萊恩·銅須的重要線索。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (26666, 1, 0, 'zhTW', '還記得你找到的那本矮人日記嗎？呃，它的主人很可能就是我們追捕布萊恩·銅鬚的重要線索。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 26666 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (26666, 2, 0, 'zhTW', '我相信你會的，除非你想為難自己。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 26666 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -16821,7 +16821,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 26810 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (26810, 2, 0, 'zhTW', 'Lok\'tar Ogar！不勝利，毋寧死——正是這條被所有的部落成員奉為真理的信條促使我加入部落！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 26810 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (26810, 3, 0, 'zhTW', '我發誓終身效忠於薩爾酋長。他的意志就是我的信條。他的指令就是我的使命！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (26810, 3, 0, 'zhTW', '我發誓終身效忠於索爾酋長。他的意志就是我的信條。他的指令就是我的使命！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 26810 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (26810, 4, 0, 'zhTW', '從這一刻直到我闔上雙眼——為了部落！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 26810 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -17673,13 +17673,13 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 27658 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (27658, 0, 0, 'zhTW', '感謝你們，凡人。藍龍軍團已經察覺到你們的動向，你們要當心。眼下，瑪裡苟斯任命瓦爾洛斯·雲擊率領碧藍魔環衛士死守魔環。請接受我們的幫助，這樣才有機會擊敗敵人。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 27683 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (27683, 0, 0, 'zhTW', '我一直守護著這座被阿萊克絲塔薩女王祝福過的聖地，光陰荏苒……連我都不記得度過了多長時間。在最為黑暗的年代，我未能盡到自己的職守……我倒在了死亡騎士血毒的腳下。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (27683, 0, 0, 'zhTW', '我一直守護著這座被雅立史卓莎女王祝福過的聖地，光陰荏苒……連我都不記得度過了多長時間。在最為黑暗的年代，我未能盡到自己的職守……我倒在了死亡騎士血毒的腳下。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 27683 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (27683, 1, 0, 'zhTW', '達莉亞想起那個名字，往地上啐了口口水。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 27683 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (27683, 2, 0, 'zhTW', '巫妖王已經伸出魔爪……肆無忌憚地踐踏著龍族最神聖的領地。他想逼迫我們採取行動。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 27683 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (27683, 3, 0, 'zhTW', '我的時日不多了……我為阿萊克絲塔薩女王奉獻了一生，可死亡終將阻斷我的奉獻之意。紅玉巨龍聖地需要一名新的守護者。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (27683, 3, 0, 'zhTW', '我的時日不多了……我為雅立史卓莎女王奉獻了一生，可死亡終將阻斷我的奉獻之意。紅玉巨龍聖地需要一名新的守護者。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 27683 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (27683, 4, 0, 'zhTW', '謝謝你……謝謝你將我從被詛咒的枷鎖中解救出來。你是個英雄……我知道你還會幹出驚天動地的大事來的。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 27683 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -18437,11 +18437,11 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28179 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28179, 0, 0, 'zhTW', '巫妖王對此次反擊迅速做出了反應，竟然比我預想中的還要快。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28179 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28179, 1, 0, 'zhTW', '達裡安，你覺得我應該怎麼做？');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28179, 1, 0, 'zhTW', '達里安，你覺得我應該怎麼做？');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28179 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28179, 2, 0, 'zhTW', '說話小心點，死亡騎士。你身邊的人都是聖光虔誠的信徒。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28179 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28179, 3, 0, 'zhTW', '我們要光明正大地戰鬥，達裡安。不能為了勝利，做出和天災軍團一樣的行徑。如果我們那麼做了，和怪物又有什麼差別！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28179, 3, 0, 'zhTW', '我們要光明正大地戰鬥，達里安。不能為了勝利，做出和天災軍團一樣的行徑。如果我們那麼做了，和怪物又有什麼差別！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28189 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28189, 0, 0, 'zhTW', '陛下，我們的教徒已經順利地混入聯盟的地盤並取得了一定的控制權。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28189 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -19551,7 +19551,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28859 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28859, 0, 0, 'zhTW', '低等生物，竟敢入侵這裡！可惜你們過度膨脹的勇氣，無法挽救愚蠢所導致的悲慘結局！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28859 AND `GroupID` = 0 AND `ID` = 1 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28859, 0, 1, 'zhTW', '這裡除了藍龍軍團，沒有人可以進來。看來是阿萊克絲塔薩在搞鬼？很好，她實際上是派你們來送死的！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28859, 0, 1, 'zhTW', '這裡除了藍龍軍團，沒有人可以進來。看來是雅立史卓莎在搞鬼？很好，她實際上是派你們來送死的！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28859 AND `GroupID` = 0 AND `ID` = 2 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28859, 0, 2, 'zhTW', '你們以為自己能做些什麼呢？自大地在我的領域橫衝直撞，用毀滅性的魔法來對付……我？');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28859 AND `GroupID` = 0 AND `ID` = 3 AND `Locale` = 'zhTW';
@@ -19595,7 +19595,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28859 AND `GroupID` = 14 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28859, 14, 0, 'zhTW', '我無堅不摧！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28859 AND `GroupID` = 15 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28859, 15, 0, 'zhTW', '阿萊克絲塔薩，又有一個你的孩子倒下了！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28859, 15, 0, 'zhTW', '雅立史卓莎，又有一個你的孩子倒下了！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28859 AND `GroupID` = 15 AND `ID` = 1 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (28859, 15, 1, 'zhTW', '就比小蟲子強了一點點！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 28859 AND `GroupID` = 15 AND `ID` = 2 AND `Locale` = 'zhTW';
@@ -21257,15 +21257,15 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29173 AND `GroupID` = 85 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29173, 85, 0, 'zhTW', '聖光洗禮了禮拜堂嗎？黎明曙光即將重現。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 24 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 24, 0, 'zhTW', '你贏不了的，達裡安！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 24, 0, 'zhTW', '你贏不了的，達里安！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 25 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 25, 0, 'zhTW', '帶到禮拜堂前！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 27 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 27, 0, 'zhTW', '你難道還不明白嗎，孩子？你已經淪為了你父親畢生都在對抗的存在！你已經和阿爾薩斯那個懦夫一樣，甘心墮入黑暗……墮入仇恨……以殺害他人為生！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 28 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 28, 0, 'zhTW', '你的主子知道禮拜堂下面埋藏著什麼。所以他才不敢露面！你和你的死亡騎士就是他派來送死的，達裡安。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 28, 0, 'zhTW', '你的主子知道禮拜堂下面埋藏著什麼。所以他才不敢露面！你和你的死亡騎士就是他派來送死的，達里安。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 29 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 29, 0, 'zhTW', '你現在感受到的，是上千個迷失靈魂的痛苦！他們都是犧牲在你和你的主人劍下的英靈！聖光會把你撕碎的，達裡安！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 29, 0, 'zhTW', '你現在感受到的，是上千個迷失靈魂的痛苦！他們都是犧牲在你和你的主人劍下的英靈！聖光會把你撕碎的，達里安！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 46 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 46, 0, 'zhTW', '阿爾薩斯，你這該死的怪物！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 53 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -21273,7 +21273,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 55 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 55, 0, 'zhTW', '你完了。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 59 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 59, 0, 'zhTW', '站起來，達裡安，你聽著……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 59, 0, 'zhTW', '站起來，達里安，你聽著……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 60 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29175, 60, 0, 'zhTW', '我們見證了一場可怕的悲劇。善良人的鮮血早已將這整片土地染紅！無數高貴而英勇的騎士，為了保衛我們而犧牲在這裡！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29175 AND `GroupID` = 61 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -21347,9 +21347,9 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29227 AND `GroupID` = 31 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29227, 31, 0, 'zhTW', '我的兒子！最讓我自豪的孩子！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29227 AND `GroupID` = 36 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29227, 36, 0, 'zhTW', '沒有什麼能夠阻止我回家，達裡安。我絕不會離開自己的家鄉和親人。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29227, 36, 0, 'zhTW', '沒有什麼能夠阻止我回家，達里安。我絕不會離開自己的家鄉和親人。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29227 AND `GroupID` = 38 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29227, 38, 0, 'zhTW', '達裡安·莫格萊尼，你還沒有到可以握劍的年齡呢，更不用說去跟肆虐洛丹倫的亡靈作戰了！我不能失去你，想都不敢想……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29227, 38, 0, 'zhTW', '達里安·莫格萊尼，你還沒有到可以握劍的年齡呢，更不用說去跟肆虐洛丹倫的亡靈作戰了！我不能失去你，想都不敢想……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29227 AND `GroupID` = 40 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29227, 40, 0, 'zhTW', '我的兒子啊，你總有一天會舉起灰燼使者，憑藉它的力量在這片土地上匡扶正義。我堅信，當那一天終於到來的時候，你會為我們的人民帶來榮光，洛丹倫將因你而變得更加美好。但，我的孩子，不是今天。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29227 AND `GroupID` = 41 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -22089,7 +22089,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29914 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29914, 0, 0, 'zhTW', '雷鑄鐵矮人從殘破的屍體中湧了出來！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29919 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29919, 1, 0, 'zhTW', '黑鋒騎士團指揮官、天災軍團征服者以及暗影拱頂征服者——蘭克拉爾公爵命令你束手就擒。你接不接受這份裁決？');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29919, 1, 0, 'zhTW', '黯刃騎士團指揮官、天災軍團征服者以及暗影拱頂征服者——蘭克拉爾公爵命令你束手就擒。你接不接受這份裁決？');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29919 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (29919, 2, 0, 'zhTW', '怎麼回事？');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 29919 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -22691,7 +22691,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 30411 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (30411, 1, 0, 'zhTW', '我的兄弟！真的是你！我幾乎不敢相信自己的眼睛……你還活著！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 30411 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (30411, 2, 0, 'zhTW', '能再見到你真是太好了，穆拉丁。我聽說你現在登上了王座，真的嗎？銅須家族的人註定是要成為大人物的！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (30411, 2, 0, 'zhTW', '能再見到你真是太好了，穆拉丁。我聽說你現在登上了王座，真的嗎？銅鬚家族的人註定是要成為大人物的！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 30411 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (30411, 3, 0, 'zhTW', '似乎的確如此！你看上去還是那麼強壯。你還記得發生了什麼事嗎，穆拉丁？在你離開的日子裡，命運愈發糟糕了。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 30411 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -22911,7 +22911,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 30899 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (30899, 2, 0, 'zhTW', '警告：安全系統自動修復裝置已被關閉。立刻消除化全部儲存器內容並……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 30899 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (30899, 3, 0, 'zhTW', '系統已上線。生命形態模式已確認。您好，銅須先生。是否需要問詢？');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (30899, 3, 0, 'zhTW', '系統已上線。生命形態模式已確認。您好，銅鬚先生。是否需要問詢？');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 30899 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (30899, 4, 0, 'zhTW', '正在檢索史前資料……文件定位完畢。創世之初，土靈的使命是——');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 30899 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -23179,7 +23179,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31279 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31279, 3, 0, 'zhTW', '請轉告我的兄弟，我還活著。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31283 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31283, 0, 0, 'zhTW', '哎呀，黑鋒騎士團派人來殺我了。我害怕得發抖啊。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31283, 0, 0, 'zhTW', '哎呀，黯刃騎士團派人來殺我了。我害怕得發抖啊。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31283 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31283, 1, 0, 'zhTW', '哈！你們就這點本事啊？就憑這點實力，你們也敢闖進城堡啊。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31283 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -23191,7 +23191,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31283 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31283, 5, 0, 'zhTW', '巫妖王會將……你們……統統……幹掉。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31283 AND `GroupID` = 6 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31283, 6, 0, 'zhTW', '你總算來了，達裡安！我正在猜想你什麼時候會露面呢。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31283, 6, 0, 'zhTW', '你總算來了，達里安！我正在猜想你什麼時候會露面呢。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31290 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31290, 0, 0, 'zhTW', '奧爾巴茲·血毒，就憑你也敢自稱是巫妖王的左膀右臂。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31290 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -23329,7 +23329,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31565 AND `GroupID` = 13 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31565, 13, 0, 'zhTW', '心血……付諸一旦……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31649 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31649, 0, 0, 'zhTW', '夥計們呀！幽暗城的戰鬥已經打響啦！薩爾正在裡面奮戰，你可以進去找他並肩作戰，你也可以在這兒等他。他隨時都會回來。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31649, 0, 0, 'zhTW', '夥計們呀！幽暗城的戰鬥已經打響啦！索爾正在裡面奮戰，你可以進去找他並肩作戰，你也可以在這兒等他。他隨時都會回來。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31737 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31737, 0, 0, 'zhTW', '有埋伏！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31737 AND `GroupID` = 0 AND `ID` = 1 AND `Locale` = 'zhTW';
@@ -23373,7 +23373,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31810 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31810, 2, 0, 'zhTW', '誰也不知道存放在奧杜爾的檔案中隱藏了什麼秘密。我要去那裡揭開真相。再次感謝你的幫助，$n。沒有你的幫助，我現在還在找那把鑰匙呢。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31814 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31814, 0, 0, 'zhTW', '你好，布萊恩·銅須。我是這座神殿的最後一名守衛者。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31814, 0, 0, 'zhTW', '你好，布萊恩·銅鬚。我是這座神殿的最後一名守衛者。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31814 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31814, 1, 0, 'zhTW', '你當之無愧是一名優秀的探險家，你的心中充滿了對知識的渴求。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31814 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -23381,7 +23381,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31814 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31814, 3, 0, 'zhTW', '在戰鬥以及尋找鑰石的過程中，你和你的同伴都證明了自己。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31814 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31814, 4, 0, 'zhTW', '你們的動機是純潔的。鑰石的碎片將得以重新拼合。前往奧杜爾尋找你想要的答案吧，布萊恩·銅須。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31814, 4, 0, 'zhTW', '你們的動機是純潔的。鑰石的碎片將得以重新拼合。前往奧杜爾尋找你想要的答案吧，布萊恩·銅鬚。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31833 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (31833, 0, 0, 'zhTW', '有埋伏！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 31833 AND `GroupID` = 0 AND `ID` = 1 AND `Locale` = 'zhTW';
@@ -23513,7 +23513,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32315 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32315, 0, 0, 'zhTW', '我知道他會幹什麼。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32315 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32315, 1, 0, 'zhTW', '他會對你說：薩爾，領導你的人民。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32315, 1, 0, 'zhTW', '他會對你說：索爾，領導你的人民。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32315 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32315, 2, 0, 'zhTW', '讓我們回家吧，老朋友。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32315 AND `GroupID` = 15 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -23545,13 +23545,13 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32363 AND `GroupID` = 7 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32363, 7, 0, 'zhTW', '庫卡隆，準備傳送到幽暗城。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32364 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32364, 0, 0, 'zhTW', '薩爾，出了什麼事？國王正在備戰……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32364, 0, 0, 'zhTW', '索爾，出了什麼事？國王正在備戰……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32364 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32364, 1, 0, 'zhTW', '我會轉告國王的，薩爾，但是……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32364, 1, 0, 'zhTW', '我會轉告國王的，索爾，但是……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32364 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32364, 2, 0, 'zhTW', '伯瓦爾和他情同手足。國王離開期間，是他維繫著聯盟的團結。在最艱難的日子裡，他是人民的支柱，他監護著安度因，將其視如己出。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32364 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32364, 3, 0, 'zhTW', '我擔心國王剋制不了他心中的怒火，薩爾，我希望我能說服他吧，但是我們必須做好最壞的打算……比如戰爭。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32364, 3, 0, 'zhTW', '我擔心國王剋制不了他心中的怒火，索爾，我希望我能說服他吧，但是我們必須做好最壞的打算……比如戰爭。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32364 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32364, 4, 0, 'zhTW', '再見，酋長。希望下次見面時，我們能夠成為盟友。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32365 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -23615,7 +23615,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32401 AND `GroupID` = 21 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32401, 21, 0, 'zhTW', '我深知，獸人的內心是多麼邪惡。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32401 AND `GroupID` = 22 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32401, 22, 0, 'zhTW', '薩爾！他來了？');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32401, 22, 0, 'zhTW', '索爾！他來了？');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32401 AND `GroupID` = 23 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32401, 23, 0, 'zhTW', '前進！結束這一切吧！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32401 AND `GroupID` = 24 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -23627,7 +23627,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32401 AND `GroupID` = 27 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32401, 27, 0, 'zhTW', '匡扶正義的時刻到了，我要摧毀這個滿是兇手和竊賊的王國！普特雷斯只是個開始。好戲剛剛開始！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32401 AND `GroupID` = 28 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32401, 28, 0, 'zhTW', '這一刻我等了很久，薩爾。每當我被扔進你那該死的獸人競技場……每當我殺死一隻和你一樣可憎的綠皮怪物……我都只有一個念頭。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32401, 28, 0, 'zhTW', '這一刻我等了很久，索爾。每當我被扔進你那該死的獸人競技場……每當我殺死一隻和你一樣可憎的綠皮怪物……我都只有一個念頭。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32401 AND `GroupID` = 29 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (32401, 29, 0, 'zhTW', '如果沒有你和你那扭曲的部落，世界將多麼美好……酋長，你們要完蛋了。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 32401 AND `GroupID` = 30 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -25785,7 +25785,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35320 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35320, 0, 0, 'zhTW', '謝謝，這是我唯一能做的。我們需要同心協力。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35320 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35320, 1, 0, 'zhTW', '我相信薩爾會管住他的部下……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35320, 1, 0, 'zhTW', '我相信索爾會管住他的部下……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35321 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35321, 0, 0, 'zhTW', '提里奧。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35321 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -25795,7 +25795,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35321 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35321, 3, 0, 'zhTW', '但如果我出席這些比賽能換來你在戰爭中的協助。那我暫時，會留下來。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35361 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35361, 0, 0, 'zhTW', '歡迎你們，薩爾酋長，地獄咆哮統帥。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35361, 0, 0, 'zhTW', '歡迎你們，索爾酋長，地獄咆哮統帥。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35361 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35361, 1, 0, 'zhTW', '我希望你能明白現在的狀況，加爾魯什。如果再這樣互相爭鬥，就休想戰勝天災軍團。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35361 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -25841,7 +25841,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35372 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35372, 1, 0, 'zhTW', '揮舞粗頭棒子有什麼榮譽可言？這是在浪費時間。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35372 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35372, 2, 0, 'zhTW', '別算上我，薩爾。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35372, 2, 0, 'zhTW', '別算上我，索爾。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35372 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35372, 3, 0, 'zhTW', '一派胡言。部落殺死那隻亡靈易如反掌，不需要你，更別說那個傲慢的國王。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35372 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -25877,7 +25877,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35476 AND `GroupID` = 0 AND `ID` = 1 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35476, 0, 1, 'zhTW', '很快，全世界都將知道威爾弗雷德的名字！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35501 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35501, 0, 0, 'zhTW', '部落的酋長薩爾和督軍加爾魯什·地獄咆哮已經來到比武場！讓路！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35501, 0, 0, 'zhTW', '部落的酋長索爾和督軍加爾魯什·地獄咆哮已經來到比武場！讓路！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35501 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (35501, 1, 0, 'zhTW', '大領主提里奧·弗丁已經來到臺上，要向聚集在比武場上的人們講話！來聽他的演講吧！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 35501 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -27341,7 +27341,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 37592 AND `GroupID` = 21 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (37592, 21, 0, 'zhTW', '今天我們不僅見證了你們的勇猛，還見證了聯盟和部落拋開仇怨，精誠團結的力量。有了這種力量，即使是巫妖王也會敗倒在你們腳下。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 37596 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (37596, 0, 0, 'zhTW', '銀色北伐軍和黑鋒騎士團已經攻入冰冠城堡大門，正準備向天災軍團發動總攻。我們的任務雖小，但同樣重要。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (37596, 0, 0, 'zhTW', '銀色北伐軍和黯刃騎士團已經攻入冰冠城堡大門，正準備向天災軍團發動總攻。我們的任務雖小，但同樣重要。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 37596 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (37596, 1, 0, 'zhTW', '當巫妖王的注意力被吸引到前門的時候，我們就從側翼潛入，尋找能幫助我們的重要情報，徹底除掉巫妖王。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 37596 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -27355,7 +27355,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 37597 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (37597, 0, 0, 'zhTW', '感謝聖光，你安然無恙！為了消滅巫妖王和天災軍團，我們還有很多事要做。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 37597 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (37597, 1, 0, 'zhTW', '銀色北伐軍和黑鋒騎士團的盟軍已經打破冰冠堡壘的大門，他們正努力在城堡中安置一個前哨站。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (37597, 1, 0, 'zhTW', '銀色北伐軍和黯刃騎士團的盟軍已經打破冰冠堡壘的大門，他們正努力在城堡中安置一個前哨站。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 37597 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (37597, 2, 0, 'zhTW', '我們在這些廳堂中的發現將決定他們的成敗。雖然任務危險重重，但我們必須堅持！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 37597 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -27793,17 +27793,17 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38609 AND `GroupID` = 6 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38609, 6, 0, 'zhTW', '我的思緒很亂。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38610 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 0, 0, 'zhTW', '達裡安，我的孩子。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 0, 0, 'zhTW', '達里安，我的孩子。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38610 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 1, 0, 'zhTW', '終於，我能夠重新見到你了。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38610 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 2, 0, 'zhTW', '巫妖王一直在折磨我，達裡安。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 2, 0, 'zhTW', '巫妖王一直在折磨我，達里安。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38610 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 3, 0, 'zhTW', '無休無止，他想要擊潰我的意志，讓我屈服，成為劍中的冤魂……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38610 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 4, 0, 'zhTW', '最後，戰爭讓他無暇分身，他才放棄了我。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38610 AND `GroupID` = 5 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 5, 0, 'zhTW', '有個回憶，是我的力量，達裡安……是讓我不被奴役的力量……');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 5, 0, 'zhTW', '有個回憶，是我的力量，達里安……是讓我不被奴役的力量……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38610 AND `GroupID` = 6 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (38610, 6, 0, 'zhTW', '那就是你的犧牲，我的兒子，再度拯救我於萬劫不復。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 38995 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -27873,7 +27873,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 39712 AND `GroupID` = 7 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (39712, 7, 0, 'zhTW', '……我們終於奪回了主權！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 39746 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (39746, 0, 0, 'zhTW', '阿萊克絲塔薩選對了盟友……很可惜，你們都將死在這裡！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (39746, 0, 0, 'zhTW', '雅立史卓莎選對了盟友……很可惜，你們都將死在這裡！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 39746 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (39746, 1, 0, 'zhTW', '不要心存僥倖！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 39746 AND `GroupID` = 1 AND `ID` = 1 AND `Locale` = 'zhTW';
