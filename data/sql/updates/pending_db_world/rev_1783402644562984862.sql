@@ -1,0 +1,43 @@
+-- Fill missing zhTW item_template_locale rows for genuine player-facing items
+-- (translation-memory reuse plus manual translation); excludes the overwhelming
+-- majority of the original gap, which was deprecated/QA/monster-only/test items
+DELETE FROM `item_template_locale` WHERE `ID` = 16334 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (16334,'zhTW','中士的徽章',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 16340 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (16340,'zhTW','上士的斗篷',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 20880 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (20880,'zhTW','黃金代幣','這是用純粹的墓穴邪惡與金錢完美結合所鑄造的強大代幣。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 32911 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (32911,'zhTW','空的啤酒節酒杯',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 33147 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (33147,'zhTW','公式:附魔披風 - 狡詐','​教你學會如何永久地為一件披風附魔，使其降低2%所有攻擊與法術造成的威脅值。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34735 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34735,'zhTW','北裂境肉塊01',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34737 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34737,'zhTW','北裂境肉塊03',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34738 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34738,'zhTW','北裂境肉塊04',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34739 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34739,'zhTW','北裂境肉塊05',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34740 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34740,'zhTW','北裂境肉塊06',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34741 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34741,'zhTW','北裂境肉塊07',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34742 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34742,'zhTW','北裂境肉塊08',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34743 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34743,'zhTW','北裂境肉塊09',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34744 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34744,'zhTW','北裂境肉塊10',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34745 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34745,'zhTW','北裂境肉塊11',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 34746 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (34746,'zhTW','北裂境肉塊12',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 41750 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (41750,'zhTW','布倫希爾達魚叉',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 41753 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (41753,'zhTW','布倫希爾達巨斧',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 42474 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (42474,'zhTW','魔爆術雕紋','雖然這個雕紋似乎因為受到嚴重燒毀而不再含有任何魔力，但是商人或許看不出來其中差異...',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 44852 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (44852,'zhTW','玉米粉',NULL,0);
