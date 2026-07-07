@@ -511,7 +511,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 266 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (266,'zhTW','哦，沒錯，我記得這本書。這書的主人租了幾天房間，每晚都趴在吧檯上寫東西。$B$B他離開鎮子的時候顯得很匆忙，嘀咕著說有什麼東西正在追殺他……我最後一次見他的時候，他正在往鎮子西邊走，想要去找個新的藏身之地。$B$B往西邊走的話，他能找到的第一個藏身之地就是烏鴉嶺……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 267 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (267,'zhTW','我很滿意，$N。你保衛了我們矮人的領土，給我們幫了大忙。國王麥格尼·銅須陛下會為你驕傲的！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (267,'zhTW','我很滿意，$N。你保衛了我們矮人的領土，給我們幫了大忙。國王麥格尼·銅鬚陛下會為你驕傲的！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 268 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (268,'zhTW','這本日記解開了許多謎團，也讓我走上和黑騎兵鬥爭的道路！我在夜色鎮上見過這些騎兵，還看見他們和荒棄鬼屋裡的巫師摩本特·費爾說話。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 269 AND `locale` = 'zhTW';
@@ -691,7 +691,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 360 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (360,'zhTW','竟然有天災軍團計程車兵透過了防波堤，這聽起來真令人擔憂。巫妖王與他的嘍羅們正在不停地騷擾著我們的領土。$B$B但我們絕不能放棄！不能再讓天災軍團得逞了！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 361 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (361,'zhTW','啊……我可憐的薩爾曼！我求過他好幾次了，希望他能和我與我的父親一起離開阿加曼德磨坊，但他對他的系列實在是太忠誠了！我就知道會是這樣！我詛咒這該死的瘟疫，詛咒這該死的天災軍團！$B$B<伊維特的情緒逐漸穩定了下來……>$B$B但只有弱者才會後悔。身為一個被遺忘者，我已經有了新的目標，但我不再會去愛戀任何人了。感謝你把這封信送到我這裡，讓我知道我的舊愛究竟發生了些什麼事。$B$B但那樣的生活已經結束了，永遠結束了。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (361,'zhTW','啊……我可憐的索爾曼！我求過他好幾次了，希望他能和我與我的父親一起離開阿加曼德磨坊，但他對他的系列實在是太忠誠了！我就知道會是這樣！我詛咒這該死的瘟疫，詛咒這該死的天災軍團！$B$B<伊維特的情緒逐漸穩定了下來……>$B$B但只有弱者才會後悔。身為一個被遺忘者，我已經有了新的目標，但我不再會去愛戀任何人了。感謝你把這封信送到我這裡，讓我知道我的舊愛究竟發生了些什麼事。$B$B但那樣的生活已經結束了，永遠結束了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 362 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (362,'zhTW','謝謝你。我會把代弗林的遺骨“安葬”在我的壁爐裡。他系列的其它成員隨後也將被一一“安葬”。$B$B如今只有將阿加曼德系列徹底消滅，才能讓我冰冷的心略略感到溫暖。瘟疫到來時，他們曾背叛了我和我的系列，現在我發誓，就算掘地三尺也要把他們挖出來鞭屍！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 363 AND `locale` = 'zhTW';
@@ -881,7 +881,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 457 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (457,'zhTW','你很好的詮釋了對大自然的貢獻，$N。像你這樣年輕的$C定能前程似錦。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 458 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (458,'zhTW','我知道你在找我，年輕的$r。麥利薩爾派你來證明了他的睿智。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (458,'zhTW','我知道你在找我，年輕的$r。麥利索爾派你來證明了他的睿智。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 459 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (459,'zhTW','你為幽影谷中的生靈所做的一切都值得嘉獎，$N$B$B儘管如此，我還是高興不起來，因為你證實了我所擔憂的事。如果劣魔是因為被魔苔影響而變成這樣的話，熊怪們會變成什麼樣子也是可以想象的了。$B$B你必須到多蘭納爾去，能幹的$C，你得去找知識淵博的德魯伊阿斯瑞達斯·熊皮。他和我們一樣關心森林的安寧。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 460 AND `locale` = 'zhTW';
@@ -1271,7 +1271,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 654 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (654,'zhTW','好吧，給我一點時間把能量源弄下來。然後隨便你怎麼處理它也不用再擔心會遺失資料了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 655 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (655,'zhTW','啊，你是說戈莫爾啊。沒錯，看來他依然無法從對毀滅之錘戰死的悲傷中恢復過來。$B$B當薩爾和奧格瑞姆為解放這裡作戰的時候，戈莫爾正是這裡的俘虜。但當大地開始震動，我們向外逃離這裡的時候，他卻落單了。他漫無目的、毫無方向地一個人獨自遊蕩了很多年，直到我們來到落錘村並在這裡建立了屬於自己的家園。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (655,'zhTW','啊，你是說戈莫爾啊。沒錯，看來他依然無法從對毀滅之錘戰死的悲傷中恢復過來。$B$B當索爾和奧格瑞姆為解放這裡作戰的時候，戈莫爾正是這裡的俘虜。但當大地開始震動，我們向外逃離這裡的時候，他卻落單了。他漫無目的、毫無方向地一個人獨自遊蕩了很多年，直到我們來到落錘村並在這裡建立了屬於自己的家園。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 656 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (656,'zhTW','你把怪異鐐銬放置在水晶裂片周圍。從地下很深的地方傳來可怕的尖叫聲，緊接著傳來的是一聲怒吼。$B$B密斯賴爾水晶裂片再也沒有那種曾經有過的溫暖安適的感覺了。現在，它們越來越猛烈地震動著……就像是有一種潛藏在地下的怨怒即將衝破地表一樣。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 657 AND `locale` = 'zhTW';
@@ -1603,7 +1603,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 830 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (830,'zhTW','這不是什麼好兆頭。你把這個訊息告訴我是個很明智的選擇。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 831 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (831,'zhTW','我多次提醒大酋長不要相信人類，但個人的驕傲現在似乎不太重要。$B$B年輕的$C，你對部落的效忠是令人尊敬的。$B$B不過請你原諒我，我必須立刻就這個問題向薩爾提出忠告……',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (831,'zhTW','我多次提醒大酋長不要相信人類，但個人的驕傲現在似乎不太重要。$B$B年輕的$C，你對部落的效忠是令人尊敬的。$B$B不過請你原諒我，我必須立刻就這個問題向索爾提出忠告……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 832 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (832,'zhTW','<他仔細地檢查著燃影之眼。>$B$B有意思。你聽到的那個聲音提到我的名字？我為大酋長和部落獵殺敵人的事情是眾所周知的，不過奇怪的是……他為什麼會特別提到我。此外持有這個飾物的燃刃祭司的名字怎麼和我的名字如此相像？$B$B我得研究一下這個飾物，看看它到底隱藏著什麼秘密。$B$B謝謝你把這個東西交給我，$N。你為我們的同胞作出了巨大的貢獻。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 833 AND `locale` = 'zhTW';
@@ -1623,7 +1623,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 841 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (841,'zhTW','很好，這是你要的能量源。我強烈建議你這次要珍惜它那有限的使用時間，當然，除非你願意花時間再去找十個水袋來給我。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 842 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (842,'zhTW','好吧，$N。你想證明你對部落的價值？這裡有一大堆事情可以讓你做，仔細聽好然後按照我說的去做。$B$B$g我知道你在想什麼，別以為我會容忍你的傲慢。就連薩爾大人都說過，部落的女性和你們男性的地位是平等的。你若是再敢對我有一丁點的不敬，我就讓你吃不完兜著走。:很高興見到你，如果薩爾知道有越來越多像你我一樣出色的女性正在為建設貧瘠之地出力，他一定會很高興的。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (842,'zhTW','好吧，$N。你想證明你對部落的價值？這裡有一大堆事情可以讓你做，仔細聽好然後按照我說的去做。$B$B$g我知道你在想什麼，別以為我會容忍你的傲慢。就連索爾大人都說過，部落的女性和你們男性的地位是平等的。你若是再敢對我有一丁點的不敬，我就讓你吃不完兜著走。:很高興見到你，如果索爾知道有越來越多像你我一樣出色的女性正在為建設貧瘠之地出力，他一定會很高興的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 843 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (843,'zhTW','卡茲戈姆罪有應得，我對這個白痴的下場不會有絲毫的同情。他根本不屬於這片土地。$B$B希望他的死能警告所有那些對我們的生活構成威脅的人。$B$B現在，讓我來研究一下這個矮人的日記……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 844 AND `locale` = 'zhTW';
@@ -1801,7 +1801,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 933 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (933,'zhTW','怒風大師從未回來過，德魯伊們已經陷入了混亂，至今我們仍不知他到底發生了什麼事。瑪法里奧失蹤，大德魯伊範達爾·鹿盔接過了德魯伊的領導權，他使黑海岸的古樹議會相信現在是重建輝煌和重獲不朽的時候了。$B$B經議會的批准，範達爾和那些最強大的德魯伊們在泰達希爾種下了新的世界之樹。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 934 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (934,'zhTW','在神諭之樹面前……你會感覺到自己幾乎能把智慧抓在手裡。讓我繼續說下去……$B$B隨著泰達希爾的成長，大德魯伊去祈求巨龍的祝福，因為在古代，那些巨龍的地位遠在諾達希爾之上。但是時間之王諾茲多姆拒絕祝福泰達希爾，反而斥責德魯伊的傲慢。和諾茲多姆一樣，阿萊克絲塔薩也拒絕了德魯伊們的要求，但是沒有她的祝福，泰達希爾的成長就會受到不良的影響，後果難以預料……',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (934,'zhTW','在神諭之樹面前……你會感覺到自己幾乎能把智慧抓在手裡。讓我繼續說下去……$B$B隨著泰達希爾的成長，大德魯伊去祈求巨龍的祝福，因為在古代，那些巨龍的地位遠在諾達希爾之上。但是時間之王諾茲多姆拒絕祝福泰達希爾，反而斥責德魯伊的傲慢。和諾茲多姆一樣，雅立史卓莎也拒絕了德魯伊們的要求，但是沒有她的祝福，泰達希爾的成長就會受到不良的影響，後果難以預料……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 935 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (935,'zhTW','啊，對，這正是我需要的水。特納隆巴科瑞薩斯一定花了不少時間來找這些水……但是似乎沒能找到一個最可靠的信差……嗯。$B$B不管怎麼樣，我終於能繼續我的工作了。泰達希爾所面臨的諸多問題全都壓在我的肩上，我希望能儘快把它們都解決掉。$B$B拿著這個，它應該會對你有些用處的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 936 AND `locale` = 'zhTW';
@@ -2553,7 +2553,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 1432 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (1432,'zhTW','你好，$C。你帶來了奧格瑪的訊息，這真好。$B$B這裡惡魔的腐臭氣息足以蓋過半人馬的糞味，那群馬人宣稱這片土地是他們的，但是僅僅以他們那一點可憐的影響力，這個地區並不完全在他們的控制範圍之內，如果我們不對此有所行動的話，他們定會遭到滅頂之災。$B$B雖然間接地幫助半人馬對我來說不算是個樂事，但這對部落有好處，所以我會對大酋長盡責，即使這種責任意味著我正在給部落裡的術士們幫忙。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 1433 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (1433,'zhTW','啊，好極了！感謝來自$r的幫助。$B$B我的名字是莫林。我是奉科爾丹以及年輕的大酋長薩爾之命來到這裡的。能夠幫助年輕的領袖抵抗威脅著部落的邪惡勢力，那是我一生的夙願。$B$B來，靠近點，$C。我將會向你說明一下我的計劃，關於如何將火刃氏族這顆毒瘤除掉的計劃。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (1433,'zhTW','啊，好極了！感謝來自$r的幫助。$B$B我的名字是莫林。我是奉科爾丹以及年輕的大酋長索爾之命來到這裡的。能夠幫助年輕的領袖抵抗威脅著部落的邪惡勢力，那是我一生的夙願。$B$B來，靠近點，$C。我將會向你說明一下我的計劃，關於如何將火刃氏族這顆毒瘤除掉的計劃。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 1434 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (1434,'zhTW','幹得好，$C。你向大家展示了你的榮耀和奉獻精神。$B$B當我們在淒涼之地的任務告一段落時，大酋長將會知道是你在這裡幫助我們完成了任務，是你幫助他實現了他的計劃。$B$B感謝你。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 1435 AND `locale` = 'zhTW';
@@ -3201,7 +3201,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2379 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2379,'zhTW','也許是贊杜沙錯了，贊杜沙道歉。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2380 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2380,'zhTW','薩爾想要改變部落的傳統，我們碎手氏族必須對此保持警覺，這一點很重要。從人數上來說，我們很難和薩爾的勢力相抗衡，所以我們必須精於隱秘行動和欺詐。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2380,'zhTW','索爾想要改變部落的傳統，我們碎手氏族必須對此保持警覺，這一點很重要。從人數上來說，我們很難和索爾的勢力相抗衡，所以我們必須精於隱秘行動和欺詐。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2381 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2381,'zhTW','不可思議！這絕不可能！太讓人驚奇了！你真是個天才，$N。你真是個幸運星！$B$B這個是我給你的報酬，我相信它對你比對我更有用。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2382 AND `locale` = 'zhTW';
@@ -3287,7 +3287,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2609 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2609,'zhTW','我在做什麼？我看起來像是在做什麼？我當然是在為你的伊提斯綜合症研究治療方法！現在別對我發火，$N！$B$B再等幾秒鐘。好了！把這個噴上，嗯，噴在你身上味道不錯，你會煥然一新的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2621 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2621,'zhTW','薩爾近衛軍……我還清清楚楚地記得那可怕的一幕。$B$B<指揮官盧爾格搖了搖頭。>$B$B這個軍團經歷了可怕的遭遇。部落也因此失去了最好的一批士兵。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2621,'zhTW','索爾近衛軍……我還清清楚楚地記得那可怕的一幕。$B$B<指揮官盧爾格搖了搖頭。>$B$B這個軍團經歷了可怕的遭遇。部落也因此失去了最好的一批士兵。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2622 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2622,'zhTW','沼……沼澤……空談者……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2623 AND `locale` = 'zhTW';
@@ -3337,7 +3337,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2755 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2755,'zhTW','<奧羅克喘著氣說。>',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2756 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2756,'zhTW','$N，看來你不過是大酋長手下又一個容易自足的傢伙，太讓人失望了。$B$B我多麼希望能在戰場上光榮地死去，可是現在我卻得困在這裡，聽從薩爾的命令去訓練新手！仔細看好了，孩子！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2756,'zhTW','$N，看來你不過是大酋長手下又一個容易自足的傢伙，太讓人失望了。$B$B我多麼希望能在戰場上光榮地死去，可是現在我卻得困在這裡，聽從索爾的命令去訓練新手！仔細看好了，孩子！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2757 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2757,'zhTW','我們終於找到一個值得秘銀會信任的$r了！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2758 AND `locale` = 'zhTW';
@@ -3445,7 +3445,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2870 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2870,'zhTW','幹得好，$N！沙爾札魯領主的死能讓那些納迦在短期內變得像無頭蒼蠅一樣，他們現在所能造成的威脅已經基本在我們能控制的範圍內了。$B$B這是取自要塞庫藏的獎金——這些都是你自己賺來的。你在羽月要塞將永遠受到我們的歡迎，我的朋友。$B$B在你離開之前，我還有一件事情想要請你幫忙……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2871 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2871,'zhTW','真有趣……你說這來自索蘭薩爾廢墟？好，拉託說得對，我得看一下。它不像是屬於那個廢墟的東西，好像也不是納迦的設計……太奇怪了。$B$B我要花點時間研究這東西。當我結束對它的研究時，或許你也可以幫忙進行後續的工作。$B$B來，從這些東西裡挑一件吧，我希望它們對你有用！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2871,'zhTW','真有趣……你說這來自索蘭索爾廢墟？好，拉託說得對，我得看一下。它不像是屬於那個廢墟的東西，好像也不是納迦的設計……太奇怪了。$B$B我要花點時間研究這東西。當我結束對它的研究時，或許你也可以幫忙進行後續的工作。$B$B來，從這些東西裡挑一件吧，我希望它們對你有用！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2872 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (2872,'zhTW','啊，你和麥克基雷談過了？$B$B事實並不是他想象的那樣！我當然不是不想給他嚐嚐熱砂港朗姆酒……$B$B但是我現在一瓶朗姆酒都沒有了！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 2873 AND `locale` = 'zhTW';
@@ -3637,7 +3637,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 3083 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (3083,'zhTW','在你足夠成熟之前，還是得由我來負責訓練你。一旦你覺得準備好了的時候就來找我，然後我就可以看看你接下來要接受什麼樣的訓練。在此之前，你必須訓練你的技能，把它們磨練得像刀刃那樣鋒利。你永遠都不知道自己會靠什麼技能活下來，即使是最不起眼的技能也會非常有用。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 3084 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (3084,'zhTW','你也許知道，元素賜予我們力量。火，土，水，氣——這些都是我們的工具。$B$B我們的力量來自於祖先的靈魂，我們引導著我們的同胞。就像薩爾對部落那樣，我們對於這些村莊和城鎮也肩負著重大的責任。他們需要我們的智慧和保護。為了作好充分的準備，你必須經常接受訓練。等你覺得自己變得更加強大時就來找我，我將把我所會的都教給你。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (3084,'zhTW','你也許知道，元素賜予我們力量。火，土，水，氣——這些都是我們的工具。$B$B我們的力量來自於祖先的靈魂，我們引導著我們的同胞。就像索爾對部落那樣，我們對於這些村莊和城鎮也肩負著重大的責任。他們需要我們的智慧和保護。為了作好充分的準備，你必須經常接受訓練。等你覺得自己變得更加強大時就來找我，我將把我所會的都教給你。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 3085 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (3085,'zhTW','在你對自己進行試煉的時候，會發現對自己靈魂的掌控能力越來越強了——由此你也能做更偉大的事情……這裡就需要肯傑我的幫忙了。等你感覺準備好了，就來和肯傑談談。如果你的靈魂也準備好了，我們就可以教你更有用的技能……不過一定要你的靈魂也準備好。$B$B現在去吧，和谷裡其它人也談談。晚些時候再來找我。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 3086 AND `locale` = 'zhTW';
@@ -3649,7 +3649,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 3089 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (3089,'zhTW','你將成為我們祖先的代言人，你將擁有元素的力量，撕裂敵人對你來說輕而易舉，而為盟友療傷也不在話下。面對挑戰的時候你要記住這些，要經常回來見我，我會留在這裡，等你準備好的時候，我就會教你新的法術，並引導你走在正確的道路上。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 3090 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (3090,'zhTW','現在你也加入了我們的行列。別誤會，$N。你有著令許多人嫉妒的力量，但這不意味著你會被很輕易地接受。薩爾允許我們進入奧格瑪是因為我們仍是他的族人——他不能拒絕我們，否則我們會變得像那些曾經奴役過他的人類一樣悲慘。我要說的是，你要萬事小心。你也許可以變得很強大，但如果你很愚蠢，那麼你跟死了沒什麼兩樣。$B$B如果你要學習新的法術，那麼就來找我吧。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (3090,'zhTW','現在你也加入了我們的行列。別誤會，$N。你有著令許多人嫉妒的力量，但這不意味著你會被很輕易地接受。索爾允許我們進入奧格瑪是因為我們仍是他的族人——他不能拒絕我們，否則我們會變得像那些曾經奴役過他的人類一樣悲慘。我要說的是，你要萬事小心。你也許可以變得很強大，但如果你很愚蠢，那麼你跟死了沒什麼兩樣。$B$B如果你要學習新的法術，那麼就來找我吧。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 3091 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (3091,'zhTW','我們都在部族中扮演著自己的角色，我們都需要透過相同的試煉和祭祀儀式來成長。絕對不要驕傲自滿。$B$B我在這裡訓練那些追尋榮譽的年輕戰士，當你感到自己準備好了之後就回來找我，讓我對你進行進一步的訓練。整個部族都將祝福你，$N。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 3092 AND `locale` = 'zhTW';
@@ -4107,11 +4107,11 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4003 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4003,'zhTW','看看你都幹了些什麼！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4004 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4004,'zhTW','<薩爾對你帶給他的訊息感到非常吃驚。>$B$B一個新的威脅正在醞釀當中。麥格尼日漸老邁，看來那個未出生的黑鐵矮人真的要成為鐵爐堡的統治者了。$B$B你完成了我給你的任務，你應該得到獎勵。$B$B你現在可以走了，$N！我必須跟希爾瓦娜斯和凱恩交換一下意見。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4004,'zhTW','<索爾對你帶給他的訊息感到非常吃驚。>$B$B一個新的威脅正在醞釀當中。麥格尼日漸老邁，看來那個未出生的黑鐵矮人真的要成為鐵爐堡的統治者了。$B$B你完成了我給你的任務，你應該得到獎勵。$B$B你現在可以走了，$N！我必須跟希爾瓦娜斯和凱恩交換一下意見。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4005 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4005,'zhTW','你是說火焰使者……？$B$B是的，我知道在這個環形山中部燒焦的那片土地上有一個強大的元素生物。我們都儘量和它保持距離，從來都沒人能擊破環繞在它周圍的光環。許多想要挑戰它的人，都從那條岩石路上被推了下來。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4021 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4021,'zhTW','你成功了！你打敗了科卡爾部族！$B$B我會把這個訊息告訴薩爾的，$N。$B$B你證明了自己的價值，部落為你而驕傲。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4021,'zhTW','你成功了！你打敗了科卡爾部族！$B$B我會把這個訊息告訴索爾的，$N。$B$B你證明了自己的價值，部落為你而驕傲。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4022 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4022,'zhTW','<塞勒斯檢視了一下那塊龍皮。>$B$B看來你還不是一文不值的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4023 AND `locale` = 'zhTW';
@@ -4329,9 +4329,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4361 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4361,'zhTW','<麥格尼憤怒地用他的拳頭砸向王座的扶手。>',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4362 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4362,'zhTW','銅須公主為達格蘭·索瑞森大帝的死而放聲痛哭。>$B$B為什麼？',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4362,'zhTW','銅鬚公主為達格蘭·索瑞森大帝的死而放聲痛哭。>$B$B為什麼？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4363 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4363,'zhTW','<國王麥格尼·銅須顯然非常失望。>$B$B看來即使索瑞森死了，他也獲得了勝利。$B$B你可以走了，$N。在你離開之前，別忘了從皇家寶庫裡選擇你應得的獎勵。$B$B<麥格尼·銅須癱倒在王座上，陷入了沉思。>',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4363,'zhTW','<國王麥格尼·銅鬚顯然非常失望。>$B$B看來即使索瑞森死了，他也獲得了勝利。$B$B你可以走了，$N。在你離開之前，別忘了從皇家寶庫裡選擇你應得的獎勵。$B$B<麥格尼·銅鬚癱倒在王座上，陷入了沉思。>',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4381 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4381,'zhTW','你仔細地排列著水晶陣列，調整著不同顏色水晶的位置。當你把最後一塊水晶放上去之後，一陣強光將這些水晶熔為一體。$B$B你得到了一塊新的水晶。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4382 AND `locale` = 'zhTW';
@@ -4437,7 +4437,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4508 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4508,'zhTW','我很高興你把這個訊息帶給我，但是我不確定這到底會給我們帶來什麼好處。聯盟忽視了一切部落之外的威脅，即使是我們在達納蘇斯的領導者們也不會關心這個新的威脅。像範達爾·鹿盔這樣的蠢才會認為異種蠍並不像我所說的那樣可怕，他的無知只有他的自大可以與之相提並論！$B$B你已經親眼目睹了這個威脅，$N。我們必須繼續投入擊敗異種蠍的行動！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4509 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4509,'zhTW','我很高興你把這個訊息帶給我，但是我不確定這到底會為我們帶來什麼好處。部落忽視了一切聯盟之外的威脅，如果薩爾看到現在這種嚴重的事實的話，也許他會採取一些行動，但是他被各種雜務困擾著，根本看不到這些。那些笨蛋認為我們在擔心著想象中的威脅，而他們所關心的才是我們真正面臨的危機！$B$B你已經親眼目睹這個威脅，$N。我們必須繼續投入擊敗異種蠍的行動！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4509,'zhTW','我很高興你把這個訊息帶給我，但是我不確定這到底會為我們帶來什麼好處。部落忽視了一切聯盟之外的威脅，如果索爾看到現在這種嚴重的事實的話，也許他會採取一些行動，但是他被各種雜務困擾著，根本看不到這些。那些笨蛋認為我們在擔心著想象中的威脅，而他們所關心的才是我們真正面臨的危機！$B$B你已經親眼目睹這個威脅，$N。我們必須繼續投入擊敗異種蠍的行動！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4510 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4510,'zhTW','這張贈券授權我從格拉希娜·靈風的帳戶中取出一件東西送給你。看來我要恭喜你了！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4511 AND `locale` = 'zhTW';
@@ -4633,7 +4633,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4921 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4921,'zhTW','我明白。謝謝你，$C。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4941 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4941,'zhTW','<薩爾聽到你帶來的訊息之後顯得有些沮喪。>',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4941,'zhTW','<索爾聽到你帶來的訊息之後顯得有些沮喪。>',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4961 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (4961,'zhTW','幹得好，$N！你讓那個惡魔吃了苦頭，看來短時間內它是不會忘了你所展現出的強大力量和技巧的，現在你可以帶著淨化過的寶珠回去找梅納拉，然後好好地利用這顆寶珠。$B$B祝你好運，$C。也許以後我們還能再見面的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 4962 AND `locale` = 'zhTW';
@@ -5139,17 +5139,17 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5627 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5627,'zhTW','你已經證明了自己的價值並引起了艾露恩的注意，$N。如果你感覺自己已經準備好了，那麼我就將傳授你一項艾露尼賜予我們暗夜精靈的獨特法術。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5628 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5628,'zhTW','太好了，你終於回家了，$N。每當泰蘭德和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5628,'zhTW','太好了，你終於回家了，$N。每當泰蘭妲和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5629 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5629,'zhTW','太好了，你終於回家了，$N。每當泰蘭德和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5629,'zhTW','太好了，你終於回家了，$N。每當泰蘭妲和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5630 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5630,'zhTW','太好了，你終於回家了，$N。每當泰蘭德和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5630,'zhTW','太好了，你終於回家了，$N。每當泰蘭妲和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5631 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5631,'zhTW','太好了，你終於回家了，$N。每當泰蘭德和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5631,'zhTW','太好了，你終於回家了，$N。每當泰蘭妲和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5632 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5632,'zhTW','太好了，你終於回家了，$N。每當泰蘭德和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5632,'zhTW','太好了，你終於回家了，$N。每當泰蘭妲和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5633 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5633,'zhTW','太好了，你終於回家了，$N。每當泰蘭德和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5633,'zhTW','太好了，你終於回家了，$N。每當泰蘭妲和我看到自己親手訓練的那些牧師走向未知的世界並最終安全返回的時候，我們總是非常高興。你過得怎麼樣？艾露恩有沒有在旅途中護佑你？也許在我們完成了手邊的事情之後，你可以告訴我更多你在旅途中的所見所聞。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5634 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5634,'zhTW','你以聖光之名做出的貢獻已經成為了冒險者們的榜樣。請你接受這個，作為我們對你的感謝。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5635 AND `locale` = 'zhTW';
@@ -5301,7 +5301,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5728 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5728,'zhTW','很高興你回來了，$N。我的眼線已經告訴我了，由於首領被殺，奧格瑪地下的洞穴之中亂成一團。甚至有報告稱尼爾魯陷入了極度的驚恐和不安。我們這一步走得非常成功，即使是這樣的小勝利，也讓我感到了喜悅。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5729 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5729,'zhTW','什麼？！哦，$C……我向你道歉。我的憤怒快可以與一頭狂暴的科多獸相提並論了……但這也許是我的錯。在派遣他們轉至怒焰裂谷之前，我就應該瞭解他們惹禍上身的可能性。似乎巴札蘭和耶戈什都是在毫無防備的情況下被薩爾的手下殺死的。他們死得真不是時候，但是如今已經於事無補了。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5729,'zhTW','什麼？！哦，$C……我向你道歉。我的憤怒快可以與一頭狂暴的科多獸相提並論了……但這也許是我的錯。在派遣他們轉至怒焰裂谷之前，我就應該瞭解他們惹禍上身的可能性。似乎巴札蘭和耶戈什都是在毫無防備的情況下被索爾的手下殺死的。他們死得真不是時候，但是如今已經於事無補了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5730 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5730,'zhTW','梣谷？嗯，我沒有聽說過梣谷有議會或者火刃氏族的勢力存在。我的探子會去調查的，$N。你乾得很出色。$B$B至於現在，去好好休息吧，然後繼續執行其它的任務。不久之後我會再次召喚你。$B$B為了部落的榮耀！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5741 AND `locale` = 'zhTW';
@@ -5309,7 +5309,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5742 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5742,'zhTW','弗丁的救贖是一個困難的任務，你準備好了嗎？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5761 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5761,'zhTW','啊！你成功了！薩爾會很滿意的。$B$B我會好好看管這顆心臟。$B$B慶祝你的勝利吧，我將把你的名字告知薩爾。$B$B感謝你的幫助，$C。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5761,'zhTW','啊！你成功了！索爾會很滿意的。$B$B我會好好看管這顆心臟。$B$B慶祝你的勝利吧，我將把你的名字告知索爾。$B$B感謝你的幫助，$C。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5762 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (5762,'zhTW','太好了，濃須給我的包裹！謝謝你，$N。這個木箱裡裝著特別尺寸的彈藥——我父親發誓——這對我們在叢林中很有幫助！$B$B這是你應得的報酬，告訴我，那個易怒的老克拉維爾最近過得怎麼樣？我打賭他還是不太好……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 5763 AND `locale` = 'zhTW';
@@ -9025,9 +9025,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9343 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9343,'zhTW','收下這件外袍並驕傲地穿上它。或許你的行為能激勵其它人也加入我們對抗天災軍團的行列。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9344 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9344,'zhTW','<葛雷拉格試著站起來時畏縮了。>$B$B我應該聽從先知雷古庫特的意見等待她派來給我的保鑣。我很幸運她想到派人來追我。$B$B我自己是不可能回的了薩爾瑪的。我已經盡力治療我的腿了，但沒有物資，未來只是一片灰暗。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9344,'zhTW','<葛雷拉格試著站起來時畏縮了。>$B$B我應該聽從先知雷古庫特的意見等待她派來給我的保鑣。我很幸運她想到派人來追我。$B$B我自己是不可能回的了索爾瑪的。我已經盡力治療我的腿了，但沒有物資，未來只是一片灰暗。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9345 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9345,'zhTW','這些就是我所需要的。我要開始準備藥膏並完成我的夾板再回到薩爾瑪。我怎麼感覺我知道當先知雷古庫特看到我的時候她會說什麼？$B$B<葛雷拉格無趣地嘆了口氣。>$B$B謝謝你的幫忙，$N。我這還有一些剩下的骨葉，你可以將它們帶走，誰知道這些葉子在何時會證明它的用途呢？',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9345,'zhTW','這些就是我所需要的。我要開始準備藥膏並完成我的夾板再回到索爾瑪。我怎麼感覺我知道當先知雷古庫特看到我的時候她會說什麼？$B$B<葛雷拉格無趣地嘆了口氣。>$B$B謝謝你的幫忙，$N。我這還有一些剩下的骨葉，你可以將它們帶走，誰知道這些葉子在何時會證明它的用途呢？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9346 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9346,'zhTW','做得好，$N。$B$B<警備隊長克朗剋期待地搓著他的雙手。>$B$B我等不及要試試了。如果他們想自稱燃燒軍團，我們就如他們所願！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9347 AND `locale` = 'zhTW';
@@ -9037,7 +9037,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9349 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9349,'zhTW','想吃美味的料理，就需要特級的食材。這些蛋看起來太棒了！$B$B我剛洗完我的鍋子，所以歡迎你跟我一起品嚐美食！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9350 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9350,'zhTW','我本來擔心突變的裂蹄牛骨頭不夠強韌，但我想這些應該沒有問題。年輕的葛雷拉格所想出的主意可能會拯救薩爾瑪。我們可以從祖先生活的方式中學到更多東西。$B$B請收下這些錢做為你努力的獎勵，$N。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9350,'zhTW','我本來擔心突變的裂蹄牛骨頭不夠強韌，但我想這些應該沒有問題。年輕的葛雷拉格所想出的主意可能會拯救索爾瑪。我們可以從祖先生活的方式中學到更多東西。$B$B請收下這些錢做為你努力的獎勵，$N。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9351 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9351,'zhTW','太完美了！事實上，我想它會發揮極佳的功用。我會重新設計引擎來充分利用這份額外的動力。我是說，如果，當我們順利離開這裡，我將會展示我的新設計，讓每一位回到52區的人欣賞！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9352 AND `locale` = 'zhTW';
@@ -9151,7 +9151,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9406 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9406,'zhTW','你確定嗎？正統獸人……就在地獄火半島這裡！這可是件大新聞，$N。$B$B我們必須立刻通知大酋長。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9407 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9407,'zhTW','我們的遠征隊安全的透過黑暗之門並且建立一個新的據點叫做薩爾瑪。但是如你所見，燃燒軍團進駐並將我們與我們的弟兄們分開。很明顯地，惡魔們想要重建黑暗之門以防止我們從艾澤拉斯獲得任何的援兵。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9407,'zhTW','我們的遠征隊安全的透過黑暗之門並且建立一個新的據點叫做索爾瑪。但是如你所見，燃燒軍團進駐並將我們與我們的弟兄們分開。很明顯地，惡魔們想要重建黑暗之門以防止我們從艾澤拉斯獲得任何的援兵。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9408 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9408,'zhTW','我們被困在這裡已經20年了。太多原始遠征隊的人都死去了，$C。是的，我們最偉大的英雄們都散落在風中了：失蹤，陣亡，或消失。$B$B我聽說他們在暴風城建了我們的雕像。$B$B<達納斯搖搖頭。>$B$B為了什麼，我不知道。我們做了所有在這個位置上該做的事：我們的職責。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9409 AND `locale` = 'zhTW';
@@ -9205,7 +9205,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9437 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9437,'zhTW','做得好，$N！只要等伊薩妮亞休息一下，我的準備完成後，我們就會離開這個荒地回到文明世界。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9438 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9438,'zhTW','<當薩爾開始閱讀納茲格雷爾的訊息時，驚訝的神色慢慢爬上了他的臉龐。>$B$B我的人民……我們一定要去找他們。我們一定要儘快轉至納格蘭！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9438,'zhTW','<當索爾開始閱讀納茲格雷爾的訊息時，驚訝的神色慢慢爬上了他的臉龐。>$B$B我的人民……我們一定要去找他們。我們一定要儘快轉至納格蘭！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9439 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9439,'zhTW','你是個神奇的工作者，$N！我告訴你，我這一生從沒這麼渴望換衣服過。$B$B還有我的細劍！沒有我的劍感覺就像被扒光了衣服一樣。$B$B你會因你的努力被讚賞和獎勵。別讓人說薩羅法斯沒感謝幫助他的人！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9440 AND `locale` = 'zhTW';
@@ -9309,11 +9309,11 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9494 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9494,'zhTW','做得好！我不期望模仿大術士奈德克斯的技藝，我也不渴求，但如果忽略魔化餘燼的力量那我們就是蠢蛋了。$B$B不過，還是有些人會禁止我要著手的研究型別，因此，我的努力一定要保密。拜託不要跟任何人說起這些事，$N。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9495 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9495,'zhTW','你做的很好，$N。卡加斯·刃拳在壯年期間是個優秀的戰士，是他人民的英雄和典範。$B$B他的死對我們所有人都是個打擊，尤其是對大酋長薩爾而言。在他最後的日子裡，不管發生了什麼事，我們都不該忘記卡加斯曾經是怎樣的獸人，也不能忘記他的死帶給我們什麼樣的教訓。$B$B至於你對部落的效勞，$N，你可以在這些武器中選一個做為獎勵。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9495,'zhTW','你做的很好，$N。卡加斯·刃拳在壯年期間是個優秀的戰士，是他人民的英雄和典範。$B$B他的死對我們所有人都是個打擊，尤其是對大酋長索爾而言。在他最後的日子裡，不管發生了什麼事，我們都不該忘記卡加斯曾經是怎樣的獸人，也不能忘記他的死帶給我們什麼樣的教訓。$B$B至於你對部落的效勞，$N，你可以在這些武器中選一個做為獎勵。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9496 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9496,'zhTW','做得好，$N。既然軍團士兵被擊破了，在戰場上挑戰魔獄部落就會更容易，雖然他們仍是可怕的敵人。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9497 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9497,'zhTW','做得好，$N！大酋長薩爾會非常高興知道我們在摧毀魔獄部落上又有所進展。當我做報告的時候，我會確定大酋長知道是你率領突擊的。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9497,'zhTW','做得好，$N！大酋長索爾會非常高興知道我們在摧毀魔獄部落上又有所進展。當我做報告的時候，我會確定大酋長知道是你率領突擊的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9498 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9498,'zhTW','歡迎來到獵鷹崗哨，$r。我們歡迎所有的部落盟友，尤其是瑪提克推薦的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9499 AND `locale` = 'zhTW';
@@ -9333,7 +9333,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9506 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9506,'zhTW','你真是個機智的人！有了我們的航海工具，我們就能知道自己偏離航道多少了。$B$B但是等等，這是什麼？地圖裡還卷著一個東西。讓我看看……$B$B這些是風險投資公司的穆戈爾歐·瑞斯丹克所下的命令。根據這些計劃，他們想挖光島上的水晶殘骸，並在完成後劫走我們的船。$B$B我的老天爺啊！這是為什麼他們要逼迫我們登陸嗎？他們怎麼會知道我們的計劃？$B$B我聞到叛徒的味道……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9507 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9507,'zhTW','感謝銅須！這是為什麼他們逼我們登陸嗎？他們怎麼可能知道我們的計劃？$B$B<艦隊司令·奧迪席斯低聲輕說。>$B$B我聞到叛徒的味道……$B$B如果我獲得更多資訊會跟你聯絡的。放心，我會對這個秘密追根究底的，$N！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9507,'zhTW','感謝銅鬚！這是為什麼他們逼我們登陸嗎？他們怎麼可能知道我們的計劃？$B$B<艦隊司令·奧迪席斯低聲輕說。>$B$B我聞到叛徒的味道……$B$B如果我獲得更多資訊會跟你聯絡的。放心，我會對這個秘密追根究底的，$N！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9508 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9508,'zhTW','那麼就完成了！危險解除，你讓秘血島的水復原了。隨著時間過去，水和其它元素結合後會自己治癒。$B$B不幸的是，血精靈並不知道汙染了他們的環境，他們自己也會死亡的！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9509 AND `locale` = 'zhTW';
@@ -9461,7 +9461,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9571 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9571,'zhTW','這是我做過最堅固的護甲！好好利用它，$N。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9572 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9572,'zhTW','這是個好的開始。那三個傢伙死了他們的軍隊就會陷入混亂，他們的炮火也會沉默，我們就能更輕易地接近並拿下堡壘！$B$B不過，我有預感這事情沒有看起來那麼簡單——所以我要請你做件事。$B$B不過目前為止，你做的很好。從這些薩爾瑪護甲中選一件吧。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9572,'zhTW','這是個好的開始。那三個傢伙死了他們的軍隊就會陷入混亂，他們的炮火也會沉默，我們就能更輕易地接近並拿下堡壘！$B$B不過，我有預感這事情沒有看起來那麼簡單——所以我要請你做件事。$B$B不過目前為止，你做的很好。從這些索爾瑪護甲中選一件吧。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9573 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9573,'zhTW','這就是我們需要的機會！我會立刻發出攻擊！止松部族感謝你的幫忙，$N！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9574 AND `locale` = 'zhTW';
@@ -9555,7 +9555,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9620 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9620,'zhTW','德萊尼測量小組的屍體四處散落在這裡，身上滿是被納迦的武器傷害過的痕跡。地上都是他們補給的剩餘物和測量裝備，但他們的儲存測量資料的水晶卻不見蹤影。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9621 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9621,'zhTW','看來他的生命已經結束了。可惡的背叛者已經得到了該有的報應。$B$B你對血精靈和部落的幫助很大。達克汗是薩爾用來拒絕他們加入我們同盟的藉口。你為新部落開創了新局面，$N。$B$B我也看到洛索瑪有了其它的訊息會大大地改善他與薩爾的關係。非常好！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9621,'zhTW','看來他的生命已經結束了。可惡的背叛者已經得到了該有的報應。$B$B你對血精靈和部落的幫助很大。達克汗是索爾用來拒絕他們加入我們同盟的藉口。你為新部落開創了新局面，$N。$B$B我也看到洛索瑪有了其它的訊息會大大地改善他與索爾的關係。非常好！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9622 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9622,'zhTW','你說幻象？真有趣……而這個預言成真了？$B$B但你說他們見到了艾克索達的力量核心？而且沃洛斯也在幻象裡？這會是什麼意思？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9623 AND `locale` = 'zhTW';
@@ -9565,9 +9565,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9625 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9625,'zhTW','嗯，你已做了這麼多的努力！在你體力尚未消耗完畢前我還有一點工作需要你來幫忙。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9626 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9626,'zhTW','<薩爾開始讀這封信。>$B$B希爾瓦娜斯是個固執的人。所以她派了銀月城的一個勇士……這能改變什麼？',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9626,'zhTW','<索爾開始讀這封信。>$B$B希爾瓦娜斯是個固執的人。所以她派了銀月城的一個勇士……這能改變什麼？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9627 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9627,'zhTW','你的努力幫了我們種族的事業一個大忙。薩爾不但相信我們有能力在敵人面前處理狀況，他還相信他可以利用我們和外域的聯絡來接近他的人民。$B$B不完全是事實，但也不是個謊言。$B$B準備好接受很大的改變吧，$N。我們現在是部落正式的一員了。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9627,'zhTW','你的努力幫了我們種族的事業一個大忙。索爾不但相信我們有能力在敵人面前處理狀況，他還相信他可以利用我們和外域的聯絡來接近他的人民。$B$B不完全是事實，但也不是個謊言。$B$B準備好接受很大的改變吧，$N。我們現在是部落正式的一員了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9628 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9628,'zhTW','<你告訴先行官米庫拉斯測量小組的命運。他從你手中接過水晶，沉默了好一陣子。>$B$B他們是好人，$N，他們也知道自己的任務很危險。我很感激你幫忙找到小組並取回水晶。$B$B<先行官的拳頭緊緊握著。>$B$B我們已失去太多人了，而我們的任務才剛開始。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9629 AND `locale` = 'zhTW';
@@ -9919,9 +9919,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9811 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9811,'zhTW','你殺了達克汗，$r？了不起。我有預感我們的人民很快就會變成好朋友了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9812 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9812,'zhTW','看來他的生命已經結束了。可惡的背叛者已經得到了該有的報應。$B$B你對血精靈和部落的幫助很大。達克汗是薩爾用來拒絕他們加入我們同盟的藉口。你為新部落開創了新局面，$N。$B$B我也看到洛索瑪有了其他的訊息會大大地改善他與薩爾的關係。非常好！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9812,'zhTW','看來他的生命已經結束了。可惡的背叛者已經得到了該有的報應。$B$B你對血精靈和部落的幫助很大。達克汗是索爾用來拒絕他們加入我們同盟的藉口。你為新部落開創了新局面，$N。$B$B我也看到洛索瑪有了其他的訊息會大大地改善他與索爾的關係。非常好！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9813 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9813,'zhTW','<薩爾開始讀信。>$B$B血精靈終於解決掉他們的小麻煩了。別介意它藉助了你和整個被遺忘者軍隊的幫助才完成工作。$B$B<薩爾笑了起來。>$B$B我想這誰都阻止不了。最後我們會需要他們就像他們需要我們一樣。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9813,'zhTW','<索爾開始讀信。>$B$B血精靈終於解決掉他們的小麻煩了。別介意它藉助了你和整個被遺忘者軍隊的幫助才完成工作。$B$B<索爾笑了起來。>$B$B我想這誰都阻止不了。最後我們會需要他們就像他們需要我們一樣。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9814 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9814,'zhTW','這些非常好，老兄！$B$B跟你說吧。既然你是個好人又幫忙弄到蘑菇，我就讓你進來玩玩！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9815 AND `locale` = 'zhTW';
@@ -10399,7 +10399,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10052 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10052,'zhTW','伊斯拉·星鬃剛離開，不過她給了我一份完整的報告，大概說明在火翼崗哨發生的事。她之所以會這麼的煩惱塞納里奧樹林是可以理解的。卑鄙的血精靈！$B$B她告訴我你是如何幫忙保護她的，所以我們才能收到那個資訊。裂石堡感激你的幫忙。$B$B請接受這份代表我們謝意的禮物。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10053 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10053,'zhTW','密密麻麻的炭筆箭頭指出軍隊將從三個不同的方向往薩爾瑪聚集。你已排除西方支流的軍隊，但似乎塞斯高的獸人數量看起來遠比偷襲所需的還多。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10053,'zhTW','密密麻麻的炭筆箭頭指出軍隊將從三個不同的方向往索爾瑪聚集。你已排除西方支流的軍隊，但似乎塞斯高的獸人數量看起來遠比偷襲所需的還多。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10054 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10054,'zhTW','你成功的阻止了塞斯高的軍隊，但同時，我們從北方被攻擊了。兩股勢力已經集合了，榮耀堡將有陷落的危險。幸運及警覺讓我們存活到今日，但我們不能永遠依賴這些。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10055 AND `locale` = 'zhTW';
@@ -10411,7 +10411,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10058 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10058,'zhTW','這真的是我要的東西嗎？真難相信它竟在戰爭中儲存了下來。廢墟的狀況並不是太好，我很高興能再得到它。$B$B這是我僅有的圖拉揚的遺物了。$B$B<戴維迪庫斯神父似乎正強忍著淚水。>$B$B當你長久與某人並肩作戰，彼此的感情會變得比家人更加親近。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10059 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10059,'zhTW','密密麻麻的炭筆箭頭指出軍隊將從三個不同的方向往薩爾瑪聚集。你已排除西方支流的軍隊，但似乎塞斯高的獸人數量看起來遠比偷襲所需的還多。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10059,'zhTW','密密麻麻的炭筆箭頭指出軍隊將從三個不同的方向往索爾瑪聚集。你已排除西方支流的軍隊，但似乎塞斯高的獸人數量看起來遠比偷襲所需的還多。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10060 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10060,'zhTW','我一直懷薩斯卡的寂靜是不是暴風雨前的寧靜。看來我的擔心是對的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10061 AND `locale` = 'zhTW';
@@ -10451,7 +10451,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10078 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10078,'zhTW','就是這股精神！$B$B我很高興我們終於有了援軍，但我不太確定他們對部落的想法。我來的地方，任何用武器指著你的都是敵人而且需要像個敵人一樣的解決掉！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10079 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10079,'zhTW','銅須的銅……須，你做到了！你是個英雄，$N。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10079,'zhTW','銅鬚的銅……須，你做到了！你是個英雄，$N。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10080 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10080,'zhTW','仔細檢查計劃書，你發現它們似乎是什麼機械學的指示說明。只有大約一半的計劃還在。$B$B沒有整個圖表，就不可能知道軍團正在建造什麼。或許剩下的計劃書可以在西邊的鑄魔營地：狂亂找到。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10081 AND `locale` = 'zhTW';
@@ -10467,7 +10467,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10086 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10086,'zhTW','這些東西簡直是太棒了！雖然有點彎曲以及燒過的焦痕，但是我一向都可以把粗糙的材料做成高度精密的爆裂物。$B$B感謝你，$N。你真的具有撿破爛的才能！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10087 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10087,'zhTW','我就知道！從這邊我不能辨識摧毀的情形，但是我可以想象它的慘狀。太棒了！$B$B做得好，$N。薩爾瑪指揮官將會很高興聽到你的捷報。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10087,'zhTW','我就知道！從這邊我不能辨識摧毀的情形，但是我可以想象它的慘狀。太棒了！$B$B做得好，$N。索爾瑪指揮官將會很高興聽到你的捷報。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10088 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10088,'zhTW','終於！現在，我不認為你願意去敲敲幾個礦工的頭，還是這需要額外的收費呢？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10089 AND `locale` = 'zhTW';
@@ -10533,7 +10533,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10119 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10119,'zhTW','歡迎來到外域，$N——歡迎來到夢魘裡。雖然最初的遠征軍使它未受損傷，但燃燒軍團企圖將黑暗之門重新拿下以阻止我們的援兵抵達。$B$B我要你儘量的幫助這裡，我們的軍隊和部落計程車兵能夠擋住軍團企圖攻下這個平臺的攻勢。$B$B我們需要你盡力發揮你的才能。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10120 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10120,'zhTW','所以你是沃雷恩新的傳令員嗎？我祈禱你的遭遇會比上次他派來的那個好一點，$C。隨著軍團的逼近，你絕對沒有辦法徒步送回薩爾瑪的。說吧，我的雙足飛龍會將你安全送達那裡。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10120,'zhTW','所以你是沃雷恩新的傳令員嗎？我祈禱你的遭遇會比上次他派來的那個好一點，$C。隨著軍團的逼近，你絕對沒有辦法徒步送回索爾瑪的。說吧，我的雙足飛龍會將你安全送達那裡。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10121 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10121,'zhTW','毫無疑問的在你從黑暗之門來的飛行途中可以看到島上遍佈著軍團計程車兵。雖然我們在約五年前的海加爾山戰役中擊敗了他們，這些邪惡的惡魔還是不停的回來。如果這是他們所渴望的挑戰，那麼部落也會相同的回應他們！$B$B我們獸人有許多消滅軍團的理由。你呢，$N？我該不該告訴你有關我們敵人的事呢？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10122 AND `locale` = 'zhTW';
@@ -10565,7 +10565,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10135 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10135,'zhTW','<當納茲格雷爾讀公文時，他仔細咀嚼著菸斗的末端。>$B$B沒錯……沒錯！這將是阿拉薩爾斯親手寫的最後一封公文。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10136 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10136,'zhTW','將來部落的後代們，會流傳歌頌今日發生的壯舉，$N——關於你英勇事蹟的歌曲。我希望薩爾可以在這邊跟我們一起慶祝。燃燒軍團已經玩完了——而地獄火半島如今再次回到我們部落的手中啦！這個充滿破壞與蹂躪的世界看起來還是存有希望——而我們部落在其中還可以擁有一席之地。$B$B為了部落！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10136,'zhTW','將來部落的後代們，會流傳歌頌今日發生的壯舉，$N——關於你英勇事蹟的歌曲。我希望索爾可以在這邊跟我們一起慶祝。燃燒軍團已經玩完了——而地獄火半島如今再次回到我們部落的手中啦！這個充滿破壞與蹂躪的世界看起來還是存有希望——而我們部落在其中還可以擁有一席之地。$B$B為了部落！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10137 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10137,'zhTW','真是令人高興的好訊息。我本來開始懷疑我們再也看不到士兵艾瑪倫，但是你已經證明我錯了。$B$B在你告訴我燃燒軍團的計劃後，恐怕我們沒有太多時間可以慶祝了。你已經在截斷他們西邊部隊上做的很好，但是燃燒軍團仍然有相當大的主力部隊集結在塞斯高。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10138 AND `locale` = 'zhTW';
@@ -10597,7 +10597,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10151 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10151,'zhTW','瑪克哈的盾，劍和其它貴重物品似乎被隨便扔到一旁。囚犯好像在不久後被拖到了遠處。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10152 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10152,'zhTW','你是對的，$N。如果他們成功的與在塞斯高的軍隊一起進行他們的攻擊，薩爾瑪就會被佔領了。$B$B幸好你有先見之明，在一切太遲之前阻止了戰王奈克羅格的部隊',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10152,'zhTW','你是對的，$N。如果他們成功的與在塞斯高的軍隊一起進行他們的攻擊，索爾瑪就會被佔領了。$B$B幸好你有先見之明，在一切太遲之前阻止了戰王奈克羅格的部隊',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10153 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10153,'zhTW','你必須讓我離開這裡，但並不容易。戰王奈克羅格的手下個個兇猛且訓練有素。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10154 AND `locale` = 'zhTW';
@@ -10607,7 +10607,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10156 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10156,'zhTW','做得好，$N。這些公文終於可揭露出這些攻擊之後的策劃者身份。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10157 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10157,'zhTW','薩爾瑪的防衛者已經享受到他們努力暫緩邪獸人攻擊的喘息時間，雖然燃燒軍團還是繼續著他們的戰爭。擊敗遠征軍指揮官葛洛克斯，你已經幫了薩爾瑪一個大忙。$B$B你實在是你們戰友的典範。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10157,'zhTW','索爾瑪的防衛者已經享受到他們努力暫緩邪獸人攻擊的喘息時間，雖然燃燒軍團還是繼續著他們的戰爭。擊敗遠征軍指揮官葛洛克斯，你已經幫了索爾瑪一個大忙。$B$B你實在是你們戰友的典範。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10158 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10158,'zhTW','做得好，$N。持續控制他們將會是一個挑戰，但這是唯一的方法可以阻止自塞斯高發動的一連串攻擊。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10159 AND `locale` = 'zhTW';
@@ -10643,7 +10643,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10174 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10174,'zhTW','<當你傳達拉文德維爾的訊息時，大法師瓦格斯的影像同時檢查著你。>$B$B拉文德維爾凡事都能符合他師傅的期望。當我給他權杖並且要他逃離時，我原本希望一旦凱爾薩斯的部隊從塔裡撤出，他可以使用它來尋求協助並解救我。從那以後，我已經學到了許多有關詛咒的種類。$B$B這是可以被破除的，$N，但是會需要你的協助。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10175 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10175,'zhTW','<薩爾的聲音如風暴雷雲一樣震撼。>$B$B我……我還有一位祖母嗎？她還活著？',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10175,'zhTW','<索爾的聲音如風暴雷雲一樣震撼。>$B$B我……我還有一位祖母嗎？她還活著？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10176 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10176,'zhTW','你做的很好，$N。摧毀這個結界將有助於我可以更容易的解除這個塔的詛咒。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10177 AND `locale` = 'zhTW';
@@ -10863,7 +10863,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10288 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10288,'zhTW','回報榮耀堡嗎？沒問題——我的獅鷲將安全迅速地帶你到那裡！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10289 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10289,'zhTW','我將集結我所能調動的軍隊，並且派他們去援助在黑暗之門的沃雷恩的部隊。不久之後燃燒軍團將忘不了部落的戰吼聲！至於你$N，你今天已經為薩爾瑪做了一項偉大的事。我期待你在這裡能給我們很大的協助……假如你有讓自己生存下去的智慧的話。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10289,'zhTW','我將集結我所能調動的軍隊，並且派他們去援助在黑暗之門的沃雷恩的部隊。不久之後燃燒軍團將忘不了部落的戰吼聲！至於你$N，你今天已經為索爾瑪做了一項偉大的事。我期待你在這裡能給我們很大的協助……假如你有讓自己生存下去的智慧的話。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10290 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (10290,'zhTW','啊，是的。這種等級確實是我所期待的。假如我們能從巨人身上取得穩定的進貨來源，我們也許能完全的放棄開採水晶礦。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 10291 AND `locale` = 'zhTW';
@@ -12667,7 +12667,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 11205 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (11205,'zhTW','恐怖圖騰應該可以輕易地瞭解我們最近的行動想表達的敵意。$B$B至於你，你在蕨牆村的聯絡人一定很想知道你乾的好事。我知道燒燬樹蔭旅店這件事可能會成為部落和聯盟之間情勢緊繃的導火線。假如我遇到塞拉摩派來的調查員，我會很高興的轉達恐怖圖騰獨力犯下這起事件。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 11206 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (11206,'zhTW','<克羅格聽著你的報告。>$B$B你令我刮目相看，$N。我本以為要找到那些恐怖圖騰的罪犯們會是一件更困難的事。$B$B塔貝薩的警告並沒有被漠視，但懲戒恐怖圖騰這件事已經超越我的權責了。當然，我會在給大酋長的報告中提起這件事。在薩爾解決恐怖圖騰的問題之前，不要跟任何人談起這件事。你在解決樹蔭旅店的謎團以及使我們免於塞拉摩的猜疑這兩件事上，做的很好。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (11206,'zhTW','<克羅格聽著你的報告。>$B$B你令我刮目相看，$N。我本以為要找到那些恐怖圖騰的罪犯們會是一件更困難的事。$B$B塔貝薩的警告並沒有被漠視，但懲戒恐怖圖騰這件事已經超越我的權責了。當然，我會在給大酋長的報告中提起這件事。在索爾解決恐怖圖騰的問題之前，不要跟任何人談起這件事。你在解決樹蔭旅店的謎團以及使我們免於塞拉摩的猜疑這兩件事上，做的很好。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 11207 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (11207,'zhTW','哇！你收回的貨物比我預期可找到的還多。我不確定德拉茲特以為我們能找到多少貨物，但是現在他應該對我們尋回的數量感到高興才對。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 11208 AND `locale` = 'zhTW';
@@ -14271,7 +14271,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12025 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12025,'zhTW','所以這是事實？我們之中有內奸？顯然我們不能相信十字軍會在我們的困境中伸出援手。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12026 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12026,'zhTW','這個布萊恩·銅須是誰？鐵矮人沒理由要和他交涉，我也不知道為什麼要對他寫的文字感興趣。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12026,'zhTW','這個布萊恩·銅鬚是誰？鐵矮人沒理由要和他交涉，我也不知道為什麼要對他寫的文字感興趣。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12027 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12027,'zhTW','感謝老天讓你找到了艾米莉！當她一個人離開的時候，我就擔心她會迷路了。$B$B我也很高興知道小毛球安然無恙。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12028 AND `locale` = 'zhTW';
@@ -15153,7 +15153,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12477 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12477,'zhTW','<哈爾弗閱讀著這本書。>$B$B阿比迪斯已經走火入魔了。聖光跟她說話？$B$B除了空洞的胡言亂語之外，這本日記讓我們一窺血色狂熱分子的內心。這是個重要的發現，$N，弗塔根大人會很開心的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12478 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12478,'zhTW','穆拉丁還活著？怎麼可能？我得馬上通知銅須國王！$B$B我得再檢查寶珠，一定還有其它的情報——就在某處！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12478,'zhTW','穆拉丁還活著？怎麼可能？我得馬上通知銅鬚國王！$B$B我得再檢查寶珠，一定還有其它的情報——就在某處！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12479 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12479,'zhTW','你辦到了，$N。記得這就是諾森德的兩個入口之一。$B$B要回撒塔斯城就使用我身旁的傳送門吧。好好享受你的巫妖王之怒FF測試版！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12480 AND `locale` = 'zhTW';
@@ -15183,9 +15183,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12493 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12493,'zhTW','太讚了！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12495 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12495,'zhTW','你來尋求我的指示，凡人。我知道這點，但你知不知道自己在面對什麼呢？$B$B<阿萊克絲塔薩指向北方。>$B$B此地的北方是迦拉克隆之墓……它是龍族的先祖。泰坦們就是依照迦拉克隆造出了守護巨龍，我們是不是就不難想象迦拉克隆的力量了？他的體型比所有的守護巨龍加起來還要大！現在試著理解天災軍團在廣袤的龍骨荒野所做的一切。$B$B冰霜巨龍——凡人——並不是你最該關心的問題。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12495,'zhTW','你來尋求我的指示，凡人。我知道這點，但你知不知道自己在面對什麼呢？$B$B<雅立史卓莎指向北方。>$B$B此地的北方是迦拉克隆之墓……它是龍族的先祖。泰坦們就是依照迦拉克隆造出了守護巨龍，我們是不是就不難想象迦拉克隆的力量了？他的體型比所有的守護巨龍加起來還要大！現在試著理解天災軍團在廣袤的龍骨荒野所做的一切。$B$B冰霜巨龍——凡人——並不是你最該關心的問題。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12496 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12496,'zhTW','你來尋求我的指示，凡人。我知道這點，但你知不知道自己在面對什麼呢？$B$B<阿萊克絲塔薩指向北方。>$B$B此地的北方是迦拉克隆之墓……它是龍族的先祖。泰坦們就是依照迦拉克隆造出了守護巨龍，我們是不是就不難想象迦拉克隆的力量了？他的體型比所有的守護巨龍加起來還要大！現在試著理解天災軍團在廣袤的龍骨荒野所做的一切。$B$B冰霜巨龍——凡人——並不是你最該關心的問題。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12496,'zhTW','你來尋求我的指示，凡人。我知道這點，但你知不知道自己在面對什麼呢？$B$B<雅立史卓莎指向北方。>$B$B此地的北方是迦拉克隆之墓……它是龍族的先祖。泰坦們就是依照迦拉克隆造出了守護巨龍，我們是不是就不難想象迦拉克隆的力量了？他的體型比所有的守護巨龍加起來還要大！現在試著理解天災軍團在廣袤的龍骨荒野所做的一切。$B$B冰霜巨龍——凡人——並不是你最該關心的問題。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12497 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12497,'zhTW','凡人的勇氣總是使我震驚。死亡冰冷地凝視著你們，而你們卻起身挑戰它！這也是為什麼你們這些種族是如此的被深愛著……也被痛恨著。$B$B雖然紅龍軍團與瑪裡苟斯的戰事膠著，我們還是可以提供一些幫助。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12498 AND `locale` = 'zhTW';
@@ -15627,7 +15627,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12722 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12722,'zhTW','你劍法不錯，$N。如果巫妖王允許的話，也許你會有興趣當我的手下？斯坦索姆需要一個新的市長。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12723 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12723,'zhTW','看來最近似乎什麼人都可以加入我們的黑鋒騎士團啊。在我獲得巫妖王垂青的時候，事情可不是這樣的，那時候可嚴苛多了！$B$B至於那個信差……',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12723,'zhTW','看來最近似乎什麼人都可以加入我們的黯刃騎士團啊。在我獲得巫妖王垂青的時候，事情可不是這樣的，那時候可嚴苛多了！$B$B至於那個信差……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12724 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12724,'zhTW','<奧爾巴茲翻閱了日程表。>$B$B這些沒用的廢物可真忙！北巡路線、南巡路線、西巡路線、東巡路線，但就是沒提到信差的路線。等等。這是什麼？看起來像是一條從西瘟疫之地過來的西巡邏路線？這個巡邏員今天就會經過這裡！我需要時間來好好計劃計劃。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12725 AND `locale` = 'zhTW';
@@ -15721,7 +15721,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12770 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12770,'zhTW','聖光將會戰勝一切！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12771 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12771,'zhTW','我的鬍子啊！這東西的力量可以和咱們整隊的飛行器對抗！我會把它交給我的戰鬥牧師，我們會設計一個能夠把那些骯髒的浮空城趕回諾森德的作戰計劃……然後我們會緊跟在後面！$B$B噢，我的兄弟穆拉丁啊，你一定得好好活著！以銅須的榮譽起誓，我一定會找到你的！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12771,'zhTW','我的鬍子啊！這東西的力量可以和咱們整隊的飛行器對抗！我會把它交給我的戰鬥牧師，我們會設計一個能夠把那些骯髒的浮空城趕回諾森德的作戰計劃……然後我們會緊跟在後面！$B$B噢，我的兄弟穆拉丁啊，你一定得好好活著！以銅鬚的榮譽起誓，我一定會找到你的！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12772 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12772,'zhTW','$N，尊敬的$R，歡迎你。願聖光照耀著你，也希望先祖能在必要的時刻守護我們的大地。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12773 AND `locale` = 'zhTW';
@@ -15781,7 +15781,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12800 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12800,'zhTW','大領主與其它的死亡騎士正在準備進攻！我們將會把此地殘留的最後一點生氣給榨乾。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12801 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12801,'zhTW','我們罪無可恕，$N。我們將永遠受到詛咒，以這具怪物的軀體在世上苟活，也許巫妖王暫時放過了我們，但我們昔日所犯下的罪行也將永遠折磨我們的記憶。$B$B只有一種辦法可以補償我們的罪孽……那就是死亡。$B$B現在，我邀請你加入黑鋒騎士團，與我們一起擊敗巫妖王，終結天災軍團。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12801,'zhTW','我們罪無可恕，$N。我們將永遠受到詛咒，以這具怪物的軀體在世上苟活，也許巫妖王暫時放過了我們，但我們昔日所犯下的罪行也將永遠折磨我們的記憶。$B$B只有一種辦法可以補償我們的罪孽……那就是死亡。$B$B現在，我邀請你加入黯刃騎士團，與我們一起擊敗巫妖王，終結天災軍團。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12802 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12802,'zhTW','讓人印象深刻，老兄！命運讓我們相遇真是一件好事。$B$B很快，我就能淨化達克薩隆，替我的弟兄們復仇，你也會得到達克薩隆的財寶當作獎賞。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12803 AND `locale` = 'zhTW';
@@ -15933,11 +15933,11 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12882 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12882,'zhTW','這些真是太棒了！我很感激你，同你的煩惱憂愁喝一杯如何？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12883 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12883,'zhTW','要是這跟達克薩隆要塞的達庫魯是同一個的話，我們就會需要……支援。$B$B阿徹魯斯的死亡騎士就在附近駐紮，毫無疑問跟我們銀色北伐軍一樣，都是追尋著天災軍團的破壞痕跡而來。我們一半的軍力都在銀色前沿跟瘋狂的達卡萊巨魔奮戰，我們得跟黑鋒騎士團會合。$B$B<蘭迪加低聲地抱怨了幾句。>$B$B我本來想著能不用再看到那些混蛋的，聖光在上呀。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12883,'zhTW','要是這跟達克薩隆要塞的達庫魯是同一個的話，我們就會需要……支援。$B$B阿徹魯斯的死亡騎士就在附近駐紮，毫無疑問跟我們銀色北伐軍一樣，都是追尋著天災軍團的破壞痕跡而來。我們一半的軍力都在銀色前沿跟瘋狂的達卡萊巨魔奮戰，我們得跟黯刃騎士團會合。$B$B<蘭迪加低聲地抱怨了幾句。>$B$B我本來想著能不用再看到那些混蛋的，聖光在上呀。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12884 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12884,'zhTW','<斯特凡讀了信，將它撕成碎片，丟入火中。>$B$B老掉牙的訊息了。銀色北伐軍又一次晚了一步。我們從灰白之丘就在注意達庫魯了——他已經在我們的死亡名單上了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12885 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12885,'zhTW','所以說你認識布萊恩·銅須了？他是我們在血肉之軀的生物中最親近的盟友。我們像兄弟一樣的對抗洛肯與他的手下，像兄弟一樣的在奧杜爾奮戰。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12885,'zhTW','所以說你認識布萊恩·銅鬚了？他是我們在血肉之軀的生物中最親近的盟友。我們像兄弟一樣的對抗洛肯與他的手下，像兄弟一樣的在奧杜爾奮戰。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12886 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12886,'zhTW','西芙……是你嗎？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12887 AND `locale` = 'zhTW';
@@ -15985,7 +15985,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12909 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12909,'zhTW','所以說伯克塔給霜齒派了份任務？好吧，這最好是特別重要的任務——他應該知道寵物跟獵人是不能分開的！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12910 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12910,'zhTW','<當你引導了通訊器之後一個矮人的影像浮現出來。他一定就是布萊恩·銅須。>$B$B<從他臉上的表情看來，布萊恩看到你似乎很震驚，然後他開始狂亂的比劃手勢。>',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12910,'zhTW','<當你引導了通訊器之後一個矮人的影像浮現出來。他一定就是布萊恩·銅鬚。>$B$B<從他臉上的表情看來，布萊恩看到你似乎很震驚，然後他開始狂亂的比劃手勢。>',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12911 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12911,'zhTW','擊殺獎勵有沒有分到你隊友那裡？',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12912 AND `locale` = 'zhTW';
@@ -16005,7 +16005,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12919 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12919,'zhTW','難以置信！這會是個流傳百年的故事，$N！一個$g男人:女人騎在風暴巨人之王的頭上，將整個天災軍團隊剷平！$B$B而我就就有幸在旁邊目睹了一切……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12920 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12920,'zhTW','<伯克塔聆聽你敘述與布萊恩的對話。>$B$B矮人說的是真的，沃塔肯的計劃不是部落的手法。如果布萊恩·銅須知道阻止鐵矮人和他們幕後黑手的方法，那麼幫助他對我們來說也很有利。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12920,'zhTW','<伯克塔聆聽你敘述與布萊恩的對話。>$B$B矮人說的是真的，沃塔肯的計劃不是部落的手法。如果布萊恩·銅鬚知道阻止鐵矮人和他們幕後黑手的方法，那麼幫助他對我們來說也很有利。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12921 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12921,'zhTW','你來了——很好。我想我知道你的地精在哪裡了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12922 AND `locale` = 'zhTW';
@@ -16021,7 +16021,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12928 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12928,'zhTW','就是它！這就是諾甘農圓盤的前半部。做得好，$N。我讓探險者協會的成員尋找外殼所在地的線索已經很久了。如果我告訴他們是個勇敢的$r替我找到它的，他們一定不會相信。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12929 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12929,'zhTW','所以說你認識布萊恩·銅須咯？他是我們在血肉之軀的生物中最親近的盟友。我們像兄弟一樣的對抗洛肯與他的手下，為了奧杜爾一同奮戰。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12929,'zhTW','所以說你認識布萊恩·銅鬚咯？他是我們在血肉之軀的生物中最親近的盟友。我們像兄弟一樣的對抗洛肯與他的手下，為了奧杜爾一同奮戰。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12930 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (12930,'zhTW','這樣我們就能夠救治更多倒下的人了。謝謝你，$N，我代表庇護所的所有人感謝你。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 12931 AND `locale` = 'zhTW';
@@ -16315,9 +16315,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13078 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13078,'zhTW','有了達莉亞之淚和古老的魔法，我可以賦予你拯救偉大北伐軍戰士的一絲希望。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13079 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13079,'zhTW','阿萊克絲塔薩之息……你去找紅龍女王本人？言語無法表達我心中感激之萬一。$B$B我瞭解淨化的風險，也已經做好準備。動手吧，$C。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13079,'zhTW','雅立史卓莎之息……你去找紅龍女王本人？言語無法表達我心中感激之萬一。$B$B我瞭解淨化的風險，也已經做好準備。動手吧，$C。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13080 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13080,'zhTW','天災瘟疫的確是非常的棘手——這從阿萊克絲塔薩的話中不難理解，要從如此無情的命運中拯救佈雷登布萊德也許不太樂觀，但我不會如此輕易地放棄他。$B$B仍然還有一線光明，還有一個存在或許能扭轉他的悲慘命運。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13080,'zhTW','天災瘟疫的確是非常的棘手——這從雅立史卓莎的話中不難理解，要從如此無情的命運中拯救佈雷登布萊德也許不太樂觀，但我不會如此輕易地放棄他。$B$B仍然還有一線光明，還有一個存在或許能扭轉他的悲慘命運。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13081 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13081,'zhTW','<當你接近納魯，一陣輕柔的鈴聲在你的耳際與腦海中縈繞。>$B$B我知道你為何而來。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13082 AND `locale` = 'zhTW';
@@ -16365,9 +16365,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13103 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13103,'zhTW','這酒超正點的！我一定要知道它是哪來的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13104 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13104,'zhTW','你已不可同日而語，我忠實的騎士。$B$B<大領主達瑞安·莫格萊尼盯著你。>$B$B復仇就要展開，$g兄弟:姐妹。庫爾迪拉以炮艇和奧格瑞姆之錘為部落助戰，而薩薩里安則為聯盟提供了破天號的幫助。黑鋒騎士團就要橫掃冰冠冰川，讓巫妖王的軍隊在戰場上永久地毀滅。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13104,'zhTW','你已不可同日而語，我忠實的騎士。$B$B<大領主達瑞安·莫格萊尼盯著你。>$B$B復仇就要展開，$g兄弟:姐妹。庫爾迪拉以炮艇和奧格瑞姆之錘為部落助戰，而薩薩里安則為聯盟提供了破天號的幫助。黯刃騎士團就要橫掃冰冠冰川，讓巫妖王的軍隊在戰場上永久地毀滅。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13105 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13105,'zhTW','你已不可同日而語，我忠實的騎士。$B$B<大領主達瑞安·莫格萊尼盯著你。>$B$B復仇就要展開，$g兄弟:姐妹。庫爾迪拉以炮艇和奧格瑞姆之錘為部落助戰，而薩薩里安則為聯盟提供了破天號的幫助。黑鋒騎士團就要橫掃冰冠冰川，讓巫妖王的軍隊在戰場上永久地毀滅。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13105,'zhTW','你已不可同日而語，我忠實的騎士。$B$B<大領主達瑞安·莫格萊尼盯著你。>$B$B復仇就要展開，$g兄弟:姐妹。庫爾迪拉以炮艇和奧格瑞姆之錘為部落助戰，而薩薩里安則為聯盟提供了破天號的幫助。黯刃騎士團就要橫掃冰冠冰川，讓巫妖王的軍隊在戰場上永久地毀滅。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13106 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13106,'zhTW','很好。我們需要一切可得的幫助。這位是歐爾拉金——銀色北伐軍派來參與破壞行動的人。我們就廢話不多說，直接下去幹活，讓天災軍團中不再有血肉巨人。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13107 AND `locale` = 'zhTW';
@@ -16481,7 +16481,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13163 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13163,'zhTW','所以他終於死了？真是好訊息。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13164 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13164,'zhTW','莫格萊尼親自到場監督處刑？我猜他們倆之間，一定有些過節——他想取走那畜牲屍體的一部分，實在不令人意外。$B$B你做得非常好，$r，你也會得到相應的獎賞。黑鋒騎士團感謝你。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13164,'zhTW','莫格萊尼親自到場監督處刑？我猜他們倆之間，一定有些過節——他想取走那畜牲屍體的一部分，實在不令人意外。$B$B你做得非常好，$r，你也會得到相應的獎賞。黯刃騎士團感謝你。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13165 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13165,'zhTW','巫妖王被灰燼使者所傷，已經返回了諾森德，但是他最後的軍隊仍然佔據著二樓。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13166 AND `locale` = 'zhTW';
@@ -16523,7 +16523,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13188 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13188,'zhTW','<瓦里安望向遠方。>$B$B真正的老友……鮮血與榮耀。$B$B<瓦里安的目光轉向你。>$B$B要不是提里奧的這封信，你現在已經成了地板上的一灘血跡。只有史上最偉大聖騎士的推薦信才能確保你的性命。$B$B我們……我們將會同心協力對抗天災軍團。對抗巫妖王！$B$B榮耀歸於聯盟！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13189 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13189,'zhTW','伊崔格是因為這位聖騎士才活下來的。要是大領主弗丁沒有將他從斯坦索姆救出來，伊崔格就會遭到處決。$B$B提里奧·弗丁犧牲了一切來拯救一個獸人的性命……我只認識一個會做出這種犧牲的人類。$B$B<薩爾眨了眨眼，忍住了眼淚。>$B$B是的，為了提里奧·弗丁與伊崔格！我們會接納你成為部落的一員，接納你的騎士團做為盟友。$B$B鮮血與榮耀！為了部落！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13189,'zhTW','伊崔格是因為這位聖騎士才活下來的。要是大領主弗丁沒有將他從斯坦索姆救出來，伊崔格就會遭到處決。$B$B提里奧·弗丁犧牲了一切來拯救一個獸人的性命……我只認識一個會做出這種犧牲的人類。$B$B<索爾眨了眨眼，忍住了眼淚。>$B$B是的，為了提里奧·弗丁與伊崔格！我們會接納你成為部落的一員，接納你的騎士團做為盟友。$B$B鮮血與榮耀！為了部落！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13190 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13190,'zhTW','啊哈！$B$B希望那嘲弄的失敗氣味會蝕入他們空虛的靈魂！$B$B謝謝你，$C。今天，你給了那些不死生物重重一擊。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13191 AND `locale` = 'zhTW';
@@ -16653,7 +16653,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13256 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13256,'zhTW','危機已經解除而脫逃的犯人們都重新鋃鐺入獄。$B$B達拉然感謝你，$N！$B$B現在我得去找某人談談何故有人能輕易的突破城市的反傳送護盾進入監獄裡？！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13257 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13257,'zhTW','惡魔領主瓦里瑪薩斯和被遺忘者大藥劑師普特雷斯是這次叛變的主謀。$B$B<薩爾點了點頭。>$B$B對，就是這個普特雷斯，也負責為最近爆發的天災瘟疫尋找解藥。$B$B不和他們站在同一陣線的人都被處決或流放了。$B$B部落已經失去了幽暗城。奧格瑪會接納被遺忘者的難民，直到危機落幕為止。現在我們處於戒嚴狀態。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13257,'zhTW','惡魔領主瓦里瑪薩斯和被遺忘者大藥劑師普特雷斯是這次叛變的主謀。$B$B<索爾點了點頭。>$B$B對，就是這個普特雷斯，也負責為最近爆發的天災瘟疫尋找解藥。$B$B不和他們站在同一陣線的人都被處決或流放了。$B$B部落已經失去了幽暗城。奧格瑪會接納被遺忘者的難民，直到危機落幕為止。現在我們處於戒嚴狀態。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13258 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (13258,'zhTW','正好及時，$N。庫爾迪拉老是提到你。也許你會合我胃口。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 13259 AND `locale` = 'zhTW';
@@ -17875,7 +17875,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24545 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24545,'zhTW','當熔爐熔鑄物品時，你感到一股深深的恐懼感籠罩了你。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24547 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24547,'zhTW','<大領主莫格萊尼沉默地看了你一會兒。>$b$b你似乎已經經受住了這一考驗，$R。$B$B祈禱命運在你接下來的任務中能繼續對你微笑……',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24547,'zhTW','<大領主莫格萊尼沉默地看了你一會兒。>$B$B你似乎已經經受住了這一考驗，$R。$B$B祈禱命運在你接下來的任務中能繼續對你微笑……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24548 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24548,'zhTW','這些就足夠了，$c。$B$B當影鋒一切就緒時，我將嘗試著去把它鑄造成完全體。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24549 AND `locale` = 'zhTW';
@@ -17993,9 +17993,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24748 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24748,'zhTW','終於，我們做到了。$B$B願艾澤拉斯的人民永遠銘記我們在這裡的事蹟，願如此多的犧牲能像熊熊火焰一樣在他們的心中燃燒，願他們在面對惡魔時永遠不會怯懦和退縮。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24749 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24749,'zhTW','做得很好，$c。$b$b我們的工作就快完成了。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24749,'zhTW','做得很好，$c。$B$B我們的工作就快完成了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24756 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24756,'zhTW','做得很好，$c。$b$b影之哀傷就快要成型了。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24756,'zhTW','做得很好，$c。$B$B影之哀傷就快要成型了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24757 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (24757,'zhTW','斧子已經集齊了所需要的材料，$r，熔爐也準備好鑄就影之哀傷了……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 24795 AND `locale` = 'zhTW';
@@ -18115,11 +18115,11 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 25282 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25282,'zhTW','做得好，$N。現在我們必須集中精力去尋找關於這個教派更多的資訊從而解救已經加入他們的迷途羔羊。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 25283 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25283,'zhTW','我的天。他們反應不一？$b$b這可出乎我預料了，但我想我起碼對這個演講有點頭緒了。$b$b讓我再想想該如何措辭……',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25283,'zhTW','我的天。他們反應不一？$B$B這可出乎我預料了，但我想我起碼對這個演講有點頭緒了。$B$B讓我再想想該如何措辭……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 25285 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25285,'zhTW','看啊！你沒有被炸到！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 25286 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25286,'zhTW','託比寫好了演講稿？讓我瞧瞧……$b$b<他開始閱讀著稿子。>真是令人心潮澎湃的作品！我知道託比是個好作家，但這次估計是他寫的最好的作品。$b$b是時候讓你去戰場了。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25286,'zhTW','託比寫好了演講稿？讓我瞧瞧……$B$B<他開始閱讀著稿子。>真是令人心潮澎湃的作品！我知道託比是個好作家，但這次估計是他寫的最好的作品。$B$B是時候讓你去戰場了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 25287 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25287,'zhTW','這是最後的稿子了，嗯？讓我看看……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 25288 AND `locale` = 'zhTW';
@@ -18171,7 +18171,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 25495 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25495,'zhTW','終於，一切就緒了。現在，我們要讓扎拉贊恩明白藐視暗矛部族將有什麼後果！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 25500 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25500,'zhTW','託比的演講稿？不是做夢吧？$b新兵，你完成了我們委託做的所有工作，我代表諾莫瑞根感謝你！$b我們正要率領一支精兵趕赴諾莫瑞根，你的幫忙就像雪中送炭。鑑於你的卓越貢獻，我們邀請你加入諾莫瑞根預備隊！$b這些聊表謝意，你值得擁有這些時尚的頭盔。拿著吧，有一天也許會用到的！',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (25500,'zhTW','託比的演講稿？不是做夢吧？$B新兵，你完成了我們委託做的所有工作，我代表諾莫瑞根感謝你！$B我們正要率領一支精兵趕赴諾莫瑞根，你的幫忙就像雪中送炭。鑑於你的卓越貢獻，我們邀請你加入諾莫瑞根預備隊！$B這些聊表謝意，你值得擁有這些時尚的頭盔。拿著吧，有一天也許會用到的！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 26012 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (26012,'zhTW','感謝你帶來羅寧的訊息，勇敢的冒險家。$B$B我來告訴你我們目前掌握的情報，必要時非常期待你能伸出援手。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 26013 AND `locale` = 'zhTW';
