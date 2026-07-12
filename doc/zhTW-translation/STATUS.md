@@ -144,6 +144,20 @@ duplicate of an already-translated live quest.
   English usage of a creature-type word (e.g. "prowler fodder", not
   naming the specific "Prowler" creature) doesn't need to match any one
   creature's exact translation.
+- **`$g word1:word2;` gender tokens need their word pair translated too,
+  not just carried over verbatim** — 3 of the 118 greeting entries left
+  the pair in raw English (`$gboy:girl;`, `$gmister:ma'am;`, `$glad:lass;`)
+  since there was no NPC-name-style lookup to catch it automatically. The
+  corpus has thousands of already-established pairs for exactly this
+  purpose (`grep -rhoP '\$g[^;]{1,20};' ... | sort | uniq -c | sort -rn`
+  surfaces them ranked by frequency) — matched to `$g男孩:女孩;` (53 uses),
+  `$g先生:女士;` (284 uses), `$g小夥子:姑娘;` (183 uses) respectively. This
+  is a different failure mode than the `<male/female>` bracket-pair bug
+  documented above (that one loses content to the tag-stripper entirely;
+  this one keeps the content but leaves it untranslated) — worth a
+  specific check for stray `\$g[a-zA-Z]` patterns after any manual/LLM
+  translation batch, the same way the bracket-pair bug gets checked after
+  Wowhead extraction batches.
 
 ## The CompletionText / RewardText / Greeting dead end
 

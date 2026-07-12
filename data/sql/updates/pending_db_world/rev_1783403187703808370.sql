@@ -291,7 +291,7 @@ INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `Verifi
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 3649 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (3649,0,'zhTW','黑暗勢力正侵蝕著我們的邊境，古老的汙染再度浮現，新的邪惡也不斷崛起，威脅著這片土地脆弱的平衡。在這樣黑暗的時刻，我們都必須保持警戒。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 3663 AND `type` = 0 AND `locale` = 'zhTW';
-INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (3663,0,'zhTW','日安，$glad:lass;！或許你能幫我處理一些需要留意的事情。',0);
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (3663,0,'zhTW','日安，$g小夥子:姑娘;！或許你能幫我處理一些需要留意的事情。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 3666 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (3666,0,'zhTW','嗯……我可以把這條線插在這裡，這樣就能驅動嘶嘶坦克裝置了，但這麼一來水力法蘭盤就需要另一個電源……也許我可以……喔，你好！嘿，想不想幫我試試一項新發明？',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 3845 AND `type` = 0 AND `locale` = 'zhTW';
@@ -315,7 +315,7 @@ INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `Verifi
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 4452 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4452,0,'zhTW','靠近一點。你我之間有重要的事情要討論。$B$B而且有些事情，我們可不希望被別人聽見……',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 4453 AND `type` = 0 AND `locale` = 'zhTW';
-INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4453,0,'zhTW','小心你踩腳的地方，$gmister:ma\'am;。不是每個人都像$r一樣有那麼高的個子。',0);
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4453,0,'zhTW','小心你踩腳的地方，$g先生:女士;。不是每個人都像$r一樣有那麼高的個子。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 4456 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4456,0,'zhTW','不，長耳並不是我的真名。而我也不打算告訴你我的真名是什麼，所以別問了。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 4485 AND `type` = 0 AND `locale` = 'zhTW';
@@ -393,7 +393,7 @@ INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `Verifi
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 900 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (900,0,'zhTW','什麼事情讓你來到湖畔鎮法庭與尊敬的所羅門鎮長面前？',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 9078 AND `type` = 0 AND `locale` = 'zhTW';
-INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (9078,0,'zhTW','親愛的$gboy:girl;，你來得正是時候，可以協助卡加斯遠征軍。',0);
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (9078,0,'zhTW','親愛的$g男孩:女孩;，你來得正是時候，可以協助卡加斯遠征軍。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 9081 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (9081,0,'zhTW','我從未失手過……',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 9177 AND `type` = 0 AND `locale` = 'zhTW';
