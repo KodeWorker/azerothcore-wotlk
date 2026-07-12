@@ -145,3 +145,21 @@ DELETE FROM `quest_greeting_locale` WHERE `ID` = 5638 AND `type` = 0 AND `locale
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (5638,0,'zhTW','我在淒涼之地這裡有很多事要忙，$N。羅田要我們幫其中一位客戶收集一些材料，還要找回一些遺失的物品。$B$B既然你來了要幫忙，那我們何不現在就開始？',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 22292 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (22292,0,'zhTW','聖光尚未照耀到斯克提斯。',0);
+-- Filled from npc_text_locale where the English Greeting text is an exact duplicate
+-- of an already-translated npc_text entry (confirmed via exact-string match, not guessed).
+DELETE FROM `quest_greeting_locale` WHERE `ID` = 2993 AND `type` = 0 AND `locale` = 'zhTW';
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (2993,0,'zhTW','這片土地一直善待著我們的人民，$c。我們必須感謝我們的好運。',0);
+DELETE FROM `quest_greeting_locale` WHERE `ID` = 4080 AND `type` = 0 AND `locale` = 'zhTW';
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4080,0,'zhTW','嘿, $N.需要我幫忙嗎?',0);
+DELETE FROM `quest_greeting_locale` WHERE `ID` = 4201 AND `type` = 0 AND `locale` = 'zhTW';
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4201,0,'zhTW','嘿, $N.需要我幫忙嗎?',0);
+DELETE FROM `quest_greeting_locale` WHERE `ID` = 4454 AND `type` = 0 AND `locale` = 'zhTW';
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4454,0,'zhTW','嘿, $N.需要我幫忙嗎?',0);
+DELETE FROM `quest_greeting_locale` WHERE `ID` = 4498 AND `type` = 0 AND `locale` = 'zhTW';
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4498,0,'zhTW','你好，$c。',0);
+DELETE FROM `quest_greeting_locale` WHERE `ID` = 4630 AND `type` = 0 AND `locale` = 'zhTW';
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (4630,0,'zhTW','嘿, $N.需要我幫忙嗎?',0);
+DELETE FROM `quest_greeting_locale` WHERE `ID` = 5636 AND `type` = 0 AND `locale` = 'zhTW';
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (5636,0,'zhTW','嘿, $N.需要我幫忙嗎?',0);
+DELETE FROM `quest_greeting_locale` WHERE `ID` = 8256 AND `type` = 0 AND `locale` = 'zhTW';
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (8256,0,'zhTW','你好，$N。',0);

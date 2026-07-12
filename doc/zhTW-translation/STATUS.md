@@ -43,11 +43,11 @@ The SQL style linter doesn't catch two bug classes:
 | Turn-in dialogue | `quest_request_items_locale-gaps.tsv` | **0** |
 | Reward dialogue | `quest_offer_reward_locale-gaps.tsv` | **0** |
 | Item names/descriptions | `item_template_locale` | **0** |
-| Quest-giver greeting | `quest_greeting_locale-gaps.tsv` | **126** — only remaining gap |
+| Quest-giver greeting | `quest_greeting_locale-gaps.tsv` | **118** — only remaining gap |
 
 The manual-translation backlog stood at 80 quests at the start of this
 session; it is now zero. The only open translation work project-wide is the
-126-entry Greeting blocker (see "The dead end" below — no source found for
+118-entry Greeting blocker (see "The dead end" below — no source found for
 it anywhere; needs either a new reference or manual translation).
 
 ## Skip-list criteria
@@ -123,6 +123,20 @@ content in any scrapable form found this session:
    anyway.
 3. NPC pages (`wowhead.com/wotlk/tw/npc=<entry>`) don't expose gossip/greeting
    text in static HTML either.
+4. DBC/client extraction (2026-07-12): checked whether `quest_greeting`
+   content exists in the client's static DBC/MPQ data — no, this kind of
+   NPC dialogue is server-sent, never baked into client files; WotLK's DBC
+   catalog has no such file type. The project's own zhTW client install has
+   play-history WDB cache files, but the account is literally named
+   "AzerothCore," so that cache only reflects what our own server already
+   sent — circular, not an independent source.
+
+**One partial win**: cross-referencing `quest_greeting`'s English text
+against `npc_text` (exact string match) found 8 entries whose Greeting is a
+verbatim duplicate of an already-translated `npc_text` entry — copied those
+zhTW translations over directly. Worth re-running this cross-reference if
+more `npc_text_locale` rows get translated later; only 8 of 126 matched so
+far, but it's a legitimate free win, not a guess.
 
 If picking this back up: find a different reference source, or plan for
 manual/original translation.
@@ -188,7 +202,7 @@ only method that worked.
 - `quests-no-wowhead-reference.tsv`, `quest_template_locale-gaps.tsv`,
   `quest_request_items_locale-gaps.tsv`, `quest_offer_reward_locale-gaps.tsv`
   — all empty/retired, kept for their header-comment history.
-- `quest_greeting_locale-gaps.tsv` — 126 entries, the one open gap.
+- `quest_greeting_locale-gaps.tsv` — 118 entries, the one open gap.
 - `wowhead-client-ground-truth/` — official zhTW strings from the client.
 - `scripts/` — extraction/validation pipeline. Portable via `ZHTW_SCRATCH`
   env var (defaults to `/tmp/zhtw-scratch`).
@@ -196,4 +210,4 @@ only method that worked.
 ## Suggested next steps
 
 1. Find a real source (or commit to manual translation) for the Greeting
-   blocker — 126 entries, the only remaining translation gap project-wide.
+   blocker — 118 entries, the only remaining translation gap project-wide.
