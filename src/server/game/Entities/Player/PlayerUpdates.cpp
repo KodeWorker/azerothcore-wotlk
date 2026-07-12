@@ -559,7 +559,7 @@ void Player::UpdateLocalChannels(uint32 newZone)
                     std::string currentNameExt;
 
                     if (channel->flags & CHANNEL_DBC_FLAG_CITY_ONLY)
-                        currentNameExt = sObjectMgr->GetAcoreStringForDBCLocale(LANG_CHANNEL_CITY);
+                        currentNameExt = sObjectMgr->GetAcoreString(LANG_CHANNEL_CITY, m_session->GetSessionDbcLocale());
                     else
                         currentNameExt = current_zone_name;
 
