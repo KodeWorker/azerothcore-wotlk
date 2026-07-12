@@ -57,3 +57,5 @@ DELETE FROM `item_template_locale` WHERE `ID` = 42474 AND `locale` = 'zhTW';
 INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (42474,'zhTW','魔爆術雕紋','雖然這個雕紋似乎因為受到嚴重燒毀而不再含有任何魔力，但是商人或許看不出來其中差異...',0);
 DELETE FROM `item_template_locale` WHERE `ID` = 44852 AND `locale` = 'zhTW';
 INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (44852,'zhTW','玉米粉',NULL,0);
+DELETE FROM `item_template_locale` WHERE `ID` = 5732 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (5732,'zhTW','NG-5',NULL,0);
