@@ -126,6 +126,24 @@ duplicate of an already-translated live quest.
   `燃燒之刃` guess. Cross-referencing each `quest_greeting` row's linked
   quests (`linked_quests` column) for their already-translated
   Title/Details gives strong grounding context per entry.
+- **When a translated term names a "type of being" (not a unique NPC),
+  check whether it's also an actual `creature_template` entry, not just a
+  corpus text match** — a Wowhead page or flavor-text mention can still be
+  wrong. Caught two real mistakes this way post-translation: "Dark Riders"
+  was translated as `黑暗騎士` (freehand), but both a real Wowhead TW page
+  (`quest=40838`) and this project's own `creature_template_locale`
+  ("Dark Rider of Acherus" → `亞榭洛黑騎兵`) confirm the correct term is
+  `黑騎兵`. "Leper Gnomes" was translated as `痲瘋侏儒`, but
+  `creature_template_locale`'s own "Leper Gnome" (entry 1211) is
+  `麻瘋地精` — confirmed by the client DBC ground truth
+  (`ChrRaces_zhTW.tsv` race ID 7) that this project's official term for
+  Gnome is `地精`, not the more common fan-convention `侏儒`. Both fixed.
+  Not every such term has a single answer, though — "Burning Blade" itself
+  is inconsistent even in official base data (`火刃暴徒`/`火刃新兵` vs
+  `燃刃狂熱者` on different creatures of the same name), and generic
+  English usage of a creature-type word (e.g. "prowler fodder", not
+  naming the specific "Prowler" creature) doesn't need to match any one
+  creature's exact translation.
 
 ## The CompletionText / RewardText / Greeting dead end
 
