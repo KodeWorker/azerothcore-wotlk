@@ -1,0 +1,84 @@
+# Quest IDs from the zhTW quest_template_locale "bracket-title" backlog (originally
+# 1538 rows whose Title/Details/Objectives were still raw English wrapped in [brackets])
+# that Wowhead's TW site itself has no Traditional Chinese translation for either
+# (confirmed via wowhead.com/tw/quest=<id> redirecting to an English URL slug).
+#
+# These need original/manual translation -- there's no ready-made TW reference text
+# to pull from, unlike the ~1460 quests already filled from Wowhead TW content.
+#
+# Format: quest ID<TAB>Wowhead URL slug (English, confirms no TW translation exists there)
+8384	claiming-arathi-basin
+8386	fight-for-warsong-gulch
+8389	battle-of-warsong-gulch
+8390	conquering-arathi-basin
+8391	claiming-arathi-basin
+8392	claiming-arathi-basin
+8397	claiming-arathi-basin
+8404	fight-for-warsong-gulch
+8431	battle-of-warsong-gulch
+8440	conquering-arathi-basin
+8441	conquering-arathi-basin
+8442	conquering-arathi-basin
+9386	a-light-in-dark-places
+10994	chasing-the-moonstone
+11320	nyi-now-this-is-ram-racing-almost
+11462	handsome-terry
+11513	intercepting-the-mana-cells
+11524	erratic-behavior
+11532	distraction-at-the-dead-scar
+11542	intercept-the-reinforcements
+11551	agamath-the-first-gate
+11578	the-chow-quest-123-aa-copy
+11579	the-chow-quest-123-aa-copy
+11974	ph-now-when-i-grow-up
+12018	sweet-revenge
+12025	a-scarlet-among-us
+12601	the-alchemists-apprentice
+12602	the-alchemists-apprentice
+12626	company-of-the-damned
+12911	kill-credit-test
+12952	gem-perfection
+13002	gem-perfection
+13156	a-rare-herb
+13199	bones-and-arrows
+13242	darkness-stirs
+13244	timear-foresees-titanium-vanguards-in-your-future
+13245	proof-of-demise-ingvar-the-plunderer
+13247	proof-of-demise-ley-guardian-eregos
+13250	proof-of-demise-galdarah
+13251	proof-of-demise-malganis
+13253	proof-of-demise-loken
+13254	proof-of-demise-anubarak
+13255	proof-of-demise-herald-volazj
+13256	proof-of-demise-cyanigosa
+13373	fringe-science-benefits
+13376	total-ohmage-the-valley-of-lost-hope
+13382	putting-the-hertz-the-valley-of-lost-hope
+13377	the-battle-for-the-undercity
+13406	riding-the-wavelength-the-bombardment
+13404	static-shock-troops-the-bombardment
+13840	reuse
+13914	searing-roc-feathers
+13915	hungry-hungry-hatchling
+13916	poached-scrambled-or-raw
+13908	gearing-up-to-ride
+13917	gorishi-grub
+14111	relic-of-the-earthen-ring
+14350	the-crimson-courier
+14352	an-unholy-alliance
+14420	the-deathstalkers
+14418	the-deathstalkers
+14440	rites-of-the-earthmother
+14437	rites-of-the-earthmother
+14421	the-deathstalkers
+14419	the-deathstalkers
+24875	deprogramming
+24878	residue-rendezvous
+24873	residue-rendezvous
+24871	securing-the-ramparts
+24876	securing-the-ramparts
+24870	securing-the-ramparts
+24874	blood-quickening
+24877	securing-the-ramparts
+24857	attack-on-camp-narache
+24879	blood-quickening
