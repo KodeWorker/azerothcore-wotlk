@@ -43,12 +43,14 @@ The SQL style linter doesn't catch two bug classes:
 | Turn-in dialogue | `quest_request_items_locale-gaps.tsv` | **0** |
 | Reward dialogue | `quest_offer_reward_locale-gaps.tsv` | **0** |
 | Item names/descriptions | `item_template_locale` | **0** |
-| Quest-giver greeting | `quest_greeting_locale-gaps.tsv` | **118** — only remaining gap |
+| Quest-giver greeting | `quest_greeting_locale-gaps.tsv` | **0** |
 
-The manual-translation backlog stood at 80 quests at the start of this
-session; it is now zero. The only open translation work project-wide is the
-118-entry Greeting blocker (see "The dead end" below — no source found for
-it anywhere; needs either a new reference or manual translation).
+**All translation gaps in the project are now resolved.** The
+manual-translation backlog stood at 80 quests and the Greeting blocker at
+126 entries at the start of this session; both are now zero. The last 118
+Greeting entries had no source anywhere (see "The dead end" below) and were
+translated directly via LLM, grounded in official NPC/GO names and
+corpus-established terminology (see "Hard-won methodology lessons" below).
 
 ## Skip-list criteria
 
@@ -110,6 +112,20 @@ duplicate of an already-translated live quest.
   raw `<male/female>` bracket pair** — the extraction pipeline must convert
   it back (`scripts/fetch_quest_text.py`'s `convert_tokens()` handles this
   now) or it silently loses the content to the generic tag-stripper.
+- **When no scrapable source exists at all (`quest_greeting`'s final 118
+  entries), LLM translation grounded in the project's own established data
+  works well** — don't translate proper nouns freehand. Every
+  `quest_greeting` row's key IS the speaking NPC/GO's entry ID, so its
+  official zhTW name comes straight from `creature_template_locale`/
+  `gameobject_template_locale`, no guessing needed. For other proper nouns
+  (zone names, faction/cult names, business names), grep the existing
+  corpus for precedent before translating — concrete case: "Kibler's
+  Exotic Pets" is NOT "異寵店" (a freehand guess); the already-translated
+  quest `4729` establishes "基布雷爾的特殊寵物" as the real convention.
+  Same for "Burning Blade" → corpus-established `火刃`, not a literal
+  `燃燒之刃` guess. Cross-referencing each `quest_greeting` row's linked
+  quests (`linked_quests` column) for their already-translated
+  Title/Details gives strong grounding context per entry.
 
 ## The CompletionText / RewardText / Greeting dead end
 
@@ -131,15 +147,16 @@ content in any scrapable form found this session:
    "AzerothCore," so that cache only reflects what our own server already
    sent — circular, not an independent source.
 
-**One partial win**: cross-referencing `quest_greeting`'s English text
-against `npc_text` (exact string match) found 8 entries whose Greeting is a
-verbatim duplicate of an already-translated `npc_text` entry — copied those
-zhTW translations over directly. Worth re-running this cross-reference if
-more `npc_text_locale` rows get translated later; only 8 of 126 matched so
-far, but it's a legitimate free win, not a guess.
-
-If picking this back up: find a different reference source, or plan for
-manual/original translation.
+**Resolution (2026-07-12): all 126 `quest_greeting` entries are now
+translated.** 8 were a free win — cross-referencing the English Greeting
+text against `npc_text` (exact string match) found entries whose text is a
+verbatim duplicate of an already-translated `npc_text` entry, so those
+zhTW translations were copied over directly. The remaining 118 had no
+scrapable source anywhere, so they were translated directly (LLM,
+grounded in the project's own established data — see "Hard-won
+methodology lessons" above for the technique). `RewardText`/
+`CompletionText` are also both fully resolved (see the "Recent fixes"
+history above) — this whole category is closed out project-wide.
 
 ## Wowhead TW extraction method (for `quest_template_locale`)
 
@@ -200,14 +217,16 @@ only method that worked.
 - `skip-list.tsv` — 390 quest IDs to exclude, with English title and reason.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
 - `quests-no-wowhead-reference.tsv`, `quest_template_locale-gaps.tsv`,
-  `quest_request_items_locale-gaps.tsv`, `quest_offer_reward_locale-gaps.tsv`
-  — all empty/retired, kept for their header-comment history.
-- `quest_greeting_locale-gaps.tsv` — 118 entries, the one open gap.
+  `quest_request_items_locale-gaps.tsv`, `quest_offer_reward_locale-gaps.tsv`,
+  `quest_greeting_locale-gaps.tsv` — all empty/retired, kept for their
+  header-comment history.
 - `wowhead-client-ground-truth/` — official zhTW strings from the client.
 - `scripts/` — extraction/validation pipeline. Portable via `ZHTW_SCRATCH`
   env var (defaults to `/tmp/zhtw-scratch`).
 
-## Suggested next steps
+## Status
 
-1. Find a real source (or commit to manual translation) for the Greeting
-   blocker — 118 entries, the only remaining translation gap project-wide.
+**Every translation gap in this project is resolved.** There is no
+outstanding zhTW translation work as of 2026-07-12. If new gaps are found
+in the future (e.g. from a data update), use the same tables/scripts and
+methodology documented above rather than starting from scratch.
