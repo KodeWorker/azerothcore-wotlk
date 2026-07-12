@@ -46,7 +46,7 @@ does **not** catch:
 
 ## Current numbers (as of this report)
 
-### Skip list — 389 quest IDs (`skip-list.tsv`)
+### Skip list — 390 quest IDs (`skip-list.tsv`)
 
 Quests that should **not** be translated: unreachable in-game (no
 creature/gameobject queststarter+questender row, and no `game_event_*_quest`
@@ -261,20 +261,22 @@ script — don't trust old counts anywhere in git history before this fix.
 
 | File | Table | Field | Count | Status |
 |---|---|---|---|---|
-| `quests-no-wowhead-reference.tsv` | `quest_template_locale` | Title/Details/Objectives | **70** (was 75; `13917` moved to skip list as a confirmed duplicate of already-translated `13903`, `13377` translated via zhCN+OpenCC fallback since its own Wowhead TW page is bracketed/unavailable — see "Recent fixes" below) | From the bracket-title backlog; Wowhead itself has no zhTW translation for these either (confirmed via URL slug still being English/ASCII) |
+| `quests-no-wowhead-reference.tsv` | `quest_template_locale` | Title/Details/Objectives | **0** — retired/fully resolved | Turned out to be almost entirely a false alarm caused by a 570-quest regression bug — see "Recent fixes" below |
 | `quest_template_locale-gaps.tsv` | `quest_template_locale` | Title/Details/Objectives | **0** — fully resolved | Was 11, then 5, then 4; all 5 original entries resolved — see "Recent fixes" below |
 | `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **0** — fully resolved | Was 566, then 5, then 1; all resolved — see "Recent fixes" below |
 | `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | **0** — fully resolved | Was 7, then 6, then 2; all resolved — see "Recent fixes" below |
 | `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) — confirmed all 126 have real English text, no NULL issue here |
 | — | `item_template_locale` | Name/Description | **0** — fully resolved | Was 14 raw gaps; 1 filled (5732), 1 deliberately dropped (33776, Wowhead-flagged `[PH]` placeholder, noted in `skip-list.tsv`'s trailer comment), the other 12 all turned out to be items tied only to skip-listed/duplicate quests (see the `zzDEPRECATED`/`UNUSED`/`DEPRECATED`/`[PH]`/`NPC Equip <id>` pattern discussed above) |
 
-**70 quests have zero usable translation source anywhere found — these need
-original/manual translation**, same as any from-scratch localization work
-(down from 80; `quest_template_locale-gaps.tsv`'s remaining 4 turned out to
-need no manual work at all — see "Recent fixes" below). The reward/completion
-blockers are now fully resolved (0 + 0); only the Greeting blocker remains,
-**126** entries, not the ~700 originally estimated — still blocked on finding
-a source, but a far smaller problem than first reported.
+**The manual/original-translation backlog is now 0 quests** (down from 80 at
+the start of this session). `quest_template_locale-gaps.tsv`'s remaining 4
+and `quests-no-wowhead-reference.tsv`'s remaining ~60 all turned out to need
+no manual work at all — see "Recent fixes" below, especially the 570-quest
+regression-bug fix, which is what actually closed out
+`quests-no-wowhead-reference.tsv`. The reward/completion blockers are also
+fully resolved (0 + 0); only the Greeting blocker remains, **126** entries,
+not the ~700 originally estimated — still blocked on finding a source, but a
+far smaller problem than first reported.
 
 ### Recent fixes that reduced the manual-translation count (2026-07-12)
 
@@ -347,6 +349,45 @@ a source, but a far smaller problem than first reported.
   part of a known BG/holiday/event system), grep the C++ source for the
   actual quest IDs referenced before deciding either way, rather than
   guessing from indirect signals like sibling-translation state alone.
+- **Found and fixed a 570-quest regression bug in `quest_template_locale`**
+  (2026-07-12), discovered while checking `quests-no-wowhead-reference.tsv`
+  for one-time/orphan event quests per user request. Spot-checking a handful
+  of "reachable" entries there (`8390`, `8392`, `9386`, `14437`) found they
+  were already **fully translated in base** — contradicting their presence
+  in a "no translation source" list. Investigating why turned up the actual
+  cause: a `pending_db_world` override (in the consolidated
+  `quest_template_locale` file) had reverted the Title — and often
+  Details/Objectives/CompletedText too — back to raw bracketed English, even
+  though `base/db_world/quest_template_locale.sql` already had complete,
+  professional-quality zhTW translations underneath. Same regression class
+  as the earlier `11987`/`13843` fixes, just found to be **~100x larger in
+  scope than previously known**. A full scan across all 9,464 quests found
+  **570 total instances** of this pattern (base = real translation, pending
+  override = blank or `[bracketed English]`). Spot-verified 59 of them in
+  full field-by-field detail before fixing all 570 — in every case, base's
+  content was strictly better and nothing was lost by deleting the override.
+  Deleted all 570 bad override pairs (all in a single file,
+  `rev_1783688290124463491.sql`); base's real translations now take effect.
+  Docker-validated (exit 0) before committing. **Checked all other locale
+  tables for the same pattern (item_template_locale, creature_template_locale,
+  gameobject_template_locale, npc_text_locale, quest_offer_reward_locale,
+  quest_request_items_locale, quest_greeting_locale, broadcast_text_locale,
+  creature_text_locale, page_text_locale, gossip_menu_option_locale) — zero
+  found elsewhere; this bug was confined to `quest_template_locale` only.**
+  Of the original 61-entry `quests-no-wowhead-reference.tsv`, this resolved
+  54 entries outright, 6 turned out to be stale duplicates of quests already
+  in `skip-list.tsv`, and 1 (`11974`, literal `"[ph]"` placeholder baked into
+  its own English title) was moved to skip-list.
+  `quests-no-wowhead-reference.tsv` is now retired/empty — see the file's own
+  header comment for detail. **This is very likely why the manual-translation
+  backlog kept turning out to be much smaller than tracked throughout this
+  session** (80 → 74 → 70 → 0): the bracket-title detection method used to
+  build that original ~1538-quest backlog evidently ran *before* many of
+  these quests' base translations existed, or the override-writing pass
+  didn't check base first — either way, the lesson is the same as the
+  `11987` finding, just far more consequential: **always diff base vs.
+  pending directly before trusting any "needs translation" list's accuracy,
+  especially one built by an earlier mechanical pass.**
 
 ## The CompletionText / RewardText / Greeting dead end
 
@@ -459,11 +500,12 @@ reference against these client-extracted ground-truth glossaries directly.
 ## Files in this directory
 
 - `STATUS.md` — this file.
-- `skip-list.tsv` — 389 quest IDs to exclude from translation, with English
+- `skip-list.tsv` — 390 quest IDs to exclude from translation, with English
   title and reason.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
-- `quests-no-wowhead-reference.tsv` — 70 quest_template_locale gaps with no
-  translation source anywhere.
+- `quests-no-wowhead-reference.tsv` — retired/empty (see "Recent fixes"
+  above — the 570-quest regression-bug fix resolved 54 of its original 61
+  entries, 6 were stale skip-list duplicates, 1 moved to skip-list).
 - `quest_template_locale-gaps.tsv` — now empty, fully resolved (see
   "Recent fixes" above).
 - `quest_request_items_locale-gaps.tsv` — now empty, fully resolved (see
@@ -481,20 +523,22 @@ reference against these client-extracted ground-truth glossaries directly.
 
 1. Find a real source (or commit to manual translation) for the remaining
    Greeting blocker — 126 entries (see "The CompletionText / RewardText /
-   Greeting dead end" above for what was already tried and ruled out).
-2. Manual/original translation for the 70 quests with literally no source
-   (`quests-no-wowhead-reference.tsv`), down from 80.
-   `quest_template_locale-gaps.tsv` is now fully resolved (0 entries).
+   Greeting dead end" above for what was already tried and ruled out). This
+   is now the **only** remaining translation gap in the entire project.
 
-Everything else from this session is fully resolved: the skip list (389
+Everything else from this session is fully resolved: the skip list (390
 entries), `item_template_locale` (0 real gaps left), `quest_template_locale-gaps.tsv`
 / `quest_request_items_locale-gaps.tsv` / `quest_offer_reward_locale-gaps.tsv`
-(0 entries left in all three), the six zone-name
-zhCN/zhTW terminology leaks (Ashenvale, Argent Crusade, Icecrown, Durotar,
-Orgrimmar, Howling Fjord, Gnomeregan, Zul'Drak), the Jaina Proudmoore
-name-leak, and all 10 previously-ambiguous marker-titled quests — nothing
-pending a decision. **Worth a broader check some day:** the stray
-blank-override bug that hid `13843`'s complete base translation (and
-partially hid 4 others) was found by chance while reducing the
-manual-translation count — there may be more of the same pattern hiding
-real content in other tables' pending overrides, not yet swept.
+/ `quests-no-wowhead-reference.tsv` (0 entries left in all four — the
+manual/original-translation backlog that stood at 80 quests at the start of
+this session is now **zero**), the six zone-name zhCN/zhTW terminology leaks
+(Ashenvale, Argent Crusade, Icecrown, Durotar, Orgrimmar, Howling Fjord,
+Gnomeregan, Zul'Drak), the Jaina Proudmoore name-leak, the 570-quest
+regression bug, and all 10 previously-ambiguous marker-titled quests —
+nothing pending a decision. **The regression-bug sweep was already extended
+to every other locale table** (item_template_locale, creature_template_locale,
+gameobject_template_locale, npc_text_locale, quest_offer_reward_locale,
+quest_request_items_locale, quest_greeting_locale, broadcast_text_locale,
+creature_text_locale, page_text_locale, gossip_menu_option_locale) with zero
+further instances found, so this class of bug should be considered closed
+project-wide, not just for `quest_template_locale`.
