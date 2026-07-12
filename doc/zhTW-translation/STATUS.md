@@ -170,6 +170,25 @@ right before the generic tag-stripper, which would otherwise just delete
 the bracket pair and lose the content). Still worth a spot-check for stray
 `<.../ ...>` patterns after any future extraction batch, just in case.
 
+**The same "concatenation masks a blank primary field" bug class exists in
+`item_template_locale` too** (checked on request; `quest_greeting_locale`
+only has one text field, so it's structurally immune). Found 18 items with
+blank `Name` but a real, non-empty `Description` — the "missing" scan only
+flags rows where Name+Description concatenated is empty. 16 of the 18 are
+orphaned deprecated/test items (`Deprecated Writ of Lakeshire`,
+`zzOLDCodex of...`, `[PH] Hakkar'i Urn`, `NPC Equip 46371`, etc. — the same
+naming patterns established above) with **no quest referencing them at
+all**, so out of scope either way. But 2 are real, well-known items that
+just happened to have `Name` set to `NULL` by an already-merged migration
+(`data/sql/updates/db_world/2026_05_30_06.sql` — immutable, can't be
+edited directly, so fixed via a `pending_db_world` override instead):
+`38301` "D.I.S.C.O." (the Disco Ball trinket) and `40768` "MOLL-E" (the
+portable mailbox trinket), both kept as literal pass-through names (same
+convention as `5732` "NG-5" — stylized proper-noun/acronym names aren't
+translated). One more (`5550` "Fast Test Gun") has an untranslated English
+`Description` ("Testing the LOC trigger") confirming it's genuine test
+content, not a real gap — left alone.
+
 ### Translated and pushed this session
 
 - **1460** quest_template_locale rows filled from Wowhead TW quest pages
