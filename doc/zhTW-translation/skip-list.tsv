@@ -59,7 +59,7 @@ quest_id	english_title	reason
 1278	<nyi> <TXT> The Grim Totem Clan	English title marker: <nyi> <TXT> The Grim Totem Clan
 1279	<nyi> <TXT>The Centaur Hoofprints	
 1280	<nyi> <TXT>The Centaur Hoofprints	
-1289	<nyi> Vimes's Report	English title marker: <nyi> Vimes's Report
+1289	<nyi> Vimes\'s Report	English title marker: <nyi> Vimes's Report
 1290	<nyi> Investigating Mosarn	English title marker: <nyi> Investigating Mosarn
 1291	<nyi> <TXT> Centaur Hoofprints	English title marker: <nyi> <TXT> Centaur Hoofprints
 1292	<nyi><TXT> Centaur Hoofprints	English title marker: <nyi><TXT> Centaur Hoofprints
@@ -68,8 +68,8 @@ quest_id	english_title	reason
 1295	<nyi> <TXT> Course of Action	
 1296	<nyi> <TXT> Course of Action	
 1297	<nyi> <TXT> Course of Action	
-1298	<nyi> <TXT> Thrall's Dirty Work	English title marker: <nyi> <TXT> Thrall's Dirty Work
-1299	<nyi> <TXT> Thrall's Dirty Work	
+1298	<nyi> <TXT> Thrall\'s Dirty Work	English title marker: <nyi> <TXT> Thrall's Dirty Work
+1299	<nyi> <TXT> Thrall\'s Dirty Work	
 1300	<nyi> <TXT> Lorn Grim Totem	
 1390	<nyi> Oops, We Killed Them Again.	English title marker: <nyi> Oops, We Killed Them Again.
 1397	<nyi> Saved!	English title marker: <nyi> Saved!
@@ -85,7 +85,7 @@ quest_id	english_title	reason
 1662	<UNUSED>	English title marker: <UNUSED>
 1663	<UNUSED>	English title marker: <UNUSED>
 1664	<UNUSED>	English title marker: <UNUSED>
-2018	Rokar's Test	Rokar's Test -- unreachable, English-only wowhead slug
+2018	Rokar\'s Test	Rokar's Test -- unreachable, English-only wowhead slug
 2020	<UNUSED>	English title marker: <UNUSED>
 2058	<UNUSED>	English title marker: <UNUSED>
 2059	<UNUSED>	English title marker: <UNUSED>
@@ -116,7 +116,7 @@ quest_id	english_title	reason
 3623	<UNUSED>	English title marker: <UNUSED>
 3624	<UNUSED>	English title marker: <UNUSED>
 3885	<NYI> <TXT> The Gadgetzan Run	English title marker: <NYI> <TXT> The Gadgetzan Run
-3910	<NYI> <TXT> The Un'Goro Run	English title marker: <NYI> <TXT> The Un'Goro Run
+3910	<NYI> <TXT> The Un\'Goro Run	English title marker: <NYI> <TXT> The Un'Goro Run
 4299	<NYI> <TXT>The Tomb of the Seven	English title marker: <NYI> <TXT>The Tomb of the Seven
 4323	<NYI> <TXT> Get those Hyenas!!!	English title marker: <NYI> <TXT> Get those Hyenas!!!
 4541	<NYI> <TXT>	English title marker: <NYI> <TXT>
@@ -128,7 +128,7 @@ quest_id	english_title	reason
 5209	<UNUSED>	English title marker: <UNUSED>
 5303	<UNUSED>	English title marker: <UNUSED>
 5304	<UNUSED>	English title marker: <UNUSED>
-5383	Krastinov's Bag of Horrors	Krastinov's Bag of Horrors -- obsolete duplicate of quest 5515 (real live version, already translated, matches Wowhead's real zhTW slug); requires item 13543 which Wowhead flags UNUSED
+5383	Krastinov\'s Bag of Horrors	Krastinov's Bag of Horrors -- obsolete duplicate of quest 5515 (real live version, already translated, matches Wowhead's real zhTW slug); requires item 13543 which Wowhead flags UNUSED
 5506	<UNUSED>	English title marker: <UNUSED>
 5512	<UNUSED>	English title marker: <UNUSED>
 5516	<UNUSED>	English title marker: <UNUSED>
@@ -179,7 +179,7 @@ quest_id	english_title	reason
 5711	<NYI> The Lost Ways	English title marker: <NYI> The Lost Ways
 5712	<NYI> The Lost Ways	English title marker: <NYI> The Lost Ways
 6003	<nyi> <txt> Green With Envy	<nyi> <txt> Green With Envy (lowercase marker, missed by original case-sensitive scan)
-6165	<NYI> <TXT> Archmage Timolain's Remains	
+6165	<NYI> <TXT> Archmage Timolain\'s Remains	
 6201	<UNUSED> The Legacy of the Ashbringer	English title marker: <UNUSED> The Legacy of the Ashbringer
 6202	<UNUSED> Good and Evil	English title marker: <UNUSED> Good and Evil
 6627	Test of Lore	Test of Lore -- duplicate ID, real version is 6628 (already translated); no wowhead documentation
@@ -244,7 +244,7 @@ quest_id	english_title	reason
 8974	REUSE	REUSE -- same as 8971
 8975	REUSE	REUSE -- same as 8971
 8976	REUSE	REUSE -- same as 8971
-9031	<TXT>Anthion's Parting Words	English title marker: <TXT>Anthion's Parting Words
+9031	<TXT>Anthion\'s Parting Words	English title marker: <TXT>Anthion's Parting Words
 9051	Toxic Test	Toxic Test -- reachable but no wowhead documentation (English-only slug), likely deprecated/test content per user judgment
 9231	reuse	English title marker: reuse
 9284	Aldor Faction Test	Aldor Faction Test -- unreachable, English-only wowhead slug
@@ -266,7 +266,7 @@ quest_id	english_title	reason
 9445	<NYI><TXT>Placeholder: A Worthy Offering	English title marker: <NYI><TXT>Placeholder: A Worthy Offering
 9458	<UNUSED>Potion of Heightened Senses	
 9459	<UNUSED>Anti-crit Potion	
-9477	<UNUSED>Potion of Nature's Armor	
+9477	<UNUSED>Potion of Nature\'s Armor	
 9478	<UNUSED>Portable Healing Font	
 9479	<UNUSED>Glorious Standard of the Alliance	
 9480	<UNUSED>Debuff Banner	
@@ -277,7 +277,7 @@ quest_id	english_title	reason
 9596	<DEPRECATED>Control	
 9597	<UNUSED>	
 9599	<UNUSED>	
-9613	Deprecated: Keanna's Will	English title marker: Deprecated: Keanna's Will
+9613	Deprecated: Keanna\'s Will	English title marker: Deprecated: Keanna's Will
 9614	Deprecated: Reforge a Short Blade	English title marker: Deprecated: Reforge a Short Blade
 9615	Deprecated: Reforge a Long Blade	English title marker: Deprecated: Reforge a Long Blade
 9650	Deprecated: Magical Augmentation	English title marker: Deprecated: Magical Augmentation
@@ -292,22 +292,22 @@ quest_id	english_title	reason
 9659	Deprecated: Healing Amplification	English title marker: Deprecated: Healing Amplification
 9660	Deprecated: Lethality First	English title marker: Deprecated: Lethality First
 9661	Deprecated: A Well Rounded Defense	English title marker: Deprecated: A Well Rounded Defense
-9662	Deprecated: Keanna's Freedom	English title marker: Deprecated: Keanna's Freedom
+9662	Deprecated: Keanna\'s Freedom	English title marker: Deprecated: Keanna's Freedom
 9679	<NYI>Return to Knight-Lord Bloodvalor	English title marker: <NYI>Return to Knight-Lord Bloodvalor
 9745	<DEPRECATED>Suppressing the Flame	English title marker: <DEPRECATED>Suppressing the Flame
 9754		
 9767	Know Your Enemy	Wowhead URL slug is literally 'deprecated'
 10029	The Spirits Are Calling	Wowhead URL slug 'deprecated', no creature/GO starter+ender or game_event link in our DB
-10207	Forward Base: Reaver's Fall REUSE	English title marker: Forward Base: Reaver's Fall REUSE
+10207	Forward Base: Reaver\'s Fall REUSE	English title marker: Forward Base: Reaver's Fall REUSE
 10215		
-10370	Nazgrel's Command <TXT>	English title marker: Nazgrel's Command <TXT>
+10370	Nazgrel\'s Command <TXT>	English title marker: Nazgrel's Command <TXT>
 10402	<TXT>	
 10549	REUSE	English title marker: REUSE
 10616	<nyi>Breadcrumb	English title marker: <nyi>Breadcrumb
-10716	Test Flight: Raven's Wood <needs reward>	Test Flight: Raven's Wood <needs reward> -- unreachable, wowhead slug literally contains 'needs-reward'
-10743	[DEPRECATED]<txt>Hero of the Mok'Nathal	English title marker: [DEPRECATED]<txt>Hero of the Mok'Nathal
+10716	Test Flight: Raven\'s Wood <needs reward>	Test Flight: Raven's Wood <needs reward> -- unreachable, wowhead slug literally contains 'needs-reward'
+10743	[DEPRECATED]<txt>Hero of the Mok\'Nathal	English title marker: [DEPRECATED]<txt>Hero of the Mok'Nathal
 10746	DEPRECATED Karazhan: LAB - E - Exalted Ring - Caster	English title marker: DEPRECATED Karazhan: LAB - E - Exalted Ring - Caster
-10787	[DEPRECATED]<txt><nyi>The Dragons of Dragons' End	English title marker: [DEPRECATED]<txt><nyi>The Dragons of Dragons' End
+10787	[DEPRECATED]<txt><nyi>The Dragons of Dragons\' End	English title marker: [DEPRECATED]<txt><nyi>The Dragons of Dragons' End
 10890	[UNUSED] <NYI> 	
 11088	<DEPRECATED>Unravelling Your Training	English title marker: <DEPRECATED>Unravelling Your Training
 11121	DAILY TEST QUEST (RAID)	
@@ -319,6 +319,8 @@ quest_id	english_title	reason
 11347	<NYI> Clear Some Room	<NYI> Clear Some Room -- broken EndText 'Return to .' (missing NPC name), Wowhead has no real name either (slug: nyi-clear-some-room)
 11425	Test Quest - Craig	Test Quest - Craig -- unreachable, English-only wowhead slug
 11461	DEPRECATED	English title marker: DEPRECATED
+11578	The \"Chow\" Quest (123)aa COPY	The "Chow" Quest (123)aa COPY -- unreachable, duplicate pair with 11579 (identical content), literal "COPY" in title
+11579	The \"Chow\" Quest (123)aa COPY	The "Chow" Quest (123)aa COPY -- unreachable, duplicate pair with 11578 (identical content), literal "COPY" in title
 11588	REUSE	English title marker: REUSE
 11589	REUSE	English title marker: REUSE
 11987	zzOLDFortune Card: Silver	zzOLDFortune Card: Silver -- confirmed both ways: Wowhead flags deprecated (此任務被暴雪標記為過期) AND unreachable in our DB (no starter/ender, no game_event link)
@@ -337,6 +339,8 @@ quest_id	english_title	reason
 12445		
 12452	zzOLD The Fate of the Ruby Dragonshrine	zzOLD The Fate of the Ruby Dragonshrine -- unreachable, wowhead slug still carries 'zzold'
 12493	PvP Test	PvP Test -- unreachable, English-only wowhead slug
+12601	The Alchemist\'s Apprentice	The Alchemist's Apprentice -- unreachable, duplicate pair with 12602 (identical content), Wowhead bracket-title (unavailable)
+12602	The Alchemist\'s Apprentice	The Alchemist's Apprentice -- unreachable, duplicate pair with 12601 (identical content), Wowhead bracket-title (unavailable)
 12682	Uncharted Territory (DEPRECATED)	English title marker: Uncharted Territory (DEPRECATED)
 12731		
 12764	The Secret to Kungaloosh (DEPRECATED)	English title marker: The Secret to Kungaloosh (DEPRECATED)
@@ -346,20 +350,27 @@ quest_id	english_title	reason
 12911	Kill Credit Test	English title marker: Kill Credit Test
 12923		
 13150	ZZOLDLost: Widget	ZZOLDLost: Widget -- unreachable, wowhead slug still carries 'zzold'
+13156	A Rare Herb	A Rare Herb -- unreachable, Wowhead bracket-title (unavailable), duplicate concept of already-translated 13195
 13210	Blizzard Account: - DEM - E - FLAG	Blizzard Account: - DEM - E - FLAG -- unreachable, internal/dev account testing, wowhead slug matches
 13299	ZZOLDWisp Cloak	ZZOLDWisp Cloak -- unreachable, wowhead slug still carries 'zzold'
 13303	Test Quest	Test Quest -- unreachable in our DB; wowhead slug shows unrelated content (the-panchurian-candidate), likely ID repurposed in a later expansion
 13541		
-13649	Justin's Fun Test	Justin's Fun Test -- reachable but no wowhead documentation (English-only slug), likely deprecated/test content per user judgment
+13649	Justin\'s Fun Test	Justin's Fun Test -- reachable but no wowhead documentation (English-only slug), likely deprecated/test content per user judgment
 13825	Clamlette Surprise	Clamlette Surprise -- internal duplicate stub (type=0,level=-1,min=0), dead pair pattern
 13826	Nat Pagle, Angler Extreme	Nat Pagle, Angler Extreme -- internal duplicate stub of quest 6607 (which already has zhTW text)
 13840	REUSE	English title marker: REUSE
-14106	Na Kada's Quest Test	Na Kada's Quest Test -- unreachable, English-only wowhead slug
+13914	Searing Roc Feathers	Searing Roc Feathers -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 13905
+13915	Hungry, Hungry Hatchling	Hungry, Hungry Hatchling -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 13889
+13916	Poached, Scrambled, Or Raw?	Poached, Scrambled, Or Raw? -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 13904
+13917	Gorishi Grub	Gorishi Grub -- duplicate of already-translated quest 13903 (identical content). Wowhead confirms deprecated (此任務被暴雪標記為過期) despite having a starter/ender in our DB -- same false-positive-reachability pattern as the Thunderfury/Krastinov's duplicates
+14106	Na Kada\'s Quest Test	Na Kada's Quest Test -- unreachable, English-only wowhead slug
+14111	Relic of the Earthen Ring	Relic of the Earthen Ring -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 14100
 14119	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
 14147	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
 14148	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
 14149	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
 14150	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
+14350	The Crimson Courier	The Crimson Courier -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 6145
 14351	Battle of Hillsbrad	deprecated-battle-of-hillsbrad -- Wowhead URL slug
 14439	Journey into Thunder Bluff	Journey into Thunder Bluff -- Wowhead: deprecated, superseded by quest 24550 in a later expansion
 24222	Call to Arms: Eye of the Storm DEPRECATED	English title marker: Call to Arms: Eye of the Storm DEPRECATED
@@ -367,3 +378,5 @@ quest_id	english_title	reason
 24661	REUSE ME	REUSE ME -- QuestLevel=-1 internal-duplicate-stub signature, template for the 'Crushing the Crown' city-variant quests
 24746	REUSE	English title marker: REUSE
 24797	REUSE	English title marker: REUSE
+24857	Attack on Camp Narache	Attack on Camp Narache -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 781
+24875	Deprogramming	Deprogramming -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 24869
