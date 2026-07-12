@@ -46,7 +46,7 @@ does **not** catch:
 
 ## Current numbers (as of this report)
 
-### Skip list — 321 quest IDs (`skip-list.tsv`)
+### Skip list — 331 quest IDs (`skip-list.tsv`)
 
 Quests that should **not** be translated: unreachable in-game (no
 creature/gameobject queststarter+questender row, and no `game_event_*_quest`
@@ -75,11 +75,27 @@ that *is* reachable and already translated (5786↔7521 pattern) — reachabilit
 alone doesn't prove a title-legitimate quest is obsolete; check for a live
 duplicate first if you're unsure.
 
-10 more quests are reachable in our DB but have marker-looking English titles
-(`REUSE` ×6, `<NYI> Clear Some Room`, `[NYI] Now this is Ram Racing... Almost.`,
-`Warsong Outriders <NYI> <TXT>`, `Forward Base: Reaver's Fall REUSE` — wait,
-that last one was unreachable, see file) — **not resolved**, sitting in
-`ambiguous-reachable-marker-titled-quests.tsv` pending a human call.
+**Resolved:** the 10 quests reachable-but-marker-titled (`REUSE` ×6,
+`<NYI> Clear Some Room`, `[NYI] Now this is Ram Racing... Almost.`,
+`Warsong Outriders <NYI> <TXT>`, `REUSE ME`) were investigated individually
+and all confirmed as incomplete/template content, not real translatable
+quests — added to the skip list. Evidence per quest: the six `REUSE`
+quests (8971-8976) have blank Details/Objectives, a broken `EndText`
+("Return to ." — missing NPC name, a template bug), and are only reachable
+via the seasonal-event quest pool (`game_event_seasonal_questrelation`,
+Love is in the Air), not a real NPC — consistent with internal
+"grant-a-random-reward" stub quests never meant to be player-visible.
+`[NYI] Now this is Ram Racing...` has Details/Objectives that are literally
+the unfilled placeholder *labels* `Log Descritpion`/`Quest Description`.
+`REUSE ME` has `QuestLevel=-1`, the same internal-duplicate-stub signature
+as the Thunderfury/Krastinov's finds below — it's a copy-paste template for
+the "Crushing the Crown" city-variant quests. `<NYI> Clear Some Room` and
+`Warsong Outriders <NYI> <TXT>` both have a broken `EndText` target and
+Wowhead has never assigned either a real documented name (slugs are
+literally `nyi-clear-some-room` and `warsong-outriders-nyi-txt`).
+**Lesson for next time:** `game_event_seasonal_questrelation` reachability
+is a weaker signal than a direct creature/GO starter+ender — worth
+checking Details/Objectives/EndText content quality too before trusting it.
 
 One more duplicate-item pattern found while resolving `item_template_locale`:
 quests 7922/7923/7924/7925/8002/8293/8296/8568 (all blank English titles,
@@ -241,10 +257,9 @@ reference against these client-extracted ground-truth glossaries directly.
 ## Files in this directory
 
 - `STATUS.md` — this file.
-- `skip-list.tsv` — 321 quest IDs to exclude from translation, with English
+- `skip-list.tsv` — 331 quest IDs to exclude from translation, with English
   title and reason.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
-- `ambiguous-reachable-marker-titled-quests.tsv` — 10 unresolved edge cases.
 - `quests-no-wowhead-reference.tsv` — 75 quest_template_locale gaps with no
   translation source anywhere.
 - `quest_template_locale-gaps.tsv` — 11 more of the same, different backlog.
@@ -258,7 +273,6 @@ reference against these client-extracted ground-truth glossaries directly.
 
 ## Suggested next steps
 
-1. Decide the 10 `ambiguous-reachable-marker-titled-quests.tsv` cases.
 2. Find a real source (or commit to manual translation) for
    CompletionText/RewardText/Greeting — 138 entries blocked on this alone
    (5 + 7 + 126; see the correction note above the gaps table — this was
