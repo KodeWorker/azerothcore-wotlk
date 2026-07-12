@@ -46,7 +46,7 @@ does **not** catch:
 
 ## Current numbers (as of this report)
 
-### Skip list — 368 quest IDs (`skip-list.tsv`)
+### Skip list — 381 quest IDs (`skip-list.tsv`)
 
 Quests that should **not** be translated: unreachable in-game (no
 creature/gameobject queststarter+questender row, and no `game_event_*_quest`
@@ -241,18 +241,48 @@ script — don't trust old counts anywhere in git history before this fix.
 
 | File | Table | Field | Count | Status |
 |---|---|---|---|---|
-| `quests-no-wowhead-reference.tsv` | `quest_template_locale` | Title/Details/Objectives | 75 | From the bracket-title backlog; Wowhead itself has no zhTW translation for these either (confirmed via URL slug still being English/ASCII) |
-| `quest_template_locale-gaps.tsv` | `quest_template_locale` | Title/Details/Objectives | 11 | Same as above but from the "fully blank row" backlog |
+| `quests-no-wowhead-reference.tsv` | `quest_template_locale` | Title/Details/Objectives | **70** (was 75; `13917` moved to skip list as a confirmed duplicate of already-translated `13903`, `13377` translated via zhCN+OpenCC fallback since its own Wowhead TW page is bracketed/unavailable — see "Recent fixes" below) | From the bracket-title backlog; Wowhead itself has no zhTW translation for these either (confirmed via URL slug still being English/ASCII) |
+| `quest_template_locale-gaps.tsv` | `quest_template_locale` | Title/Details/Objectives | **4** (was 11, then 5; `13843` fully resolved, the remaining 4 partially resolved — see "Recent fixes" below) | Same origin as above but from the "fully blank row" backlog |
 | `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **5** (corrected from 566, then re-checked against the final skip list — see above) | **Blocked, no source found** (see below) |
 | `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | **6** (was 7, `8270` "test copy quest" removed once skip-listed) | **Blocked, no source found** (see below) — confirmed real English text, no NULL issue here |
 | `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) — confirmed all 126 have real English text, no NULL issue here |
 | — | `item_template_locale` | Name/Description | **0** — fully resolved | Was 14 raw gaps; 1 filled (5732), 1 deliberately dropped (33776, Wowhead-flagged `[PH]` placeholder, noted in `skip-list.tsv`'s trailer comment), the other 12 all turned out to be items tied only to skip-listed/duplicate quests (see the `zzDEPRECATED`/`UNUSED`/`DEPRECATED`/`[PH]`/`NPC Equip <id>` pattern discussed above) |
 
-**80 quests (75 + 5) have zero usable translation source anywhere found —
+**74 quests (70 + 4) have zero usable translation source anywhere found —
 these need original/manual translation**, same as any from-scratch localization
-work. The reward/completion/greeting blockers now total a much smaller **138**
-entries (5 + 6 + 126), not the ~700 originally estimated — still blocked on
-finding a source, but a far smaller problem than first reported.
+work (down from 80). The reward/completion/greeting blockers now total a much
+smaller **138** entries (5 + 6 + 126), not the ~700 originally estimated —
+still blocked on finding a source, but a far smaller problem than first reported.
+
+### Recent fixes that reduced the manual-translation count (2026-07-12)
+
+- **13917** "Gorishi Grub" confirmed as a deprecated duplicate of already-translated
+  `13903` (identical content, Wowhead confirms deprecated) — moved to skip list.
+  Following that same pattern up against the rest of `quests-no-wowhead-reference.tsv`
+  turned up 12 more genuine duplicates (`11578/11579` literal "...COPY" test pair,
+  `12601/12602`, `13156`, `13914-13916`, `14111`, `14350`, `24875`, `24857`), all
+  unreachable in our DB and confirmed unavailable on Wowhead — also skip-listed.
+  Two other title-match suspects (`9386`, `13377`) turned out to be real, reachable
+  WotLK-era one-time-event quests that Wowhead only brackets because retail removed
+  them post-event — **not** duplicates.
+- **13377** "The Battle For The Undercity" (Alliance side of the Fall of Undercity
+  event) translated. Its own Wowhead TW page is bracketed/English (same
+  retail-removal false-deprecation pattern as above), so no TW source existed;
+  sourced from Wowhead **zhCN** instead and converted via OpenCC s2twp, matching
+  the Horde-side sibling quest `13267`'s already-correct terminology.
+- **Stray blank-override regression found and fixed**, same bug class as the
+  earlier quest-11987 fix: 30 quests in `pending_db_world`'s consolidated
+  `quest_template_locale` file had an override that force-blanked
+  Title/Details/Objectives/etc to `''` — for 25 of them this was harmless (all
+  already skip-listed/deprecated, base itself has no real content either;
+  deleted the overrides anyway for policy consistency), but for **5 of them
+  base already had real, well-formed zhTW content that the override was
+  actively hiding**: `13843` "The Scrapbot Construction Kit" had a *complete*
+  base translation (Title+Details+Objectives) entirely masked by the blank
+  override — now fully resolved, zero manual work needed. `12890`, `13175`,
+  `13176`, `13184` had at least a real Title in base (Details/Objectives/etc
+  were genuinely blank in base too) — Title now restored, body text is the
+  only remaining gap for these 4.
 
 ## The CompletionText / RewardText / Greeting dead end
 
@@ -365,12 +395,14 @@ reference against these client-extracted ground-truth glossaries directly.
 ## Files in this directory
 
 - `STATUS.md` — this file.
-- `skip-list.tsv` — 368 quest IDs to exclude from translation, with English
+- `skip-list.tsv` — 381 quest IDs to exclude from translation, with English
   title and reason.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
-- `quests-no-wowhead-reference.tsv` — 75 quest_template_locale gaps with no
+- `quests-no-wowhead-reference.tsv` — 70 quest_template_locale gaps with no
   translation source anywhere.
-- `quest_template_locale-gaps.tsv` — 11 more of the same, different backlog.
+- `quest_template_locale-gaps.tsv` — 4 more of the same, different backlog
+  (all 4 now have a real Title restored from base; only the body text is
+  still an open gap — see "Recent fixes" above).
 - `quest_request_items_locale-gaps.tsv` / `quest_offer_reward_locale-gaps.tsv`
   / `quest_greeting_locale-gaps.tsv` — blocked gaps, see above.
 - `wowhead-client-ground-truth/` — official zhTW strings extracted from the
@@ -383,11 +415,19 @@ reference against these client-extracted ground-truth glossaries directly.
 
 1. Find a real source (or commit to manual translation) for
    CompletionText/RewardText/Greeting — 137 entries blocked on this alone
-   (5 + 7 + 126; see "The CompletionText / RewardText / Greeting dead end"
+   (5 + 6 + 126; see "The CompletionText / RewardText / Greeting dead end"
    above for what was already tried and ruled out).
-2. Manual/original translation for the 80 quests with literally no source
-   (`quests-no-wowhead-reference.tsv` + `quest_template_locale-gaps.tsv`).
+2. Manual/original translation for the 74 quests with literally no source
+   (`quests-no-wowhead-reference.tsv` + `quest_template_locale-gaps.tsv`),
+   down from 80.
 
-Everything else from this session is fully resolved: the skip list (368
-entries), `item_template_locale` (0 real gaps left), and all 10
-previously-ambiguous marker-titled quests — nothing pending a decision.
+Everything else from this session is fully resolved: the skip list (381
+entries), `item_template_locale` (0 real gaps left), the six zone-name
+zhCN/zhTW terminology leaks (Ashenvale, Argent Crusade, Icecrown, Durotar,
+Orgrimmar, Howling Fjord, Gnomeregan, Zul'Drak), the Jaina Proudmoore
+name-leak, and all 10 previously-ambiguous marker-titled quests — nothing
+pending a decision. **Worth a broader check some day:** the stray
+blank-override bug that hid `13843`'s complete base translation (and
+partially hid 4 others) was found by chance while reducing the
+manual-translation count — there may be more of the same pattern hiding
+real content in other tables' pending overrides, not yet swept.
