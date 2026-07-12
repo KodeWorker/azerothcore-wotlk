@@ -245,7 +245,7 @@ INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `Verifi
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 267 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (267,0,'zhTW','歡迎來到夜色鎮。書記員達爾塔為您服務。有什麼我能幫忙的嗎？',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 273 AND `type` = 0 AND `locale` = 'zhTW';
-INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (273,0,'zhTW','把門關好，$C。誰也不知道黑暗騎士什麼時候又會經過這裡。',0);
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (273,0,'zhTW','把門關好，$C。誰也不知道黑騎兵什麼時候又會經過這裡。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 288 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (288,0,'zhTW','啊?!? 喔。你看起來不像迪菲亞兄弟會的小偷……也不像守夜人的一員。可憐可憐一個窮苦人吧，行嗎？',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 289 AND `type` = 0 AND `locale` = 'zhTW';
@@ -365,7 +365,7 @@ INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `Verifi
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 6179 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (6179,0,'zhTW','還有許多試煉等待著聖光的聖騎士，$N。請放心，只要你保持熱忱，堅守我們所推崇的美德，我們的道路在未來必將多次交會。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 6569 AND `type` = 0 AND `locale` = 'zhTW';
-INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (6569,0,'zhTW','穴居怪與痲瘋侏儒橫行的地方，就是我們的家園——諾姆瑞根。$B$B我們失去了家人，家園也四分五裂，流離失所。$B$B我多麼渴望回到諾姆瑞根無憂無慮的日子，但那些日子已經一去不復返了。我們必須挺身而戰！我們必須拯救諾姆瑞根！',0);
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (6569,0,'zhTW','穴居怪與麻瘋地精橫行的地方，就是我們的家園——諾姆瑞根。$B$B我們失去了家人，家園也四分五裂，流離失所。$B$B我多麼渴望回到諾姆瑞根無憂無慮的日子，但那些日子已經一去不復返了。我們必須挺身而戰！我們必須拯救諾姆瑞根！',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 6579 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (6579,0,'zhTW','為了諾姆瑞根！',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 663 AND `type` = 0 AND `locale` = 'zhTW';
