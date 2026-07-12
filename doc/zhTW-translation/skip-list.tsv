@@ -237,6 +237,7 @@ quest_id	english_title	reason
 8489	An Intact Converter	An Intact Converter -- Wowhead URL slug 'deprecated', no creature/GO starter+ender or game_event link in our DB
 8568	Past Victories in Warsong Gulch	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
 8571	<UNUSED> Armor Kits	English title marker: <UNUSED> Armor Kits
+8742	The Might of Kalimdor	The Might of Kalimdor -- unreachable, the classic AQ40 "War of the Shifting Sands" gate-opening quest (C'Thun/Scepter of the Shifting Sands). Checked src/server/ C++ source for the AQ war-effort world-event system that would grant this via hardcoded game logic (not NPC/GO interaction) -- zero references found anywhere in the codebase. AzerothCore does not implement this one-time historical Blizzard event at all; confirmed genuinely unreachable on this server.
 8896	The Dwarven Spy	The Dwarven Spy -- same as 12021
 8971	REUSE	REUSE -- blank Details/Objectives, broken EndText 'Return to .' (missing NPC name), only reachable via Love is in the Air seasonal pool, not a real NPC
 8972	REUSE	REUSE -- same as 8971
@@ -379,6 +380,8 @@ quest_id	english_title	reason
 14439	Journey into Thunder Bluff	Journey into Thunder Bluff -- Wowhead: deprecated, superseded by quest 24550 in a later expansion
 24222	Call to Arms: Eye of the Storm DEPRECATED	English title marker: Call to Arms: Eye of the Storm DEPRECATED
 24227	DEPRECATED	English title marker: DEPRECATED
+24426	Call to Arms: Alterac Valley	Call to Arms: Alterac Valley -- unreachable. Checked src/server/game/Battlegrounds/Battleground.cpp's hardcoded "Call to Arms!" achievement-granting code (Battleground.cpp:928-953) -- it only references 8 specific quest IDs (11335/11339 AB, 11336/11340 AV, 11337/11341 EY, 11338/11342 WG), one pair per battleground. 24426 is not among them; it's a leftover/unused duplicate ID from this 32-quest QuestLevel=-1 family, not part of the functional mechanism.
+24427	Call to Arms: Alterac Valley	Call to Arms: Alterac Valley -- same as 24426, not among the 8 quest IDs actually referenced by the hardcoded Call to Arms achievement system in Battleground.cpp.
 24661	REUSE ME	REUSE ME -- QuestLevel=-1 internal-duplicate-stub signature, template for the 'Crushing the Crown' city-variant quests
 24746	REUSE	English title marker: REUSE
 24797	REUSE	English title marker: REUSE

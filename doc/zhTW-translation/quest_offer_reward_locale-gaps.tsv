@@ -1,6 +1,5 @@
-# quest_offer_reward_locale (RewardText -- reward-screen dialogue): CORRECTED 2026-07-12,
-# re-checked against the current (368-entry, then 386-entry) skip list.
-# 5 of the 6 remaining entries resolved 2026-07-12:
+# quest_offer_reward_locale (RewardText -- reward-screen dialogue): this backlog is
+# now EMPTY. All 6 original entries resolved 2026-07-12.
 #
 # 14418/14420 (The Deathstalkers): unreachable, identical content to reachable quest
 # 1978 of the same title -- confirmed duplicate, moved to skip list.
@@ -11,17 +10,20 @@
 # business..." -> "我們在這裡做的事，不關你的事……" (Apothecary Hummel, no unique
 # NPC/item names in this specific line).
 #
-# 24426/24427 (Call to Arms: Alterac Valley) still open: initially suspected as part
-# of the same internal-stub family as skip-listed 24222/24227 (QuestLevel=-1), but
-# that turned out to be wrong -- 4 sibling "Call to Arms" quests (11337/11341/14179/
-# 14182) already have real, well-written base zhTW translations despite the same
-# QuestLevel=-1/unreachable signature. This whole 32-quest family is a level-bracket
-# variant matrix for the real BG-queue "Call to Arms" bonus-reward system, granted by
-# hardcoded game logic rather than NPC/GO interaction -- our reachability check can't
-# see that mechanism. Only quests whose title literally says "DEPRECATED" (24222,
-# 24227) are confirmed dead. Do NOT skip-list 24426/24427 without individually
-# verifying they're actually part of the dead pair, not just an untranslated (but
-# real) bracket variant like most of their siblings.
+# 24426/24427 (Call to Arms: Alterac Valley): unreachable, moved to skip list.
+# Initially suspected as reachable via the hardcoded BG-queue "Call to Arms" bonus
+# system (4 sibling quests -- 11337/11341/14179/14182 -- already have real,
+# well-written base zhTW translations despite the same QuestLevel=-1/unreachable
+# signature, suggesting that whole 32-quest family might be a legitimate
+# level-bracket variant matrix). Checked src/server/game/Battlegrounds/
+# Battleground.cpp's actual hardcoded "Call to Arms!" achievement-granting code
+# (around line 928) -- it only references 8 specific quest IDs, one pair per
+# battleground (11335/11339 AB, 11336/11340 AV, 11337/11341 EY, 11338/11342 WG).
+# 24426/24427 are not among them; confirmed as leftover/unused duplicate IDs from
+# this family, not part of the functional mechanism. The 4 already-translated
+# siblings (11337 etc.) are apparently from an earlier over-inclusive translation
+# pass -- their translations aren't harmful (base data, not something we'd revert),
+# just not strictly necessary. Only 11335/11336/11337/11338/11339/11340/11341/11342
+# are confirmed functional; everything else in the 32-quest family (including
+# 24426/24427) is unused.
 quest_id	english_title	quest_wowhead_status
-24426	Call to Arms: Alterac Valley	no_wowhead_reference
-24427	Call to Arms: Alterac Valley	no_wowhead_reference
