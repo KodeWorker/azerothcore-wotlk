@@ -157,7 +157,10 @@ duplicate of an already-translated live quest.
   this one keeps the content but leaves it untranslated) — worth a
   specific check for stray `\$g[a-zA-Z]` patterns after any manual/LLM
   translation batch, the same way the bracket-pair bug gets checked after
-  Wowhead extraction batches.
+  Wowhead extraction batches. Swept the entire project for this pattern
+  after finding those 3 (all of `pending_db_world` plus base's zhTW rows,
+  which can't be edited but are worth knowing about) — zero further
+  instances found anywhere; confirmed fully clean project-wide.
 
 ## The CompletionText / RewardText / Greeting dead end
 
