@@ -13,7 +13,7 @@ METADATA_PREFIXES = ("等級", "新增於", "獎勵", "+")
 def fetch_html(qid, timeout=15):
     try:
         out = subprocess.run(
-            ["curl", "-sL", "--max-time", str(timeout), f"https://www.wowhead.com/tw/quest={qid}"],
+            ["curl", "-sL", "--max-time", str(timeout), f"https://www.wowhead.com/wotlk/tw/quest={qid}"],
             capture_output=True, timeout=timeout + 5
         )
         return out.stdout.decode("utf-8", errors="replace")
