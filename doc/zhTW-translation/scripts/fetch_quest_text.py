@@ -25,6 +25,12 @@ def convert_tokens(text):
     text = text.replace('&lt;name&gt;', '$n').replace('&lt;Name&gt;', '$N')
     text = text.replace('&lt;class&gt;', '$c').replace('&lt;Class&gt;', '$C')
     text = text.replace('&lt;race&gt;', '$r').replace('&lt;Race&gt;', '$R')
+    # Wowhead renders the project's $g male:female; gender token as a raw
+    # <male/female> bracket pair in its web display -- convert it back, or the
+    # generic tag-stripper below would just delete it and lose the content.
+    # (Bug history: this slipped through undetected across 9 rows/50 instances
+    # before being caught -- see STATUS.md.)
+    text = re.sub(r'<([^<>/]{1,20})/([^<>/]{1,20})>', r'$g\1:\2;', text)
     text = re.sub(r'<[^>]+>', '', text)
     text = html.unescape(text)
     text = re.sub(r'\s*\n\s*', ' ', text)
