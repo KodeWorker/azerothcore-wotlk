@@ -46,7 +46,7 @@ does **not** catch:
 
 ## Current numbers (as of this report)
 
-### Skip list — 331 quest IDs (`skip-list.tsv`)
+### Skip list — 362 quest IDs (`skip-list.tsv`)
 
 Quests that should **not** be translated: unreachable in-game (no
 creature/gameobject queststarter+questender row, and no `game_event_*_quest`
@@ -103,6 +103,57 @@ all unreachable) were tied to item 19322 `zzDEPRECATED Warsong Mark of Honor`
 — the real item is 20558 `Warsong Gulch Mark of Honor`. Same shape as the
 Thunderfury/Krastinov's duplicates: `zz`-prefixed names are a dev convention
 for "sort to bottom, hidden." All 8 added to the skip list.
+
+**Broader keyword sweep (31 more added).** A user-flagged example (`8270`
+"test copy quest" — plain English, no `<NYI>`/`<TXT>`/etc. marker at all)
+showed the marker-regex approach has a blind spot for generic test/debug
+words. A follow-up sweep for `test`/`temp`/`blank`/`zzold`/`ph` patterns
+found 49 more candidates — **all individually verified against Wowhead
+before touching anything** (a plain keyword match is not enough on its own;
+e.g. "Test Flight" and "Test of Endurance" are real quest names, not debug
+markers). Of the 49: 23 were confirmed junk (English-only Wowhead slug, or
+slug still carrying `zzold`, or literally containing `needs-reward`), 2 were
+duplicate IDs of an already-translated "Test of Lore"/"Test of Strength"
+quest (5 total IDs in that family), and 2 more (`9051` "Toxic Test", `13649`
+"Justin's Fun Test") were reachable with no Wowhead documentation — kept per
+user judgment as likely deprecated. All 31 added to the skip list. The
+other 18 of the 49 were confirmed real (Chinese Wowhead slug matching the
+concept) and left untouched.
+
+**3 gaps that slipped through every scan, now fixed.** `12300` "Test of
+Mettle" and `12520` "Rhino Mastery: The Test" had **blank Title** while
+other fields (EndText/CompletedText/ObjectiveText1) were already filled —
+the "missing" scan only flags rows where the *concatenation* of all fields
+is empty, so a row with a blank Title but content elsewhere slips through
+(same root cause as quest 11623's earlier discovery). Filled both from
+Wowhead. `11987` "zzOLDFortune Card: Silver" was also in this state, but
+turned out to be a genuine deprecation (Wowhead: `此任務被暴雪標記為過期` +
+confirmed unreachable in our own DB, both signals agreeing this time) —
+**and its `pending_db_world` override was actively regressing an
+already-correct base translation** (`data/sql/base/db_world/quest_template_locale.sql`
+already had `幸運卡片：白銀` for it; some earlier mechanical pass had
+overwritten that with the raw English `zzOLDFortune Card: Silver` in the
+pending override). Deleted the override entirely rather than "fixing" it
+with a translation — for confirmed-unreachable content there's no reason
+for a pending override to exist at all, and it lets the correct base value
+take effect. **Worth a broader check some day:** if one such regression
+existed, there may be others in the ~1538-quest bracket-title backlog that
+this session's Wowhead pipeline "fixed" without checking whether base
+already had something better.
+
+**Systemic gender-token bug found and fixed while investigating the above.**
+Wowhead's web display renders the `$g male:female;` token as a raw
+`<male/female>` bracket pair, and the extraction pipeline copied that
+literally instead of converting it back to `$g...:...;` (the project's
+actual convention, confirmed against existing rows like quest 5633).
+Found 50 instances across 9 already-translated rows (`5633, 11190, 12520,
+13132, 13607, 13614, 13816, 13818`, plus more) using 25 different
+male/female word-pair variants. Fixed globally with a regex sub
+(`<X/Y>` → `$gX:Y;`) across the whole file, and `scripts/fetch_quest_text.py`'s
+`convert_tokens()` now handles this automatically for future runs (added
+right before the generic tag-stripper, which would otherwise just delete
+the bracket pair and lose the content). Still worth a spot-check for stray
+`<.../ ...>` patterns after any future extraction batch, just in case.
 
 ### Translated and pushed this session
 
@@ -257,7 +308,7 @@ reference against these client-extracted ground-truth glossaries directly.
 ## Files in this directory
 
 - `STATUS.md` — this file.
-- `skip-list.tsv` — 331 quest IDs to exclude from translation, with English
+- `skip-list.tsv` — 362 quest IDs to exclude from translation, with English
   title and reason.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
 - `quests-no-wowhead-reference.tsv` — 75 quest_template_locale gaps with no
@@ -280,6 +331,6 @@ reference against these client-extracted ground-truth glossaries directly.
 2. Manual/original translation for the 86 quests with literally no source
    (`quests-no-wowhead-reference.tsv` + `quest_template_locale-gaps.tsv`).
 
-Everything else from this session is fully resolved: the skip list (331
+Everything else from this session is fully resolved: the skip list (362
 entries), `item_template_locale` (0 real gaps left), and all 10
 previously-ambiguous marker-titled quests — nothing pending a decision.
