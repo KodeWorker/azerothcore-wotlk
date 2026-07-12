@@ -1,0 +1,571 @@
+# quest_request_items_locale (CompletionText -- turn-in dialogue): blocked, Wowhead does not
+# publicly expose this field for classic/WotLK quests (confirmed via static-page and tooltip-API
+# investigation, see doc in this folder). Status column reflects the underlying QUEST's Wowhead
+# translation state, not this specific field (which is unavailable regardless of status).
+quest_id	english_title	quest_wowhead_status
+35	Further Concerns	quest_has_zh_but_field_unavailable
+37	Find the Lost Guards	quest_has_zh_but_field_unavailable
+40	A Fishy Peril	quest_has_zh_but_field_unavailable
+45	Discover Rolf's Fate	quest_has_zh_but_field_unavailable
+66	The Legend of Stalvan	quest_has_zh_but_field_unavailable
+69	The Legend of Stalvan	reachable_but_deprecated_slug_unclear
+72	The Legend of Stalvan	quest_has_zh_but_field_unavailable
+85	Lost Necklace	quest_has_zh_but_field_unavailable
+95	Sven's Revenge	quest_has_zh_but_field_unavailable
+100	Call of Water	no_wowhead_reference
+130	Visit the Herbalist	quest_has_zh_but_field_unavailable
+138	Captain Sanders' Hidden Treasure	quest_has_zh_but_field_unavailable
+139	Captain Sanders' Hidden Treasure	no_wowhead_reference
+140	Captain Sanders' Hidden Treasure	no_wowhead_reference
+148	Supplies from Darkshire	quest_has_zh_but_field_unavailable
+158	Zombie Juice	quest_has_zh_but_field_unavailable
+172	Children's Week	quest_has_zh_but_field_unavailable
+175	Look To The Stars	reachable_but_deprecated_slug_unclear
+200	Bookie Herod	quest_has_zh_but_field_unavailable
+215	Jungle Secrets	quest_has_zh_but_field_unavailable
+227	Morgan Ladimore	quest_has_zh_but_field_unavailable
+229	The Daughter Who Lived	quest_has_zh_but_field_unavailable
+235	The Ashenvale Hunt	quest_has_zh_but_field_unavailable
+239	Westbrook Garrison Needs Help!	quest_has_zh_but_field_unavailable
+244	Encroaching Gnolls	quest_has_zh_but_field_unavailable
+247	The Hunt Completed	no_wowhead_reference
+250	A Dark Threat Looms	quest_has_zh_but_field_unavailable
+270	The Doomed Fleet	quest_has_zh_but_field_unavailable
+273	Resupplying the Excavation	quest_has_zh_but_field_unavailable
+283	A Dark Threat Looms	quest_has_zh_but_field_unavailable
+284	The Search Continues	quest_has_zh_but_field_unavailable
+285	Search More Hovels	quest_has_zh_but_field_unavailable
+305	In Search of The Excavation Team	quest_has_zh_but_field_unavailable
+318	Evershine	no_wowhead_reference
+321	Lightforge Iron	quest_has_zh_but_field_unavailable
+330	Patrol Schedules	no_wowhead_reference
+331	Report to Doren	no_wowhead_reference
+343	Speaking of Fortitude	quest_has_zh_but_field_unavailable
+344	Brother Paxton	quest_has_zh_but_field_unavailable
+345	Ink Supplies	quest_has_zh_but_field_unavailable
+350	Look to an Old Friend	quest_has_zh_but_field_unavailable
+355	Speak with Sevren	no_wowhead_reference
+359	Forsaken Duties	quest_has_zh_but_field_unavailable
+360	Return to the Magistrate	no_wowhead_reference
+363	Rude Awakening	quest_has_zh_but_field_unavailable
+389	Bazil Thredd	quest_has_zh_but_field_unavailable
+395	Brotherhood's End	quest_has_zh_but_field_unavailable
+415	Rejold's New Brew	no_wowhead_reference
+419	The Lost Pilot	quest_has_zh_but_field_unavailable
+428	Lost Deathstalkers	quest_has_zh_but_field_unavailable
+436	Ironband's Excavation	quest_has_zh_but_field_unavailable
+438	The Decrepit Ferry	quest_has_zh_but_field_unavailable
+448	Report to Hadrec	no_wowhead_reference
+452	Pyrewood Ambush	quest_has_zh_but_field_unavailable
+454	After the Ambush	quest_has_zh_but_field_unavailable
+463	The Greenwarden	quest_has_zh_but_field_unavailable
+467	Stonegear's Search	quest_has_zh_but_field_unavailable
+468	Report to Mountaineer Rockgar	quest_has_zh_but_field_unavailable
+472	Fall of Dun Modr	quest_has_zh_but_field_unavailable
+473	Report to Captain Stoutfist	quest_has_zh_but_field_unavailable
+476	Gnarlpine Corruption	quest_has_zh_but_field_unavailable
+477	Border Crossings	quest_has_zh_but_field_unavailable
+482	Dalaran's Intentions	no_wowhead_reference
+494	Time To Strike	reachable_but_deprecated_slug_unclear
+495	The Crown of Will	quest_has_zh_but_field_unavailable
+506	Blackmoore's Legacy	reachable_but_deprecated_slug_unclear
+561	Farren's Proof	reachable_but_deprecated_slug_unclear
+588	The Fate of Yenniku	no_wowhead_reference
+595	The Bloodsail Buccaneers	quest_has_zh_but_field_unavailable
+597	The Bloodsail Buccaneers	quest_has_zh_but_field_unavailable
+599	The Bloodsail Buccaneers	quest_has_zh_but_field_unavailable
+615	The Captain's Cutlass	no_wowhead_reference
+616	The Haunted Isle	quest_has_zh_but_field_unavailable
+631	The Thandol Span	quest_has_zh_but_field_unavailable
+634	Plea To The Alliance	quest_has_zh_but_field_unavailable
+635	Crystal in the Mountains	quest_has_zh_but_field_unavailable
+638	Trollbane	no_wowhead_reference
+649	Ripple Recovery	quest_has_zh_but_field_unavailable
+650	Ripple Recovery	no_wowhead_reference
+653	Myzrael's Allies	quest_has_zh_but_field_unavailable
+655	Hammerfall	no_wowhead_reference
+657	Hints of a New Plague?	quest_has_zh_but_field_unavailable
+661	Hints of a New Plague?	quest_has_zh_but_field_unavailable
+663	Land Ho!	quest_has_zh_but_field_unavailable
+675	Raising Spirits	no_wowhead_reference
+686	A King's Tribute	no_wowhead_reference
+687	Theldurin the Lost	quest_has_zh_but_field_unavailable
+688	Myzrael's Allies	no_wowhead_reference
+690	Malin's Request	quest_has_zh_but_field_unavailable
+707	Ironband Wants You!	quest_has_zh_but_field_unavailable
+720	A Sign of Hope	quest_has_zh_but_field_unavailable
+721	A Sign of Hope	quest_has_zh_but_field_unavailable
+734	This Is Going to Be Hard	no_wowhead_reference
+738	Find Agmond	quest_has_zh_but_field_unavailable
+742	The Ashenvale Hunt	quest_has_zh_but_field_unavailable
+749	The Ravaged Caravan	quest_has_zh_but_field_unavailable
+752	A Humble Task	quest_has_zh_but_field_unavailable
+755	Rites of the Earthmother	no_wowhead_reference
+767	Rite of Vision	quest_has_zh_but_field_unavailable
+772	Rite of Vision	quest_has_zh_but_field_unavailable
+773	Rite of Wisdom	quest_has_zh_but_field_unavailable
+775	Journey into Thunder Bluff	quest_has_zh_but_field_unavailable
+783	A Threat Within	reachable_but_deprecated_slug_unclear
+787	The New Horde	quest_has_zh_but_field_unavailable
+804	Sarkoth	no_wowhead_reference
+805	Report to Sen'jin Village	quest_has_zh_but_field_unavailable
+809	Ak'Zeloth	quest_has_zh_but_field_unavailable
+823	Report to Orgnil	quest_has_zh_but_field_unavailable
+828	Margoz	no_wowhead_reference
+838	Scholomance	no_wowhead_reference
+847	Guile of the Raptor	no_wowhead_reference
+854	Journey to the Crossroads	no_wowhead_reference
+860	Sergra Darkthorn	quest_has_zh_but_field_unavailable
+874	Mahren Skyseer	quest_has_zh_but_field_unavailable
+886	The Barrens Oases	quest_has_zh_but_field_unavailable
+894	Samophlange	quest_has_zh_but_field_unavailable
+936	Assisting Arch Druid Runetotem	quest_has_zh_but_field_unavailable
+948	Onu	no_wowhead_reference
+949	The Twilight Camp	no_wowhead_reference
+954	Bashal'Aran	quest_has_zh_but_field_unavailable
+960	Onu is meditating	no_wowhead_reference
+965	The Tower of Althalaxx	quest_has_zh_but_field_unavailable
+979	Find Ranshalla	no_wowhead_reference
+980	The New Springs	no_wowhead_reference
+981	The Tower of Althalaxx	no_wowhead_reference
+991	Raene's Cleansing	quest_has_zh_but_field_unavailable
+1000	The New Frontier	quest_has_zh_but_field_unavailable
+1004	The New Frontier	quest_has_zh_but_field_unavailable
+1015	The New Frontier	quest_has_zh_but_field_unavailable
+1018	The New Frontier	quest_has_zh_but_field_unavailable
+1019	The New Frontier	quest_has_zh_but_field_unavailable
+1021	Vile Satyr! Dryads in Danger!	quest_has_zh_but_field_unavailable
+1029	Raene's Cleansing	quest_has_zh_but_field_unavailable
+1030	Raene's Cleansing	quest_has_zh_but_field_unavailable
+1036	Avast Ye, Scallywag	quest_has_zh_but_field_unavailable
+1037	Velinde Starsong	no_wowhead_reference
+1039	The Barrens Port	no_wowhead_reference
+1040	Passage to Booty Bay	no_wowhead_reference
+1041	The Caravan Road	quest_has_zh_but_field_unavailable
+1042	The Carevin Family	no_wowhead_reference
+1044	Answered Questions	no_wowhead_reference
+1047	The New Frontier	quest_has_zh_but_field_unavailable
+1059	Reclaiming the Charred Vale	quest_has_zh_but_field_unavailable
+1061	The Spirits of Stonetalon	quest_has_zh_but_field_unavailable
+1063	The Elder Crone	quest_has_zh_but_field_unavailable
+1064	Forsaken Aid	reachable_but_deprecated_slug_unclear
+1082	Update for Sentinel Thenysil	no_wowhead_reference
+1085	On Guard in Stonetalon	no_wowhead_reference
+1095	Further Instructions	reachable_but_deprecated_slug_unclear
+1097	Elmore's Task	quest_has_zh_but_field_unavailable
+1098	Deathstalkers in Shadowfang	quest_has_zh_but_field_unavailable
+1115	The Rumormonger	no_wowhead_reference
+1123	Rabine Saturna	no_wowhead_reference
+1130	Melor Sends Word	quest_has_zh_but_field_unavailable
+1132	Fiora Longears	no_wowhead_reference
+1133	Journey to Astranaar	quest_has_zh_but_field_unavailable
+1137	News for Fizzle	quest_has_zh_but_field_unavailable
+1152	Test of Lore	quest_has_zh_but_field_unavailable
+1159	Test of Lore	no_wowhead_reference
+1167	The Tower of Althalaxx	no_wowhead_reference
+1178	Goblin Sponsorship	quest_has_zh_but_field_unavailable
+1181	Goblin Sponsorship	no_wowhead_reference
+1185	Under the Chitin Was...	quest_has_zh_but_field_unavailable
+1186	The Eighteenth Pilot	no_wowhead_reference
+1191	Zamek's Distraction	no_wowhead_reference
+1198	In Search of Thaelrid	quest_has_zh_but_field_unavailable
+1246	The Missing Diplomat	quest_has_zh_but_field_unavailable
+1247	The Missing Diplomat	quest_has_zh_but_field_unavailable
+1248	The Missing Diplomat	quest_has_zh_but_field_unavailable
+1250	The Missing Diplomat	quest_has_zh_but_field_unavailable
+1259	Lieutenant Paval Reethe	reachable_but_deprecated_slug_unclear
+1260	Morgan Stern	reachable_but_deprecated_slug_unclear
+1264	The Missing Diplomat	quest_has_zh_but_field_unavailable
+1266	The Missing Diplomat	quest_has_zh_but_field_unavailable
+1268	Suspicious Hoofprints	reachable_but_deprecated_slug_unclear
+1271	Feast at the Blue Recluse	quest_has_zh_but_field_unavailable
+1274	The Missing Diplomat	quest_has_zh_but_field_unavailable
+1284	Suspicious Hoofprints	reachable_but_deprecated_slug_unclear
+1285	Daelin's Men	reachable_but_deprecated_slug_unclear
+1286	The Deserters	reachable_but_deprecated_slug_unclear
+1287	The Deserters	reachable_but_deprecated_slug_unclear
+1301	James Hyal	reachable_but_deprecated_slug_unclear
+1302	James Hyal	reachable_but_deprecated_slug_unclear
+1320	The Black Shield	reachable_but_deprecated_slug_unclear
+1323	The Black Shield	reachable_but_deprecated_slug_unclear
+1339	Mountaineer Stormpike's Task	quest_has_zh_but_field_unavailable
+1362	The Kolkar of Desolace	quest_has_zh_but_field_unavailable
+1363	Mazen's Behest	quest_has_zh_but_field_unavailable
+1372	Nothing But The Truth	quest_has_zh_but_field_unavailable
+1394	Final Passage	quest_has_zh_but_field_unavailable
+1418	Neeka Bloodscar	quest_has_zh_but_field_unavailable
+1422	Threat From the Sea	reachable_but_deprecated_slug_unclear
+1427	Threat From the Sea	reachable_but_deprecated_slug_unclear
+1431	Alliance Relations	quest_has_zh_but_field_unavailable
+1432	Alliance Relations	quest_has_zh_but_field_unavailable
+1433	Alliance Relations	no_wowhead_reference
+1436	Alliance Relations	quest_has_zh_but_field_unavailable
+1437	Vahlarriel's Search	quest_has_zh_but_field_unavailable
+1438	Vahlarriel's Search	no_wowhead_reference
+1440	Return to Vahlarriel	no_wowhead_reference
+1444	Return to Fel'Zerul	no_wowhead_reference
+1449	To The Hinterlands	no_wowhead_reference
+1450	Gryphon Master Talonaxe	no_wowhead_reference
+1451	Rhapsody Shindigger	no_wowhead_reference
+1453	Reclaimers' Business in Desolace	quest_has_zh_but_field_unavailable
+1454	The Karnitol Shipwreck	quest_has_zh_but_field_unavailable
+1455	The Karnitol Shipwreck	quest_has_zh_but_field_unavailable
+1468	Children's Week	quest_has_zh_but_field_unavailable
+1472	Devourer of Souls	no_wowhead_reference
+1477	Vital Supplies	no_wowhead_reference
+1478	Halgar's Summons	no_wowhead_reference
+1483	Ziz Fizziks	reachable_but_deprecated_slug_unclear
+1484	The Corrupter	no_wowhead_reference
+1490	Nara Wildmane	no_wowhead_reference
+1499	Vile Familiars	no_wowhead_reference
+1502	Thun'grim Firegaze	no_wowhead_reference
+1505	Veteran Uzzek	quest_has_zh_but_field_unavailable
+1506	Gan'rul's Summons	no_wowhead_reference
+1507	Devourer of Souls	no_wowhead_reference
+1508	Blind Cazul	no_wowhead_reference
+1509	News of Dogran	no_wowhead_reference
+1510	News of Dogran	no_wowhead_reference
+1520	Call of Earth	no_wowhead_reference
+1522	Call of Fire	no_wowhead_reference
+1523	Call of Fire	no_wowhead_reference
+1528	Call of Water	quest_has_zh_but_field_unavailable
+1529	Call of Water	no_wowhead_reference
+1530	Call of Water	no_wowhead_reference
+1532	Call of Air	no_wowhead_reference
+1559	Flash Bomb Recipe	quest_has_zh_but_field_unavailable
+1638	A Warrior's Training	quest_has_zh_but_field_unavailable
+1639	Bartleby the Drunk	quest_has_zh_but_field_unavailable
+1642	The Tome of Divinity	no_wowhead_reference
+1643	The Tome of Divinity	no_wowhead_reference
+1645	The Tome of Divinity	no_wowhead_reference
+1646	The Tome of Divinity	no_wowhead_reference
+1647	The Tome of Divinity	no_wowhead_reference
+1649	The Tome of Valor	no_wowhead_reference
+1650	The Tome of Valor	quest_has_zh_but_field_unavailable
+1652	The Tome of Valor	no_wowhead_reference
+1653	The Test of Righteousness	no_wowhead_reference
+1661	The Tome of Nobility	no_wowhead_reference
+1666	Marshal Haggard	quest_has_zh_but_field_unavailable
+1680	Tormus Deepforge	no_wowhead_reference
+1682	Grey Iron Weapons	quest_has_zh_but_field_unavailable
+1684	Elanaria	quest_has_zh_but_field_unavailable
+1685	Gakin's Summons	quest_has_zh_but_field_unavailable
+1693	Weapons of Elunite	no_wowhead_reference
+1698	Yorus Barleybrew	quest_has_zh_but_field_unavailable
+1706	Grimand's Armor	quest_has_zh_but_field_unavailable
+1709	Klockmort's Creation	quest_has_zh_but_field_unavailable
+1711	Mathiel's Armor	no_wowhead_reference
+1715	The Slaughtered Lamb	no_wowhead_reference
+1716	Devourer of Souls	no_wowhead_reference
+1717	Gakin's Summons	no_wowhead_reference
+1718	The Islander	quest_has_zh_but_field_unavailable
+1758	Tome of the Cabal	no_wowhead_reference
+1778	The Tome of Divinity	no_wowhead_reference
+1779	The Tome of Divinity	no_wowhead_reference
+1780	The Tome of Divinity	no_wowhead_reference
+1781	The Tome of Divinity	no_wowhead_reference
+1782	Furen's Armor	quest_has_zh_but_field_unavailable
+1783	The Tome of Divinity	no_wowhead_reference
+1785	The Tome of Divinity	no_wowhead_reference
+1786	The Tome of Divinity	no_wowhead_reference
+1788	The Tome of Divinity	no_wowhead_reference
+1791	The Windwatcher	quest_has_zh_but_field_unavailable
+1792	Whirlwind Weapon	quest_has_zh_but_field_unavailable
+1793	The Tome of Valor	no_wowhead_reference
+1794	The Tome of Valor	no_wowhead_reference
+1798	Seeking Strahad	no_wowhead_reference
+1801	Tome of the Cabal	no_wowhead_reference
+1818	Speak with Dillinger	quest_has_zh_but_field_unavailable
+1822	Heirloom Weapon	no_wowhead_reference
+1823	Speak with Ruga	quest_has_zh_but_field_unavailable
+1825	Speak with Thun'grim	no_wowhead_reference
+1839	Ula'elek and the Brutal Gauntlets	no_wowhead_reference
+1840	Orm Stonehoof and the Brutal Helm	no_wowhead_reference
+1841	Velora Nitely and the Brutal Legguards	no_wowhead_reference
+1843	Brutal Gauntlets	no_wowhead_reference
+1845	Brutal Helm	no_wowhead_reference
+1847	Brutal Legguards	no_wowhead_reference
+1848	Brutal Hauberk	no_wowhead_reference
+1859	Therzok	no_wowhead_reference
+1860	Speak with Jennea	no_wowhead_reference
+1879	Speak with Bink	no_wowhead_reference
+1881	Speak with Anastasia	no_wowhead_reference
+1883	Speak with Un'thuwa	quest_has_zh_but_field_unavailable
+1939	High Sorcerer Andromath	quest_has_zh_but_field_unavailable
+1947	Journey to the Marsh	quest_has_zh_but_field_unavailable
+2019	Tools of the Trade	no_wowhead_reference
+5084	Falling to Corruption	reachable_but_deprecated_slug_unclear
+5095	A Call to Arms: The Plaguelands!	quest_has_zh_but_field_unavailable
+5126	Lorax's Tale	no_wowhead_reference
+5215	The Scourge Cauldrons	quest_has_zh_but_field_unavailable
+5261	Eagan Peltskinner	quest_has_zh_but_field_unavailable
+5634	Desperate Prayer	no_wowhead_reference
+5635	Desperate Prayer	no_wowhead_reference
+5636	Desperate Prayer	no_wowhead_reference
+5637	Desperate Prayer	quest_has_zh_but_field_unavailable
+5638	Desperate Prayer	no_wowhead_reference
+5639	Desperate Prayer	no_wowhead_reference
+5640	Desperate Prayer	no_wowhead_reference
+5647	A Lack of Fear	no_wowhead_reference
+5658	Touch of Weakness	no_wowhead_reference
+5660	Touch of Weakness	no_wowhead_reference
+5661	Touch of Weakness	no_wowhead_reference
+5662	Touch of Weakness	no_wowhead_reference
+5663	Touch of Weakness	no_wowhead_reference
+5678	Arcane Feedback	no_wowhead_reference
+6072	The Hunter's Path	no_wowhead_reference
+6523	Protect Kaya	quest_has_zh_but_field_unavailable
+6541	Report to Kadrak	quest_has_zh_but_field_unavailable
+6761	The New Frontier	quest_has_zh_but_field_unavailable
+6762	Rabine Saturna	quest_has_zh_but_field_unavailable
+6845	Uncovering Past Secrets	quest_has_zh_but_field_unavailable
+7021	Great-father Winter is Here!	quest_has_zh_but_field_unavailable
+7022	Greatfather Winter is Here!	quest_has_zh_but_field_unavailable
+7023	Greatfather Winter is Here!	quest_has_zh_but_field_unavailable
+7024	Great-father Winter is Here!	quest_has_zh_but_field_unavailable
+7121	The Quartermaster	quest_has_zh_but_field_unavailable
+7123	Speak with our Quartermaster	quest_has_zh_but_field_unavailable
+7810	Arena Master	quest_has_zh_but_field_unavailable
+7863	Sentinel Basic Care Package	quest_has_zh_but_field_unavailable
+7864	Sentinel Standard Care Package	quest_has_zh_but_field_unavailable
+7865	Sentinel Advanced Care Package	quest_has_zh_but_field_unavailable
+7866	Outrider Basic Care Package	quest_has_zh_but_field_unavailable
+7867	Outrider Standard Care Package	quest_has_zh_but_field_unavailable
+7868	Outrider Advanced Care Package	quest_has_zh_but_field_unavailable
+8260	Arathor Basic Care Package	quest_has_zh_but_field_unavailable
+8261	Arathor Standard Care Package	quest_has_zh_but_field_unavailable
+8262	Arathor Advanced Care Package	quest_has_zh_but_field_unavailable
+8263	Defiler's Basic Care Package	quest_has_zh_but_field_unavailable
+8264	Defiler's Standard Care Package	quest_has_zh_but_field_unavailable
+8265	Defiler's Advanced Care Package	quest_has_zh_but_field_unavailable
+8327	Report to Lanthan Perilon	quest_has_zh_but_field_unavailable
+8328	Mage Training	quest_has_zh_but_field_unavailable
+8331	Aurel Goldleaf	quest_has_zh_but_field_unavailable
+8343	Goldleaf's Discovery	quest_has_zh_but_field_unavailable
+8347	Aiding the Outrunners	quest_has_zh_but_field_unavailable
+8349	Bor Wildmane	quest_has_zh_but_field_unavailable
+8351	Bor Wishes to Speak	no_wowhead_reference
+8381	Armaments of War	quest_has_zh_but_field_unavailable
+8409	Ruined Kegs	no_wowhead_reference
+8462	Speak to Nafien	reachable_but_deprecated_slug_unclear
+8465	Speak to Salfa	quest_has_zh_but_field_unavailable
+8553	The Captain's Cutlass	no_wowhead_reference
+8555	The Charge of the Dragonflights	quest_has_zh_but_field_unavailable
+8563	Warlock Training	quest_has_zh_but_field_unavailable
+8564	Priest Training	no_wowhead_reference
+8576	Translating the Ledger	quest_has_zh_but_field_unavailable
+8619	Morndeep the Elder	quest_has_zh_but_field_unavailable
+8635	Splitrock the Elder	quest_has_zh_but_field_unavailable
+8636	Rumblerock the Elder	quest_has_zh_but_field_unavailable
+8642	Silvervein the Elder	quest_has_zh_but_field_unavailable
+8643	Highpeak the Elder	quest_has_zh_but_field_unavailable
+8644	Stonefort the Elder	quest_has_zh_but_field_unavailable
+8645	Obsidian the Elder	quest_has_zh_but_field_unavailable
+8646	Hammershout the Elder	quest_has_zh_but_field_unavailable
+8649	Stormbrow the Elder	quest_has_zh_but_field_unavailable
+8650	Snowcrown the Elder	quest_has_zh_but_field_unavailable
+8651	Ironband the Elder	quest_has_zh_but_field_unavailable
+8652	Graveborn the Elder	quest_has_zh_but_field_unavailable
+8653	Goldwell the Elder	quest_has_zh_but_field_unavailable
+8670	Runetotem the Elder	quest_has_zh_but_field_unavailable
+8671	Ragetotem the Elder	quest_has_zh_but_field_unavailable
+8672	Stonespire the Elder	quest_has_zh_but_field_unavailable
+8673	Bloodhoof the Elder	quest_has_zh_but_field_unavailable
+8674	Winterhoof the Elder	quest_has_zh_but_field_unavailable
+8675	Skychaser the Elder	quest_has_zh_but_field_unavailable
+8678	Wheathoof the Elder	quest_has_zh_but_field_unavailable
+8679	Grimtotem the Elder	quest_has_zh_but_field_unavailable
+8680	Windtotem the Elder	quest_has_zh_but_field_unavailable
+8681	Thunderhorn the Elder	quest_has_zh_but_field_unavailable
+8682	Skyseer the Elder	quest_has_zh_but_field_unavailable
+8683	Dawnstrider the Elder	quest_has_zh_but_field_unavailable
+8685	Mistwalker the Elder	quest_has_zh_but_field_unavailable
+8686	High Mountain the Elder	quest_has_zh_but_field_unavailable
+8688	Windrun the Elder	quest_has_zh_but_field_unavailable
+8713	Starsong the Elder	quest_has_zh_but_field_unavailable
+8714	Moonstrike the Elder	quest_has_zh_but_field_unavailable
+8716	Starglade the Elder	quest_has_zh_but_field_unavailable
+8717	Moonwarden the Elder	quest_has_zh_but_field_unavailable
+8718	Bladeswift the Elder	quest_has_zh_but_field_unavailable
+8721	Starweave the Elder	quest_has_zh_but_field_unavailable
+8722	Meadowrun the Elder	quest_has_zh_but_field_unavailable
+8723	Nightwind the Elder	quest_has_zh_but_field_unavailable
+8724	Morningdew the Elder	quest_has_zh_but_field_unavailable
+8725	Riversong the Elder	quest_has_zh_but_field_unavailable
+8726	Brightspear the Elder	quest_has_zh_but_field_unavailable
+8727	Farwhisper the Elder	quest_has_zh_but_field_unavailable
+8742	The Might of Kalimdor	no_wowhead_reference
+8744	A Carefully Wrapped Present	quest_has_zh_but_field_unavailable
+8745	Treasure of the Timeless One	no_wowhead_reference
+8767	A Gently Shaken Gift	quest_has_zh_but_field_unavailable
+8768	A Gaily Wrapped Present	quest_has_zh_but_field_unavailable
+8769	A Ticking Present	quest_has_zh_but_field_unavailable
+8788	A Gently Shaken Gift	quest_has_zh_but_field_unavailable
+8798	A Yeti of Your Own	quest_has_zh_but_field_unavailable
+8803	A Festive Gift	quest_has_zh_but_field_unavailable
+8827	Winter's Presents	quest_has_zh_but_field_unavailable
+8828	Winter's Presents	quest_has_zh_but_field_unavailable
+8866	Bronzebeard the Elder	quest_has_zh_but_field_unavailable
+8890	Word from the Spire	quest_has_zh_but_field_unavailable
+8980	Zinge's Assessment	no_wowhead_reference
+9025	Morgan's Discovery	no_wowhead_reference
+9026	Tracing the Source	quest_has_zh_but_field_unavailable
+9029	A Bubbling Cauldron	no_wowhead_reference
+9272	Dressing the Part	quest_has_zh_but_field_unavailable
+9287	Paladin Training	no_wowhead_reference
+9288	Hunter Training	no_wowhead_reference
+9290	Mage Training	no_wowhead_reference
+9291	Priest Training	no_wowhead_reference
+9339	A Thief's Reward	quest_has_zh_but_field_unavailable
+9358	Ranger Sareyn	quest_has_zh_but_field_unavailable
+9363	Warning Fairbreeze Village	quest_has_zh_but_field_unavailable
+9365	A Thief's Reward	quest_has_zh_but_field_unavailable
+9392	Rogue Training	quest_has_zh_but_field_unavailable
+9394	Where's Wyllithen?	quest_has_zh_but_field_unavailable
+9395	Saltheril's Haven	quest_has_zh_but_field_unavailable
+9400	The Assassin	quest_has_zh_but_field_unavailable
+9415	Report to Marshal Bluewall	quest_has_zh_but_field_unavailable
+9416	Report to General Kirika	quest_has_zh_but_field_unavailable
+9432	Travel to Astranaar	no_wowhead_reference
+9449	Call of Earth	quest_has_zh_but_field_unavailable
+9461	Call of Fire	no_wowhead_reference
+9462	Call of Fire	no_wowhead_reference
+9464	Call of Fire	quest_has_zh_but_field_unavailable
+9499	Falcon Watch	quest_has_zh_but_field_unavailable
+9500	Call of Water	no_wowhead_reference
+9501	Call of Water	no_wowhead_reference
+9502	Call of Water	no_wowhead_reference
+9525	Imprisoned in the Citadel	no_wowhead_reference
+9547	Call of Air	no_wowhead_reference
+9551	Call of Air	no_wowhead_reference
+9552	Call of Air	no_wowhead_reference
+9553	Call of Air	no_wowhead_reference
+9555	Call of Fire	no_wowhead_reference
+9561	Nolkai's Words	quest_has_zh_but_field_unavailable
+9578	Searching for Galaen	quest_has_zh_but_field_unavailable
+9609	Help Watcher Biggs	reachable_but_deprecated_slug_unclear
+9620	The Missing Survey Team	quest_has_zh_but_field_unavailable
+9627	Allegiance to the Horde	quest_has_zh_but_field_unavailable
+9638	In Good Hands	quest_has_zh_but_field_unavailable
+9639	Kamsis	quest_has_zh_but_field_unavailable
+9671	Urgent Delivery	quest_has_zh_but_field_unavailable
+9676	Paladin Training	quest_has_zh_but_field_unavailable
+9677	Summons from Knight-Lord Bloodvalor	no_wowhead_reference
+9681	A Study in Power	no_wowhead_reference
+9685	Redeeming the Dead	no_wowhead_reference
+9697	Watcher Leesa'oh	quest_has_zh_but_field_unavailable
+9704	Slain by the Wretched	quest_has_zh_but_field_unavailable
+9712	The Thalassian Warhorse	no_wowhead_reference
+9724	Warning the Cenarion Circle	quest_has_zh_but_field_unavailable
+9732	Return to the Marsh	quest_has_zh_but_field_unavailable
+9758	Return to Arcanist Vandril	quest_has_zh_but_field_unavailable
+9762	The Unwritten Prophecy	quest_has_zh_but_field_unavailable
+9860	The New Directive	quest_has_zh_but_field_unavailable
+9876	Failed Incursion	quest_has_zh_but_field_unavailable
+9877	A Restorative Draught	quest_has_zh_but_field_unavailable
+9884	Membership Benefits	quest_has_zh_but_field_unavailable
+9885	Membership Benefits	quest_has_zh_but_field_unavailable
+9887	Membership Benefits	quest_has_zh_but_field_unavailable
+9960	What's Wrong at Cenarion Thicket?	quest_has_zh_but_field_unavailable
+9961	What's Wrong at Cenarion Thicket?	quest_has_zh_but_field_unavailable
+9978	By Any Means Necessary	quest_has_zh_but_field_unavailable
+9979	Wind Trader Lathrai	quest_has_zh_but_field_unavailable
+9984	Host of the Hidden City	quest_has_zh_but_field_unavailable
+9985	Host of the Hidden City	quest_has_zh_but_field_unavailable
+10005	Letting Earthbinder Tavgren Know	quest_has_zh_but_field_unavailable
+10006	Letting Earthbinder Tavgren Know	quest_has_zh_but_field_unavailable
+10038	Speak with Private Weeks	quest_has_zh_but_field_unavailable
+10039	Speak with Scout Neftis	quest_has_zh_but_field_unavailable
+10064	Talk to the Hand	quest_has_zh_but_field_unavailable
+10068	Well Watcher Solanian	no_wowhead_reference
+10069	Well Watcher Solanian	quest_has_zh_but_field_unavailable
+10070	Well Watcher Solanian	quest_has_zh_but_field_unavailable
+10071	Well Watcher Solanian	quest_has_zh_but_field_unavailable
+10072	Well Watcher Solanian	quest_has_zh_but_field_unavailable
+10194	Stealth Flight	quest_has_zh_but_field_unavailable
+10200	Return to Thalodien	quest_has_zh_but_field_unavailable
+10202	A Defector	quest_has_zh_but_field_unavailable
+10210	A'dal	quest_has_zh_but_field_unavailable
+10287	The Mistress Revealed	quest_has_zh_but_field_unavailable
+10340	Shatter Point	quest_has_zh_but_field_unavailable
+10344	Wing Commander Gryphongar	quest_has_zh_but_field_unavailable
+10350	Behomat	quest_has_zh_but_field_unavailable
+10364	Caedmos	no_wowhead_reference
+10366	Jol	quest_has_zh_but_field_unavailable
+10371	Yorus Barleybrew	quest_has_zh_but_field_unavailable
+10373	A Call to Arms: The Plaguelands!	quest_has_zh_but_field_unavailable
+10374	A Call to Arms: The Plaguelands!	no_wowhead_reference
+10381	Aldor No More	quest_has_zh_but_field_unavailable
+10403	Naladu	quest_has_zh_but_field_unavailable
+10428	The Missing Fisherman	quest_has_zh_but_field_unavailable
+10431	Outside Assistance	quest_has_zh_but_field_unavailable
+10442	Helping the Cenarion Post	quest_has_zh_but_field_unavailable
+10444	Report to the Allerian Post	quest_has_zh_but_field_unavailable
+10448	Report to Stonebreaker Camp	quest_has_zh_but_field_unavailable
+10461	Restorer's Pledge	quest_has_zh_but_field_unavailable
+10490	Call of Water	no_wowhead_reference
+10491	Call of Air	quest_has_zh_but_field_unavailable
+10520	Assisting Arch Druid Staghelm	quest_has_zh_but_field_unavailable
+10527	Ar'tor, Son of Oronok	quest_has_zh_but_field_unavailable
+10530	The Hunter's Path	no_wowhead_reference
+10551	Allegiance to the Aldor	quest_has_zh_but_field_unavailable
+10552	Allegiance to the Scryers	quest_has_zh_but_field_unavailable
+10553	Voren'thal the Seer	quest_has_zh_but_field_unavailable
+10554	Ishanah	quest_has_zh_but_field_unavailable
+10575	The Warden's Cage	quest_has_zh_but_field_unavailable
+10580	Where Did Those Darn Gnomes Go?	quest_has_zh_but_field_unavailable
+10581	Follow the Breadcrumbs	quest_has_zh_but_field_unavailable
+10605	Carendin Summons	no_wowhead_reference
+10628	Akama	quest_has_zh_but_field_unavailable
+10638	NOT A QUEST	no_wowhead_reference
+10640	Altruis	quest_has_zh_but_field_unavailable
+10652	Behind Enemy Lines	quest_has_zh_but_field_unavailable
+10686	The Warden's Cage	quest_has_zh_but_field_unavailable
+10689	Altruis	quest_has_zh_but_field_unavailable
+10706	A Mysterious Portent	quest_has_zh_but_field_unavailable
+10730	Path of the Violet Restorer	quest_has_zh_but_field_unavailable
+10731	Path of the Violet Assassin	quest_has_zh_but_field_unavailable
+10732	Path of the Violet Protector	quest_has_zh_but_field_unavailable
+10752	Onward to Ashenvale	quest_has_zh_but_field_unavailable
+10783	Baron Sablemane	quest_has_zh_but_field_unavailable
+10818	Baron Sablemane Has Requested Your Presence	quest_has_zh_but_field_unavailable
+10865	Inform Leoroxx!	quest_has_zh_but_field_unavailable
+10891	Imperial Plate Armor	no_wowhead_reference
+10892	Imperial Plate Armor	no_wowhead_reference
+10900	The Mark of Vashj	quest_has_zh_but_field_unavailable
+10905	Master of Potions	no_wowhead_reference
+10906	Master of Elixirs	no_wowhead_reference
+10907	Master of Transmutation	no_wowhead_reference
+10936	Trollbane is Looking for You	quest_has_zh_but_field_unavailable
+10942	Children's Week	quest_has_zh_but_field_unavailable
+10943	Children's Week	quest_has_zh_but_field_unavailable
+10960	When I Grow Up...	quest_has_zh_but_field_unavailable
+11012	Blood Oath of the Netherwing	quest_has_zh_but_field_unavailable
+11019	Your Friend On The Inside	quest_has_zh_but_field_unavailable
+11057	The Trouble Below	quest_has_zh_but_field_unavailable
+11062	The Skyguard Outpost	quest_has_zh_but_field_unavailable
+11119	Assault on Bash'ir Landing!	quest_has_zh_but_field_unavailable
+11123	Inspecting the Ruins	reachable_but_deprecated_slug_unclear
+11124	Inspecting the Ruins	reachable_but_deprecated_slug_unclear
+11141	Jaina Must Know	reachable_but_deprecated_slug_unclear
+11142	Survey Alcaz Island	reachable_but_deprecated_slug_unclear
+11143	A Grim Connection	reachable_but_deprecated_slug_unclear
+11149	Tabetha's Assistance	reachable_but_deprecated_slug_unclear
+11151	Justice for the Hyals	reachable_but_deprecated_slug_unclear
+11172	The Zeppelin Crash	reachable_but_deprecated_slug_unclear
+11177	The Hermit of Swamplight Manor	reachable_but_deprecated_slug_unclear
+11191	This Old Lighthouse	reachable_but_deprecated_slug_unclear
+11194	Is it Real?	reachable_but_deprecated_slug_unclear
+11203	Seek Out Tabetha	reachable_but_deprecated_slug_unclear
+11204	Return to Krog	reachable_but_deprecated_slug_unclear
+11210	Oh, It's Real	reachable_but_deprecated_slug_unclear
+11214	Mission to Mudsprocket	reachable_but_deprecated_slug_unclear
+11216	Archmage Alturus	quest_has_zh_but_field_unavailable
+11425	Test Quest - Craig	no_wowhead_reference
+11497	Learning to Fly	quest_has_zh_but_field_unavailable
+11498	Learning to Fly	quest_has_zh_but_field_unavailable
+11528	A Winter Veil Gift	quest_has_zh_but_field_unavailable
+14352	An Unholy Alliance	no_wowhead_reference
+14353	An Unholy Alliance	no_wowhead_reference
+14418	The Deathstalkers	no_wowhead_reference
+14420	The Deathstalkers	no_wowhead_reference

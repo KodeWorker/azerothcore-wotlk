@@ -1,0 +1,14 @@
+# quest_template_locale: rows with no zhTW entry at all, and no Wowhead TW reference either (English-only on Wowhead too)
+# Needs original/manual translation -- no ready-made reference source found
+quest_id	english_title
+8896	The Dwarven Spy
+9357	Report to Aeldon Sunbrand
+12021	A Letter Home
+12162	Solstice Village
+12163	The Evil Below
+12881	The Brothers Bronzebeard
+12890	If Size Mattered...
+13175	Regaining Control
+13176	Preparing the Delivery
+13184	Outliving Usefulness
+13843	The Scrapbot Construction Kit

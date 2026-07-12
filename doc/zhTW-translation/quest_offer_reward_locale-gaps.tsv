@@ -1,0 +1,10 @@
+# quest_offer_reward_locale (RewardText -- reward-screen dialogue): same blocker as
+# quest_request_items_locale, Wowhead does not expose this field.
+quest_id	english_title	quest_wowhead_status
+8270	test copy quest	no_wowhead_reference
+14418	The Deathstalkers	no_wowhead_reference
+14420	The Deathstalkers	no_wowhead_reference
+14488	You've Been Served	quest_has_zh_but_field_unavailable
+24426	Call to Arms: Alterac Valley	no_wowhead_reference
+24427	Call to Arms: Alterac Valley	no_wowhead_reference
+25092	Elemental Research	quest_has_zh_but_field_unavailable
