@@ -68,6 +68,26 @@ Wowhead-"deprecated"-slug quests checked this session, 40 were still reachable
 in our DB and were correctly *kept* as translation targets; only 3 were
 genuinely unreachable both ways.
 
+**Better tool for this, found 2026-07-12:** `https://www.wowhead.com/wotlk/quest=<id>`
+(the WotLK-specific build, not the bare `/tw/` or `/quest=<id>` retail page)
+shows deprecation status *for that build specifically* — the "marked obsolete
+by Blizzard and cannot be obtained or completed" banner only appears there if
+the quest was actually invalid in 3.3.5a, not just later removed by retail.
+Concrete example: quest `13377` shows deprecated on the retail page but *not*
+on `/wotlk/quest=13377` — and it's reachable in our DB (2 creature
+starter+ender), confirming it's real WotLK content (translated, see commit
+history). Prefer this URL over the retail one when checking a quest's
+deprecated status going forward. That said, **DB reachability is still the
+decisive signal for this project specifically** — a full audit (2026-07-12)
+found several skip-listed quests (`9767`, `14351`, `14439`, `9051`, `13649`)
+that Wowhead's `/wotlk/` page confirms were genuine, non-deprecated WotLK
+content, but all remain unreachable in our own AzerothCore DB (no creature/GO
+starter+ender, no working `game_event_*_quest` link) — decided to keep these
+skip-listed, since a quest nobody can start or complete on *this* server has
+no practical translation value regardless of its status on Blizzard's
+historical realms. Revisit only if AzerothCore's world data ever adds the
+missing NPC/GO wiring for one of these.
+
 The reverse mistake also happened: quests with real English titles (e.g.
 "Thunderaan the Windseeker") that *are* unreachable in our DB were confirmed
 as genuinely obsolete only by finding a duplicate quest ID with the same title
