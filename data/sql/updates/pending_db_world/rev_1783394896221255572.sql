@@ -63,3 +63,7 @@ DELETE FROM `item_template_locale` WHERE `ID` = 38301 AND `locale` = 'zhTW';
 INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (38301,'zhTW','D.I.S.C.O.','右鍵點擊讓舞會開始。 (5​分鐘 冷卻)',0);
 DELETE FROM `item_template_locale` WHERE `ID` = 40768 AND `locale` = 'zhTW';
 INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (40768,'zhTW','MOLL-E','製造一個攜帶式郵箱，持續10 min。MOLL-E可以重複使用。 (2​小時 冷卻)',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 50065 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (50065,'zhTW','寒冰皇冠之牆','',15050);
+DELETE FROM `item_template_locale` WHERE `ID` = 50729 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (50729,'zhTW','寒冰皇冠之牆','',15050);

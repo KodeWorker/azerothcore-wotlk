@@ -1794,9 +1794,9 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2011 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2011,'zhTW','最強大最狡猾的恐懼魔王提託迪奧斯接受了這個挑戰，他對瘟疫的效力和巫妖王在滅絕式的大屠殺上所表現的無限創造力充滿了興趣。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2012 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2012,'zhTW','基爾加丹將盛放耐奧祖靈魂的冰冷容器送回了艾澤拉斯的世界。堅硬的水晶劃過夜空，墜落在荒涼寒冷的北裂境大陸，埋入了深不見底的冰冠冰川。困著耐奧祖靈魂的冰殼被它本身撞擊地表所爆發出的巨大能量扭曲，形成了一個王座，耐奧祖那充滿復仇意念的靈魂就附著在這個王座上。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2012,'zhTW','基爾加丹將盛放耐奧祖靈魂的冰冷容器送回了艾澤拉斯的世界。堅硬的水晶劃過夜空，墜落在荒涼寒冷的北裂境大陸，埋入了深不見底的寒冰皇冠。困著耐奧祖靈魂的冰殼被它本身撞擊地表所爆發出的巨大能量扭曲，形成了一個王座，耐奧祖那充滿復仇意念的靈魂就附著在這個王座上。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2013 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2013,'zhTW','耐奧祖開始在冰封王座的領域中釋放他的意念並與北裂境的原住生物的思想接觸。他很輕鬆地控制了許多當地生物的思想（比如冰巨魔和兇猛的雪怪），並且將他們籠罩在自己不斷擴大的陰影下。耐奧祖發現自己的精神力量幾乎是無限的，於是他使用這種力量建立了一支小型部隊，讓他們駐紮在冰冠冰川的迷宮中。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2013,'zhTW','耐奧祖開始在冰封王座的領域中釋放他的意念並與北裂境的原住生物的思想接觸。他很輕鬆地控制了許多當地生物的思想（比如冰巨魔和兇猛的雪怪），並且將他們籠罩在自己不斷擴大的陰影下。耐奧祖發現自己的精神力量幾乎是無限的，於是他使用這種力量建立了一支小型部隊，讓他們駐紮在寒冰皇冠的迷宮中。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2014 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2014,'zhTW','在恐懼魔王的監視下，巫妖王控制著他越來越強大的部隊，並且在龍骨荒地的邊緣發現了一個人類的移民點。耐奧祖決定用這些毫無防備的人類來檢驗他的力量。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2015 AND `locale` = 'zhTW';
@@ -1830,9 +1830,9 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2029 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2029,'zhTW','雖然這種症狀很明顯，但安東尼達斯無法找到治療獸人目前狀況的方法，而他的許多學徒和一些著名的聯盟領導人都認為替獸人找出治療的方法純屬冒險行為。在謹慎地考察了獸人目前的神秘狀況之後，安東尼達斯認為治癒獸人的唯一途徑是透過精神的力量。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2039 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2039,'zhTW','當索爾在洛丹倫釋放其同胞弟兄的時候，耐奧祖繼續在北裂境大陸鞏固他的基地，他在冰冠冰川上空建立起了一座巨大的城堡以控制龐大的亡靈軍團。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2039,'zhTW','當索爾在洛丹倫釋放其同胞弟兄的時候，耐奧祖繼續在北裂境大陸鞏固他的基地，他在寒冰皇冠上空建立起了一座巨大的城堡以控制龐大的亡靈軍團。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2040 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2040,'zhTW','但在巫妖王拓展他的疆域時，一個孤單、隱秘的王國開始與他的力量進行對抗。這個被稱為艾卓-尼魯布的古老的地下王國是由一個殘忍的類人蜘蛛種族建立的，他們派出精銳部隊襲擊了冰冠冰川，並使耐奧祖打消了征服他們的瘋狂念頭。耐奧祖沮喪地發現這些蜘蛛對他的心靈控制完全免疫，並且強大到足以和他的亡靈大軍一較高下。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2040,'zhTW','但在巫妖王拓展他的疆域時，一個孤單、隱秘的王國開始與他的力量進行對抗。這個被稱為艾卓-尼魯布的古老的地下王國是由一個殘忍的類人蜘蛛種族建立的，他們派出精銳部隊襲擊了寒冰皇冠，並使耐奧祖打消了征服他們的瘋狂念頭。耐奧祖沮喪地發現這些蜘蛛對他的心靈控制完全免疫，並且強大到足以和他的亡靈大軍一較高下。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2041 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2041,'zhTW','蛛網怪的蜘蛛之王控制著龐大的部隊，並且擁有覆蓋了北裂境一半疆域的地下隧道網路。他們的游擊戰術令巫妖王疲於奔命卻一無所得。最終，耐奧祖艱難地贏得了對蛛網怪的戰爭，在狂暴的恐懼魔王和無數不死生物戰士的進攻下，蜘蛛王國艾卓-尼魯布變成了一片廢墟。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2042 AND `locale` = 'zhTW';
@@ -1848,7 +1848,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2047 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2047,'zhTW','大法師穿越了被戰爭毀滅的艾卓-尼魯布王國的廢墟，在這裡他看到了耐奧祖的可怕力量，他開始相信投靠神秘的巫妖之王是一個明智而且利益豐厚的決定。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2048 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2048,'zhTW','在冰冷的荒野上旅行了數月之後，克爾蘇加德終於到達了冰冠冰川。他來到了耐奧祖的黑暗城堡，當沉默的亡靈守衛讓他透過時，大法師感到了強烈的震撼。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2048,'zhTW','在冰冷的荒野上旅行了數月之後，克爾蘇加德終於到達了寒冰皇冠。他來到了耐奧祖的黑暗城堡，當沉默的亡靈守衛讓他透過時，大法師感到了強烈的震撼。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2049 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2049,'zhTW','他沿著道路一直朝下走，在冰川的最底層，他見到了冰霜王座，並且將自己的靈魂獻給了巫妖王。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2050 AND `locale` = 'zhTW';
@@ -1934,7 +1934,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2095 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2095,'zhTW','為了緩解手下們與生俱來的對於魔法的飢渴，凱爾做了件令人無法想像的事情：他接受了他們的高等精靈祖先伸出的援手，懷著找到一個新的魔法力量之源的希望加入了伊利丹和他的納迦部隊。殘餘的聯盟領袖譴責血精靈為叛徒，並將他們永遠驅逐。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2096 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2096,'zhTW','走投無路之下，凱爾和他的血精靈們只得跟隨伊利丹來到外域，並幫助他對付典獄官馬維。馬維本已將伊利丹抓獲，卻被血精靈和納迦聯手擊敗，伊利丹也被重新解放。伊利丹將外域作為自己的基地，為了向巫妖王和他的冰冠冰川要塞發起新一輪的進攻而聚集著力量。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2096,'zhTW','走投無路之下，凱爾和他的血精靈們只得跟隨伊利丹來到外域，並幫助他對付典獄官馬維。馬維本已將伊利丹抓獲，卻被血精靈和納迦聯手擊敗，伊利丹也被重新解放。伊利丹將外域作為自己的基地，為了向巫妖王和他的寒冰皇冠要塞發起新一輪的進攻而聚集著力量。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2097 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2097,'zhTW','巫妖王耐奧祖知道自己已經時日不多了。被囚禁在冰封王座之中的他懷疑基爾加丹會派出手下來毀滅自己，伊利丹的咒語造成的傷害破壞了冰封王座，巫妖王的力量因而一天天地喪失。於是，急於自保的耐奧祖將他最強大的手下——死亡騎士阿爾薩斯召喚到身邊。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2098 AND `locale` = 'zhTW';
@@ -1942,13 +1942,13 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2099 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2099,'zhTW','最終，希爾瓦娜斯和她的亡靈叛軍（他們被稱作被遺忘者）將洛丹倫都城的廢墟佔為己有。被遺忘者在都城的殘骸下建立起了自己的基地，他們發誓要擊敗天災並將克爾蘇加德和他的僕從趕出大陸。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2100 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2100,'zhTW','力量遭到削弱的阿爾薩斯仍決定去援救他的主人。他到達北裂境後卻發現伊利丹的血精靈和納迦已經先他一步到了那裡。於是，阿爾薩斯和他的蜘蛛怪只得與伊利丹的部隊爭奪時間，他要率先到達冰冠冰川冰川並保護冰封王座。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2100,'zhTW','力量遭到削弱的阿爾薩斯仍決定去援救他的主人。他到達北裂境後卻發現伊利丹的血精靈和納迦已經先他一步到了那裡。於是，阿爾薩斯和他的蜘蛛怪只得與伊利丹的部隊爭奪時間，他要率先到達寒冰皇冠冰川並保護冰封王座。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2101 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2101,'zhTW','即便是在如此虛弱的情況下，阿爾薩斯最終仍以策略戰勝了伊利丹，並率先抵達了冰封王座。阿爾薩斯用他的魔劍霜之哀傷擊碎了囚禁巫妖王的冰牢，並得到了耐奧祖附魂的頭盔和胸甲。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2102 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2102,'zhTW','阿爾薩斯將擁有無盡力量的頭盔戴到了自己的頭上，成為了新的巫妖王。正如耐奧祖一直計劃的那樣，他和阿爾薩斯的靈魂合體成為一個強大的生物。伊利丹和他的軍隊被迫恥辱地逃回外域，阿爾薩斯則成了這個世界上最強大的生物之一。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2103 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2103,'zhTW','現在的阿爾薩斯作為新的不朽的巫妖王佔據著北裂境，據說他正在那裡重建冰冠冰川城堡，而他所信任的副官克爾蘇加德則統領著瘟疫之地的天災部隊。希爾瓦娜斯和她的反叛亡靈力量僅僅控制著提瑞斯法林地，那只是被飽經戰亂的洛丹倫王國的一小部分。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2103,'zhTW','現在的阿爾薩斯作為新的不朽的巫妖王佔據著北裂境，據說他正在那裡重建寒冰皇冠城堡，而他所信任的副官克爾蘇加德則統領著瘟疫之地的天災部隊。希爾瓦娜斯和她的反叛亡靈力量僅僅控制著提瑞斯法林地，那只是被飽經戰亂的洛丹倫王國的一小部分。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2104 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2104,'zhTW','儘管獲得了戰爭的勝利，但艾澤拉斯的各個種族卻發現他們的世界早已被戰爭所摧毀。天災軍團和燃燒軍團毀滅了洛丹倫的文明，卡利姆多也幾乎遭受同樣的命運。這裡有飽經創傷的森林需要治癒，有無邊的仇恨需要忘卻，人民需要新的家園來定居。戰爭重創了每一個種族，但他們無私地合作，想要創造一個新的開端。這一切都從聯盟和部落之間極為來之不易的停戰開始。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2105 AND `locale` = 'zhTW';
@@ -1990,7 +1990,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2175 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2175,'zhTW','獨臂因瓦爾$B$B血色十字軍的首席刺客$B達拉然的公民$B$B失蹤於北裂境海岸',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2176 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2176,'zhTW','激流堡的奧瑪爾$B$B血色十字軍的首任將領$B激流堡的公民$B$B失蹤於冰冠冰川',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2176,'zhTW','激流堡的奧瑪爾$B$B血色十字軍的首任將領$B激流堡的公民$B$B失蹤於寒冰皇冠',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2177 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2177,'zhTW','瓦雷亞$B$B血色十字軍戰士$B奧特蘭克的公民$B$B失蹤於東瘟疫之地',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2178 AND `locale` = 'zhTW';
@@ -2000,7 +2000,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2191 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2191,'zhTW','大約16000年以前（遠早於暗夜精靈愚蠢地召來燃燒軍團的年代），巨魔主宰了卡利姆多大陸（那個時候只有一塊大陸）的大部分割槽域。那個時候有兩個巨魔帝國並存，即東南部森林中的古拉巴什帝國，以及中部的阿曼尼帝國。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2192 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2192,'zhTW','在北部有些小的部族（位於現在的北裂境地區），這些部族建立了一個叫做祖達克的小國家，但是其規模和繁榮程度從來沒有達到過南方這兩個帝國的程度。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2192,'zhTW','在北部有些小的部族（位於現在的北裂境地區），這些部族建立了一個叫做祖爾德拉克的小國家，但是其規模和繁榮程度從來沒有達到過南方這兩個帝國的程度。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2193 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2193,'zhTW','古拉巴什帝國和阿曼尼帝國之間並不十分友好，但是也不常交戰。那個時候，他們共同的敵人是一個異族的帝國——阿茲亞基文明。亞基是一種有智慧的昆蟲生物，它們主要統治著西部地區。這些聰明的蟲族生物具有強烈的擴張慾望，並且非常邪惡。亞基蟲類的目標就是消滅卡利姆多大陸上所有的非昆蟲生物。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2194 AND `locale` = 'zhTW';
@@ -2170,7 +2170,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2439 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2439,'zhTW','告訴我，$c，你有沒有聽過獸人的咆哮？也許你曾參與在家鄉抵禦過豺狼人的襲擊，差點就被那些傢伙撕破了喉嚨？啊，這些聽上去都很可怕，不是嗎？$B$B好吧，如果你想要保護自己所熱愛的東西，那你就需要我的幫助，到北郡的修道院裡來找我吧。我的知識並非免費傳授給你的，不過如果你擁有足夠的閱歷，那我就能教給你很多東西，幫助你與威脅著暴風城的邪惡勢力作戰。$B$B——萊尼·拜舍爾，戰士訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2440 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2440,'zhTW','注意：$B你必須立即向斯蘭·庫爾曼報到。他在A3區中，也就是當地居��所說的安威瑪爾那裡。在與庫爾曼接頭之後，你要著手準備參加即將來臨的戰鬥——奪回我們的家園諾莫瑞根！$B$B我們所有的努力都是為了這個最終的目的。在完成此任務之後，新的任務會很快下達給你。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2440,'zhTW','注意：$B你必須立即向斯蘭·庫爾曼報到。他在A3區中，也就是當地居��所說的安威瑪爾那裡。在與庫爾曼接頭之後，你要著手準備參加即將來臨的戰鬥——奪回我們的家園諾姆瑞根！$B$B我們所有的努力都是為了這個最終的目的。在完成此任務之後，新的任務會很快下達給你。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2441 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2441,'zhTW','許多部族認為使用魔法或者與我們的先祖對話的能力都是不可多得的天賦，但是你應該知道，$c，你也同樣具有其他人不具備的天賦。有些人沒有足夠的力量來揮舞強大的武器，有些人沒有躲避刺客致命一擊的能力，或者無法承受一個法師所帶來的傷害，但是你可以。你非常強壯，我會幫助你變得更加強壯。到納拉其營地來找我吧。$B$B——哈魯特·雷角，戰士訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2442 AND `locale` = 'zhTW';
@@ -2494,7 +2494,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2831 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2831,'zhTW','親愛的日記，$B$B好了，我現在很好。我把一個傭人打到哭的跟個小女孩一樣。$B$B嗯……我現在覺得有點糟。等一下！該死的，我是個邪惡的天才！邪惡，你懂嗎？我對自己真是太失望了。下次再說。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2832 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2832,'zhTW','親愛的日記，$B$B我給了他一個擁抱並告訴他要繼續努力工作。我現在覺得好多了。這是我們之間的秘密，日記。$B$B我上次說到哪了？喔，對，納裡安！哼！！！我恨那個傢伙。畢竟，就是納裡安摧毀了所有我們在修補諾莫瑞根學院當學生時的測驗曲線。$B$B他們會把我趕出學校嗎？就我看來，諾莫瑞根已經得到它該有的教訓了！$B$B今天就寫到這裡。好好睡，日記！',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2832,'zhTW','親愛的日記，$B$B我給了他一個擁抱並告訴他要繼續努力工作。我現在覺得好多了。這是我們之間的秘密，日記。$B$B我上次說到哪了？喔，對，納裡安！哼！！！我恨那個傢伙。畢竟，就是納裡安摧毀了所有我們在修補諾姆瑞根學院當學生時的測驗曲線。$B$B他們會把我趕出學校嗎？就我看來，諾姆瑞根已經得到它該有的教訓了！$B$B今天就寫到這裡。好好睡，日記！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2833 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2833,'zhTW','親愛的日記，$B$B我一定是老了。我完全忘記我跟你說了納裡安和他的詭計的事。總之，當我看到扮成納裡安的誘餌，我真的很生氣所以就命令二號把那個笨蛋給殺了！$B$B我進入飛行器裡開始撕毀他寶貴、愚蠢、無知的龍語書。真是愛炫耀！誰會讀龍語啊？我真是痛恨他！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2834 AND `locale` = 'zhTW';
@@ -3036,7 +3036,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3166 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3166,'zhTW','狂熱者基爾凱森$B$B強大的巫妖，直接彙報給巫妖王陛下。他身經百戰，因戰功顯赫而被授予老兵勳章。基爾凱森策劃並主導了一項代號為“血腥攻勢”的、針對聖光之願禮拜堂的大規模襲擊行動。儘管天災軍團佔據了壓倒性的優勢，但是他率領的軍隊很快就遭到了有效的反擊，傷亡慘重。基爾凱森未能躲過瑪克斯韋爾·泰羅索斯男爵的致命一擊，他的殘骸再也無法重新組裝起來。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3167 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3167,'zhTW','來自西北裂境$B$B冰冠冰川的航空偵察中隊彙報，他們與巫妖領主基爾溫特的通訊突然中斷了。中隊的首席情報主管，天災工程師卡洛蒙稱，“我們最後一次看見基爾溫特時，他正駕駛著塔爾拉瑪斯在北風凍原上空執行一項機密任務。診斷儀器顯示他隨身攜帶的通訊水晶運轉正常……但是我們能聽到的……只有死一般的寂靜。”',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3167,'zhTW','來自西北裂境$B$B寒冰皇冠的航空偵察中隊彙報，他們與巫妖領主基爾溫特的通訊突然中斷了。中隊的首席情報主管，天災工程師卡洛蒙稱，“我們最後一次看見基爾溫特時，他正駕駛著塔爾拉瑪斯在北風凍原上空執行一項機密任務。診斷儀器顯示他隨身攜帶的通訊水晶運轉正常……但是我們能聽到的……只有死一般的寂靜。”',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3169 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3169,'zhTW','來自東部王國，死亡裂口$B$B教官拉蘇維奧斯在本週早些時候發表宣告，重申了對叛亂以及違抗軍令的懲罰措施。“任何膽敢違背天災軍團的死亡騎士都將遭受比死亡更加殘酷的命運。他們將承受永無止境的痛苦和折磨——我會親自確保這一懲罰措施的順利執行。”',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3171 AND `locale` = 'zhTW';
@@ -3256,7 +3256,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3278 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3278,'zhTW','天災軍團代表著大地的意志。所有的生命體都將臣服於我們的意志，僅僅是因為：他們需要我們，他們渴望得到我們的救贖。天災軍團的準則不可妥協，天災軍團的戒律不可豁免。我們是萬物輪迴的必然環節：死亡。生命終將走向死亡，而亡靈將在死亡中誕生。生者越快地認識到這一亙古不變的真理，他們就能越快地實現蛻變。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3279 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3279,'zhTW','小的們，聽從主人的號令！巫妖王派我來全權管理祖達克的天災部隊。我們要做的就是消滅一切。$B$B消滅一切！！！$B$B我們正在死亡曠野對所有的屍體進行處理，然後把它們派去澤爾拉瑪斯的納瓦留斯王子手下，加強天災軍團的實力。在達庫魯的管理下，什麼都不會浪費的！$B$B很快我們就將變得前所未有的強大！不久之後，祖達克和古達克就將屬於天災軍團！',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3279,'zhTW','小的們，聽從主人的號令！巫妖王派我來全權管理祖爾德拉克的天災部隊。我們要做的就是消滅一切。$B$B消滅一切！！！$B$B我們正在死亡曠野對所有的屍體進行處理，然後把它們派去澤爾拉瑪斯的納瓦留斯王子手下，加強天災軍團的實力。在達庫魯的管理下，什麼都不會浪費的！$B$B很快我們就將變得前所未有的強大！不久之後，祖爾德拉克和古達克就將屬於天災軍團！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3280 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3280,'zhTW','很久以前，當北風獨自統治這片山區的時候，有一個強大的犛牛人酋長。他的兄弟妄圖佔有這些土地。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3281 AND `locale` = 'zhTW';
@@ -3646,7 +3646,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3517 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3517,'zhTW','獸人——儘管體魄強健，獸人仍然擁有優秀的魔法操縱能力。他們之中極少誕生出色的奧術師，但是獸人歷來崇尚和平的薩滿教義，近年來則將注意力轉移到了術士的黑暗魔法以及通靈術的研究上。$B$B牛頭人——牛頭人很少嘗試使用奧術魔法，但是他們對自然法術卻有著與生俱來的悟性。和許多崇尚自認的種族一樣，許多牛頭人選擇了薩滿之道。此外，高階牛頭人德魯伊們的能力堪與達納蘇斯的大德魯伊們媲美。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3518 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3518,'zhTW','巨魔——巨魔歷來是野蠻與暴躁的代名詞，但是他們對魔法藝術的理解力著實令我感到詫異。在那次巨魔帝國之旅中——我曾遊歷過祖阿曼，祖爾法拉克和祖達克三座著名的巨魔城市，我發現他們的施法者種類繁多，從巫醫到暗影祭司再到動物之神的膜拜者。說到崇拜動物神靈，這點倒是與德魯伊教義極其相似。$B$B亡靈——亡靈操縱魔法的能力與生者幾乎幾乎無差異……甚至更為出色。希爾瓦娜斯女王率領的被遺忘者尤其突出，熱誠與激情令他們的施法技巧爐火純青。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3518,'zhTW','巨魔——巨魔歷來是野蠻與暴躁的代名詞，但是他們對魔法藝術的理解力著實令我感到詫異。在那次巨魔帝國之旅中——我曾遊歷過祖阿曼，祖爾法拉克和祖爾德拉克三座著名的巨魔城市，我發現他們的施法者種類繁多，從巫醫到暗影祭司再到動物之神的膜拜者。說到崇拜動物神靈，這點倒是與德魯伊教義極其相似。$B$B亡靈——亡靈操縱魔法的能力與生者幾乎幾乎無差異……甚至更為出色。希爾瓦娜斯女王率領的被遺忘者尤其突出，熱誠與激情令他們的施法技巧爐火純青。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3519 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3519,'zhTW','血精靈——長期暴露在魔法能量下對血精靈產生了難以磨滅的影響。這些體態優雅、嗜魔成癮的生靈能迅速掌握各種魔法學派的教義。最近他們走上了“血騎士”之道，勉強算上是聖騎士教義的一種形式吧。$B$B犛牛人——和表親牛頭人一樣，犛牛人也醉心於研習自然法術。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3520 AND `locale` = 'zhTW';
@@ -3680,7 +3680,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3534 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3534,'zhTW','猛獁人——魔法對體型龐大的猛獁人缺乏吸引力。猛獁人施法者極其罕見，且傾向於遵循薩滿教義。我和猛獁人打過交道，你很難挫敗他們那股寧死不屈的傲氣，而他們厚厚的毛皮甚至能抵禦數發寒冰箭的攻擊。$B$B維庫人——這些來自北裂境的半巨人原本對魔法一無所知，但是巫妖王將部分維庫人訓練成了可怕的通靈師。我還聽說過關於“符文魔法”的種種傳聞，可惜至今沒有機會深入研究這項有趣的課題。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3535 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3535,'zhTW','大領主，$B$B$N成功地帶領我們對抗來自天譴岸地的天災軍團，並使我們得以開始向冰冠冰川進軍。$B$B泥瓦匠帶滿了足以興建正義要塞的材料，這都多虧了$N和$g他:她在水晶之歌森林的戰功。$B$B還剩下最後一個挑戰——北伐軍之峰。我希望從這個最讓我們苦惱的地方劃下這個時代的終章。$B$B我們等待著您的命令，大人。$B$B願聖光保護您。$B$B——古斯塔夫',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3535,'zhTW','大領主，$B$B$N成功地帶領我們對抗來自天譴岸地的天災軍團，並使我們得以開始向寒冰皇冠進軍。$B$B泥瓦匠帶滿了足以興建正義要塞的材料，這都多虧了$N和$g他:她在水晶之歌森林的戰功。$B$B還剩下最後一個挑戰——十字軍之巔。我希望從這個最讓我們苦惱的地方劃下這個時代的終章。$B$B我們等待著您的命令，大人。$B$B願聖光保護您。$B$B——古斯塔夫',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3536 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3536,'zhTW','陛下，$B$B仁慈的王，願聖光永駐您的身心。請允許我貿然懇求您暫緩對這名戰敗的勇士的裁決，容我說上一番話。$B$B這位持信人本是聯盟的英雄。雖然$g他:她渾身散發著惡臭，看上去像是天災軍團的成員，但是她擁有勇士的靈魂。而這靈魂，是最近才與$g他:她的軀體再次融合的。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3537 AND `locale` = 'zhTW';
@@ -3744,9 +3744,9 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3568 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3568,'zhTW','<這塊小小的墓碑上滿懷愛意地刻著獸人符文。><br /><br />$B$B$B$B$B——摯愛的歐格拉——<br />$B$B$B$B$B$B$B$B曼克里克之妻<br /><br />$B$B$B找了你好久好久<br />$B$B$B$B$B如今你已離去',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3569 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3569,'zhTW','科勒博士，$B$B我們的黑騎士沒有能完成他的任務，將他殘破的身軀從錦標賽中取回，用你的法術將他復活，我們將利用銀白十字軍和他們追隨者的力量來對抗他們。$B$B俘虜他們，利用他們的靈魂增強我們僕人的力量。抓住北伐軍戰士庫爾，他的輕率魯莽是非常有名的，將他作為祭品放到你的祭壇上，他的靈魂會讓黑騎士獲得恐怖的力量。然後將重生的黑騎士帶到我這裡來。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3569,'zhTW','科勒博士，$B$B我們的黑騎士沒有能完成他的任務，將他殘破的身軀從錦標賽中取回，用你的法術將他復活，我們將利用銀白十字軍和他們追隨者的力量來對抗他們。$B$B俘虜他們，利用他們的靈魂增強我們僕人的力量。抓住十字軍戰士庫爾，他的輕率魯莽是非常有名的，將他作為祭品放到你的祭壇上，他的靈魂會讓黑騎士獲得恐怖的力量。然後將重生的黑騎士帶到我這裡來。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3570 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3570,'zhTW','第一天：\\r\\n\\r\\n登上了一艘名叫「卓卡之怒號」的船。$B我們正把特殊貨物運往大海另一端的遙遠之地。$B我的職責是在船上打掃，等靠岸之後負責偵察。\\r\\n\\r\\n總比在奧格瑪搜捕聯盟盜賊和德魯伊要好多了。\\r\\n\\r\\n食物沒有以前好吃，但烈酒的味道還是一樣。$B杜隆塔爾已經消失在視線之外了。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3570,'zhTW','第一天：\\r\\n\\r\\n登上了一艘名叫「卓卡之怒號」的船。$B我們正把特殊貨物運往大海另一端的遙遠之地。$B我的職責是在船上打掃，等靠岸之後負責偵察。\\r\\n\\r\\n總比在奧格瑪搜捕聯盟盜賊和德魯伊要好多了。\\r\\n\\r\\n食物沒有以前好吃，但烈酒的味道還是一樣。$B杜洛塔已經消失在視線之外了。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3571 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3571,'zhTW','第二天：\\r\\n\\r\\n食物和船身的搖晃讓我很不舒服！\\r\\n\\r\\n有好多兄弟都暈船了，要打掃的東西堆積如山。$B我覺得這不是個好主意，但如果他非去不可，我們也會心甘情願跟著他一路沉到海底。\\r\\n\\r\\n希望事情不會演變成那樣。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3572 AND `locale` = 'zhTW';
@@ -3768,7 +3768,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3580 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3580,'zhTW','謹記：薩滿絕不能強求力量，這麼做會激起元素的憤怒，而失去元素庇護的薩滿什麼都不是。$B追隨薩滿之道的人絕不能忘記這條最重要的信條。$B$B然而，能以敬重之心與元素攜手合作的薩滿，所掌握的力量少有人能及。$B如果你自認擁有這樣的謙遜，就到鐵砧堡來見我吧。$B我會教你——就像當年我的師父教我一樣——如何運用火、土、風、水與野性之力。$B$B~提歐·錘暴',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3581 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3581,'zhTW','「角色扮演」\\n\\n熟練的角色扮演技巧不可或缺。天才侏儒女孩才不會想要一個超級無聊的傢伙。用你們未來橫跨大陸的冒險故事來取悅她：\\n\\n$B「寶貝，你和我，我們要一起飛到卡林多，在泰達希爾的樹幹上刻下我們的名字，然後在安戈洛環形山的樹林間盪鞦韆度過餘生。」\\n\\n「說故事」\\n\\n分享你們一起共度的精彩未來吧！越是天馬行空越好。沒有什麼比一個雄心勃勃的計畫更能讓侏儒女孩興奮的了。這也是絕佳的話題開場白！\\n\\n$B「只要結合我們聰明的腦袋，我們就能奪回諾莫瑞根。……話說回來，我們到底為什麼還沒把諾莫瑞根奪回來？」',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3581,'zhTW','「角色扮演」\\n\\n熟練的角色扮演技巧不可或缺。天才侏儒女孩才不會想要一個超級無聊的傢伙。用你們未來橫跨大陸的冒險故事來取悅她：\\n\\n$B「寶貝，你和我，我們要一起飛到卡林多，在泰達希爾的樹幹上刻下我們的名字，然後在安戈洛環形山的樹林間盪鞦韆度過餘生。」\\n\\n「說故事」\\n\\n分享你們一起共度的精彩未來吧！越是天馬行空越好。沒有什麼比一個雄心勃勃的計畫更能讓侏儒女孩興奮的了。這也是絕佳的話題開場白！\\n\\n$B「只要結合我們聰明的腦袋，我們就能奪回諾姆瑞根。……話說回來，我們到底為什麼還沒把諾姆瑞根奪回來？」',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3582 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3582,'zhTW','「調侃」\\n\\n調侃是一門用幽默的方式取笑女性的藝術。小心點，很容易就會玩過頭。叫她「地精殺手小蚊子」>只會讓你穿著剛買的綠色戈多克烈酒走路回家。試試更含蓄一點的招數吧。\\n\\n如果她表現得很孩子氣，一直不停地跳上酒吧裡的桌子，可以試試看：\\n\\n「我聽說暴風城孤兒院正在招募明星藝人喔。」\\n\\n如果她一直嘻笑著談論自己沒完沒了，可以試試看：\\n\\n「你的關機開關在哪裡？」\\n\\n重要提醒：侏儒女孩沒有關機開關。試圖尋找它可能會讓你賠上性命、肢體，或是荷包。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3583 AND `locale` = 'zhTW';
