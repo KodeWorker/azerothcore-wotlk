@@ -273,13 +273,13 @@ reference against these client-extracted ground-truth glossaries directly.
 
 ## Suggested next steps
 
-2. Find a real source (or commit to manual translation) for
+1. Find a real source (or commit to manual translation) for
    CompletionText/RewardText/Greeting — 138 entries blocked on this alone
-   (5 + 7 + 126; see the correction note above the gaps table — this was
-   originally misreported as ~700 due to a NULL-handling bug, now fixed).
-3. Manual/original translation for the 86 quests with literally no source
+   (5 + 7 + 126; see "The CompletionText / RewardText / Greeting dead end"
+   above for what was already tried and ruled out).
+2. Manual/original translation for the 86 quests with literally no source
    (`quests-no-wowhead-reference.tsv` + `quest_template_locale-gaps.tsv`).
-4. All 5 corrected `quest_request_items_locale` entries are `no_wowhead_reference`
-   status — none need the "reachable but deprecated slug" nuance that applied
-   before the NULL-bug correction. (That 40-entry ambiguity was against the old,
-   inflated 566-count and no longer applies to the real 5.)
+
+Everything else from this session is fully resolved: the skip list (331
+entries), `item_template_locale` (0 real gaps left), and all 10
+previously-ambiguous marker-titled quests — nothing pending a decision.
