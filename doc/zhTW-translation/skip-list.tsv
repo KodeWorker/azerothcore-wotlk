@@ -324,6 +324,7 @@ quest_id	english_title	reason
 11579	The \"Chow\" Quest (123)aa COPY	The "Chow" Quest (123)aa COPY -- unreachable, duplicate pair with 11578 (identical content), literal "COPY" in title
 11588	REUSE	English title marker: REUSE
 11589	REUSE	English title marker: REUSE
+11974	[ph] Now, When I Grow Up...	[ph] Now, When I Grow Up... -- unreachable, literal "[ph]" placeholder marker baked into the English title itself (Blizzard's own internal marker, not ours); Wowhead's wotlk-build page has no specific entry for this ID either (redirects to the generic quest listing)
 11987	zzOLDFortune Card: Silver	zzOLDFortune Card: Silver -- confirmed both ways: Wowhead flags deprecated (此任務被暴雪標記為過期) AND unreachable in our DB (no starter/ender, no game_event link)
 11992	Navigation Charts (Deprecated)	English title marker: Navigation Charts (Deprecated)
 11997	REUSE	English title marker: REUSE
