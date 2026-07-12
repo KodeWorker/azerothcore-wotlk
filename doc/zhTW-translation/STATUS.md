@@ -262,17 +262,19 @@ script — don't trust old counts anywhere in git history before this fix.
 | File | Table | Field | Count | Status |
 |---|---|---|---|---|
 | `quests-no-wowhead-reference.tsv` | `quest_template_locale` | Title/Details/Objectives | **70** (was 75; `13917` moved to skip list as a confirmed duplicate of already-translated `13903`, `13377` translated via zhCN+OpenCC fallback since its own Wowhead TW page is bracketed/unavailable — see "Recent fixes" below) | From the bracket-title backlog; Wowhead itself has no zhTW translation for these either (confirmed via URL slug still being English/ASCII) |
-| `quest_template_locale-gaps.tsv` | `quest_template_locale` | Title/Details/Objectives | **4** (was 11, then 5; `13843` fully resolved, the remaining 4 partially resolved — see "Recent fixes" below) | Same origin as above but from the "fully blank row" backlog |
+| `quest_template_locale-gaps.tsv` | `quest_template_locale` | Title/Details/Objectives | **0** — fully resolved | Was 11, then 5, then 4; all 5 original entries resolved — see "Recent fixes" below |
 | `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **5** (corrected from 566, then re-checked against the final skip list — see above) | **Blocked, no source found** (see below) |
 | `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | **6** (was 7, `8270` "test copy quest" removed once skip-listed) | **Blocked, no source found** (see below) — confirmed real English text, no NULL issue here |
 | `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) — confirmed all 126 have real English text, no NULL issue here |
 | — | `item_template_locale` | Name/Description | **0** — fully resolved | Was 14 raw gaps; 1 filled (5732), 1 deliberately dropped (33776, Wowhead-flagged `[PH]` placeholder, noted in `skip-list.tsv`'s trailer comment), the other 12 all turned out to be items tied only to skip-listed/duplicate quests (see the `zzDEPRECATED`/`UNUSED`/`DEPRECATED`/`[PH]`/`NPC Equip <id>` pattern discussed above) |
 
-**74 quests (70 + 4) have zero usable translation source anywhere found —
-these need original/manual translation**, same as any from-scratch localization
-work (down from 80). The reward/completion/greeting blockers now total a much
-smaller **138** entries (5 + 6 + 126), not the ~700 originally estimated —
-still blocked on finding a source, but a far smaller problem than first reported.
+**70 quests have zero usable translation source anywhere found — these need
+original/manual translation**, same as any from-scratch localization work
+(down from 80; `quest_template_locale-gaps.tsv`'s remaining 4 turned out to
+need no manual work at all — see "Recent fixes" below). The reward/
+completion/greeting blockers now total a much smaller **137** entries
+(5 + 6 + 126), not the ~700 originally estimated — still blocked on finding
+a source, but a far smaller problem than first reported.
 
 ### Recent fixes that reduced the manual-translation count (2026-07-12)
 
@@ -301,8 +303,15 @@ still blocked on finding a source, but a far smaller problem than first reported
   base translation (Title+Details+Objectives) entirely masked by the blank
   override — now fully resolved, zero manual work needed. `12890`, `13175`,
   `13176`, `13184` had at least a real Title in base (Details/Objectives/etc
-  were genuinely blank in base too) — Title now restored, body text is the
-  only remaining gap for these 4.
+  were genuinely blank in base too) — Title restored. Checked whether the
+  blank body fields still needed manual translation (2026-07-12): they don't
+  — the **English** base row has every body field blank too, and Wowhead's
+  `wotlk`-build page confirms these are real, non-deprecated level 79-80
+  Storm Peaks/Icecrown quests with no flavor text of their own either (its
+  page description is just the generic "A level N \<Zone\> Quest. Rewards ."
+  template, not real quest text). These are "title-only" quests by design —
+  no source material exists in any language. `quest_template_locale-gaps.tsv`
+  is now fully empty; all 5 of its original entries resolved.
 
 ## The CompletionText / RewardText / Greeting dead end
 
@@ -420,9 +429,8 @@ reference against these client-extracted ground-truth glossaries directly.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
 - `quests-no-wowhead-reference.tsv` — 70 quest_template_locale gaps with no
   translation source anywhere.
-- `quest_template_locale-gaps.tsv` — 4 more of the same, different backlog
-  (all 4 now have a real Title restored from base; only the body text is
-  still an open gap — see "Recent fixes" above).
+- `quest_template_locale-gaps.tsv` — now empty, fully resolved (see
+  "Recent fixes" above).
 - `quest_request_items_locale-gaps.tsv` / `quest_offer_reward_locale-gaps.tsv`
   / `quest_greeting_locale-gaps.tsv` — blocked gaps, see above.
 - `wowhead-client-ground-truth/` — official zhTW strings extracted from the
@@ -437,12 +445,13 @@ reference against these client-extracted ground-truth glossaries directly.
    CompletionText/RewardText/Greeting — 137 entries blocked on this alone
    (5 + 6 + 126; see "The CompletionText / RewardText / Greeting dead end"
    above for what was already tried and ruled out).
-2. Manual/original translation for the 74 quests with literally no source
-   (`quests-no-wowhead-reference.tsv` + `quest_template_locale-gaps.tsv`),
-   down from 80.
+2. Manual/original translation for the 70 quests with literally no source
+   (`quests-no-wowhead-reference.tsv`), down from 80.
+   `quest_template_locale-gaps.tsv` is now fully resolved (0 entries).
 
 Everything else from this session is fully resolved: the skip list (381
-entries), `item_template_locale` (0 real gaps left), the six zone-name
+entries), `item_template_locale` (0 real gaps left), `quest_template_locale-gaps.tsv`
+(0 entries left), the six zone-name
 zhCN/zhTW terminology leaks (Ashenvale, Argent Crusade, Icecrown, Durotar,
 Orgrimmar, Howling Fjord, Gnomeregan, Zul'Drak), the Jaina Proudmoore
 name-leak, and all 10 previously-ambiguous marker-titled quests — nothing
