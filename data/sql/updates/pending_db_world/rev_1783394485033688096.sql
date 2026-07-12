@@ -929,7 +929,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 557 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (557,'zhTW','你好啊，$N。元素生物是很難對付，不過我知道你肯定可以勝任這個任務。你拿到地縛護腕了嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 558 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (558,'zhTW','有一天我要成為吉安娜·普羅德摩爾一樣的英雄……好吧，一個男生英雄好了。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (558,'zhTW','有一天我要成為珍娜·普勞德摩爾一樣的英雄……好吧，一個男生英雄好了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 559 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (559,'zhTW','你為我拿到那些魚人的頭了嗎，$N？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 560 AND `locale` = 'zhTW';
@@ -13713,7 +13713,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 13265 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (13265,'zhTW','你衣角的碎片告訴我你是一名裁縫，應該可以輕鬆學會我要教你的技術。$B$B北裂境的人型生物所穿著的衣服可以很容易地轉化成布料——如果你知道訣竅的話。$B$B只需一點點費用，我就教你布料搜尋的技巧，這樣你就可以從北裂境的人型生物那兒搜尋到布料了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 13267 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (13267,'zhTW','吉安娜是對的，事情不一定要走到這個地步……',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (13267,'zhTW','珍娜是對的，事情不一定要走到這個地步……',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 13268 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (13268,'zhTW','你衣角的碎片告訴我你是一名裁縫，應該可以輕鬆學會我要教你的技術。$B$B北裂境的人型生物所穿著的衣服可以很容易地轉化成布料——如果你知道訣竅的話。$B$B只需一點點費用，我就教你布料搜尋的技巧，這樣你就可以從北裂境的人型生物那兒搜尋到布料了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 13269 AND `locale` = 'zhTW';

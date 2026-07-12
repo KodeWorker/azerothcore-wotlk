@@ -337,7 +337,7 @@ INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `Option
 DELETE FROM `gossip_menu_option_locale` WHERE `MenuID` = 10173 AND `OptionID` = 2 AND `Locale` = 'zhTW';
 INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES (10173, 2, 'zhTW', '紋章商人', '');
 DELETE FROM `gossip_menu_option_locale` WHERE `MenuID` = 10189 AND `OptionID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES (10189, 0, 'zhTW', '普羅德摩爾女士，我準備好去奧格瑪了。請開啟傳送門。', '');
+INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES (10189, 0, 'zhTW', '普勞德摩爾女士，我準備好去奧格瑪了。請開啟傳送門。', '');
 DELETE FROM `gossip_menu_option_locale` WHERE `MenuID` = 10265 AND `OptionID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `gossip_menu_option_locale` (`MenuID`, `OptionID`, `Locale`, `OptionText`, `BoxText`) VALUES (10265, 0, 'zhTW', '拍賣行', '');
 DELETE FROM `gossip_menu_option_locale` WHERE `MenuID` = 10265 AND `OptionID` = 3 AND `Locale` = 'zhTW';
