@@ -75,6 +75,13 @@ def unquote(s):
     if len(s) >= 2 and s[0] == "'" and s[-1] == "'":
         inner = s[1:-1]
         return inner.replace("\\'", "'").replace('\\\\', '\\')
+    if s == "NULL":
+        # unquoted literal SQL NULL, not a quoted empty string -- treat as no text.
+        # (Bug history: an earlier version of this function returned "NULL" as a
+        # literal 4-char string here, which passed `.strip() != ''` filters as if
+        # it were real content -- inflated quest_request_items_locale's gap count
+        # from 5 real entries to 566 by miscounting NULL rows as translatable.)
+        return ""
     return s
 
 def extract_inserts(filepath, table_name):

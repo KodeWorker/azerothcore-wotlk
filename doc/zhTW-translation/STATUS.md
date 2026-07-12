@@ -97,18 +97,31 @@ that last one was unreachable, see file) — **not resolved**, sitting in
 
 ### Remaining gaps, with reference-source status
 
+**Important correction made after this report was first written:** the original
+`quest_request_items_locale` count (571, later 566 after skip-list filtering)
+had a scanning bug — `scan_missing_zhtw.py`'s `unquote()` returned the literal
+4-character string `"NULL"` for unquoted SQL `NULL` values instead of treating
+it as empty, so rows with a genuinely-`NULL` English `CompletionText` (nothing
+to translate, not a gap at all) were miscounted as "has English text, missing
+zhTW." **561 of the 566 were false positives.** The bug is fixed in
+`scripts/scan_missing_zhtw.py` (see the comment on `unquote()`); re-running it
+now correctly reports far fewer. If you regenerate any gap list, use the fixed
+script — don't trust old counts anywhere in git history before this fix.
+
 | File | Table | Field | Count | Status |
 |---|---|---|---|---|
 | `quests-no-wowhead-reference.tsv` | `quest_template_locale` | Title/Details/Objectives | 75 | From the bracket-title backlog; Wowhead itself has no zhTW translation for these either (confirmed via URL slug still being English/ASCII) |
 | `quest_template_locale-gaps.tsv` | `quest_template_locale` | Title/Details/Objectives | 11 | Same as above but from the "fully blank row" backlog |
-| `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | 566 | **Blocked, no source found** (see below) |
-| `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | 7 | **Blocked, no source found** (see below) |
-| `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) |
+| `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **5** (corrected from 566 — see above) | **Blocked, no source found** (see below) |
+| `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | 7 | **Blocked, no source found** (see below) — confirmed all 7 have real English text, no NULL issue here |
+| `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) — confirmed all 126 have real English text, no NULL issue here |
 | — | `item_template_locale` | Name/Description | 1 (id 33776) | Deliberately dropped — Wowhead flags it `[PH]` placeholder, matches its own internal `NPC Equip 33776` name; noted in `skip-list.tsv`'s trailer comment, not a real gap |
 
 **86 quests (75 + 11) have zero usable translation source anywhere found —
 these need original/manual translation**, same as any from-scratch localization
-work. Everything else blocked is blocked on a *field*, not the quest itself.
+work. The reward/completion/greeting blockers now total a much smaller **138**
+entries (5 + 7 + 126), not the ~700 originally estimated — still blocked on
+finding a source, but a far smaller problem than first reported.
 
 ## The CompletionText / RewardText / Greeting dead end
 
@@ -240,10 +253,12 @@ reference against these client-extracted ground-truth glossaries directly.
 
 1. Decide the 10 `ambiguous-reachable-marker-titled-quests.tsv` cases.
 2. Find a real source (or commit to manual translation) for
-   CompletionText/RewardText/Greeting — 699 entries blocked on this alone.
+   CompletionText/RewardText/Greeting — 138 entries blocked on this alone
+   (5 + 7 + 126; see the correction note above the gaps table — this was
+   originally misreported as ~700 due to a NULL-handling bug, now fixed).
 3. Manual/original translation for the 86 quests with literally no source
    (`quests-no-wowhead-reference.tsv` + `quest_template_locale-gaps.tsv`).
-4. The 40 "reachable but Wowhead slug says deprecated" quest_request_items
-   entries need individual resolution (marked `reachable_but_deprecated_slug_unclear`
-   in that file) — same nuance as the skip-list caveat above, just never
-   fully resolved for this specific field/table.
+4. All 5 corrected `quest_request_items_locale` entries are `no_wowhead_reference`
+   status — none need the "reachable but deprecated slug" nuance that applied
+   before the NULL-bug correction. (That 40-entry ambiguity was against the old,
+   inflated 566-count and no longer applies to the real 5.)
