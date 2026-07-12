@@ -46,7 +46,7 @@ does **not** catch:
 
 ## Current numbers (as of this report)
 
-### Skip list — 314 quest IDs (`skip-list.tsv`)
+### Skip list — 321 quest IDs (`skip-list.tsv`)
 
 Quests that should **not** be translated: unreachable in-game (no
 creature/gameobject queststarter+questender row, and no `game_event_*_quest`
@@ -80,6 +80,13 @@ duplicate first if you're unsure.
 `Warsong Outriders <NYI> <TXT>`, `Forward Base: Reaver's Fall REUSE` — wait,
 that last one was unreachable, see file) — **not resolved**, sitting in
 `ambiguous-reachable-marker-titled-quests.tsv` pending a human call.
+
+One more duplicate-item pattern found while resolving `item_template_locale`:
+quests 7922/7923/7924/7925/8002/8293/8296/8568 (all blank English titles,
+all unreachable) were tied to item 19322 `zzDEPRECATED Warsong Mark of Honor`
+— the real item is 20558 `Warsong Gulch Mark of Honor`. Same shape as the
+Thunderfury/Krastinov's duplicates: `zz`-prefixed names are a dev convention
+for "sort to bottom, hidden." All 8 added to the skip list.
 
 ### Translated and pushed this session
 
@@ -115,7 +122,7 @@ script — don't trust old counts anywhere in git history before this fix.
 | `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **5** (corrected from 566 — see above) | **Blocked, no source found** (see below) |
 | `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | 7 | **Blocked, no source found** (see below) — confirmed all 7 have real English text, no NULL issue here |
 | `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) — confirmed all 126 have real English text, no NULL issue here |
-| — | `item_template_locale` | Name/Description | 1 (id 33776) | Deliberately dropped — Wowhead flags it `[PH]` placeholder, matches its own internal `NPC Equip 33776` name; noted in `skip-list.tsv`'s trailer comment, not a real gap |
+| — | `item_template_locale` | Name/Description | **0** — fully resolved | Was 14 raw gaps; 1 filled (5732), 1 deliberately dropped (33776, Wowhead-flagged `[PH]` placeholder, noted in `skip-list.tsv`'s trailer comment), the other 12 all turned out to be items tied only to skip-listed/duplicate quests (see the `zzDEPRECATED`/`UNUSED`/`DEPRECATED`/`[PH]`/`NPC Equip <id>` pattern discussed above) |
 
 **86 quests (75 + 11) have zero usable translation source anywhere found —
 these need original/manual translation**, same as any from-scratch localization
@@ -234,7 +241,7 @@ reference against these client-extracted ground-truth glossaries directly.
 ## Files in this directory
 
 - `STATUS.md` — this file.
-- `skip-list.tsv` — 314 quest IDs to exclude from translation, with English
+- `skip-list.tsv` — 321 quest IDs to exclude from translation, with English
   title and reason.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
 - `ambiguous-reachable-marker-titled-quests.tsv` — 10 unresolved edge cases.

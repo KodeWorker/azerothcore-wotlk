@@ -198,13 +198,19 @@ quest_id	english_title	reason
 7869	test quest - do not use	English title marker: test quest - do not use
 7870	test quest2 - do not use	English title marker: test quest2 - do not use
 7904	<UNUSED>	
-8002	Silverwing Sentinels <NYI> <TXT>	English title marker: Silverwing Sentinels <NYI> <TXT>
+7922	Mark of Honor	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
+7923	Mark of Honor	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
+7924	Mark of Honor	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
+7925	Mark of Honor	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
+8002	Silverwing Sentinels <NYI> <TXT>	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
 8152	REUSE	English title marker: REUSE
 8237	REUSE	English title marker: REUSE
 8244	<UNUSED>	
 8245	<UNUSED>	
 8247	<UNUSED>	
 8248	<UNUSED>	
+8293	Mark of Honor	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
+8296	Mark of Honor	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
 8337	<UNUSED>	English title marker: <UNUSED>
 8339	Royalty of the Council <NYI> <TXT> UNUSED	
 8340	Twilight Signet Ring <NYI> <TXT>	
@@ -220,6 +226,7 @@ quest_id	english_title	reason
 8458	<UNUSED>	English title marker: <UNUSED>
 8459	<UNUSED>	
 8489	An Intact Converter	An Intact Converter -- Wowhead URL slug 'deprecated', no creature/GO starter+ender or game_event link in our DB
+8568	Past Victories in Warsong Gulch	blank English title, unreachable, tied to item 19322 'zzDEPRECATED Warsong Mark of Honor' (real item is 20558)
 8571	<UNUSED> Armor Kits	English title marker: <UNUSED> Armor Kits
 9031	<TXT>Anthion's Parting Words	English title marker: <TXT>Anthion's Parting Words
 9231	reuse	English title marker: reuse
