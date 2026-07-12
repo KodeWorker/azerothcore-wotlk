@@ -46,7 +46,7 @@ does **not** catch:
 
 ## Current numbers (as of this report)
 
-### Skip list — 362 quest IDs (`skip-list.tsv`)
+### Skip list — 368 quest IDs (`skip-list.tsv`)
 
 Quests that should **not** be translated: unreachable in-game (no
 creature/gameobject queststarter+questender row, and no `game_event_*_quest`
@@ -74,6 +74,21 @@ as genuinely obsolete only by finding a duplicate quest ID with the same title
 that *is* reachable and already translated (5786↔7521 pattern) — reachability
 alone doesn't prove a title-legitimate quest is obsolete; check for a live
 duplicate first if you're unsure.
+
+**Policy-consistency follow-up:** early in the session, 7 Wowhead-"deprecated"
+quests (`12021, 12162, 12163, 12881, 8489, 8896, 9357`) were kept as
+translation candidates purely on the *principle* that the deprecated flag
+alone shouldn't be trusted — none of the 7 actually had a *positive*
+reachability signal (no starter/ender, no `game_event` link, no documented
+successor quest). `8489` got moved to skip-list later when re-checked with
+the full rigor developed by that point. The other 6 were still sitting as
+candidates on the old, less rigorous basis until a direct request to
+re-verify them — moved to skip-list for consistency, since they have the
+exact same (lack of) evidence as `8489`. **Takeaway: "keep it because the
+deprecated flag alone isn't proof" is not the same as "keep it because
+there's positive evidence it's reachable"** — the former is a reason to
+withhold judgment pending more evidence, not a reason to permanently commit
+to treating something as translatable.
 
 **Resolved:** the 10 quests reachable-but-marker-titled (`REUSE` ×6,
 `<NYI> Clear Some Room`, `[NYI] Now this is Ram Racing... Almost.`,
@@ -191,7 +206,7 @@ script — don't trust old counts anywhere in git history before this fix.
 | `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) — confirmed all 126 have real English text, no NULL issue here |
 | — | `item_template_locale` | Name/Description | **0** — fully resolved | Was 14 raw gaps; 1 filled (5732), 1 deliberately dropped (33776, Wowhead-flagged `[PH]` placeholder, noted in `skip-list.tsv`'s trailer comment), the other 12 all turned out to be items tied only to skip-listed/duplicate quests (see the `zzDEPRECATED`/`UNUSED`/`DEPRECATED`/`[PH]`/`NPC Equip <id>` pattern discussed above) |
 
-**86 quests (75 + 11) have zero usable translation source anywhere found —
+**80 quests (75 + 5) have zero usable translation source anywhere found —
 these need original/manual translation**, same as any from-scratch localization
 work. The reward/completion/greeting blockers now total a much smaller **138**
 entries (5 + 7 + 126), not the ~700 originally estimated — still blocked on
@@ -308,7 +323,7 @@ reference against these client-extracted ground-truth glossaries directly.
 ## Files in this directory
 
 - `STATUS.md` — this file.
-- `skip-list.tsv` — 362 quest IDs to exclude from translation, with English
+- `skip-list.tsv` — 368 quest IDs to exclude from translation, with English
   title and reason.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
 - `quests-no-wowhead-reference.tsv` — 75 quest_template_locale gaps with no
@@ -328,9 +343,9 @@ reference against these client-extracted ground-truth glossaries directly.
    CompletionText/RewardText/Greeting — 138 entries blocked on this alone
    (5 + 7 + 126; see "The CompletionText / RewardText / Greeting dead end"
    above for what was already tried and ruled out).
-2. Manual/original translation for the 86 quests with literally no source
+2. Manual/original translation for the 80 quests with literally no source
    (`quests-no-wowhead-reference.tsv` + `quest_template_locale-gaps.tsv`).
 
-Everything else from this session is fully resolved: the skip list (362
+Everything else from this session is fully resolved: the skip list (368
 entries), `item_template_locale` (0 real gaps left), and all 10
 previously-ambiguous marker-titled quests — nothing pending a decision.
