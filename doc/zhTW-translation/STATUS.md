@@ -115,13 +115,13 @@ duplicate of an already-translated live quest.
 
 Wowhead does not publicly expose these three fields for classic/WotLK
 content in any scrapable form found this session:
-1. `wowhead.com/tw/quest=<id>` static HTML has Details (`<h2>描述</h2>`) and
-   Objectives (`<meta name="description">`), but the reward section is
+1. `wowhead.com/wotlk/tw/quest=<id>` static HTML has Details (`<h2>描述</h2>`)
+   and Objectives (`<meta name="description">`), but the reward section is
    client-rendered UI only — no NPC reward line.
 2. `nether.wowhead.com/tooltip/quest/<id>?locale=zhTW` returns zhTW text but
    it's **retail** data, not classic/WotLK, and only has Title+Objectives
    anyway.
-3. NPC pages (`wowhead.com/tw/npc=<entry>`) don't expose gossip/greeting
+3. NPC pages (`wowhead.com/wotlk/tw/npc=<entry>`) don't expose gossip/greeting
    text in static HTML either.
 
 If picking this back up: find a different reference source, or plan for
@@ -129,8 +129,11 @@ manual/original translation.
 
 ## Wowhead TW extraction method (for `quest_template_locale`)
 
-Fetch `https://www.wowhead.com/tw/quest=<id>` with `curl -sL` (must follow
-the redirect).
+Fetch `https://www.wowhead.com/wotlk/tw/quest=<id>` with `curl -sL` (must
+follow the redirect). Use the `/wotlk/tw/` build-specific path, not the bare
+`/tw/` retail-flavored one — same content coverage, but the deprecated-flag
+check is only meaningful on the build-specific page (see "Hard-won
+methodology lessons" above).
 
 - **Title**: `<meta property="twitter:title" content="...">`.
 - **Objectives**: `<meta name="description" content="...">`, split on the

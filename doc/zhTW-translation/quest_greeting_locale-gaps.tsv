@@ -1,5 +1,5 @@
 # quest_greeting_locale (Greeting -- NPC/GO popup text shown before quest accept dialog):
-# BLOCKED, no source found at all. Checked Wowhead NPC pages (wowhead.com/tw/npc=<entry>)
+# BLOCKED, no source found at all. Checked Wowhead NPC pages (wowhead.com/wotlk/tw/npc=<entry>)
 # directly -- this gossip/greeting text is not present in static HTML there either (same
 # limitation as RewardText/CompletionText). Needs a different source or manual translation.
 entry	type(0=creature,1=gameobject)	name	linked_quests
