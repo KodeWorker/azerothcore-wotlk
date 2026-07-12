@@ -189,6 +189,29 @@ translated). One more (`5550` "Fast Test Gun") has an untranslated English
 `Description` ("Testing the LOC trigger") confirming it's genuine test
 content, not a real gap — left alone.
 
+**`quest_offer_reward_locale`/`quest_request_items_locale` re-checked too**
+(both structurally immune to the masking bug above — one text field each,
+same as `quest_greeting_locale`). Just needed re-cross-referencing against
+the final 368-entry skip list: `8270` and `14351` dropped out of their
+respective gap lists since both got skip-listed along the way. Counts:
+`quest_offer_reward_locale` 7→6, `quest_request_items_locale` 6→5 (this
+one was already down from 566 thanks to the earlier NULL-bug fix).
+
+**Gotcha hit while doing this re-check, worth flagging:** `scan_missing_zhtw.py`
+writes its `missing_zhtw_*.txt` output to `$ZHTW_SCRATCH` (default
+`/tmp/zhtw-scratch`), but a stale copy of the same filenames was still
+sitting in this session's own scratchpad directory from *before* the
+portable-paths refactor. A quick analysis script that opened
+`missing_zhtw_quest_request_items.txt` by a bare relative filename picked
+up the stale 571-entry copy instead of the fresh 6-entry one at
+`/tmp/zhtw-scratch/`, even though the very same script run had just
+printed the correct `missing=6` to stdout — the file read and the
+printed summary silently disagreed. No bad SQL got written from it (caught
+before generating anything), but it's an easy trap: **always read
+`scan_missing_zhtw.py`'s output from `$ZHTW_SCRATCH` explicitly, never a
+bare relative filename**, especially if an old scratchpad has files left
+over from before a path convention changed.
+
 ### Translated and pushed this session
 
 - **1460** quest_template_locale rows filled from Wowhead TW quest pages
@@ -220,15 +243,15 @@ script — don't trust old counts anywhere in git history before this fix.
 |---|---|---|---|---|
 | `quests-no-wowhead-reference.tsv` | `quest_template_locale` | Title/Details/Objectives | 75 | From the bracket-title backlog; Wowhead itself has no zhTW translation for these either (confirmed via URL slug still being English/ASCII) |
 | `quest_template_locale-gaps.tsv` | `quest_template_locale` | Title/Details/Objectives | 11 | Same as above but from the "fully blank row" backlog |
-| `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **5** (corrected from 566 — see above) | **Blocked, no source found** (see below) |
-| `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | 7 | **Blocked, no source found** (see below) — confirmed all 7 have real English text, no NULL issue here |
+| `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **5** (corrected from 566, then re-checked against the final skip list — see above) | **Blocked, no source found** (see below) |
+| `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | **6** (was 7, `8270` "test copy quest" removed once skip-listed) | **Blocked, no source found** (see below) — confirmed real English text, no NULL issue here |
 | `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) — confirmed all 126 have real English text, no NULL issue here |
 | — | `item_template_locale` | Name/Description | **0** — fully resolved | Was 14 raw gaps; 1 filled (5732), 1 deliberately dropped (33776, Wowhead-flagged `[PH]` placeholder, noted in `skip-list.tsv`'s trailer comment), the other 12 all turned out to be items tied only to skip-listed/duplicate quests (see the `zzDEPRECATED`/`UNUSED`/`DEPRECATED`/`[PH]`/`NPC Equip <id>` pattern discussed above) |
 
 **80 quests (75 + 5) have zero usable translation source anywhere found —
 these need original/manual translation**, same as any from-scratch localization
 work. The reward/completion/greeting blockers now total a much smaller **138**
-entries (5 + 7 + 126), not the ~700 originally estimated — still blocked on
+entries (5 + 6 + 126), not the ~700 originally estimated — still blocked on
 finding a source, but a far smaller problem than first reported.
 
 ## The CompletionText / RewardText / Greeting dead end
@@ -359,7 +382,7 @@ reference against these client-extracted ground-truth glossaries directly.
 ## Suggested next steps
 
 1. Find a real source (or commit to manual translation) for
-   CompletionText/RewardText/Greeting — 138 entries blocked on this alone
+   CompletionText/RewardText/Greeting — 137 entries blocked on this alone
    (5 + 7 + 126; see "The CompletionText / RewardText / Greeting dead end"
    above for what was already tried and ruled out).
 2. Manual/original translation for the 80 quests with literally no source
