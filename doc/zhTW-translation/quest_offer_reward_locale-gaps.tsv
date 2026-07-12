@@ -1,10 +1,27 @@
 # quest_offer_reward_locale (RewardText -- reward-screen dialogue): CORRECTED 2026-07-12,
-# re-checked against the current (368-entry) skip list -- 8270 'test copy quest' removed
-# (now skip-listed). Still blocked on the Wowhead-doesn't-expose-this-field issue in STATUS.md.
+# re-checked against the current (368-entry, then 386-entry) skip list.
+# 5 of the 6 remaining entries resolved 2026-07-12:
+#
+# 14418/14420 (The Deathstalkers): unreachable, identical content to reachable quest
+# 1978 of the same title -- confirmed duplicate, moved to skip list.
+# 25092 (Elemental Research): English source itself contains literal "[ph] log
+# description" placeholder text (never finished by Blizzard) -- moved to skip list.
+# 14488 (You've Been Served): TRANSLATED. Reachable via the "Love is in the Air"
+# seasonal event (game_event 8). RewardText "What we do here is none of your
+# business..." -> "我們在這裡做的事，不關你的事……" (Apothecary Hummel, no unique
+# NPC/item names in this specific line).
+#
+# 24426/24427 (Call to Arms: Alterac Valley) still open: initially suspected as part
+# of the same internal-stub family as skip-listed 24222/24227 (QuestLevel=-1), but
+# that turned out to be wrong -- 4 sibling "Call to Arms" quests (11337/11341/14179/
+# 14182) already have real, well-written base zhTW translations despite the same
+# QuestLevel=-1/unreachable signature. This whole 32-quest family is a level-bracket
+# variant matrix for the real BG-queue "Call to Arms" bonus-reward system, granted by
+# hardcoded game logic rather than NPC/GO interaction -- our reachability check can't
+# see that mechanism. Only quests whose title literally says "DEPRECATED" (24222,
+# 24227) are confirmed dead. Do NOT skip-list 24426/24427 without individually
+# verifying they're actually part of the dead pair, not just an untranslated (but
+# real) bracket variant like most of their siblings.
 quest_id	english_title	quest_wowhead_status
-14418	The Deathstalkers	no_wowhead_reference
-14420	The Deathstalkers	no_wowhead_reference
-14488	You've Been Served	quest_has_zh_but_field_unavailable
 24426	Call to Arms: Alterac Valley	no_wowhead_reference
 24427	Call to Arms: Alterac Valley	no_wowhead_reference
-25092	Elemental Research	quest_has_zh_but_field_unavailable

@@ -18279,5 +18279,7 @@ DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 26012 AND `locale` = 'zhTW'
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (26012,'zhTW','感謝你帶來羅寧的訊息，勇敢的冒險家。$B$B我來告訴你我們目前掌握的情報，必要時非常期待你能伸出援手。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 26013 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (26013,'zhTW','再次感謝你從巴爾薩魯斯手中救了我，$C！$B$B儘管，還有很多事沒完成……',0);
+DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 14488 AND `locale` = 'zhTW';
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (14488,'zhTW','我們在這裡做的事，不關你的事……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 26034 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (26034,'zhTW','<克拉蘇斯認真地聽你講述著和海里昂的戰鬥，然而當你說到死亡之翼的時候，他的眼睛突然就睜大看著你。>$B$B我們欠你一份大人情，凡人，因為你們將敵人趕出了聖殿。不過毀滅者的的到來還是讓人費解，我必須要告訴議會的其他人。$B$B請收下這些禮物以便於你以後的戰鬥。',0);
