@@ -1,0 +1,14 @@
+# Quests reachable via creature/GO starter+ender, but with debug-marker-looking English
+# titles (REUSE, <NYI>, [NYI], etc). Per user decision: translate if reachable, but these
+# looked suspicious enough to flag rather than auto-decide. NOT resolved -- needs a human call.
+quest_id	title
+8001	Warsong Outriders <NYI> <TXT>
+8971	REUSE
+8972	REUSE
+8973	REUSE
+8974	REUSE
+8975	REUSE
+8976	REUSE
+11320	[NYI] Now this is Ram Racing... Almost.
+11347	<NYI> Clear Some Room
+24661	REUSE ME

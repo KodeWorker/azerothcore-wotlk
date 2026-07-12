@@ -1,0 +1,2 @@
+# Non-quest entries related to the skip list, different ID space (item_template_locale etc.)
+item 33776 (NPC Equip 33776) -- Wowhead flags it "[PH]" (placeholder), dropped from item_template_locale
