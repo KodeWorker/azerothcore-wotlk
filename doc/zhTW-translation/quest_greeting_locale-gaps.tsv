@@ -1,7 +1,15 @@
 # quest_greeting_locale (Greeting -- NPC/GO popup text shown before quest accept dialog):
-# BLOCKED, no source found at all. Checked Wowhead NPC pages (wowhead.com/wotlk/tw/npc=<entry>)
-# directly -- this gossip/greeting text is not present in static HTML there either (same
-# limitation as RewardText/CompletionText). Needs a different source or manual translation.
+# BLOCKED for the rest, no source found. Checked Wowhead NPC pages
+# (wowhead.com/wotlk/tw/npc=<entry>) -- gossip/greeting text isn't in static HTML there
+# either (same limitation as RewardText/CompletionText). Checked whether this content is
+# DBC/client-extractable (2026-07-12) -- no, gossip/greeting text is server-sent dialogue,
+# never baked into static client DBC/MPQ files (confirmed: no such DBC exists in WotLK's
+# catalog, and this project's own zhTW client's WDB play-cache only reflects what our own
+# server already sent, so it's circular, not an independent source).
+# 8 entries resolved 2026-07-12 by cross-referencing against npc_text: found their English
+# Greeting text is an EXACT duplicate of an already-translated npc_text entry, so the
+# existing npc_text_locale zhTW translation was copied over (2993, 4080, 4201, 4454, 4498,
+# 4630, 5636, 8256). Remaining 118 have no npc_text match either -- genuinely blocked.
 entry	type(0=creature,1=gameobject)	name	linked_quests
 10260	0	0	4729,4862
 10321	0	0	6570,6582,6583,6584,6585,6601
@@ -49,7 +57,6 @@ entry	type(0=creature,1=gameobject)	name	linked_quests
 294	0	0	74,75,78,109,1666,1667
 2981	0	0	752,753,755,757,763,781,24857
 2988	0	0	749,751,764,765
-2993	0	0	745,746,763,767
 3050	0	0	768,769
 313	0	0	94,178,249
 3139	0	0	784,825,830,831,837
@@ -77,16 +84,11 @@ entry	type(0=creature,1=gameobject)	name	linked_quests
 4049	0	0	1061,1062,1063,1068
 4077	0	0	1071,1072,1074,1075,1077,1079,1080,1085,1091,2931
 4078	0	0	1075,1076,1077,1078
-4080	0	0	1070,1082,1083,1084,1085,1091
-4201	0	0	1092,1093,1094,1095,1096,1483
 4452	0	0	1110,1111,1112,1114,1115,1117,1118,1119,1120,1121,1122,5762
 4453	0	0	1105,1107,1179,2769,2770
-4454	0	0	1104,1106,1114,1137
 4456	0	0	
 4485	0	0	1145,1146,1184,1361,2976,2981,3504,3507
-4498	0	0	1433,1435,1480,1481,1482,1484
 4500	0	0	1166,1170,1171,1173
-4630	0	0	1176,1178,1183,1186,1190,1192,1194
 469	0	0	200,202,215,329,330,331,574
 4791	0	0	1201,1202,1238,1239,1240,1261,1262,11186,11213,11215
 4792	0	0	1203,1206,1218,11177,11225
@@ -98,7 +100,6 @@ entry	type(0=creature,1=gameobject)	name	linked_quests
 5412	0	0	1367,1368
 5591	0	0	698,1430
 5598	0	0	1429,1444,1446
-5636	0	0	1450,1451,2988,2989,2990,2993,2994
 5637	0	0	1453,1457,1467
 5641	0	0	1432,1433,1434,1436,1484,1488
 5767	0	0	1486
@@ -121,7 +122,6 @@ entry	type(0=creature,1=gameobject)	name	linked_quests
 7876	0	0	2864,2865,3362,4504
 7882	0	0	2875,2876,8366
 7900	0	0	2982,3445
-8256	0	0	3182,3201,3368,3371,3566
 8379	0	0	3561,3565,8234,8235,8236,8251,8252,8253,9362,9364
 900	0	0	91
 9078	0	0	4133,4134,4768,4769,7201
