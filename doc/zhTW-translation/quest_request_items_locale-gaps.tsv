@@ -1,10 +1,6 @@
-# quest_request_items_locale (CompletionText -- turn-in dialogue): CORRECTED 2026-07-12.
-# The original scan had a bug treating literal SQL NULL as "has English text" (unquoting
-# NULL with no surrounding quotes returns the string "NULL", which isn't '', so it passed
-# the has-text filter). Of the original 566 entries, 561 were false positives -- their
-# English CompletionText is genuinely NULL, nothing to translate, not a real gap at all.
-# Only these 5 have real English text. Still blocked on the same Wowhead-doesn't-expose-this-
-# field issue documented in STATUS.md, but the true scope is 5, not 566/571.
+# quest_request_items_locale (CompletionText -- turn-in dialogue): CORRECTED 2026-07-12,
+# re-checked against the current (368-entry) skip list -- 14351 removed (now skip-listed).
+# Still blocked on the Wowhead-doesn't-expose-this-field issue documented in STATUS.md.
 quest_id	english_title	english_completion_text	quest_wowhead_status
 8742	The Might of Kalimdor	A thousand years has passed and just as it was fated, one stands before me. One who shall lead their people to a new age.$B$BThe Old God trembles, $N.	no_wowhead_reference
 14352	An Unholy Alliance	What do you want, $N?  This had better be important.	no_wowhead_reference

@@ -1,7 +1,7 @@
-# quest_offer_reward_locale (RewardText -- reward-screen dialogue): same blocker as
-# quest_request_items_locale, Wowhead does not expose this field.
+# quest_offer_reward_locale (RewardText -- reward-screen dialogue): CORRECTED 2026-07-12,
+# re-checked against the current (368-entry) skip list -- 8270 'test copy quest' removed
+# (now skip-listed). Still blocked on the Wowhead-doesn't-expose-this-field issue in STATUS.md.
 quest_id	english_title	quest_wowhead_status
-8270	test copy quest	no_wowhead_reference
 14418	The Deathstalkers	no_wowhead_reference
 14420	The Deathstalkers	no_wowhead_reference
 14488	You've Been Served	quest_has_zh_but_field_unavailable
