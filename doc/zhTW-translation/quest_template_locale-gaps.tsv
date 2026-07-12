@@ -1,8 +1,15 @@
-# quest_template_locale: rows with no zhTW entry at all, and no Wowhead TW reference either (English-only on Wowhead too)
-# Needs original/manual translation -- no ready-made reference source found
-quest_id	english_title
-12890	If Size Mattered...
-13175	Regaining Control
-13176	Preparing the Delivery
-13184	Outliving Usefulness
-13843	The Scrapbot Construction Kit
+# quest_template_locale: rows with no Wowhead TW reference (English-only on Wowhead too).
+# Needs original/manual translation -- no ready-made reference source found.
+# 13843 removed 2026-07-12: a stray pending_db_world override was blanking out this
+# quest's Title/Details/Objectives even though base/db_world already had complete,
+# well-formed zhTW text for all three -- same regression class as the quest-11987 fix
+# earlier in this branch. Deleting the override restored the existing base translation;
+# quest is now fully resolved, no manual work needed.
+# 12890/13175/13176/13184: same stray-override bug, but base only ever had a Title for
+# these (Details/Objectives/etc genuinely blank in base too) -- deleting the override
+# restored the Title, but the body text below still needs manual/original translation.
+quest_id	english_title	note
+12890	If Size Mattered...	Title now restored from base (如果尺寸重要); Details/Objectives/EndText/etc still blank, need manual translation
+13175	Regaining Control	Title now restored from base (重獲控制); Details/Objectives/EndText/etc still blank, need manual translation
+13176	Preparing the Delivery	Title now restored from base (準備交貨); Details/Objectives/EndText/etc still blank, need manual translation
+13184	Outliving Usefulness	Title now restored from base (持久的用處); Details/Objectives/EndText/etc still blank, need manual translation
