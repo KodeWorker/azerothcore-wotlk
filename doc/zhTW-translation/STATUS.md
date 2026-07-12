@@ -46,7 +46,7 @@ does **not** catch:
 
 ## Current numbers (as of this report)
 
-### Skip list — 381 quest IDs (`skip-list.tsv`)
+### Skip list — 386 quest IDs (`skip-list.tsv`)
 
 Quests that should **not** be translated: unreachable in-game (no
 creature/gameobject queststarter+questender row, and no `game_event_*_quest`
@@ -263,8 +263,8 @@ script — don't trust old counts anywhere in git history before this fix.
 |---|---|---|---|---|
 | `quests-no-wowhead-reference.tsv` | `quest_template_locale` | Title/Details/Objectives | **70** (was 75; `13917` moved to skip list as a confirmed duplicate of already-translated `13903`, `13377` translated via zhCN+OpenCC fallback since its own Wowhead TW page is bracketed/unavailable — see "Recent fixes" below) | From the bracket-title backlog; Wowhead itself has no zhTW translation for these either (confirmed via URL slug still being English/ASCII) |
 | `quest_template_locale-gaps.tsv` | `quest_template_locale` | Title/Details/Objectives | **0** — fully resolved | Was 11, then 5, then 4; all 5 original entries resolved — see "Recent fixes" below |
-| `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **5** (corrected from 566, then re-checked against the final skip list — see above) | **Blocked, no source found** (see below) |
-| `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | **6** (was 7, `8270` "test copy quest" removed once skip-listed) | **Blocked, no source found** (see below) — confirmed real English text, no NULL issue here |
+| `quest_request_items_locale-gaps.tsv` | `quest_request_items_locale` | CompletionText | **1** (was 566, then 5; 4 resolved 2026-07-12 — see "Recent fixes" below) | `8742` still open, needs a reachability-mechanism recheck |
+| `quest_offer_reward_locale-gaps.tsv` | `quest_offer_reward_locale` | RewardText | **2** (was 7, then 6; 4 resolved 2026-07-12 — see "Recent fixes" below) | `24426`/`24427` still open, needs a reachability-mechanism recheck |
 | `quest_greeting_locale-gaps.tsv` | `quest_greeting_locale` | Greeting | 126 | **Blocked, no source found** (see below) — confirmed all 126 have real English text, no NULL issue here |
 | — | `item_template_locale` | Name/Description | **0** — fully resolved | Was 14 raw gaps; 1 filled (5732), 1 deliberately dropped (33776, Wowhead-flagged `[PH]` placeholder, noted in `skip-list.tsv`'s trailer comment), the other 12 all turned out to be items tied only to skip-listed/duplicate quests (see the `zzDEPRECATED`/`UNUSED`/`DEPRECATED`/`[PH]`/`NPC Equip <id>` pattern discussed above) |
 
@@ -272,8 +272,8 @@ script — don't trust old counts anywhere in git history before this fix.
 original/manual translation**, same as any from-scratch localization work
 (down from 80; `quest_template_locale-gaps.tsv`'s remaining 4 turned out to
 need no manual work at all — see "Recent fixes" below). The reward/
-completion/greeting blockers now total a much smaller **137** entries
-(5 + 6 + 126), not the ~700 originally estimated — still blocked on finding
+completion/greeting blockers now total a much smaller **129** entries
+(1 + 2 + 126), not the ~700 originally estimated — still blocked on finding
 a source, but a far smaller problem than first reported.
 
 ### Recent fixes that reduced the manual-translation count (2026-07-12)
@@ -312,6 +312,30 @@ a source, but a far smaller problem than first reported.
   template, not real quest text). These are "title-only" quests by design —
   no source material exists in any language. `quest_template_locale-gaps.tsv`
   is now fully empty; all 5 of its original entries resolved.
+- **Investigated all 9 remaining `quest_request_items_locale-gaps.tsv` /
+  `quest_offer_reward_locale-gaps.tsv` entries individually** (these two lists
+  had never been reachability-checked, unlike `quests-no-wowhead-reference.tsv`
+  — every single one turned out to be unreachable in our DB). Resolved 8 of 9:
+  `14352`/`14353` (An Unholy Alliance) and `14418`/`14420` (The Deathstalkers)
+  are confirmed content-matched duplicates of reachable sibling quests (`6522`
+  and `1978` respectively) — moved to skip list. `25092` (Elemental Research)
+  has literal `[ph]` placeholder text in its **English** source — moved to
+  skip list. `14488` (You've Been Served) is reachable via the "Love is in the
+  Air" seasonal event — translated (RewardText: "What we do here is none of
+  your business..." → "我們在這裡做的事，不關你的事……", no unique NPC/item
+  names in this line). **Discovered a reachability blind spot while
+  investigating `8742`** (real content — the classic AQ40 gate-opening quest,
+  C'Thun/Scepter of the Shifting Sands references) and `24426`/`24427` (Call
+  to Arms: Alterac Valley): both are unreachable via any creature/GO/
+  game_event table, but are very likely granted through hardcoded game
+  systems (the AQ war-effort world event; the BG-queue "Call to Arms" bonus
+  system) that our reachability check can't see — confirmed for the latter by
+  finding 4 sibling "Call to Arms" quests with real, already-translated base
+  zhTW content despite the identical unreachable/`QuestLevel=-1` signature.
+  Left `8742`/`24426`/`24427` untouched (neither translated nor skip-listed)
+  pending a proper check of these mechanisms — **do not skip-list a quest
+  based on creature/GO/game_event-table unreachability alone without also
+  considering whether it might be granted by hardcoded game logic instead.**
 
 ## The CompletionText / RewardText / Greeting dead end
 
@@ -424,15 +448,18 @@ reference against these client-extracted ground-truth glossaries directly.
 ## Files in this directory
 
 - `STATUS.md` — this file.
-- `skip-list.tsv` — 381 quest IDs to exclude from translation, with English
+- `skip-list.tsv` — 386 quest IDs to exclude from translation, with English
   title and reason.
 - `skip-list-non-quest-notes.txt` — the one non-quest (item) skip note.
 - `quests-no-wowhead-reference.tsv` — 70 quest_template_locale gaps with no
   translation source anywhere.
 - `quest_template_locale-gaps.tsv` — now empty, fully resolved (see
   "Recent fixes" above).
-- `quest_request_items_locale-gaps.tsv` / `quest_offer_reward_locale-gaps.tsv`
-  / `quest_greeting_locale-gaps.tsv` — blocked gaps, see above.
+- `quest_request_items_locale-gaps.tsv` — down to 1 entry (`8742`, blocked on
+  the reachability-mechanism question above).
+- `quest_offer_reward_locale-gaps.tsv` — down to 2 entries (`24426`/`24427`,
+  same open question).
+- `quest_greeting_locale-gaps.tsv` — 126 entries, blocked gap, see above.
 - `wowhead-client-ground-truth/` — official zhTW strings extracted from the
   game client, see above.
 - `scripts/` — the extraction/validation pipeline, paths made portable
@@ -441,15 +468,19 @@ reference against these client-extracted ground-truth glossaries directly.
 
 ## Suggested next steps
 
-1. Find a real source (or commit to manual translation) for
-   CompletionText/RewardText/Greeting — 137 entries blocked on this alone
-   (5 + 6 + 126; see "The CompletionText / RewardText / Greeting dead end"
-   above for what was already tried and ruled out).
-2. Manual/original translation for the 70 quests with literally no source
+1. Check whether `8742`, `24426`, `24427` are reachable via a hardcoded
+   game-system mechanism (AQ war-effort event; BG-queue "Call to Arms" bonus)
+   that the standard creature/GO/game_event tables can't show — then either
+   translate (if reachable) or skip-list (if genuinely dead, matching the
+   `24222`/`24227` "DEPRECATED" pair). See "Recent fixes" above.
+2. Find a real source (or commit to manual translation) for the remaining
+   Greeting blocker — 126 entries (see "The CompletionText / RewardText /
+   Greeting dead end" above for what was already tried and ruled out).
+3. Manual/original translation for the 70 quests with literally no source
    (`quests-no-wowhead-reference.tsv`), down from 80.
    `quest_template_locale-gaps.tsv` is now fully resolved (0 entries).
 
-Everything else from this session is fully resolved: the skip list (381
+Everything else from this session is fully resolved: the skip list (386
 entries), `item_template_locale` (0 real gaps left), `quest_template_locale-gaps.tsv`
 (0 entries left), the six zone-name
 zhCN/zhTW terminology leaks (Ashenvale, Argent Crusade, Icecrown, Durotar,

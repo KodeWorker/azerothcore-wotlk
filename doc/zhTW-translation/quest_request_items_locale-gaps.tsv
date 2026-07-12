@@ -1,9 +1,18 @@
 # quest_request_items_locale (CompletionText -- turn-in dialogue): CORRECTED 2026-07-12,
-# re-checked against the current (368-entry) skip list -- 14351 removed (now skip-listed).
-# Still blocked on the Wowhead-doesn't-expose-this-field issue documented in STATUS.md.
+# re-checked against the current (368-entry, then 386-entry) skip list.
+# 4 of the 5 remaining entries resolved 2026-07-12 (individually investigated -- see
+# notes below); 8742 is still open pending a reachability-mechanism recheck.
+#
+# 14352/14353 (An Unholy Alliance): unreachable, near-identical content (same NPC
+# letter text) to reachable quest 6522 of the same title -- confirmed duplicate,
+# moved to skip list.
+# 14418/14420 (The Deathstalkers): unreachable, identical content to reachable quest
+# 1978 of the same title -- confirmed duplicate, moved to skip list.
+# 8742 (The Might of Kalimdor): real content (the classic AQ40 gate-opening quest,
+# C'Thun/Scepter of the Shifting Sands references), but unreachable via any
+# creature/GO/game_event table in our DB. NOT skip-listed -- this quest is likely
+# granted via the hardcoded AQ war-effort world-event system rather than normal NPC
+# interaction, which our reachability check can't see. Left untouched pending a
+# proper check of that mechanism; do not skip-list without re-investigating.
 quest_id	english_title	english_completion_text	quest_wowhead_status
 8742	The Might of Kalimdor	A thousand years has passed and just as it was fated, one stands before me. One who shall lead their people to a new age.$B$BThe Old God trembles, $N.	no_wowhead_reference
-14352	An Unholy Alliance	What do you want, $N?  This had better be important.	no_wowhead_reference
-14353	An Unholy Alliance	Supposedly this Malcin is outside Razorfen Downs. There's no question - he has to die.$b$bMy contacts in Orgrimmar tell me their scouts have found sig	no_wowhead_reference
-14418	The Deathstalkers	Yes?	no_wowhead_reference
-14420	The Deathstalkers	Success to report?	no_wowhead_reference

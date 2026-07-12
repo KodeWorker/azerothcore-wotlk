@@ -372,6 +372,10 @@ quest_id	english_title	reason
 14150	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
 14350	The Crimson Courier	The Crimson Courier -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 6145
 14351	Battle of Hillsbrad	deprecated-battle-of-hillsbrad -- Wowhead URL slug
+14352	An Unholy Alliance	An Unholy Alliance -- unreachable, near-identical content (same NPC letter text) to reachable quest 6522 of the same title; confirmed duplicate
+14353	An Unholy Alliance	An Unholy Alliance -- unreachable, same duplicate pair as 14352 (both title-siblings of reachable 6522)
+14418	The Deathstalkers	The Deathstalkers -- unreachable, identical content to reachable quest 1978 of the same title; confirmed duplicate
+14420	The Deathstalkers	The Deathstalkers -- unreachable, same duplicate pair as 14418 (both title-siblings of reachable 1978)
 14439	Journey into Thunder Bluff	Journey into Thunder Bluff -- Wowhead: deprecated, superseded by quest 24550 in a later expansion
 24222	Call to Arms: Eye of the Storm DEPRECATED	English title marker: Call to Arms: Eye of the Storm DEPRECATED
 24227	DEPRECATED	English title marker: DEPRECATED
@@ -380,3 +384,4 @@ quest_id	english_title	reason
 24797	REUSE	English title marker: REUSE
 24857	Attack on Camp Narache	Attack on Camp Narache -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 781
 24875	Deprogramming	Deprogramming -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 24869
+25092	Elemental Research	Elemental Research -- English source itself contains literal "[ph] log description" / "[ph] I'..." placeholder text (never finished by Blizzard); sibling 25055 has the same issue
