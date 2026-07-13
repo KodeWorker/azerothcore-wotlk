@@ -30,17 +30,15 @@ services:
         ./vmap4_assembler &&
         ./mmaps_generator
       "
-
-  ac-worldserver:
-    # Use the data extracted by ac-tools above (from the zhTW client)
-    # instead of the generic wowgaming/client-data download.
-    volumes: !override
-      - ${DOCKER_VOL_ETC:-./env/dist/etc}:/azerothcore/env/dist/etc
-      - ${DOCKER_VOL_LOGS:-./env/dist/logs}:/azerothcore/env/dist/logs:delegated
-      - ./env/dist/data:/azerothcore/env/dist/data/:ro
-    # No longer need to wait on (or run) the client-data download.
-    depends_on: !override
-      ac-database:
-        condition: service_healthy
-      ac-db-import:
-        condition: service_completed_successfully
+    # NOTE: ac-worldserver intentionally no longer consumes this extracted
+    # data (see git history). mod-playerbots resolves spells almost
+    # entirely by matching hardcoded English name literals against the
+    # server's own loaded DBC data. A genuine single-locale zhTW client
+    # has no enUS strings anywhere in its DBC, so pointing ac-worldserver
+    # at zhTW-only extracted data broke that matching everywhere (bots
+    # stopped casting spells) for no display benefit: item/spell/NPC names
+    # are rendered client-side from each player's own local DBC/MPQ files
+    # looked up by ID, never sent by the server. ac-worldserver now uses
+    # the default enUS wowgaming/client-data image again. This ac-tools
+    # extraction pipeline is left here in case zhTW-locale data is needed
+    # for something else in the future, but nothing currently consumes it.
