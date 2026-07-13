@@ -15,6 +15,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <unordered_map>
+
 #include "AchievementMgr.h"
 #include "BattlefieldMgr.h"
 #include "CellImpl.h"
@@ -27,6 +29,7 @@
 #include "Guild.h"
 #include "InstanceScript.h"
 #include "Language.h"
+#include "ObjectMgr.h"
 #include "OutdoorPvPMgr.h"
 #include "Pet.h"
 #include "Player.h"
@@ -467,6 +470,44 @@ void Player::UpdateNextMailTimeAndUnreads()
     }
 }
 
+namespace
+{
+    // Static zhTW channel-name overrides, independent of the server's own DBC
+    // locale/session locale (WorldSession::m_sessionDbcLocale is clamped to
+    // whatever locale is actually populated in the server's own DBC files via
+    // World::GetAvailableDbcLocale() -- with enUS-only DBC data that's always
+    // enUS, regardless of what locale the connecting client uses). Sourced
+    // from a real zhTW client's ChatChannels.dbc.
+    std::unordered_map<uint32, char const*> const zhTWChannelPatterns =
+    {
+        { 1,  "綜合 - %s" },       // General
+        { 2,  "交易 - %s" },       // Trade
+        { 22, "本地防務 - %s" },   // LocalDefense
+        { 23, "世界防務" },        // WorldDefense
+        { 25, "公會招募 - %s" },   // GuildRecruitment
+        { 26, "尋求組隊" },        // LookingForGroup
+    };
+
+    char const* GetZhTWChannelPattern(uint32 channelId, char const* fallbackPattern)
+    {
+        auto itr = zhTWChannelPatterns.find(channelId);
+        return itr != zhTWChannelPatterns.end() ? itr->second : fallbackPattern;
+    }
+
+    // AreaTable.dbc zone/subzone names, keyed by AreaID + 900000 in
+    // `acore_string` (see data/sql/updates/pending_db_world -- sourced from a
+    // real zhTW client's AreaTable.dbc, independent of the server's own DBC
+    // locale). Falls back to fallbackName if the zone isn't covered.
+    std::string GetZhTWAreaName(uint32 areaId, std::string const& fallbackName)
+    {
+        if (AcoreString const* as = sObjectMgr->GetAcoreString(900000 + areaId))
+            if (as->Content.size() > std::size_t(LOCALE_zhTW) && !as->Content[LOCALE_zhTW].empty())
+                return as->Content[LOCALE_zhTW];
+
+        return fallbackName;
+    }
+}
+
 void Player::UpdateLFGChannel()
 {
     if (!sWorld->getBoolConfig(CONFIG_RESTRICTED_LFG_CHANNEL))
@@ -477,7 +518,8 @@ void Player::UpdateLFGChannel()
         return;
 
     ChatChannelsEntry const* cce = sChatChannelsStore.LookupEntry(26); /*LookingForGroup*/
-    Channel* cLFG = cMgr->GetJoinChannel(cce->pattern[m_session->GetSessionDbcLocale()], cce->ChannelID);
+    char const* pattern = GetZhTWChannelPattern(cce->ChannelID, cce->pattern[m_session->GetSessionDbcLocale()]);
+    Channel* cLFG = cMgr->GetJoinChannel(pattern, cce->ChannelID);
     if (!cLFG)
         return;
 
@@ -523,8 +565,8 @@ void Player::UpdateLocalChannels(uint32 newZone)
     if (!cMgr)
         return;
 
-    std::string current_zone_name =
-        current_zone->area_name[GetSession()->GetSessionDbcLocale()];
+    std::string current_zone_name = GetZhTWAreaName(
+        newZone, current_zone->area_name[GetSession()->GetSessionDbcLocale()]);
 
     for (uint32 i = 0; i < sChatChannelsStore.GetNumRows(); ++i)
     {
@@ -559,13 +601,13 @@ void Player::UpdateLocalChannels(uint32 newZone)
                     std::string currentNameExt;
 
                     if (channel->flags & CHANNEL_DBC_FLAG_CITY_ONLY)
-                        currentNameExt = sObjectMgr->GetAcoreString(LANG_CHANNEL_CITY, m_session->GetSessionDbcLocale());
+                        currentNameExt = sObjectMgr->GetAcoreString(LANG_CHANNEL_CITY, LOCALE_zhTW);
                     else
                         currentNameExt = current_zone_name;
 
-                    snprintf(new_channel_name_buf, 100,
-                             channel->pattern[m_session->GetSessionDbcLocale()],
-                             currentNameExt.c_str());
+                    char const* pattern = GetZhTWChannelPattern(
+                        channel->ChannelID, channel->pattern[m_session->GetSessionDbcLocale()]);
+                    snprintf(new_channel_name_buf, 100, pattern, currentNameExt.c_str());
 
                     joinChannel = cMgr->GetJoinChannel(new_channel_name_buf,
                                                        channel->ChannelID);
@@ -583,7 +625,7 @@ void Player::UpdateLocalChannels(uint32 newZone)
                 }
                 else
                     joinChannel = cMgr->GetJoinChannel(
-                        channel->pattern[m_session->GetSessionDbcLocale()],
+                        GetZhTWChannelPattern(channel->ChannelID, channel->pattern[m_session->GetSessionDbcLocale()]),
                         channel->ChannelID);
             }
             else
