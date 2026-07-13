@@ -49,6 +49,15 @@ else
     touch "$CONF"
 fi
 
+# Same for module configs (env/dist/etc/modules/*.conf.dist -> *.conf) --
+# ConfigMgr::LoadModulesConfigs() looks for the non-".dist" filename, so
+# without this every AiPlayerbot.*/etc. option silently falls back to its
+# C++ default instead of what's in playerbots.conf.dist.
+for MODULE_CONF_DIST in "$CONF_DIR/modules/"*.conf.dist; do
+    [[ -f "$MODULE_CONF_DIST" ]] || continue
+    cp -vn "$MODULE_CONF_DIST" "${MODULE_CONF_DIST%.dist}"
+done
+
 echo "Starting $ACORE_COMPONENT..."
 
 # The realmlist address isn't a config file value -- it's a row in the
