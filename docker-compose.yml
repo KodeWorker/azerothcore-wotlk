@@ -91,8 +91,10 @@ services:
       AC_CHARACTER_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_characters"
       AC_PLAYERBOTS_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_playerbots"
       # Overrides AiPlayerbot.MinRandomBots / AiPlayerbot.MaxRandomBots from playerbots.conf
-      AC_AI_PLAYERBOT_MIN_RANDOM_BOTS: "${DOCKER_MIN_RANDOM_BOTS:-150}"
-      AC_AI_PLAYERBOT_MAX_RANDOM_BOTS: "${DOCKER_MAX_RANDOM_BOTS:-300}"
+      AC_AI_PLAYERBOT_MIN_RANDOM_BOTS: "${DOCKER_MIN_RANDOM_BOTS:-0}"
+      AC_AI_PLAYERBOT_MAX_RANDOM_BOTS: "${DOCKER_MAX_RANDOM_BOTS:-0}"
+      # Overrides AiPlayerbot.RandomBotAutologin from playerbots.conf
+      AC_AI_PLAYERBOT_RANDOM_BOT_AUTOLOGIN: "${DOCKER_RANDOM_BOT_AUTOLOGIN:-0}"
     ports:
       - ${DOCKER_WORLD_EXTERNAL_PORT:-8085}:8085
       - ${DOCKER_SOAP_EXTERNAL_PORT:-7878}:7878
@@ -217,8 +219,10 @@ services:
       AC_WORLD_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_world"
       AC_CHARACTER_DATABASE_INFO: "ac-database;3306;root;${DOCKER_DB_ROOT_PASSWORD:-password};acore_characters"
       # Overrides AiPlayerbot.MinRandomBots / AiPlayerbot.MaxRandomBots from playerbots.conf
-      AC_AI_PLAYERBOT_MIN_RANDOM_BOTS: "${DOCKER_MIN_RANDOM_BOTS:-150}"
-      AC_AI_PLAYERBOT_MAX_RANDOM_BOTS: "${DOCKER_MAX_RANDOM_BOTS:-300}"
+      AC_AI_PLAYERBOT_MIN_RANDOM_BOTS: "${DOCKER_MIN_RANDOM_BOTS:-0}"
+      AC_AI_PLAYERBOT_MAX_RANDOM_BOTS: "${DOCKER_MAX_RANDOM_BOTS:-0}"
+      # Overrides AiPlayerbot.RandomBotAutologin from playerbots.conf
+      AC_AI_PLAYERBOT_RANDOM_BOT_AUTOLOGIN: "${DOCKER_RANDOM_BOT_AUTOLOGIN:-0}"
     networks:
       - ac-network
     ports:
