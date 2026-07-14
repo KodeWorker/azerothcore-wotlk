@@ -115,7 +115,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 75 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (75,'zhTW','你找到我所說的那頁日記了嗎，$N？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 76 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (76,'zhTW','你好，$N。你有什麼要報告的嗎？去玉石礦洞顯示過了嗎？',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (76,'zhTW','你好，$N。你有什麼要報告的嗎？去玉石礦坑調查過了嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 77 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (77,'zhTW','我相信你回來一定是拿到任務需要的十瓶蜜酒了，是吧？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 78 AND `locale` = 'zhTW';

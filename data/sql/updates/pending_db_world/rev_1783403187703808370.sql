@@ -12,7 +12,7 @@ INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `Verifi
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 241 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (241,0,'zhTW','嘿，朋友。我叫雷米。我從東邊的赤脊山來，到這裡找生意做，找生意做。你有沒有……有沒有什麼？？',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 261 AND `type` = 0 AND `locale` = 'zhTW';
-INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (261,0,'zhTW','你好，市民。你看起來像是個$g有目標的男人:有目標的女人;——你是來找暴風城軍隊辦事的嗎？',0);
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (261,0,'zhTW','你好，市民。你看起來像是個有目標的$g男人:女人;——你是來找暴風城軍隊辦事的嗎？',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 265 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (265,0,'zhTW','我早已感應到你的到來，$n。這是寫在星辰的軌跡之中的。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 272 AND `type` = 0 AND `locale` = 'zhTW';
