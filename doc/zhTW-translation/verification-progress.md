@@ -65,8 +65,10 @@ Both phases run on the same small batch before moving to the next.
 | 541–740 (excl. skip-listed 548, 612, 636, 740) | 2026-07-15 | ~15 targeted + 2 large clan/race-term sweeps (~55 occurrences) | Batch 4. See below — surfaced the Troll/Ogre terminology system, and confirmed several more wowhead-fetch errors that would have been regressions if applied blindly. |
 | 741–940 (excl. 18 skip-listed) | 2026-07-15 | ~20 targeted fixes; also a widened count-audit across the entire 100–940 range done so far | Batch 5. Highest false-positive rate yet for count fixes — three count fixes had to be reverted mid-batch. |
 | 941–1140 (excl. skip-listed 946, 987–989, 1128, 1129) | 2026-07-15 | ~25 targeted fixes + 3 project-wide term sweeps (卡利姆多→卡林多 138×, 大地之環→陶土議會 82×, 扎瑪→札瑪 等) | Batch 6. See below. Introduced `diff_quest_text.py --strict` (punctuation/$B-normalized diff) to cut the false-positive rate on large batches. |
+| 1141–1340 (excl. skip-listed 1151, 1154–1163, 1165, 1277–1280, 1289–1300) | 2026-07-15 | ~20 targeted fixes + 1 project-wide term sweep (暗夜精靈→夜精靈, 251×) | Batch 7. See below — first batch with a confirmed zhCN-leak race term (暗夜精靈), confirmed by the user directly (matches `ChrRaces_zhTW.tsv` id 4 = 夜精靈); also the first batch where several of my own proposed fixes (Ogre/Gnome race-term guesses, Vimes/Reethe rank direction) were wrong and corrected by the user — see below for what actually held up. |
+| 1341–1540 (excl. skip-listed 1390, 1397, 1441, 1443, 1460, 1461, 1533, 1537, 1538) | 2026-07-15 | ~20 targeted fixes + 3 project-wide term sweeps (幽靈崗哨→鬼旅崗哨 16×, 阿塔萊巨魔→阿塔萊食人妖 4×) | Batch 8. Highest bug density since batch 3 (108/191 flagged). Introduced `creature_template`'s literal in-game `name` field as a first-class ground-truth check (alongside `AreaTable_zhTW.tsv`) for NPC/place-name disputes — see below. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 6, **1,133 verified**, **7,734 remaining** — roughly 39 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 8, **1,524 verified**, **7,343 remaining** — roughly 37 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -452,6 +454,207 @@ confirmed correct against English "Northeast of here", wowhead's `西北方` was
 outlier), quest 1014 (`達拉爾·織曦者` already correct per the batch-3 finding; wowhead's
 `道恩維沃爾` is the same known inconsistency).
 
+### Batch 7 (1141–1340) fixes log
+
+Highest false-positive rate yet on my *own* proposed fixes — several race/rank-term guesses
+were wrong and caught by the user before being applied, not by the established methodology.
+Recorded below so future batches don't re-litigate.
+
+**Content-swap bugs** (verified against `quest_template`'s real English source):
+- Quest 1218 (`舒心草`→`沼澤青蛙腿`): Details/Objectives were entirely about collecting an
+  herb; real quest (confirmed via English `LogDescription` + `RequiredItemId1`=33202 "Marsh
+  Frog Leg") is bringing 10 Marsh Frog Legs to "Swamp Eye" Jarl. Title/Details/Objectives
+  rebuilt; kept the row's own already-correct EndText (`女巫嶺`/`塺泥沼澤`) unchanged.
+- Quest 1221 (`藍葉薯`): Objectives truncated to the first sentence only, dropping the
+  crate/gopher/command-stick/turn-in instructions. Restored full text — but corrected
+  wowhead's `棘齒城` (Ratchet) back to `貧瘠之地` (Barrens), since the same row's own EndText
+  and the English `QuestCompletionLog` both say Barrens; wowhead's location was the outlier.
+- Quests 1199 + 1200 (Twilight's Hammer/Aku'Mai chain): Objectives (and 1200's Details closing
+  line) named a fabricated NPC/location (`黑澗營地的哨兵阿露溫`, `黑澗營地的阿謝蘭‧北木`) that
+  appears nowhere else in the whole corpus, while each row's own EndText already correctly
+  said `達納蘇斯` + the right NPC (matches English "Argent Guard Manados"/"Selgorm in
+  Darnassus" exactly). Fixed Objectives/Details to match the row's own EndText.
+
+**Rank/title fixes** (verified via `creature_template`'s literal in-game `name` field, the
+strongest available signal short of a locale table):
+- `維米斯隊長`→`維米斯上尉` (17×): creature 4944's in-game name is literally "Captain Garran
+  Vimes" — confirmed both by this and by the user checking wowhead quest=27264 directly.
+  Note: `雷瑟上尉` (7×) was **left unchanged** — I initially proposed swapping this too since
+  English calls him "Lieutenant Paval Reethe" in quest titles, but the user corrected this:
+  wowhead's own quest=27264 page confirms both NPCs are called `上尉` in the zhTW client, and
+  creature 4980's in-game name is plain "Paval Reethe" with no rank at all, so the flavor
+  text's `上尉` isn't contradicted by anything. Lesson: a quest-title's English rank word isn't
+  automatically the client's zhTW rank word — check the NPC's own in-game name/a dedicated
+  quest page before swapping ranks project-wide.
+- Quest 1219: Objectives had genericized `某個上尉` (some captain), dropping both the name and
+  getting the rank wrong. Creature 23951's in-game name is literally "Lieutenant Aden" —
+  restored to `亞汀中尉`.
+- Quests 1166, 1170, 1173 (`莫格穆洛克大王`→`莫格穆洛克主宰`, 5×): English title is literally
+  "Overlord Mok'Morokk"; `主宰` is the corpus's existing convention for "Overlord" elsewhere
+  (e.g. `主宰卡魯什`). User confirmed `主宰` is correct.
+
+**Proper-noun fixes**:
+- Quest 1144: `紅葉薯`→`藍葉薯` (typo — same Blueleaf Tuber item as quest 1221, confirmed via
+  `RequiredItemId`/item_template "Blueleaf Tuber").
+- Quest 1152: `石爪小徑`→`深爪小徑` — English says "Talondeep Path," a distinct place from
+  "Stonetalon Mountains" (`石爪山`, correctly used two words later in the same sentence); DB
+  had conflated the two similarly-named places. Also `連線`→`連接` for "the tunnel that
+  connects" the two zones — confirmed via wowhead's own quest=1152 page (`連線` reads as a
+  network/telecom term in Chinese, not physical connection).
+- Quest 1179: Title `防撞頭盔`→`銅栓兄弟` (English LogTitle is literally "The Brassbolts
+  Brothers," matching the established chain title in quests 1190/1191) and `千針林大峽谷`→
+  `千針石林大峽谷` (typo, dropped `石`). Note: I also proposed changing `地精兄弟`→`哥布林兄弟`
+  in the same row, assuming the Brassbolts brothers were Goblins from lore — **wrong**, the
+  user caught this: the English text literally says "a couple of gnome brothers," so `地精`
+  (this project's Gnome term) was already correct. Lesson: don't infer race from
+  half-remembered lore when the quest's own English text states it directly — check first.
+- Quest 1240 (`巨魔巫醫`→`食人妖巫醫`, 3× incl. Title): Kin'weelay is a Darkspear troll
+  (`暗矛`); per the established Troll/Ogre convention (`[[feedback-zhtw-troll-ogre-terms]]`),
+  Troll = `食人妖`, confirmed again via `ChrRaces_zhTW.tsv` (race 8 = `食人妖`).
+- Quest 1339: DB's title/Details/Objectives all called the questgiver `巡山人卡爾·雷矛`, but
+  creature 1343's in-game name is plain "Mountaineer Stormpike" — no "Karl" anywhere.
+  Fabricated first name removed (3× in-row) → `巡山人雷矛`.
+- Quest 1288: stray trailing `*` on the title (`維米斯的報告*`→`維米斯的報告`) — same class of
+  cosmetic corruption as batch 2's quests 171/415. Left the skip-listed sibling quest 1289's
+  identical `*` alone (out of scope, already skip-listed as `<nyi> Vimes's Report`).
+- Measure-word fix (quests 1147, 1148): `只`→`隻` for animal counters (Silithid creatures),
+  continuing the convention established in batch 2's quest 376.
+- Middle-dot character fix (quests 1141, 1143, 1275): DB used `‧` (U+2027) as a name
+  separator where the corpus's dominant convention (4714 vs 970 file-wide) is `·` (U+00B7);
+  fixed the 3 in-batch occurrences only, not a full corpus sweep.
+
+**Project-wide systemic sweep**:
+- `暗夜精靈`→`夜精靈` (Night Elf), **251 occurrences across 7 files**. Confirmed directly by
+  the user: `暗夜精靈` is the zhCN (mainland) term; `夜精靈` is correct zhTW, matching
+  `ChrRaces_zhTW.tsv` (race 4 = `夜精靈`) exactly — this DBC ground-truth file had been sitting
+  unused as a check for race names until this batch.
+
+**False positives correctly rejected** (wowhead's own fetch was wrong, or DB was already
+right; verified against the real English source or in-game data before touching anything):
+- Quest 1166/1168/1169/1170 (Brackenwall ogre chain — Mok'Morokk, Tharg, Draz'Zilb): DB's
+  `食人魔` was correct throughout (English QuestDescription explicitly says "me smart ogre",
+  "ogres not good at running", etc.); wowhead's occasional `巨魔` was wrong, consistent with
+  the batch-4-established wowhead Ogre→巨魔 mistranslation pattern.
+- Quest 1258: DB's `螃蟹` (crab) was correct despite the item being named "Pristine *Crawler*
+  Legs" — the English QuestDescription itself calls it "the shelled leg of a giant **crab**",
+  so "Crawler" is just the item name's own flourish, not a distinct creature.
+- Quest 1318 (Gordok ogres, Dire Maul): DB's `戈多克食人魔` was correct — confirmed by 9
+  corpus-wide occurrences of the same term (including a near-duplicate quest 7703 with
+  identical title/body), overwhelming wowhead's one-off `戈多克巨魔` for this quest.
+- Quest 1322: DB's count of 5 Acidic Venom Sacs was correct (matches
+  `RequiredItemCount1`=5 exactly); wowhead's page said "6" but its own item icon showed
+  "(5)" — a wowhead display inconsistency, not a real content disagreement. Also DB's extra
+  "Darkmist Cavern, northwest of the village" clause (missing from wowhead's fetch) is
+  genuinely in the English `QuestDescription` — DB was more complete, not wrong.
+- Quest 1168: DB's `灰尾龍人` and generic `守衛` (vs wowhead's `灰尾龍裔`/`逆鱗守衛`) confirmed
+  correct — creatures 4328/4329/4331 (`Firemane Scalebane/Scout/Ash Tail`) are all
+  `type=2` (Dragonkin) in `creature_template`, and the corpus uses `龍人` for Dragonkin-type
+  creatures dozens of times elsewhere (Nefarian's dragonkin, chromatic/black dragonkin, etc.)
+  vs a single one-off `龍裔`; in-game creature data + corpus convention settle this, no fix
+  needed. `守衛` for "Scalebane" also left as-is: "Scalebane" is a generic elite-rank suffix
+  reused across a dozen unrelated dragonkin (Green/Red/Blue/Cobalt/Nightmare Scalebane, etc.),
+  not a unique proper name, so DB's generic rendering isn't wrong.
+- Quest 1177 (Mudcrush Durtfeet, `餓！`): fully adopted wowhead's text per user request — the
+  user clarified that in this project's convention `巨魔` is *also* a legitimate zhTW term for
+  Ogre (not just Troll = `食人妖`), consistent with the established
+  `[[feedback-zhtw-troll-ogre-terms]]` rule, so wowhead's `阿泥是大巨魔` does not conflict with
+  the English "Mud big ogre" after all. Title/Details/Objectives/EndText replaced with
+  wowhead's `碎泥·杜特非`/`阿泥`/`巨魔`/`沼鰭小魚` throughout.
+- Quest 1272 (`[Finding Reethe <CHANGE INTO GOSSIP>]`): confirmed unreachable — no
+  `creature_queststarter`/`questender`, `gameobject_queststarter`/`questender`, or
+  `game_event` link anywhere in the DB (same signature as already-skip-listed 12021).
+  Added to `skip-list.tsv`.
+
+### Batch 8 (1341–1540) fixes log
+
+Highest bug density since batch 3 (108/191 quests flagged) — the Desolace centaur/Stonard
+storyline and the Orgrimmar shaman "Call of the Elements" chain both turned out to be dense
+with proper-noun drift. `creature_template`'s literal in-game `name` field (English) proved
+useful as a first-class ground-truth check this batch — several disputes were settled just by
+confirming the exact spelling/title in the creature's own `name` column, no locale table
+needed. Also several of my own "false positive, leave alone" calls this batch were wrong and
+corrected by the user — see the note at the end of this section on when to defer to wowhead.
+
+**Content-swap / truncation fixes** (verified against `quest_template`'s real English source):
+- Quest 1420 (`向赫格拉姆報到`): dropped title — creature 1442's in-game name is literally
+  "Helgrum **the Swift**"; restored `迅捷的赫格拉姆` throughout (1420, 1423, 1425).
+- Quest 1466 (`尋物公司的委託`): the English source is actually about **Doomwarder** (creature
+  4677/4680/4683), a different creature from "Doomguard" — confirmed correct as `末日守衛`
+  after checking in-game (matches the corpus's dominant spelling for the *unrelated* Doomguard
+  creature too, so this one Chinese term now covers two different English creatures — flagged
+  here in case it ever needs disambiguating). Also fixed an internal inconsistency: DB's own
+  Details already said `噬法魔犬`/`地獄犬` inconsistently for the same creature (Felhound,
+  creature 6010) — wowhead's own NPC page (`npc=6010`) shows `惡魔犬`, which outranks same-row
+  internal consistency per the established priority order; unified to `惡魔犬`.
+- Quest 1491 (`智慧飲料`): Objectives truncated to "收集6份哀嚎香精。", dropping the turn-in
+  clause — restored using the row's own already-correct EndText location (`貧瘠之地`) over the
+  English `LogDescription`'s "Ratchet" (same Ratchet-is-inside-Barrens precedent as batch 7's
+  quest 1221).
+- Quests 1380 + 1381 (`赫魯薩可汗`→`赫蘭薩可汗`): same-row proper-noun inconsistency — DB's own
+  two rows used **three different spellings** (`赫魯薩`, `薩魯赫`, `赫蘭薩`) for a single NPC,
+  confirmed as "Khan **Hratha**" (creature 5402); unified to the spelling wowhead already used
+  consistently and that DB's own rows used twice already (`赫蘭薩`).
+
+**Proper-noun fixes**:
+- `卡達`→`卡塔爾` (5×, quests 1422/1426/1428): creature 5593's in-game name is "Katar".
+- `朗格爾斯`→`朗格茲` (3×, quests 1423/1425): creature 5393's in-game name is "Quartermaster
+  **Lungertz**" — `茲` is phonetically closer to the "-tz" ending than `爾斯`.
+- `盎格庫爾`→`盎格庫` (quest 1373): creature 5622's in-game name is plain "Ongeku" — no
+  extra trailing syllable.
+- Quest 1531 + 1532 title `空氣的召喚`→`風的召喚`: English LogTitle is "Call of Air", but the
+  parallel quest titles for the other three elements in this same chain are all "X的召喚" using
+  the classical element name (`大地的召喚`/水/火), not the literal gas "空氣" — matches
+  wowhead and the chain's own established pattern. Also fixed the questgiver's name: creature
+  5905 is "Prate **Cloudseer**", not "White Cloud" (`普拉特·白雲`→`普拉特·雲眼`).
+- `粗石英`→`劣質石英` (item 6656, "Rough Quartz", 4× in quests 1518/1521): initially assumed
+  DB's literal `粗石英` was correct and wowhead's `劣質石英` was a quality-vs-texture
+  mistranslation — wrong, user corrected this after checking the item DB; `劣質石英` is right.
+- `半人馬部族`/`瑪格拉姆部族`/`吉爾吉斯部族`/`科卡爾部族`→`...氏族` (17× within this batch's
+  Desolace centaur questline only, quests 1360–1373): initially left alone as "DB's dominant
+  corpus convention" since `部族` has 170 occurrences in this file — but nearly all of those
+  are *other, unrelated* tribes (Zandalar trolls, Wildhammer dwarves, Bristleback furbolgs,
+  etc.), not evidence for the Centaur tribes specifically; user said to match wowhead's `氏族`
+  here. Scoped the fix to just this questline's occurrences, not the other 150+ unrelated
+  `部族` uses elsewhere in the file.
+- `碎骨`→`碎骨者` (Maurin Bonesplitter, 8× within quests 1433/1435/1480/1481/1482 only): same
+  correction as above — DB's bare `碎骨` being the corpus majority doesn't make it right for
+  this specific NPC; wowhead's `碎骨者` matches "Bonesplitt**er**" literally.
+- `費澤魯爾`→`費澤盧爾` (Fel'zerul, 6×) and `甘魯爾`→`甘盧爾` (Gan'rul Bloodeye, 11×): both are
+  homophone-character spelling choices (魯/盧) with no `creature_template_locale` entry to
+  settle them one way or the other — per the user's guidance, defaulted to wowhead's spelling
+  when there's no zhTW-locale ground truth to check against, rather than keeping DB's version
+  by default.
+
+**Project-wide systemic sweeps**:
+- `幽靈崗哨`→`鬼旅崗哨` (Ghost Walker Post) — **16 occurrences** across the corpus. Verified via
+  `AreaTable_zhTW.tsv` (DBC ground truth, area id 597 = `鬼旅崗哨`) — same class of fix as
+  batch 6's `卡利姆多`→`卡林多`.
+- `阿塔萊巨魔`/`阿塔萊的巨魔`→`阿塔萊食人妖`/`阿塔萊的食人妖` (4 occurrences fixed, was already
+  split 4:2 in the corpus itself before this fix). Atal'ai are Trolls; per the established
+  `[[feedback-zhtw-troll-ogre-terms]]` rule, Troll = `食人妖` has **no per-tribe exceptions**
+  (unlike Ogre, where `巨魔` is legitimate for specific confirmed clans) — this settles the
+  corpus's own pre-existing inconsistency rather than picking a side arbitrarily.
+
+**Lesson on ground-truth priority (updated this batch)**: "DB's existing text is the corpus
+majority" is *not* by itself a reason to reject wowhead's version — same-row/same-file
+majority only counts as a signal when it's actually about the *same* proper noun. Before
+citing "corpus convention" as a reason to keep DB's wording, check that the majority
+occurrences are really the same tribe/NPC/item, not just a shared generic word (`部族`,
+`碎骨`) reused across many unrelated names. When no `_locale` table exists for a name and
+same-row consistency doesn't apply either, default to wowhead's rendering rather than DB's,
+absent a specific reason to prefer DB.
+
+**False positives correctly rejected** (wowhead's own fetch was wrong, or DB was already
+right):
+- Quest 1424: DB's count of 5 Atal'ai Artifacts was correct (`RequiredItemCount1`=5, matches
+  English "gather 5 Atal'ai Artifacts" exactly); wowhead's "10" was wrong.
+- `瑪烏林`(vs wowhead's `莫林`) for creature 4498 "**Maurin** Bonesplitter": DB's transliteration
+  is phonetically closer to the confirmed English name; wowhead's version was the outlier —
+  note this is about the *given name* specifically, unlike the `碎骨`→`碎骨者` surname fix above.
+- Quest 1526: `火焰之魂`/`火焰之靈體` (Minor Manifestation of Fire) and quest 1516's
+  `地獄捕獵者`/`惡魔捕獵者` (Felstalker, creature 3102): no locale table exists for either
+  creature and no corpus precedent favors one rendering over the other — left alone.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -505,6 +708,6 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 1141 (batch 7, target range roughly 1141–1340) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,734 quest IDs
-remain after batch 6 (see Total scope note above).
+Not started. Resume from quest ID 1541 (batch 9, target range roughly 1541–1740) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,343 quest IDs
+remain after batch 8 (see Total scope note above).

@@ -1390,9 +1390,9 @@ INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCap
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 19663 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (19663,'zhTW','黃銅門',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 19664 AND `locale` = 'zhTW';
-INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (19664,'zhTW','暗夜精靈貓頭鷹旗幟',NULL,0);
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (19664,'zhTW','夜精靈貓頭鷹旗幟',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 19665 AND `locale` = 'zhTW';
-INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (19665,'zhTW','暗夜精靈樹木旗幟',NULL,0);
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (19665,'zhTW','夜精靈樹木旗幟',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 19848 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (19848,'zhTW','亂風崗',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 19849 AND `locale` = 'zhTW';
@@ -1440,7 +1440,7 @@ INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCap
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 20817 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (20817,'zhTW','圍欄',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 20818 AND `locale` = 'zhTW';
-INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (20818,'zhTW','暗夜精靈月井',NULL,0);
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (20818,'zhTW','夜精靈月井',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 20819 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (20819,'zhTW','月井2',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 20820 AND `locale` = 'zhTW';

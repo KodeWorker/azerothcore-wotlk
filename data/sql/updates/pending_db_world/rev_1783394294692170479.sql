@@ -5295,9 +5295,9 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15378 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15378, 3, 0, 'zhTW', '%s看了一眼她的同胞。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15379 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15379, 0, 0, 'zhTW', '範達爾，記住我的話：別讓悲痛動搖了你的信念。你的思想……將把你引入黑暗，暗夜精靈。誤入歧途的復仇是不能被赦免的。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15379, 0, 0, 'zhTW', '範達爾，記住我的話：別讓悲痛動搖了你的信念。你的思想……將把你引入黑暗，夜精靈。誤入歧途的復仇是不能被赦免的。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15379 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15379, 1, 0, 'zhTW', '暗夜精靈，不要忘記今天犧牲的人們。這些野獸讓我們蒙受了巨大的損失。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15379, 1, 0, 'zhTW', '夜精靈，不要忘記今天犧牲的人們。這些野獸讓我們蒙受了巨大的損失。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15379 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (15379, 2, 0, 'zhTW', '雅立史卓莎，賦予我堅定的信念，讓我擊退敵人！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 15380 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -9945,9 +9945,9 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19173 AND `GroupID` = 0 AND `ID` = 1 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19173, 0, 1, 'zhTW', '你看過煙花嗎？現在是一年當中買菸花放的最佳季節！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19173 AND `GroupID` = 0 AND `ID` = 2 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19173, 0, 2, 'zhTW', '春節對暗夜精靈來說有著特殊的意義。我們在全世界尋找長者的智慧。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19173, 0, 2, 'zhTW', '春節對夜精靈來說有著特殊的意義。我們在全世界尋找長者的智慧。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19173 AND `GroupID` = 0 AND `ID` = 3 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19173, 0, 3, 'zhTW', '春節對暗夜精靈來說有著特殊的意義。我們在全世界尋找長者的智慧。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19173, 0, 3, 'zhTW', '春節對夜精靈來說有著特殊的意義。我們在全世界尋找長者的智慧。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19173 AND `GroupID` = 0 AND `ID` = 4 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (19173, 0, 4, 'zhTW', '傳說強大的年獸沉睡在月光林地的月神湖底，每年只會醒來一次。不過那也只是個傳說。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 19173 AND `GroupID` = 6 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -15085,7 +15085,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 24642 AND `GroupID` = 0 AND `ID` = 23 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (24642, 0, 23, 'zhTW', '“耶……酒精真令人發狂呀！”等等……酒勁來沒上來呢……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 24664 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (24664, 0, 0, 'zhTW', '別拿那種眼神看著我！我知道你們在想些什麼，但風暴要塞的失敗早就過去了。你們真以為我會把命運交給一個又瞎又粗野又下賤的暗夜精靈雜種？');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (24664, 0, 0, 'zhTW', '別拿那種眼神看著我！我知道你們在想些什麼，但風暴要塞的失敗早就過去了。你們真以為我會把命運交給一個又瞎又粗野又下賤的夜精靈雜種？');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 24664 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (24664, 1, 0, 'zhTW', '復仇之炎，燃燒吧！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 24664 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
@@ -25505,7 +25505,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 34908 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (34908, 0, 0, 'zhTW', '艾克索達的德萊尼人為$N而歡呼。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 34909 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (34909, 0, 0, 'zhTW', '達納蘇斯的暗夜精靈為$N而歡呼。');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (34909, 0, 0, 'zhTW', '達納蘇斯的夜精靈為$N而歡呼。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 34910 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (34910, 0, 0, 'zhTW', '諾姆瑞根的地精為$N而歡呼。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 34924 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
