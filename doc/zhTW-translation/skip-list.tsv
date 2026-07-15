@@ -56,6 +56,7 @@ quest_id	english_title	reason
 1162	<NYI> <TXT> speak to hamuul runetotem	English title marker: <NYI> <TXT> speak to hamuul runetotem
 1163	<NYI> <TXT> speak to tyrande whisperwind	English title marker: <NYI> <TXT> speak to tyrande whisperwind
 1165	<NYI> Ore for the Races	English title marker: <NYI> Ore for the Races
+1272	Finding Reethe <CHANGE INTO GOSSIP>	Finding Reethe <CHANGE INTO GOSSIP> -- unreachable, no creature_queststarter/ender, gameobject_queststarter/ender, or game_event link in our DB; same reachability signature as already-skip-listed 12021
 1277	<nyi> <TXT> The Centaur Hoofprints	English title marker: <nyi> <TXT> The Centaur Hoofprints
 1278	<nyi> <TXT> The Grim Totem Clan	English title marker: <nyi> <TXT> The Grim Totem Clan
 1279	<nyi> <TXT>The Centaur Hoofprints	
