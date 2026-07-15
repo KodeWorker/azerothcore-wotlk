@@ -1770,7 +1770,7 @@ INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCap
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 32418 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (32418,'zhTW','探險者大廳',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 32419 AND `locale` = 'zhTW';
-INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (32419,'zhTW','侏儒',NULL,0);
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (32419,'zhTW','地精',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 32420 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (32420,'zhTW','商業區',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 32421 AND `locale` = 'zhTW';
