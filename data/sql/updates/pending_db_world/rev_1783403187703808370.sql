@@ -347,7 +347,7 @@ INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `Verifi
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 5637 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (5637,0,'zhTW','很高興認識你，$c。我叫羅頓，我是尋物公司的負責人。$B$B我的公會專門負責找回遺失的物品。我們通常會僱用勇敢的冒險家，派他們去幫那些沒有能力或沒有時間的人完成任務。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 5641 AND `type` = 0 AND `locale` = 'zhTW';
-INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (5641,0,'zhTW','索爾希望處理的主要威脅是火刃氏族——那些效忠惡魔的部落成員。他們追求修習黑暗魔法，絲毫不在乎索爾對部落在卡利姆多未來的願景。',0);
+INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (5641,0,'zhTW','索爾希望處理的主要威脅是火刃氏族——那些效忠惡魔的部落成員。他們追求修習黑暗魔法，絲毫不在乎索爾對部落在卡林多未來的願景。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 5767 AND `type` = 0 AND `locale` = 'zhTW';
 INSERT INTO `quest_greeting_locale` (`ID`, `type`, `locale`, `Greeting`, `VerifiedBuild`) VALUES (5767,0,'zhTW','我們唯一的希望，就是從這個已經很糟的處境中創造出一些好的結果。',0);
 DELETE FROM `quest_greeting_locale` WHERE `ID` = 5770 AND `type` = 0 AND `locale` = 'zhTW';

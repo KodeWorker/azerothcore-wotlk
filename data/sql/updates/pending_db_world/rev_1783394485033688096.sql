@@ -1367,7 +1367,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 836 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (836,'zhTW','沒錯，我就是奧格索普·奧布諾提斯，世上最強的發明家，隨時為您效勞！現在，我能幫您什麼忙嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 837 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (837,'zhTW','他們的確是有點頭腦、有點組織，不過讓我驚訝的是他們竟然能在卡利姆多佔領這麼多的領土。也許他們比我想象中的更狡猾……',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (837,'zhTW','他們的確是有點頭腦、有點組織，不過讓我驚訝的是他們竟然能在卡林多佔領這麼多的領土。也許他們比我想象中的更狡猾……',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 840 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (840,'zhTW','你想幹什麼，小子？如果不是來應徵入伍的話，我可沒時間和你應酬。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 841 AND `locale` = 'zhTW';
@@ -1939,7 +1939,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 1199 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (1199,'zhTW','黑暗深淵曾經是古代暗夜精靈的神殿，裡面有一眼充滿強大魔力的月亮井。誰也不知道暮光之錘到底在那裡醞釀著怎樣的陰謀。$B$B你的行動進展如何了？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 1200 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (1200,'zhTW','時間是很寶貴的東西啊，$C。$B$B我在達納蘇斯的責任是確保銀色黎明的興盛和消滅那些盤踞在卡利姆多的邪惡勢力。$B$B有事快說，不然就走吧！',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (1200,'zhTW','時間是很寶貴的東西啊，$C。$B$B我在達納蘇斯的責任是確保銀色黎明的興盛和消滅那些盤踞在卡林多的邪惡勢力。$B$B有事快說，不然就走吧！',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 1201 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (1201,'zhTW','你找到間諜了嗎，$N？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 1202 AND `locale` = 'zhTW';
@@ -2123,7 +2123,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 1448 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (1448,'zhTW','我曾到過艾澤拉斯的森林深處，也到過卡茲莫丹的雪峰峰頂。$B$B以前我從來沒有在冒險的時候要求過別人的幫助，可現在我已經是一把老骨頭啦。$B$B沒什麼事能比完成探險者協會賦予我的最後一個任務更能讓我心滿意足的了。$B$B如果你能幫我找到阿塔哈卡神廟的話，$C，我將對你感激不盡。$B$B希望你能仔細搜尋悲傷沼澤，然後向我回報你的成果。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 1452 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (1452,'zhTW','你喝過我釀的酒嗎？要我說啊，這可是史上最好喝的酒！嗝兒！$B$B如果要我從那次差點要了我命的……嗝兒……沼澤飛行事故中緩過神來，你就得給我弄點東西來。嗝兒！$B$B你不想知道我把那些砂囊和肝加到卡利姆多雞尾酒裡是個什麼味兒麼？$B$B嗝兒！',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (1452,'zhTW','你喝過我釀的酒嗎？要我說啊，這可是史上最好喝的酒！嗝兒！$B$B如果要我從那次差點要了我命的……嗝兒……沼澤飛行事故中緩過神來，你就得給我弄點東西來。嗝兒！$B$B你不想知道我把那些砂囊和肝加到卡林多雞尾酒裡是個什麼味兒麼？$B$B嗝兒！',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 1456 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (1456,'zhTW','無論尼耶爾是誰，我都無意冒犯他，不過這個營地並不是我過夜的最佳場所，$N，希望你明白我的意思。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 1457 AND `locale` = 'zhTW';
@@ -2935,7 +2935,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3102 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3102,'zhTW','你順利地來到了這裡，好像並沒有多少人注意到你。這對我來說很好，因為我不想有很多人注意到我這裡……越低調越好，我相信你會理解這一點。$B$B你有什麼麻煩嗎？我希望沒有，不過很快一切都會改變的。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3103 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3103,'zhTW','啊，你終於來了。我知道你會來的。聖光照耀著你，你選擇了屬於你的道路。這是個艱險的時代——艾澤拉斯大陸上仍有燃燒軍團的存在，卡利姆多大陸上的人們在尋找生機，你能提供多少幫助就提供多少吧。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3103,'zhTW','啊，你終於來了。我知道你會來的。聖光照耀著你，你選擇了屬於你的道路。這是個艱險的時代——艾澤拉斯大陸上仍有燃燒軍團的存在，卡林多大陸上的人們在尋找生機，你能提供多少幫助就提供多少吧。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3104 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3104,'zhTW','你好，$N。我是凱爾東。有什麼我能幫你的嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3105 AND `locale` = 'zhTW';
@@ -3199,11 +3199,11 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3640 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3640,'zhTW','如果你簽署了這份檔案並把它交給我的話，那事情就這麼定了。$B$B我接下來要告訴你的是，簽署這樣一份保密協定是非常嚴肅的事情。我簽了一份，我們的其它成員也都簽了。你將要加入這個幸運的團體了，工程師$N！',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3641 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3641,'zhTW','一旦我收到你製作的物品並檢查完畢之後，你就可以成為受認可的侏儒工程師，你可以不受限制地拜訪世界上任何地方的任何侏儒工程學訓練師。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3641,'zhTW','一旦我收到你製作的物品並檢查完畢之後，你就可以成為受認可的地精工程師，你可以不受限制地拜訪世界上任何地方的任何地精工程學訓練師。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3642 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3642,'zhTW','如果你簽署了這份檔案並把它交給我的話，那事情就這麼定了。$B$B雖然我有時候會因為諾姆瑞根的問題對組織產生異議——特別是對那個愚蠢的技工大師歐沃斯巴克——但是，保密協議高於一切！你必須簽署它，然後一生都要遵循它。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3643 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3643,'zhTW','在我收到你製作的物品並檢查完畢之後，我就會給你發放一張真正的侏儒工程師協會會員卡！在這張卡片的有效期內，你可以不受限制地拜訪世界上任何地方的任何侏儒工程學訓練師。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3643,'zhTW','在我收到你製作的物品並檢查完畢之後，我就會給你發放一張真正的地精工程師協會會員卡！在這張卡片的有效期內，你可以不受限制地拜訪世界上任何地方的任何地精工程學訓練師。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3644 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (3644,'zhTW','要想延長你的會員期的話，你就得花些錢來為你的會員卡續費。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 3645 AND `locale` = 'zhTW';
@@ -4529,7 +4529,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 6504 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (6504,'zhTW','我希望你儘快把紙張找回來，$N！我必須馬上回去工作！',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 6521 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (6521,'zhTW','你找到大使了嗎，$N？他死了嗎？$B$B我們承受不起讓天災軍團在卡利姆多建立據點的威脅。現在我們陷入了兩面作戰的境地，這足以說明他們已經對我們構成了足夠的威脅。$B$B你告訴我的事情中唯一讓我感到樂觀的事情就是那個野豬人的首領看起來還未被腐蝕。她肯定知道天災軍團可能會帶來巨大的力量，但如果她同意接受他們的條件，貧瘠之地並不會真正成為她的地盤。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (6521,'zhTW','你找到大使了嗎，$N？他死了嗎？$B$B我們承受不起讓天災軍團在卡林多建立據點的威脅。現在我們陷入了兩面作戰的境地，這足以說明他們已經對我們構成了足夠的威脅。$B$B你告訴我的事情中唯一讓我感到樂觀的事情就是那個野豬人的首領看起來還未被腐蝕。她肯定知道天災軍團可能會帶來巨大的力量，但如果她同意接受他們的條件，貧瘠之地並不會真正成為她的地盤。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 6522 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (6522,'zhTW','你有什麼事，$N？如果你不斷來煩我，那你一定是有什麼你以為很重要的事情。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 6542 AND `locale` = 'zhTW';
@@ -4757,7 +4757,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 7166 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (7166,'zhTW','在我的面前站著的是聯盟所尊崇的英雄。$B$B<哈格丁中尉向你敬禮。>$B$B很少人能夠在雷矛衛隊贏得這樣的稱號。我看到敵人向你蜂擁而來，旋即全部倒下。$B$B你踏入戰場，就成了我們部隊的明燈！$B$B這是你的新徽記。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 7167 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (7167,'zhTW','德雷克塔爾讚美著你的偉業，卡利姆多到處都在傳頌你的事蹟。大酋長很高興——你為我們部落做出的貢獻讓他感到非常高興。$B$B你將統御我們的部隊。$B$B這就是你的新徽記，指揮官$N。$B$B<拉格隆德向你致敬。>',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (7167,'zhTW','德雷克塔爾讚美著你的偉業，卡林多到處都在傳頌你的事蹟。大酋長很高興——你為我們部落做出的貢獻讓他感到非常高興。$B$B你將統御我們的部隊。$B$B這就是你的新徽記，指揮官$N。$B$B<拉格隆德向你致敬。>',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 7168 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (7168,'zhTW','許多人都沒有活到擺脫平庸的那一天。你已經證明了自己是一個勇士的楷模，$C。現在是提升你的軍階的時候了。$B$B這是你的新徽記。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 7169 AND `locale` = 'zhTW';
@@ -5127,7 +5127,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 7808 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (7808,'zhTW','和其它紡織材料一樣，我們的絲綢庫存也已經降到了歷史最低點。如果有足夠的補給，我們就可以達成預期的目標。$B$B如果你願意將絲綢作為禮物送給我們的話，那你在我們中的地位無疑將大大提升！那麼，要是你有60塊絲綢並且願意把它們捐出來，那現在就可以給我了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 7809 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (7809,'zhTW','我們的魔紋布儲量很低，而你可以幫助我們補充庫存！如果計算所能作出的貢獻的話，我們只需要從你那裡獲得60塊魔紋布就可以達到我們的目標了。你這樣的慷慨貢獻一定會被諾姆瑞根的侏儒們廣為傳頌，這一點我可以向你保證！$B$B如果你有60塊魔紋布並且願意捐贈的話，那現在就可以給我了。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (7809,'zhTW','我們的魔紋布儲量很低，而你可以幫助我們補充庫存！如果計算所能作出的貢獻的話，我們只需要從你那裡獲得60塊魔紋布就可以達到我們的目標了。你這樣的慷慨貢獻一定會被諾姆瑞根的地精們廣為傳頌，這一點我可以向你保證！$B$B如果你有60塊魔紋布並且願意捐贈的話，那現在就可以給我了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 7811 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (7811,'zhTW','$N，你對於我們的布匹儲量做出了巨大的貢獻。我們正在盡力補充我們的物資，而我要告訴你的是，現在我們最需要的是符文布。我們的符文布儲量實在是太匱乏了，希望你能一如既往地幫助我們。$B$B如果你願意的話，請把你多餘的符文布捐獻給我。我們現在接受一次60塊符文布捐贈。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 7812 AND `locale` = 'zhTW';
@@ -6377,9 +6377,9 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8747 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8747,'zhTW','相當出色，小傢伙。你吃了不少苦才獲得青銅龍軍團的青睞。你的奉獻已被記錄下來。$B$B防衛者的徽記之戒將會在你對抗邪惡力量時提供更多的保護。$B$B提高警覺，一旦你選擇了你的道路，就無法回頭了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8748 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8748,'zhTW','你一直保護卡利姆多生靈的行為已經被我們認可。把徽記之戒拿來，讓我增強它的能量。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8748,'zhTW','你一直保護卡林多生靈的行為已經被我們認可。把徽記之戒拿來，讓我增強它的能量。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8749 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8749,'zhTW','向你致敬，$N。粉碎卡利姆多的敵人！告訴他們汙染這片不滅星光照耀下的大陸要付出什麼代價！$B$B你又贏得了一個強效施法。請把徽記之戒給我，我來灌注能量。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8749,'zhTW','向你致敬，$N。粉碎卡林多的敵人！告訴他們汙染這片不滅星光照耀下的大陸要付出什麼代價！$B$B你又贏得了一個強效施法。請把徽記之戒給我，我來灌注能量。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8750 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8750,'zhTW','如此巨大的奉獻真是少有。你已證明了你的意志堅定，$N。你會因為勇敢的守護著我們的世界而獲得重賞。$B$B請將你的徽記之戒交給我，這樣我才能強化它的能量。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8751 AND `locale` = 'zhTW';
@@ -6387,9 +6387,9 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8752 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8752,'zhTW','相當出色，小傢伙。你吃了不少苦才獲得青銅龍軍團的青睞。你的奉獻令人印象深刻。$B$B征服者徽記之戒將會大大提升你的力量和速度。$B$B提高警覺，一旦你選擇了你的道路，就無法回頭了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8753 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8753,'zhTW','你一直保護卡利姆多生靈的行為已經被我們認可。把徽記之戒拿來，讓我增強它的能量。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8753,'zhTW','你一直保護卡林多生靈的行為已經被我們認可。把徽記之戒拿來，讓我增強它的能量。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8754 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8754,'zhTW','向你致敬，$N。粉碎卡利姆多的敵人！告訴他們汙染這片不滅星光照耀下的大陸要付出什麼代價！$B$B你又贏得了一個強效附魔。請把徽記之戒給我，我來灌注能量。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8754,'zhTW','向你致敬，$N。粉碎卡林多的敵人！告訴他們汙染這片不滅星光照耀下的大陸要付出什麼代價！$B$B你又贏得了一個強效附魔。請把徽記之戒給我，我來灌注能量。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8755 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8755,'zhTW','如此巨大的奉獻真是少有。你已證明了你的意志堅定，$N。你會因為勇敢的守護著我們的世界而獲得重賞。$B$B將你的徽記之戒交給我，這樣我才能強化它的附魔。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8756 AND `locale` = 'zhTW';
@@ -6397,9 +6397,9 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8757 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8757,'zhTW','相當出色，小傢伙。你吃了不少苦才獲得青銅龍軍團的青睞。你的奉獻令人印象深刻。$B$B塑能師的徽記之戒將會大大提升你的魔法和自然能力。$B$B提高警覺，一旦你選擇了你的道路，就無法回頭了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8758 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8758,'zhTW','你一直保護卡利姆多生靈的行為已經被我們認可。把徽記之戒拿來，讓我增強它的能量。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8758,'zhTW','你一直保護卡林多生靈的行為已經被我們認可。把徽記之戒拿來，讓我增強它的能量。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8759 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8759,'zhTW','向你致敬，$N。粉碎卡利姆多的敵人！告訴他們汙染這片不滅星光照耀下的大陸要付出什麼代價！$B$B你又贏得了一個強效施法。請把徽記之戒給我，我來灌注能量。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8759,'zhTW','向你致敬，$N。粉碎卡林多的敵人！告訴他們汙染這片不滅星光照耀下的大陸要付出什麼代價！$B$B你又贏得了一個強效施法。請把徽記之戒給我，我來灌注能量。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8760 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (8760,'zhTW','如此巨大的奉獻真是少有。你已證明了你的意志堅定，$N。你會因為勇敢的守護著我們的世界而獲得重賞。$B$B請將你的徽記之戒交給我，這樣我才能強化它的能量。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 8761 AND `locale` = 'zhTW';
@@ -7447,7 +7447,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 9321 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (9321,'zhTW','除了我們其它的補給外，我們還有很多很有用的極效治療藥水。你拿十五個亡域符文來我就會給你一瓶。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 9322 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (9322,'zhTW','卡利姆多的火焰燒地旺嗎？',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (9322,'zhTW','卡林多的火焰燒地旺嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 9323 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (9323,'zhTW','你在大陸上旅行了嗎？啟蒙等待著你。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 9324 AND `locale` = 'zhTW';
@@ -8263,7 +8263,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 9809 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (9809,'zhTW','如果你有更多亮頂蘑菇就給我。我們的村子永遠都需要更多亮頂蘑菇。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 9810 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (9810,'zhTW','大地之環會盡全力幫忙。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (9810,'zhTW','陶土議會會盡全力幫忙。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 9811 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (9811,'zhTW','你想和我說話，$C？我可不記得你有先預約喔。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 9813 AND `locale` = 'zhTW';
@@ -9773,7 +9773,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 10672 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (10672,'zhTW','注意聽好，我沒有時間也不想解釋這麼做的意義何在。你只要標好這些雙帆龍就夠了。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 10673 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (10673,'zhTW','動作快一點！那個侏儒的胃口沒有上限的！',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (10673,'zhTW','動作快一點！那個地精的胃口沒有上限的！',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 10674 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (10674,'zhTW','我想既然我們已經在談話了，那表示你已經找到雷森平臺的光球？能夠看看它們的構造一定很有趣，讓我看看那些虛靈組織在做些什麼。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 10675 AND `locale` = 'zhTW';
@@ -10251,7 +10251,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 10952 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (10952,'zhTW','你對黑暗之門瞭解多少？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 10953 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (10953,'zhTW','大地之環注視著你，$C。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (10953,'zhTW','陶土議會注視著你，$C。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 10954 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (10954,'zhTW','是你帶她來的嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 10955 AND `locale` = 'zhTW';
@@ -11499,7 +11499,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 11711 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (11711,'zhTW','<圖古克嘀咕了幾聲。>$B$B你有好好照料那些逃兵嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 11712 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (11712,'zhTW','你治療了幾個機械侏儒，$C？',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (11712,'zhTW','你治療了幾個機械地精，$C？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 11713 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (11713,'zhTW','你記錄下蟲孔的位置了嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 11714 AND `locale` = 'zhTW';
@@ -12279,7 +12279,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 12274 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (12274,'zhTW','你找出什麼了嗎？你到底跟他說過話了沒有？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 12277 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (12277,'zhTW','<夸特弗拉什點了點頭。>$B$B他是個偉大的侏儒，我們之中最優秀的。永遠懷念斯林奇。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (12277,'zhTW','<夸特弗拉什點了點頭。>$B$B他是個偉大的地精，我們之中最優秀的。永遠懷念斯林奇。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 12278 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (12278,'zhTW','你填妥會員表格了嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 12279 AND `locale` = 'zhTW';
@@ -14489,7 +14489,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 14095 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (14095,'zhTW','你找到了什麼，勇士？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 14100 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (14100,'zhTW','嗯，是什麼事讓你向大地之環尋求協助？',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (14100,'zhTW','嗯，是什麼事讓你向陶土議會尋求協助？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 14102 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (14102,'zhTW','你打敗了喚霧者伊戈瓦爾並中斷他的儀式了嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 14103 AND `locale` = 'zhTW';
@@ -14503,7 +14503,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 14108 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (14108,'zhTW','你驅退海怪沒？快點，十字軍！我們沒有多少時間。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 14111 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (14111,'zhTW','元素之靈在你的體內翻騰。是什麼事讓你向大地之環尋求協助？',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (14111,'zhTW','元素之靈在你的體內翻騰。是什麼事讓你向陶土議會尋求協助？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 14112 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (14112,'zhTW','我希望你有東西能喂冰吼，要不然我真的得去帶幾個奪日者去他的牢籠。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 14136 AND `locale` = 'zhTW';
@@ -14793,7 +14793,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 24801 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (24801,'zhTW','你真的復原了奎爾德拉？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 24803 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (24803,'zhTW','卡魯亞克透過每週舉辦大賽一直在延續釣魚的傳統。$B$B獎盃會頒給第一個釣到黑鰭鯊的人，這傢伙將會成為北裂境最出名的釣手……額，至少出名幾天吧。$B$B黑鰭鯊最喜歡吃侏儒亞口魚了，所以通常情況就是你總釣到侏儒亞口魚而不是黑鰭鯊。',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (24803,'zhTW','卡魯亞克透過每週舉辦大賽一直在延續釣魚的傳統。$B$B獎盃會頒給第一個釣到黑鰭鯊的人，這傢伙將會成為北裂境最出名的釣手……額，至少出名幾天吧。$B$B黑鰭鯊最喜歡吃地精亞口魚了，所以通常情況就是你總釣到地精亞口魚而不是黑鰭鯊。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 24806 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (24806,'zhTW','今天我們已經是贏家了，年輕的$N。當然，如果你能帶給我一條鯊魚，讓我親眼看到把它放生，我會給你一些東西的。',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 24819 AND `locale` = 'zhTW';
