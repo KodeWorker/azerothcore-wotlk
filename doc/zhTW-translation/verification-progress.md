@@ -80,7 +80,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 3341–3540 (excl. 16 skip-listed IDs; 113 more IDs not in DB) | 2026-07-16 | 28 targeted fixes across 20 quest rows, no project-wide sweeps | Batch 18. 71 real rows in range; 54 flagged, moderate-to-high bug density. One severe content bug found (quest 3361: DB's entire Details narrative was fabricated/wrong — described a nonsensical earthquake-and-travel story instead of the real "troggs driven out of Gnomeregan, radiation, trolls stole my belongings" plot; rewritten from the English source). Several proper-noun fixes settled via `creature_template_locale` (Amnennar the Coldbringer → `『寒冰使者』`, not `寒冰之王`; Lord Arkkoroc needed the missing `領主` title added across 3 quests; Magatha **Grimtotem** → `恐怖圖騰`, not the fabricated `野性圖騰`; Dryad race term → `林精`, not `樹妖`; a Kalaran Windblade surname typo `溫佈雷`→`溫布雷`; Golem → `魔像`, not `傀儡`). Extended the Troll-is-always-`食人妖` rule to 4 more quests (3373, 3380, 3445, 3527) and a Gnome/Goblin race mix-up fix (Marvon Rivetseeker is explicitly a goblin in English, quests 3380/3445 both said gnome). A missing item descriptor restored (`bramble wand` → `刺藤魔杖`, not generic `魔杖`) and a dropped narrative detail restored (quest 3521's Grell alternate-ingredient-source, using the established `劣魔` term). Also confirmed 3 wowhead-fetch-error false positives going the *other* direction — DB was already correct and wowhead's rendering was wrong (quest 3376: `勇者風羽` matches English "Brave Windfeather" exactly, wowhead fabricated a first name and wrong rank; quest 3523: `誓言石` matches English "Oathstone", wowhead's `黑曜石` is wrong; quest 3525: `神像` matches English "Idol", wowhead's generic `塑像` loses the religious connotation). See below for the full per-quest log. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 18, **2,106 verified**, **6,761 remaining** — roughly 33 more ~200-ID batches at the current pace.
+| 3541–3740 (excl. 4 skip-listed IDs; 153 more IDs not in DB) | 2026-07-16 | 12 targeted fixes across 9 quest rows, no project-wide sweeps | Batch 19. 43 real rows in range; 29 flagged, moderate density. Mostly a dense run of near-identical Gnome/Goblin Engineering trainer-questline template text (3629–3643), which surfaced a real trainer-identity swap (quest 3638 said "become a Gnome technician" when the quest's own content and trainer are explicitly Goblin) and a confirmed NPC-title fix via `creature_template_locale` (Tinkmaster Overspark → `技工大師`, not `工匠大師` — applied project-wide including one occurrence outside this batch, quest 2922, since it's a single confirmed proper noun). Also fixed a Felhound race-term error (matches the batch-10 established `惡魔` > `地獄` preference for Fel creatures), a missing title (`Lady Sevine`), a location nuance ("overlooking Azshara"), and an Arcane/generic-magic distinction. Left quest 3621 (Mosh'Ogg ogre mound) untouched — DB's `食人魔山` and wowhead's `巨魔山` are both legitimate zhTW renderings of Ogre (per the established Gordunni precedent that `巨魔` isn't purely a zhCN Troll-leak, `[[feedback-zhtw-troll-ogre-terms]]`; the corpus itself already has both `莫什奧格食人魔` and `莫什奧格巨魔` for this exact place). Confirmed one race-identity false positive (quest 3542: DB's `上層精靈` correctly matches "Highborne," wowhead's `高等精靈` conflates it with the distinct "High Elf" race). |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 19, **2,149 verified**, **6,718 remaining** — roughly 33 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1390,6 +1392,57 @@ entry, but `桑塔拉` is phonetically closer to "SUN-tara" than DB's `蘇塔拉
 - Quest 3520 (Yeh'kinya): the locale table confirms DB's `葉基亞` is correct; wowhead's
   `葉金亞` is wrong.
 
+### Batch 19 (3541–3740) fixes log
+
+43 real rows in range (153 IDs not in DB — this range is even sparser than batch 18); 29
+flagged. A large chunk of the flagged quests (3629–3643) are a single near-identical
+Gnome-vs-Goblin Engineering trainer-questline template repeated across ~8 quest rows with only
+the trainer's name/location swapped — most of those diffs were confirmed as style-only ($N/$n
+case, `：`/`:`, `技師`/`工程師` — the latter a genuine corpus-wide term-choice difference, not
+an error, left alone).
+
+**Trainer-identity swap bug**: quest 3638 (`保密的誓言`) — this quest's own content is
+unambiguously about **Goblin** engineering (Details opens "Goblin engineering is about
+practical uses for high profit...", trainer is Nixx Sprocketspring, matching the Goblin-path
+trainer used in sibling quests 3633/3639), but DB's Objectives said "如果你同意成為一名**地精**
+技師" (become a **Gnome** technician) — the wrong race entirely for this specific quest. Fixed
+to `哥布林技師`.
+
+**NPC-title fix**: Tinkmaster Overspark (quests 3630/3632/3634/3640/3641, plus quest 2922
+outside this batch's range) — `creature_template_locale` (id 7944) confirms his zhTW title is
+`技工大師`, not DB's `工匠大師`. Applied project-wide since it's a single confirmed proper noun,
+not a pattern needing per-instance risk assessment.
+
+**Other confirmed fixes**:
+- Quest 3602 (`艾薩拉水晶`): English confirms "**Felhound**" — DB had `地獄犬` ("Hellhound"),
+  which doesn't match "Fel" at all. Fixed to `惡魔犬`, consistent with the batch-10 established
+  user preference (`惡魔` fits Fel/demon creatures better than `地獄`/"Hell").
+- Quest 3627 (`破碎護符的聯合`): English confirms "**Lady** Sevine" — DB's Objectives listed
+  her without the title (Grol "the Destroyer" and Archmage Allistarj were already correctly
+  titled). Fixed, and added matching `『』` quote-mark styling around "毀滅者" to match this
+  corpus's established epithet-quoting convention.
+- Quest 3561 (`送貨給大法師克希雷姆`): English says the tower is "overlooking Azshara," not
+  merely "on a hilltop in Azshara" (DB's original phrasing) — fixed to match the nuance.
+- Quest 3542 (`安德隆·甘特的石版`): English confirms "**arcane** spells," not generic magic —
+  fixed `魔法`→`秘法`. (The race term in the same sentence, `上層精靈`/Highborne, was already
+  correct on DB's side — see false positives below.)
+
+**False positives confirmed (DB was already correct, no change)**:
+- Quest 3621 (`邪能武器的鑄成`): English confirms "the Mosh'**Ogg** ogre mound" — an Ogre, not
+  a Troll. Initially logged this as a wowhead scrape error (`巨魔山` = "Troll Mountain," seemingly
+  the wrong race), but the user corrected this: `巨魔` is not purely a zhCN Troll-leak — it's
+  also a legitimate zhTW term for **Ogre** in established contexts (the Gordunni precedent,
+  `[[feedback-zhtw-troll-ogre-terms]]`), and the corpus itself already has both `莫什奧格食人魔`
+  and `莫什奧格巨魔` for this exact place. So wowhead's `巨魔山` isn't an error at all — it's an
+  equally valid Ogre rendering, not a race mix-up. DB's `食人魔山` was left as-is regardless
+  (no reason to change a correct term), but the false-positive characterization was wrong and
+  is corrected here. Also reconfirms Galvan the Ancient's title is still correctly left
+  unresolved per batch 15's prior decision — no new information here.
+- Quest 3542: DB's `上層精靈` correctly matches "Highborne" (a distinct Night Elf social class
+  from antiquity); wowhead's `高等精靈` conflates it with the separate "High Elf" race — same
+  distinction already established in `[[feedback-zhtw-ground-truth-priority]]`'s Highborne/Demon
+  Hunter class-page precedent.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1472,9 +1525,9 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 3541 (batch 19, target range roughly 3541–3740) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,761 quest IDs
-remain after batch 18 (see Total scope note above). Remember `diff_quest_text.py` has no range
+Not started. Resume from quest ID 3741 (batch 20, target range roughly 3741–3940) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,718 quest IDs
+remain after batch 19 (see Total scope note above). Remember `diff_quest_text.py` has no range
 arguments — it always diffs the whole cached jsonl, so filter its output to the current batch's
 ID range before reviewing (see batch 17's log for the exact filtering approach and why an
 unfiltered run can resurface stale/already-resolved findings from earlier batches). A follow-up
