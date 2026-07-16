@@ -73,8 +73,9 @@ Both phases run on the same small batch before moving to the next.
 | 2141–2340 (no skip-listed IDs in range) | 2026-07-16 | ~8 targeted fixes, no project-wide sweeps | Batch 12. Lowest bug density yet again (23/200 flagged). A cluster of jewelry/Uldaman-themed quests (2198-2340) had several title/rank disputes settled via a direct `curl` fetch of the NPC's own wowhead page (Renzik "The Shiv" → `『剃刃』雷吉克`, not DB's `“剃刀”`). Fixed a real mistranslation (English "restorative elixirs" rendered as "fine wine" in DB) alongside missing narrative detail. Confirmed DB's literal `"TdK"` engraving (quest 2198) was correct against a fabricated wowhead Chinese-name substitution. |
 | 2341–2540 (no skip-listed IDs in range) | 2026-07-16 | ~11 targeted fixes, no project-wide sweeps | Batch 13. One genuine content-swap bug found (quest 2499's Details didn't match its own English source at all) and two truncated Objectives restored (2438, 2518), one of which also carried a wrong location (quest 2518 said "river northeast of here" instead of English's "northern borders of Teldrassil"). Direct NPC-page `curl` fetches settled two more no-locale-table disputes (Bena **Winterhoof** → `貝娜·冬蹄`, not `本娜·冰蹄`; Taskmaster Fizzule confirmed `工頭`, not wowhead's own quest-page `監工`). |
 | 2541–2740 (no skip-listed IDs in range) | 2026-07-16 | ~7 targeted fixes, no project-wide sweeps | Batch 14. Lowest bug density yet (18/200 flagged). A wrong location (quest 2561: "door of a nearby room" vs English's "deepest areas of Ban'ethil Barrow Den"), a fabricated NPC name+missing rank (quest 2702, confirmed via `creature_template`'s literal English name "Corporal **Thund** Splithoof" — DB had invented "Sander"), a dropped gender-branch token (quest 2609, hardcoded to one gender instead of the `$g male:female` branch), and a restructured narrative that spoiled its own reveal (quest 2622). |
+| 2741–2940 (excl. skip-listed 2868) | 2026-07-16 | ~35 targeted fixes + 4 project-wide sweeps (質量→品質 8×, 大工匠梅卡托克→高等技工梅卡托克 10×, 惡魔獵手→惡魔獵人 22×, generic 穴居人→穴居怪 17×) | Batch 15. Highest bug density since batch 3 (76/199 flagged, 104 real rows in range). A zhCN-leak term caught mid-batch (`質量` for "Quality" is mainland usage; zhTW uses `品質`, `質量` means "mass" in Taiwan) and confirmed via NPC-page fetch that corpus-majority `大工匠梅卡托克` (10 occurrences) was wrong the whole time — same pattern as batch 10's Kalimdor and batch 13's Bena Winterhoof. Also found genuinely corrupted/duplicated text in 3 quest rows (2771-2773) and an MT-artifact name bug (`羅克位元`, "Rockbiter" mistranslated as the computing term "bit"). Two post-batch corrections from the user: Demon Hunter's official class-page name (`惡魔獵人`) overrides a 22:0 same-corpus majority, and generic "trogg" consistency swept to `穴居怪` while preserving established family-specific compounds. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 14, **1,810 verified**, **7,057 remaining** — roughly 35 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 15, **1,914 verified**, **6,953 remaining** — roughly 34 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1092,6 +1093,97 @@ Lungs, and one Scorpok Pincer" vs the audit script's digit-only regex).
   correct term for "vulture" (鷲=vulture/condor family vs 鷹=hawk/eagle family), matching the
   existing corpus majority (42:11); wowhead's `禿鷹` is the imprecise colloquial substitute.
 
+### Batch 15 (2741–2940) fixes log
+
+Highest bug density since batch 3 (76/199 flagged, 104 real rows reviewed) — a dense run of
+crafting-trainer questlines (blacksmithing, leatherworking) and several Zul'Farrak/Sandfury
+troll quests. Also the first batch with a large false-positive cluster from the numeric-count
+audit for a *second* reason beyond spelled-out numbers: DB rendering small counts as Chinese
+numerals (`十`) instead of Arabic digits when English used a digit — both are legitimate
+stylistic choices in this corpus, not errors.
+
+**Project-wide sweeps**:
+- `質量`→`品質` for "Quality" (8 occurrences, quests 1954/2821/2822 — 1954 in an
+  already-verified batch, included since this is a single confirmed compound term, not a
+  general pattern needing per-instance risk assessment). `質量` in Taiwan Mandarin means
+  "mass" (physics); `品質` is the correct term for product/material quality. Confirmed by
+  reading all ~15 corpus-wide contexts individually before scoping — one ambiguous instance
+  outside this batch's range ("這種油質量很重", quest 10201) was deliberately left untouched
+  since it could plausibly mean either sense without more context.
+- `大工匠梅卡托克`→`高等技工梅卡托克` (High Tinker Mekkatorque), 10 occurrences project-wide.
+  Corpus was 10:0 self-consistent for the wrong title; confirmed via direct `curl` fetch of
+  the NPC's own dedicated wowhead page (creature 7937) — same "corpus majority was wrong"
+  pattern as batch 10's Kalimdor and batch 13's Bena Winterhoof.
+
+**Corrupted/duplicated text restored** (a distinct bug class from truncation — these rows had
+inserted duplicate phrases, not missing content): quests 2771/2772/2773 (the "A Good Head On
+Your Shoulders"/"The World At Your Feet"/"The Mithril Kid" chain) — Objectives read like
+`1副精製秘銀護肩帶秘銀護肩交給...` (a duplicated `秘銀護肩` fragment) and similar garbling in
+the other two. Rebuilt each Objectives field from the verified English source
+(`quest_template`'s `RequiredItemId1-2`), which also surfaced a related term error: `精製`
+(DB, "refined") should be `華麗` (Ornate) — English titles are literally "**Ornate** Mithril
+Shoulder/Pants/Gloves" — extended the same fix to the parallel Galvan questline (2758-2764,
+7 quests) since it's the identical Mithril/Ornate item-naming pattern. Also fixed a stray
+`密銀`→`秘銀` typo (Mithril) picked up along the way.
+
+**Fabricated names / MT artifacts**:
+- Quest 2845 (`迷路的沙恩`): NPC name `羅克位元` — DB had transliterated "**Rockbit**"'s
+  second syllable as the Chinese computing term `位元` (a "bit," as in binary digit) instead
+  of continuing the phonetic transliteration. English confirms "Rockbiter's camp"; fixed to
+  `羅克比特`.
+- Quest 2875 (`通緝：安德雷·費爾比德`→`通緝：安德雷·火鬍`): English title is literally
+  "WANTED: Andre **Firebeard**" — a translatable English compound name, not a name meant to
+  be transliterated phonetically. Also dropped a fabricated first name `吉羅姆` (Jerome) for
+  Security Chief Bilgewhizzle — English confirms no first name ("Security Chief Bilgewhizzle"),
+  consistent with this NPC's established no-first-name convention from earlier batches.
+
+**Race-term fixes** (Troll/Ogre convention, `[[feedback-zhtw-troll-ogre-terms]]`): quests
+2768/2865/2880/2881/2934/2935/2936 all had `巨魔` where English confirms "troll" (Zul'Farrak
+Sandfury trolls, Witherbark trolls) — fixed to `食人妖` throughout. Quest 2843/2843:
+`地精傳送器`→`哥布林傳送器` — English literally "Goblin Transponder", a Gnome/Goblin race
+mix-up like several seen in earlier batches.
+
+**Item-name fixes verified against English titles/required items**:
+- Quest 2846: `深淵皇冠`→`深淵冠冕` — English title "**Tiara** of the Deep"; `冠冕` (tiara/small
+  crown) matches better than `皇冠` (royal/king's crown).
+- Quests 2850/2851/2857/2858: `夜色`→`夜景` for "Nightscape" gear (items 8175/8176 confirmed
+  via `item_template`) — `夜景` (night scenery, matching "-scape" as in landscape) is more
+  literal than `夜色` (night's color/hue). Scoped the sed replacement to the specific compound
+  words (`夜色外套`, `夜色頭巾`, etc.) to avoid touching the unrelated `夜色鎮` (Duskwood zone
+  name) — confirmed 95 untouched `夜色鎮` references survived the sweep intact.
+
+**Post-batch corrections (from user)**:
+- `惡魔獵手`→`惡魔獵人` (Demon Hunter, 22 occurrences project-wide) — initially left as-is on
+  22:0 corpus dominance, but the user pointed to the actual player-class page
+  (`wowhead.com/tw/class=12`, confirmed via `curl` title-tag fetch: `惡魔獵人—職業`) as the
+  authoritative source. Even though Demon Hunter isn't a playable class in this WotLK-era
+  content, "Demon Hunter" the English proper noun is the same concept Blizzard later named
+  as a class, and the class's official zhTW name outranks a same-corpus 22:0 majority — same
+  lesson as batch 9/10/13/15's other "corpus majority was wrong" findings, this time from a
+  source category (class pages) not previously used in this pass.
+- Generic "trogg" (English, unqualified by a family name) consistency: corpus was split
+  `穴居怪`(34)/`穴居人`(20) for the same generic concept — per the user's direction to keep
+  these consistent, swept the 17 generic `穴居人` occurrences to `穴居怪`, explicitly
+  preserving 3 occurrences of established specific-family compounds (`碎石穴居人` for
+  Stonesplinter, `怒焰穴居人` for Ragefire — matching `creature_template`'s "Stonesplinter
+  Trogg"/"Ragefire Trogg"). Found one of the 17 swept rows (quest 10999) already contains raw
+  unconverted simplified Chinese elsewhere in the same field — already tracked in the
+  known-issues list below, no new entry needed.
+- `遺物` (Mysterious Relic, item 9248, quests 2870/2871) confirmed correct again — same
+  "relic not holy item" finding as batch 13's quest 2701, now a second independent
+  confirmation that wowhead systematically over-translates this item type as `聖物`.
+- Quests 2741/2749/2878: DB's empty Objectives fields all matched equally-empty English
+  `LogDescription`/`QuestDescription` — wowhead's fetch pulled unrelated text into these
+  fields each time (same pattern as batches 10/11's quests 1878/2523).
+- Generic Gnomeregan "troggs" (quests 2904/2926/2927/2929, `穴居怪`) left unchanged — English
+  says only generic "trogg," not a specific named family, so there's no basis to adopt
+  wowhead's more specific `石齶怪`/`穴居人` substitution; same unresolved ambiguity already
+  flagged for quest 170 in the known-issues list below.
+- `『長者』加爾文` (Elder Galvan) — considered but **not** applied: creature_template's
+  literal English name is "Galvan **the Ancient**," which wowhead's `長者` (Elder) doesn't
+  precisely match either. Left DB's title-less `加爾文` as-is rather than adopting a
+  half-correct alternative; flagged as unresolved rather than silently "fixed."
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1117,6 +1209,18 @@ Lungs, and one Scorpok Pincer" vs the audit script's digit-only regex).
 - Quest 1960 (outside all batches reached so far) has the identical pre-fix "filled coffers"
   sentence that batch 10 fixed in quest 1920 (missing the "empty coffers" clause) — flagged,
   not touched, since it's out of range; verify against its own English source when reached.
+- Galvan the Ancient (creature 7802, quests 2758-2765 and others in that questline): DB never
+  gives him a title, but `creature_template`'s literal English subname is "Galvan **the
+  Ancient**" — wowhead's own quest-page rendering (`『長者』`, "Elder") doesn't precisely match
+  "Ancient" either, so batch 15 deliberately left this unresolved rather than adopting a
+  half-correct alternative. Needs either a better literal rendering (e.g. `太古的`/`年邁的`) or
+  direct confirmation via the NPC's own dedicated wowhead page before touching it.
+- `質量`/`品質` ("Quality" vs "mass") has only been swept within batches reached so far
+  (1954, 2821, 2822 — see batch 15's log). ~28 more occurrences exist project-wide in
+  not-yet-reached quest IDs (4323, 5284, 5582, 7641, 7648, 8515, 8556, 8697-8704, 8905-8910,
+  8912, 10182, 10201, 10492) — verify each context individually when that range is reached,
+  since `質量` can legitimately mean "mass" in rare cases (one ambiguous instance already
+  found at quest 10201, deliberately left untouched).
 
 ## Tools
 
@@ -1160,24 +1264,26 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 2741 (batch 15, target range roughly 2741–2940) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,057 quest IDs
-remain after batch 14 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+Not started. Resume from quest ID 2941 (batch 16, target range roughly 2941–3140) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,953 quest IDs
+remain after batch 15 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
 needs per-instance verification against the real English source before a sweep, not a blind
-regex replace. Batches 10-14 used a technique for no-locale-table disputes: `curl -sL
+regex replace. Batches 10-15 used a technique for no-locale-table disputes: `curl -sL
 "https://www.wowhead.com/wotlk/tw/npc=<id>"` (or `item=<id>`) and read the `<title>` tag —
 faster and more authoritative than the pre-fetched quest-page jsonl for single-entity checks;
-batch 13 showed this is worth doing even when the quest-page fetch *agrees with itself* across
-multiple quests (Bena Winterhoof's `冰蹄` was wrong on wowhead's quest pages consistently, but
-the NPC's own dedicated page had the correct `冬蹄`). Also remember: wowhead's own quest-page
-fetch is not an independent source when it derives from the same broken client string DB does
-(batch 11's quest 2098 `基爾卡可` typo appeared identically on both sides), and can also
-fabricate content outright (batch 12's quest 2198) or fail to render entirely, returning raw
-English/markup (batch 13's quest 2358) — a match between DB and wowhead isn't automatic proof
-of correctness if a locale table or dedicated page contradicts them, and a wowhead/DB
-disagreement isn't automatic proof DB is wrong either. Batch 14 also confirmed this project's
-raw `$g male:female` gender-token storage format (see quest 2205/2609) is distinct from
-wowhead's own `<male/female>` bracket display convention — when restoring a dropped gender
-branch, match the project's existing raw-token precedent, not wowhead's rendering style.
+this caught two more corpus-majority-was-wrong cases in batch 15 (Mekkatorque's title, 10:0
+self-consistent but wrong). Also remember: wowhead's own quest-page fetch is not an
+independent source when it derives from the same broken client string DB does (batch 11's
+quest 2098 `基爾卡可` typo appeared identically on both sides), and can also fabricate content
+outright (batch 12's quest 2198) or fail to render entirely, returning raw English/markup
+(batch 13's quest 2358) — a match between DB and wowhead isn't automatic proof of correctness
+if a locale table or dedicated page contradicts them, and a wowhead/DB disagreement isn't
+automatic proof DB is wrong either. Batch 14 confirmed this project's raw `$g male:female`
+gender-token storage format is distinct from wowhead's `<male/female>` bracket display
+convention. Batch 15 flagged two things worth carrying forward: (1) `質量`/`品質` needs
+per-instance verification when the corpus reaches IDs 4323+ (list in Known Issues above) since
+`質量` can rarely mean "mass" legitimately; (2) Galvan the Ancient's title is still unresolved
+(neither DB's no-title nor wowhead's `長者`/"Elder" matches "the Ancient" precisely) — don't
+assume it's settled if it resurfaces in a later batch.
