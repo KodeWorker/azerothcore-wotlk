@@ -82,7 +82,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 3541–3740 (excl. 4 skip-listed IDs; 153 more IDs not in DB) | 2026-07-16 | 12 targeted fixes across 9 quest rows, no project-wide sweeps | Batch 19. 43 real rows in range; 29 flagged, moderate density. Mostly a dense run of near-identical Gnome/Goblin Engineering trainer-questline template text (3629–3643), which surfaced a real trainer-identity swap (quest 3638 said "become a Gnome technician" when the quest's own content and trainer are explicitly Goblin) and a confirmed NPC-title fix via `creature_template_locale` (Tinkmaster Overspark → `技工大師`, not `工匠大師` — applied project-wide including one occurrence outside this batch, quest 2922, since it's a single confirmed proper noun). Also fixed a Felhound race-term error (matches the batch-10 established `惡魔` > `地獄` preference for Fel creatures), a missing title (`Lady Sevine`), a location nuance ("overlooking Azshara"), and an Arcane/generic-magic distinction. Quest 3621's `莫什奧格食人魔山` → `莫什奧格巨魔山` (Mosh'Ogg ogre mound): initially left as-is on the theory that both `食人魔`/`巨魔` are valid Ogre terms, but a follow-up DBC check (`AreaTable_zhTW.tsv`, AreaID 105) found this is the *official client zone name* — `莫什奧格巨魔山`, no ambiguity. Fixed project-wide (3 occurrences: quests 591, 2760, 3621 — the first two outside this batch's range, swept anyway since it's a single confirmed proper noun from the highest-tier ground truth). See the corrected note below. Confirmed one race-identity false positive (quest 3542: DB's `上層精靈` correctly matches "Highborne," wowhead's `高等精靈` conflates it with the distinct "High Elf" race). |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 19, **2,149 verified**, **6,718 remaining** — roughly 33 more ~200-ID batches at the current pace.
+| 3741–3940 (excl. 2 skip-listed IDs; 144 more IDs not in DB) | 2026-07-16 | 11 targeted fixes across 9 quest rows, no project-wide sweeps | Batch 20. 54 real rows in range; 31 flagged, moderate density. Two dropped sub-location details (quests 3761/3786, both missing "Elder Rise of Thunder Bluff" — the same location omission recurring across a related quest cluster), two incomplete titles (quests 3762/3763, "Arch Druid Runetotem"/"Arch Druid Staghelm" both missing their surname), a missing "Lord" title (quest 3907, Lord Incendius), a wrong emote fix (quest 3861, `/cheer` mistranslated as a vague "look happy" — fixed to the established `歡呼` emote name, also correcting wowhead's own wrong "flap wings" guess), a dropped narrative clause (quest 3901, "more mindless minions of the Lich King"), and a typo (quest 3914, `安戈洛爾`→`安戈洛`). Also resolved the `傀儡`/`魔像` (Golem) term flagged as an open follow-up item after batch 18 (quest 3911, confirmed `魔像` via `creature_template_locale`). Confirmed a 4-quest false-positive cluster going the *other* direction: quests 3821/3823/3824/3825's "Firegut ogres" — English confirms Ogre, so DB's `火腹食人魔` was already correct throughout and wowhead's `火腹巨魔` is wrong (matching the general default Ogre=`食人魔` rule, no confirmed clan exception here); left untouched. Also confirmed quest 3901's kill-count discrepancy (DB said 8, wowhead said 12) resolved in DB's favor — English confirms 8. |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 20, **2,203 verified**, **6,664 remaining** — roughly 33 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1447,6 +1449,59 @@ exists for the specific proper noun before settling for "either is fine."**
   distinction already established in `[[feedback-zhtw-ground-truth-priority]]`'s Highborne/Demon
   Hunter class-page precedent.
 
+### Batch 20 (3741–3940) fixes log
+
+54 real rows in range (144 IDs not in DB); 31 flagged, moderate density.
+
+**Dropped sub-location details** (a recurring pattern within one Thunder Bluff/Cenarion Circle
+quest cluster): quests 3761 and 3786 both dropped "at the **Elder Rise** of Thunder Bluff" —
+English confirms both Ghede and Bashana Runetotem are specifically at Elder Rise, not just
+"Thunder Bluff" generically. Fixed both. (Quest 3762 already had this location correctly in its
+own Details field, so the pattern isn't universal within the cluster — worth checking any other
+Thunder Bluff Cenarion Circle quests reached in later batches for the same omission.)
+
+**Incomplete titles**: quests 3762/3763 — English titles are "Assisting Arch Druid
+**Runetotem**"/"Assisting Arch Druid **Staghelm**"; DB's titles were both just `協助大德魯伊`,
+dropping the surname entirely. Fixed to `協助大德魯伊符文圖騰`/`協助大德魯伊鹿盔`. Quest 3763
+also had an unrelated stray-character typo in its own Details (`伊範達爾·鹿盔`, an extra `伊`
+not present anywhere else, including this same quest's own Objectives field) — fixed to match.
+
+**Missing title**: quest 3907 — English confirms "**Lord** Incendius"; DB dropped `領主` in both
+the Objectives and Details fields referencing him. Fixed both occurrences.
+
+**Emote fix**: quest 3861 (`咕咕嘎！`) — the quest specifies the `/cheer` emote command
+literally in English. DB's Objectives translated it vaguely as "look happy" (`做出高興的表情`),
+losing the specific emote name; wowhead's own guess (`拍動翅膀`, "flap wings") is simply wrong
+for `/cheer`. Fixed to this project's established emote name `歡呼` ("cheer"), and restored a
+dropped "special chicken feed" repetition present in English at the same point.
+
+**Dropped narrative clause**: quest 3901 (`斷骨骷髏`) — English confirms "the Rattlecage
+skeletons, more mindless minions of **the Lich King**" — DB's Details dropped this
+Lich-King-affiliation clause entirely. Restored it. (The kill count itself, 8, was already
+correct on DB's side — see false positives below; DB's Objectives/EndText split the "kill X"
+and "return to Y" instructions across two separate fields rather than combining them into one
+like wowhead's Objectives does, which is a legitimate DB structural choice, not a gap, so that
+part was left alone.)
+
+**Typo fix**: quest 3914 — `安戈洛爾環形山` → `安戈洛環形山` (extra stray `爾`; `安戈洛` is the
+already-established spelling for Un'Goro Crater used consistently elsewhere in the corpus,
+including this same quest cluster's own quest 3761).
+
+**Open follow-up resolved**: quest 3911's `傀儡`/`魔像` (Golem) dispute, flagged as an
+unresolved project-wide item after batch 18 — confirmed `魔像` via `creature_template_locale`
+back in that batch; applied the same fix here (`傀儡`→`魔像`, both occurrences). The corpus-wide
+58:47 split noted in batch 18 is still open for a future dedicated pass.
+
+**False positives confirmed (DB was already correct, no change)**:
+- Quests 3821/3823/3824/3825 (Dreadmaul Rock/Extinguish the Firegut questline): DB used
+  `火腹食人魔` throughout; wowhead rendered it `火腹巨魔`. English confirms "**Firegut ogres**"
+  explicitly and repeatedly (LogDesc: "15 Firegut Ogre-Mages, 7 Firegut Ogres, and 7 Firegut
+  Ogre Brutes") — no troll involved anywhere in this questline, and no confirmed clan exception
+  (unlike Gordunni/Mosh'Ogg) applies here, so the default Ogre=`食人魔` rule holds. Wowhead was
+  wrong across all 4 quests; DB was already correct. Left untouched.
+- Quest 3901: wowhead's Objectives said "kill **12**" Rattlecage Skeletons; English confirms
+  **8**, matching DB. Wowhead's count was the error here, not DB's.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1529,15 +1584,16 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 3741 (batch 20, target range roughly 3741–3940) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,718 quest IDs
-remain after batch 19 (see Total scope note above). Remember `diff_quest_text.py` has no range
+Not started. Resume from quest ID 3941 (batch 21, target range roughly 3941–4140) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,664 quest IDs
+remain after batch 20 (see Total scope note above). Remember `diff_quest_text.py` has no range
 arguments — it always diffs the whole cached jsonl, so filter its output to the current batch's
 ID range before reviewing (see batch 17's log for the exact filtering approach and why an
 unfiltered run can resurface stale/already-resolved findings from earlier batches). A follow-up
-worth doing whenever there's spare time: batch 18 found the `傀儡`/`魔像` split (Golem
-terminology) is corpus-wide inconsistent (58:47) with the locale table favoring `魔像` — this
-wasn't swept beyond batch 18's own quest, so it's still an open project-wide cleanup item. Keep the
+worth doing whenever there's spare time: the `傀儡`/`魔像` (Golem) split is corpus-wide
+inconsistent — batch 18 found it at 58:47 with the locale table favoring `魔像`, and batch 20
+fixed one more confirmed instance (quest 3911), but the bulk of the split is still unswept, so
+it remains an open project-wide cleanup item. Keep the
 OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
