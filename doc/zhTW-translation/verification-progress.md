@@ -84,7 +84,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 3741–3940 (excl. 2 skip-listed IDs; 144 more IDs not in DB) | 2026-07-16 | 11 targeted fixes across 9 quest rows, no project-wide sweeps | Batch 20. 54 real rows in range; 31 flagged, moderate density. Two dropped sub-location details (quests 3761/3786, both missing "Elder Rise of Thunder Bluff" — the same location omission recurring across a related quest cluster), two incomplete titles (quests 3762/3763, "Arch Druid Runetotem"/"Arch Druid Staghelm" both missing their surname), a missing "Lord" title (quest 3907, Lord Incendius), a wrong emote fix (quest 3861, `/cheer` mistranslated as a vague "look happy" — fixed to the established `歡呼` emote name, also correcting wowhead's own wrong "flap wings" guess), a dropped narrative clause (quest 3901, "more mindless minions of the Lich King"), and a typo (quest 3914, `安戈洛爾`→`安戈洛`). Also resolved the `傀儡`/`魔像` (Golem) term flagged as an open follow-up item after batch 18 (quest 3911, confirmed `魔像` via `creature_template_locale`). Confirmed a 4-quest false-positive cluster going the *other* direction: quests 3821/3823/3824/3825's "Firegut ogres" — English confirms Ogre, so DB's `火腹食人魔` was already correct throughout and wowhead's `火腹巨魔` is wrong (matching the general default Ogre=`食人魔` rule, no confirmed clan exception here); left untouched. Also confirmed quest 3901's kill-count discrepancy (DB said 8, wowhead said 12) resolved in DB's favor — English confirms 8. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 20, **2,203 verified**, **6,664 remaining** — roughly 33 more ~200-ID batches at the current pace.
+| 3941–4140 (no skip-listed IDs; 141 more IDs not in DB) | 2026-07-17 | 28 targeted fixes across 15 quest rows, no project-wide sweeps | Batch 21. 59 real rows in range; 39 flagged, high density. A dense Blackrock Depths/Burning Steppes cluster surfaced 4 confirmed proper-noun fixes via `creature_template_locale`/`item_template_locale`: Ginro **Hearthkindle** (`基恩諾·火花`→`燃爐`, 3 quests — the old name didn't match "Hearthkindle" at all), Felpaw **Ravager** (`魔爪掠奪者`→`劫毀者`), Maxwort **Uberglint** (`尤博格林`→`尤柏格林`), and Black Dragonflight Molt / Fractured Elemental Shard (both items DB shortened to generic names, restored to their full established item names, quests 4022/4024/4061/4062/4063). Also resolved a 3-quest title inconsistency for **Warlord** Goretooth (DB rendered his title three different wrong ways — `軍官`/`大人`/`軍閥` — across quests 4081/4082/4132; fixed all to this corpus's established `督軍`), extended the `傀儡`→`魔像` (Golem) fix to 3 more quests (4061/4062/4063), a title fix matching English "Corruption" over DB's "Fallen" (quest 4120), and a title+location fix for Shadowmaster Vivian Lagrave (quest 4133, DB dropped both her rank and the specific "Blackrock Depths" location). |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 21, **2,262 verified**, **6,605 remaining** — roughly 33 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1502,6 +1504,45 @@ back in that batch; applied the same fix here (`傀儡`→`魔像`, both occurre
 - Quest 3901: wowhead's Objectives said "kill **12**" Rattlecage Skeletons; English confirms
   **8**, matching DB. Wowhead's count was the error here, not DB's.
 
+### Batch 21 (3941–4140) fixes log
+
+59 real rows in range (141 IDs not in DB); 39 flagged, high density — dominated by a Blackrock
+Depths/Burning Steppes/Badlands quest cluster (Warlord Goretooth's Anvilrage campaign, the
+Golem-guarded "Rise of the Machines" chain, Bael'Gar's molt).
+
+**NPC-name fixes** (via `creature_template_locale`):
+- Ginro **Hearthkindle** (quests 4124/4127/4130): DB had `基恩諾·火花` ("Spark"), which
+  doesn't match "Hearthkindle" at all — fixed to `燃爐` ("hearth-kindler").
+- Felpaw **Ravager** (quest 4120): `魔爪掠奪者` ("plunderer") → `劫毀者` ("destroyer").
+- Maxwort **Uberglint** (quest 4123): `尤博格林` → `尤柏格林` (character-level spelling fix).
+
+**Item-name fixes** (via `item_template_locale`) — DB had shortened both items to a generic
+name, dropping their actual established full names:
+- "Black Dragonflight Molt" / "Altered Black Dragonflight Molt" (quests 4022/4024): DB's
+  `黑龍皮` ("black dragon skin") → `黑龍軍團之皮`/`變化後的黑龍軍團之皮`.
+- "Fractured Elemental Shard" (quests 4061/4062/4063): DB's `元素碎片` ("fragment") →
+  `元素裂片` ("shard"), matching the item's own established name exactly.
+
+**Title consistency fix**: Warlord Goretooth (quests 4081/4082/4132) — DB rendered his title
+three different ways across these three quests, none matching English's consistent "**Warlord**
+Goretooth": `軍官`("officer"), `高圖斯大人`("Lord Goretooth"), `高圖斯軍閥`("Warlord Goretooth"
+literally, but word order reversed from the naming convention used elsewhere). Fixed all three
+to this corpus's established `督軍高圖斯` (62:3 dominant term for "Warlord" project-wide).
+
+**Golem term extended**: quests 4061/4062/4063 — the same `傀儡`→`魔像` fix confirmed in
+batches 18/20, applied to 3 more occurrences (`石頭傀儡`/`機械傀儡`/`傀儡統帥`/`狂怒傀儡`/
+`戰鬥傀儡` → `石頭魔像`/`機械魔像`/`魔像領主`/`狂怒魔像`/`戰鬥魔像`).
+
+**Other fixes**:
+- Quest 4120: title `墮落的力量` → `腐化的力量` — English title is literally "The Strength of
+  **Corruption**"; this corpus has substantial precedent for `腐化` as the Corruption term
+  (130 occurrences) alongside `墮落` (166, used for a related but distinct "fallen/depraved"
+  sense) — picked the one matching this specific English title word.
+- Quest 4133 (`薇薇安·拉格雷`): English confirms "**Shadowmaster** Vivian Lagrave... Dark Iron
+  dwarves of **Blackrock Depths**" — DB's `暗法師`("Shadow Mage") doesn't match "Shadowmaster"
+  precisely, and DB's Details dropped the specific "Blackrock Depths" location entirely
+  (just said "something about Dark Iron dwarves"). Fixed both.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1584,16 +1625,16 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 3941 (batch 21, target range roughly 3941–4140) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,664 quest IDs
-remain after batch 20 (see Total scope note above). Remember `diff_quest_text.py` has no range
+Not started. Resume from quest ID 4141 (batch 22, target range roughly 4141–4340) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,605 quest IDs
+remain after batch 21 (see Total scope note above). Remember `diff_quest_text.py` has no range
 arguments — it always diffs the whole cached jsonl, so filter its output to the current batch's
 ID range before reviewing (see batch 17's log for the exact filtering approach and why an
 unfiltered run can resurface stale/already-resolved findings from earlier batches). A follow-up
 worth doing whenever there's spare time: the `傀儡`/`魔像` (Golem) split is corpus-wide
-inconsistent — batch 18 found it at 58:47 with the locale table favoring `魔像`, and batch 20
-fixed one more confirmed instance (quest 3911), but the bulk of the split is still unswept, so
-it remains an open project-wide cleanup item. Keep the
+inconsistent — batch 18 found it at 58:47 with the locale table favoring `魔像`, and batches 20
+and 21 fixed 4 more confirmed instances (quests 3911, 4061, 4062, 4063), but the bulk of the
+split is still unswept, so it remains an open project-wide cleanup item. Keep the
 OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
