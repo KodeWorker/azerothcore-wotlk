@@ -70,8 +70,9 @@ Both phases run on the same small batch before moving to the next.
 | 1541–1740 (excl. skip-listed 1659, 1660, 1662–1664) | 2026-07-16 | ~10 targeted fixes + 1 naming sweep (加科因/黑暗縛靈者→加金/『黑暗縛靈師』, 7 quests) | Batch 9. Lowest bug density yet (42/195 flagged, and 118 of those 195 candidate IDs turned out to be unused quest IDs with no `quest_template` row at all — not gaps, just gaps in the ID space). Several fixes had no `_locale` table to settle them (Gakin/Tormus/Umbral Ore/Bath'rah naming) — resolved by user judgment call rather than the usual ground-truth hierarchy; see below. |
 | 1741–1940 (no skip-listed IDs in range) | 2026-07-16 | ~20 targeted fixes + 6 project-wide term sweeps (亡靈天災→天譴軍團 26×, 提瑞斯法→提里斯法 65×, 洛丹倫→羅德隆 33×, 阿爾薩斯→阿薩斯 13×, 碎木哨崗→碎木崗哨 39×, 扎拉贊恩→札拉贊恩 12×) | Batch 10. See below — DBC ground truth (`AreaTable_zhTW.tsv`/`Faction_zhTW.tsv`) again showed the corpus-majority spelling was wrong in every case (Tirisfal 65:41, Lordaeron 33:11), same pattern as batch 6's Kalimdor. Also the first batch to directly fetch item/NPC wowhead pages via `curl` mid-session (not the pre-fetched quest jsonl) to settle no-locale-table disputes — see below. |
 | 1941–2140 (excl. skip-listed 2018, 2020, 2058, 2059) | 2026-07-16 | ~15 targeted fixes, no project-wide sweeps | Batch 11. Lowest bug density yet (28/196 flagged). Two genuine truncation bugs found and restored (quest 2038's item list, quest 2118's severely truncated/corrupted Objectives). Confirmed two more cases of wowhead's own quest-page fetch being wrong where DB was already correct (`祈倫托` vs zhCN-leak `肯瑞托`, matching batch 3's established finding; `亡靈哨兵` vs generic `不死生物哨兵`). |
+| 2141–2340 (no skip-listed IDs in range) | 2026-07-16 | ~8 targeted fixes, no project-wide sweeps | Batch 12. Lowest bug density yet again (23/200 flagged). A cluster of jewelry/Uldaman-themed quests (2198-2340) had several title/rank disputes settled via a direct `curl` fetch of the NPC's own wowhead page (Renzik "The Shiv" → `『剃刃』雷吉克`, not DB's `“剃刀”`). Fixed a real mistranslation (English "restorative elixirs" rendered as "fine wine" in DB) alongside missing narrative detail. Confirmed DB's literal `"TdK"` engraving (quest 2198) was correct against a fabricated wowhead Chinese-name substitution. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 11, **1,712 verified**, **7,155 remaining** — roughly 36 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 12, **1,749 verified**, **7,118 remaining** — roughly 36 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -951,6 +952,42 @@ right — including two direct re-confirmations of prior-batch findings):
   untouched, genuinely ambiguous with no locale table and no reward/required item to check
   against.
 
+### Batch 12 (2141–2340) fixes log
+
+Lowest bug density yet again (23/200 flagged) and no project-wide sweeps — a tight cluster of
+jewelry-repair/Uldaman-themed quests (2198-2340, the "Shattered Necklace" chain) accounted for
+most of the real findings, plus a separate SI:7/rogue-trainer cluster.
+
+**Content fix — real mistranslation, not just paraphrase**: quest 2202 (`奧達曼的蘑菇`)
+mistranslated English "restorative elixirs" as `好酒` (fine wine) — a substance-changing error,
+not just word choice. Also restored missing narrative detail (mushroom cluster
+location/description) that DB had compressed away. Replaced the whole Details field with a
+corrected, more complete version rather than patching just the wine/elixir word, per the
+verbatim-not-patch rule.
+
+**Title/rank fixes verified against the real English source**:
+- Quest 2203: title `荒蕪之地的材料 II`→`荒蕪之地的試劑 II` — English title is literally
+  "Badlands **Reagent** Run II" (試劑), not the generic "材料" (material).
+- Quest 2205: title `軍情七處`→`尋找軍情七處` — English title is "**Seek out** SI: 7"; DB
+  dropped the verb. (Quest 2300's identical-looking `軍情七處` title was correctly left
+  untouched — its own English title is literally just "SI:7", no "seek out".)
+- Quests 2298/2300: Renzik "The Shiv" — DB called him `"剃刀"雷吉克` ("razor," a shaving tool);
+  confirmed via a direct `curl` fetch of the NPC's own wowhead page (creature 6946) that the
+  correct rendering is `『剃刃』雷吉克` (with the established 『』 bracket convention, not `""`
+  quotes) — "Shiv" is a crude blade/knife, not a shaving razor.
+
+**False positive correctly rejected — wowhead fabricated a name**: quest 2198's necklace
+inscription. DB says the engraving reads literal Latin letters `"TdK"`, matching English
+verbatim ("three tiny, engraved letters: \"TdK\""); wowhead's fetch substituted a fabricated
+Chinese name (`「基瑟爾」`, "Kessel") that doesn't correspond to anything in the English source
+— a scrape/rendering error, not a translation choice. Left DB unchanged.
+
+**Left as-is, no strong evidence either direction**: `石顎怪`/`石齶怪` (quests 2201/2339, the
+same jaw-character ambiguity already flagged as a known issue for quest 170 — corpus split
+7:4, no locale table); quest 2258's Objectives being a generic summary while its own Details
+field already has the full itemized reagent list (a legitimate summary/detail split pattern
+used elsewhere in the corpus, not a content gap).
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1019,16 +1056,18 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 2141 (batch 12, target range roughly 2141–2340) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,155 quest IDs
-remain after batch 11 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+Not started. Resume from quest ID 2341 (batch 13, target range roughly 2341–2540) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,118 quest IDs
+remain after batch 12 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
 needs per-instance verification against the real English source before a sweep, not a blind
-regex replace. Batches 10-11 used a technique for no-locale-table disputes: `curl -sL
+regex replace. Batches 10-12 used a technique for no-locale-table disputes: `curl -sL
 "https://www.wowhead.com/wotlk/tw/npc=<id>"` (or `item=<id>`) and read the `<title>` tag —
 faster and more authoritative than the pre-fetched quest-page jsonl for single-entity checks.
 Also remember: wowhead's own quest-page fetch is not an independent source when it derives
 from the same broken client string DB does (batch 11's quest 2098 `基爾卡可` typo appeared
-identically on both sides) — a match between DB and wowhead isn't automatic proof of
-correctness if a locale table or dedicated page contradicts them.
+identically on both sides), and can also fabricate content outright (batch 12's quest 2198
+substituted a fake Chinese name for a literal Latin-letter engraving) — a match between DB and
+wowhead isn't automatic proof of correctness if a locale table or dedicated page contradicts
+them, and a wowhead/DB disagreement isn't automatic proof DB is wrong either.
