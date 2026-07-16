@@ -72,8 +72,9 @@ Both phases run on the same small batch before moving to the next.
 | 1941–2140 (excl. skip-listed 2018, 2020, 2058, 2059) | 2026-07-16 | ~15 targeted fixes, no project-wide sweeps | Batch 11. Lowest bug density yet (28/196 flagged). Two genuine truncation bugs found and restored (quest 2038's item list, quest 2118's severely truncated/corrupted Objectives). Confirmed two more cases of wowhead's own quest-page fetch being wrong where DB was already correct (`祈倫托` vs zhCN-leak `肯瑞托`, matching batch 3's established finding; `亡靈哨兵` vs generic `不死生物哨兵`). |
 | 2141–2340 (no skip-listed IDs in range) | 2026-07-16 | ~8 targeted fixes, no project-wide sweeps | Batch 12. Lowest bug density yet again (23/200 flagged). A cluster of jewelry/Uldaman-themed quests (2198-2340) had several title/rank disputes settled via a direct `curl` fetch of the NPC's own wowhead page (Renzik "The Shiv" → `『剃刃』雷吉克`, not DB's `“剃刀”`). Fixed a real mistranslation (English "restorative elixirs" rendered as "fine wine" in DB) alongside missing narrative detail. Confirmed DB's literal `"TdK"` engraving (quest 2198) was correct against a fabricated wowhead Chinese-name substitution. |
 | 2341–2540 (no skip-listed IDs in range) | 2026-07-16 | ~11 targeted fixes, no project-wide sweeps | Batch 13. One genuine content-swap bug found (quest 2499's Details didn't match its own English source at all) and two truncated Objectives restored (2438, 2518), one of which also carried a wrong location (quest 2518 said "river northeast of here" instead of English's "northern borders of Teldrassil"). Direct NPC-page `curl` fetches settled two more no-locale-table disputes (Bena **Winterhoof** → `貝娜·冬蹄`, not `本娜·冰蹄`; Taskmaster Fizzule confirmed `工頭`, not wowhead's own quest-page `監工`). |
+| 2541–2740 (no skip-listed IDs in range) | 2026-07-16 | ~7 targeted fixes, no project-wide sweeps | Batch 14. Lowest bug density yet (18/200 flagged). A wrong location (quest 2561: "door of a nearby room" vs English's "deepest areas of Ban'ethil Barrow Den"), a fabricated NPC name+missing rank (quest 2702, confirmed via `creature_template`'s literal English name "Corporal **Thund** Splithoof" — DB had invented "Sander"), a dropped gender-branch token (quest 2609, hardcoded to one gender instead of the `$g male:female` branch), and a restructured narrative that spoiled its own reveal (quest 2622). |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 13, **1,783 verified**, **7,084 remaining** — roughly 35 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 14, **1,810 verified**, **7,057 remaining** — roughly 35 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1045,6 +1046,52 @@ spreading corruption..."). Replaced the whole field with the verified text.
   never realize...", "Gnarlpine mystics"); wowhead's `它` (it) and dropped `瘤背` qualifier
   were the errors.
 
+### Batch 14 (2541–2740) fixes log
+
+Lowest bug density yet (18/200 flagged), no project-wide sweeps. Also the first batch with a
+large false-positive cluster from the numeric-count audit — 10 quests flagged, all resolved as
+the documented "spelled-out number" class (English "three Snickerfang Jowls, two Blasted Boar
+Lungs, and one Scorpok Pincer" vs the audit script's digit-only regex).
+
+**Content fixes verified against the real English source**:
+- Quest 2561 (`利爪德魯伊`): Details said "you must approach the door of a nearby room"
+  (`附近房室的門`), but English says "explore the deepest areas of the Ban'ethil Barrow Den" —
+  a genuine location error, not paraphrase. Restored to match.
+- Quest 2622 (`丟失的命令`): Details revealed the survivor's name (`本戈爾`) immediately,
+  contradicting English's suspenseful structure ("Only one survived... speak with Bengor").
+  Also the closing warning ("這裡到處都是危險的生物，你一定要小心一點" — generic "there are
+  dangerous creatures here") didn't match English's actual idiom ("be mindful of what you
+  stick your nose into — it may get bitten off"). Restored both the narrative order and the
+  correct warning.
+- Quest 2702 (`古代英雄`): DB's Objectives named the NPC `桑德·裂蹄` ("Sander Splithoof") — a
+  fabricated name. `creature_template`'s literal English name is "**Corporal Thund** Splithoof"
+  — neither the first name nor the rank matched; fixed to `裂蹄下士` (matching wowhead, which
+  had the rank right even though it dropped the given name).
+- Quest 2721 (`基利斯`): Objectives said `找到基利斯的下落` (dropped the rank), while the row's
+  own Details already correctly said `基利斯中尉` — same-row inconsistency, confirmed via
+  English "Lieutenant Kirith"; unified to include the rank in Objectives too.
+- Quest 2609 (`贊吉爾之觸`): DB hardcoded the closing line to `年輕的小姐` (young miss),
+  silently dropping the male branch of English's `young $g fella:lady;` gender token. Restored
+  to the project's established raw-token format (`$g先生:小姐`, matching the existing
+  precedent in quest 2205 — not wowhead's resolved `<先生/小姐>` bracket display style, which
+  is just wowhead's own rendering convention, not this project's storage format).
+
+**Title fixes verified against the real English source**:
+- Quest 2584: `野豬之魂`→`野豬之靈` — English title "**Spirit** of the Boar"; no locale table
+  or corpus precedent, deferred to wowhead per the standing rule for no-ground-truth cases.
+- Quest 2605: `口渴的地精`→`口渴的哥布林` — English title is literally "The Thirsty **Goblin**".
+
+**False positives correctly rejected**:
+- Quest 2621: DB's `分隊指揮官魯爾格` (Dispatch Commander) confirmed correct against English
+  "Speak to **Dispatch Commander** Ruag" — wowhead's `指揮官` drops "Dispatch". Name spelling
+  (`魯爾格` vs wowhead's `盧爾格`) left unresolved, no locale table either way.
+- Quest 2701: DB's `遺物` (relic) confirmed correct against English "a **relic** of old";
+  wowhead's `聖物` (holy/sacred item) overstates the religious connotation not present in the
+  source.
+- `禿鷲`/`禿鷹` (vulture, quests 2585/2586/2601-2604): left as `禿鷲` — the zoologically
+  correct term for "vulture" (鷲=vulture/condor family vs 鷹=hawk/eagle family), matching the
+  existing corpus majority (42:11); wowhead's `禿鷹` is the imprecise colloquial substitute.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1113,13 +1160,13 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 2541 (batch 14, target range roughly 2541–2740) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,084 quest IDs
-remain after batch 13 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+Not started. Resume from quest ID 2741 (batch 15, target range roughly 2741–2940) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,057 quest IDs
+remain after batch 14 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
 needs per-instance verification against the real English source before a sweep, not a blind
-regex replace. Batches 10-13 used a technique for no-locale-table disputes: `curl -sL
+regex replace. Batches 10-14 used a technique for no-locale-table disputes: `curl -sL
 "https://www.wowhead.com/wotlk/tw/npc=<id>"` (or `item=<id>`) and read the `<title>` tag —
 faster and more authoritative than the pre-fetched quest-page jsonl for single-entity checks;
 batch 13 showed this is worth doing even when the quest-page fetch *agrees with itself* across
@@ -1130,4 +1177,7 @@ fetch is not an independent source when it derives from the same broken client s
 fabricate content outright (batch 12's quest 2198) or fail to render entirely, returning raw
 English/markup (batch 13's quest 2358) — a match between DB and wowhead isn't automatic proof
 of correctness if a locale table or dedicated page contradicts them, and a wowhead/DB
-disagreement isn't automatic proof DB is wrong either.
+disagreement isn't automatic proof DB is wrong either. Batch 14 also confirmed this project's
+raw `$g male:female` gender-token storage format (see quest 2205/2609) is distinct from
+wowhead's own `<male/female>` bracket display convention — when restoring a dropped gender
+branch, match the project's existing raw-token precedent, not wowhead's rendering style.
