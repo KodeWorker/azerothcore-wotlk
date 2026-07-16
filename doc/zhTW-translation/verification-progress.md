@@ -71,8 +71,9 @@ Both phases run on the same small batch before moving to the next.
 | 1741–1940 (no skip-listed IDs in range) | 2026-07-16 | ~20 targeted fixes + 6 project-wide term sweeps (亡靈天災→天譴軍團 26×, 提瑞斯法→提里斯法 65×, 洛丹倫→羅德隆 33×, 阿爾薩斯→阿薩斯 13×, 碎木哨崗→碎木崗哨 39×, 扎拉贊恩→札拉贊恩 12×) | Batch 10. See below — DBC ground truth (`AreaTable_zhTW.tsv`/`Faction_zhTW.tsv`) again showed the corpus-majority spelling was wrong in every case (Tirisfal 65:41, Lordaeron 33:11), same pattern as batch 6's Kalimdor. Also the first batch to directly fetch item/NPC wowhead pages via `curl` mid-session (not the pre-fetched quest jsonl) to settle no-locale-table disputes — see below. |
 | 1941–2140 (excl. skip-listed 2018, 2020, 2058, 2059) | 2026-07-16 | ~15 targeted fixes, no project-wide sweeps | Batch 11. Lowest bug density yet (28/196 flagged). Two genuine truncation bugs found and restored (quest 2038's item list, quest 2118's severely truncated/corrupted Objectives). Confirmed two more cases of wowhead's own quest-page fetch being wrong where DB was already correct (`祈倫托` vs zhCN-leak `肯瑞托`, matching batch 3's established finding; `亡靈哨兵` vs generic `不死生物哨兵`). |
 | 2141–2340 (no skip-listed IDs in range) | 2026-07-16 | ~8 targeted fixes, no project-wide sweeps | Batch 12. Lowest bug density yet again (23/200 flagged). A cluster of jewelry/Uldaman-themed quests (2198-2340) had several title/rank disputes settled via a direct `curl` fetch of the NPC's own wowhead page (Renzik "The Shiv" → `『剃刃』雷吉克`, not DB's `“剃刀”`). Fixed a real mistranslation (English "restorative elixirs" rendered as "fine wine" in DB) alongside missing narrative detail. Confirmed DB's literal `"TdK"` engraving (quest 2198) was correct against a fabricated wowhead Chinese-name substitution. |
+| 2341–2540 (no skip-listed IDs in range) | 2026-07-16 | ~11 targeted fixes, no project-wide sweeps | Batch 13. One genuine content-swap bug found (quest 2499's Details didn't match its own English source at all) and two truncated Objectives restored (2438, 2518), one of which also carried a wrong location (quest 2518 said "river northeast of here" instead of English's "northern borders of Teldrassil"). Direct NPC-page `curl` fetches settled two more no-locale-table disputes (Bena **Winterhoof** → `貝娜·冬蹄`, not `本娜·冰蹄`; Taskmaster Fizzule confirmed `工頭`, not wowhead's own quest-page `監工`). |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 12, **1,749 verified**, **7,118 remaining** — roughly 36 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 13, **1,783 verified**, **7,084 remaining** — roughly 35 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -988,6 +989,62 @@ same jaw-character ambiguity already flagged as a known issue for quest 170 — 
 field already has the full itemized reagent list (a legitimate summary/detail split pattern
 used elsewhere in the corpus, not a content gap).
 
+### Batch 13 (2341–2540) fixes log
+
+Lowest bug density yet again (20/200 flagged), no project-wide sweeps. Two clusters dominated:
+an Uldaman/Southshore jewelry-repair chain continuing from batch 12, and a Wetlands rogue-trainer
+chain ("Deep Cover"/"The Shattered Salute") that turned out to hold up well under scrutiny.
+
+**Content-swap bug** (verified against `quest_template`'s real English source): quest 2499
+(`奧肯斯古爾`) — DB's Details field opened with "我搞明白了！我不得不衝來這裡找你！...腐化是
+經由樹精傳染的，但源頭卻只有一個" (a different narrative beat entirely — reads like a *later*
+step's dialogue), while the actual English QuestDescription matches wowhead's fetch almost
+word-for-word ("In a cave along the southern bank of the lake, a timberling named Oakenscowl is
+spreading corruption..."). Replaced the whole field with the verified text.
+
+**Truncated Objectives restored** (verified against English `LogDescription`):
+- Quest 2438 (`翡翠攝夢符`): `取得翡翠攝夢符。`→`將翡翠攝夢符交給多蘭納爾的塔隆凱·捷根。` —
+  matches the row's own already-correct EndText, which had the turn-in NPC all along.
+- Quest 2518 (`月神的淚水`): same truncation pattern, restored the turn-in clause. Also fixed a
+  genuine **location error** in the Details field: DB said Sathrah dwells "這裡東北邊的河流附近"
+  (near the river northeast of here), but English says "along the northern borders of
+  Teldrassil, near Wellspring Lake" — a different location entirely, not just a paraphrase gap.
+
+**Title fixes verified against the real English source**:
+- Quest 2341: dropped the fabricated `(地下城)` ["(Dungeon)"] suffix — no such tag exists in
+  the English title ("Necklace Recovery, Take 3") or on wowhead.
+- Quest 2342: `尋找寶物`→`尋回寶物` — English title "**Reclaimed** Treasures" is past-tense
+  recovery, not an active search.
+- Quest 2501: `荒蕪之地的材料 II`→`荒蕪之地的試劑 II` — same fix as batch 12's quest 2203
+  ("Badlands **Reagent** Run II"), a second instance of the identical title pattern in a
+  different (likely Horde-mirror) version of the same questline.
+
+**No-locale-table disputes settled via direct NPC-page `curl` fetch**:
+- Bena Winterhoof (creature 3009, quest 2440): confirmed `貝娜·冬蹄` — neither DB's `本娜·冰蹄`
+  nor wowhead's own quest-page fetch (which also said `冰蹄`) had the right surname; "Winterhoof"
+  literally means `冬`(winter)+`蹄`(hoof), not `冰`(ice). Also fixed her title
+  `鍊金師`→`鍊金術訓練師`, matching the creature's own English subname "Alchemy Trainer".
+- Taskmaster Fizzule (creature 7233, quests 2458/2460): confirmed `工頭` is correct — wowhead's
+  own dedicated NPC page agrees with DB, while wowhead's *quest-page* fetch showed the wrong
+  `監工`. Also confirms `碎手氏族`/`碎手軍禮` (DB, 45:7 corpus majority) as likely correct and
+  distinct from the unrelated Outland orc clan of the same English name ("Shattered Hand") —
+  the quest's own required NPC is a level-30 Wetlands creature, nothing to do with the
+  level-69+ Hellfire Peninsula orcs also named "Shattered Hand" in `creature_template`. Left
+  unchanged.
+- Quest 2418: name spelling `裡格弗茲`→`里格弗茲` (Riggerfuzz, personal name using `裡` instead
+  of the correct `里` per the batch-9-established rule) — found and fixed all 6 corpus-wide
+  occurrences including 2 in already-completed batch 4/5 range, since this is an unambiguous
+  single-entity fix, not a risky pattern sweep.
+
+**False positives correctly rejected** (wowhead was wrong, or its own fetch failed):
+- Quest 2358: wowhead's fetch returned raw unrendered English/markup (`[Horns of Nez\'ra]`,
+  `[Many years ago...]`) instead of Chinese text — a scrape failure, not a real diff. DB's
+  coherent Chinese text was left untouched.
+- Quest 2459: DB's `他` (he) for the Gnarlpine mystic leader and `墮落的瘤背秘法師` (keeping
+  the tribe qualifier) both confirmed correct against English ("their leader... He would
+  never realize...", "Gnarlpine mystics"); wowhead's `它` (it) and dropped `瘤背` qualifier
+  were the errors.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1056,18 +1113,21 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 2341 (batch 13, target range roughly 2341–2540) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,118 quest IDs
-remain after batch 12 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+Not started. Resume from quest ID 2541 (batch 14, target range roughly 2541–2740) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,084 quest IDs
+remain after batch 13 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
 needs per-instance verification against the real English source before a sweep, not a blind
-regex replace. Batches 10-12 used a technique for no-locale-table disputes: `curl -sL
+regex replace. Batches 10-13 used a technique for no-locale-table disputes: `curl -sL
 "https://www.wowhead.com/wotlk/tw/npc=<id>"` (or `item=<id>`) and read the `<title>` tag —
-faster and more authoritative than the pre-fetched quest-page jsonl for single-entity checks.
-Also remember: wowhead's own quest-page fetch is not an independent source when it derives
-from the same broken client string DB does (batch 11's quest 2098 `基爾卡可` typo appeared
-identically on both sides), and can also fabricate content outright (batch 12's quest 2198
-substituted a fake Chinese name for a literal Latin-letter engraving) — a match between DB and
-wowhead isn't automatic proof of correctness if a locale table or dedicated page contradicts
-them, and a wowhead/DB disagreement isn't automatic proof DB is wrong either.
+faster and more authoritative than the pre-fetched quest-page jsonl for single-entity checks;
+batch 13 showed this is worth doing even when the quest-page fetch *agrees with itself* across
+multiple quests (Bena Winterhoof's `冰蹄` was wrong on wowhead's quest pages consistently, but
+the NPC's own dedicated page had the correct `冬蹄`). Also remember: wowhead's own quest-page
+fetch is not an independent source when it derives from the same broken client string DB does
+(batch 11's quest 2098 `基爾卡可` typo appeared identically on both sides), and can also
+fabricate content outright (batch 12's quest 2198) or fail to render entirely, returning raw
+English/markup (batch 13's quest 2358) — a match between DB and wowhead isn't automatic proof
+of correctness if a locale table or dedicated page contradicts them, and a wowhead/DB
+disagreement isn't automatic proof DB is wrong either.
