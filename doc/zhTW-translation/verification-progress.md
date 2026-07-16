@@ -68,8 +68,9 @@ Both phases run on the same small batch before moving to the next.
 | 1141–1340 (excl. skip-listed 1151, 1154–1163, 1165, 1277–1280, 1289–1300) | 2026-07-15 | ~20 targeted fixes + 1 project-wide term sweep (暗夜精靈→夜精靈, 251×) | Batch 7. See below — first batch with a confirmed zhCN-leak race term (暗夜精靈), confirmed by the user directly (matches `ChrRaces_zhTW.tsv` id 4 = 夜精靈); also the first batch where several of my own proposed fixes (Ogre/Gnome race-term guesses, Vimes/Reethe rank direction) were wrong and corrected by the user — see below for what actually held up. |
 | 1341–1540 (excl. skip-listed 1390, 1397, 1441, 1443, 1460, 1461, 1533, 1537, 1538) | 2026-07-15 | ~20 targeted fixes + 3 project-wide term sweeps (幽靈崗哨→鬼旅崗哨 16×, 阿塔萊巨魔→阿塔萊食人妖 4×) | Batch 8. Highest bug density since batch 3 (108/191 flagged). Introduced `creature_template`'s literal in-game `name` field as a first-class ground-truth check (alongside `AreaTable_zhTW.tsv`) for NPC/place-name disputes — see below. |
 | 1541–1740 (excl. skip-listed 1659, 1660, 1662–1664) | 2026-07-16 | ~10 targeted fixes + 1 naming sweep (加科因/黑暗縛靈者→加金/『黑暗縛靈師』, 7 quests) | Batch 9. Lowest bug density yet (42/195 flagged, and 118 of those 195 candidate IDs turned out to be unused quest IDs with no `quest_template` row at all — not gaps, just gaps in the ID space). Several fixes had no `_locale` table to settle them (Gakin/Tormus/Umbral Ore/Bath'rah naming) — resolved by user judgment call rather than the usual ground-truth hierarchy; see below. |
+| 1741–1940 (no skip-listed IDs in range) | 2026-07-16 | ~20 targeted fixes + 6 project-wide term sweeps (亡靈天災→天譴軍團 26×, 提瑞斯法→提里斯法 65×, 洛丹倫→羅德隆 33×, 阿爾薩斯→阿薩斯 13×, 碎木哨崗→碎木崗哨 39×, 扎拉贊恩→札拉贊恩 12×) | Batch 10. See below — DBC ground truth (`AreaTable_zhTW.tsv`/`Faction_zhTW.tsv`) again showed the corpus-majority spelling was wrong in every case (Tirisfal 65:41, Lordaeron 33:11), same pattern as batch 6's Kalimdor. Also the first batch to directly fetch item/NPC wowhead pages via `curl` mid-session (not the pre-fetched quest jsonl) to settle no-locale-table disputes — see below. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 9, **1,601 verified**, **7,266 remaining** — roughly 36 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 10, **1,671 verified**, **7,196 remaining** — roughly 36 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -777,6 +778,114 @@ signal this batch learned to distrust, but confirmed correct as-is after all; no
 exists either way for "Wyvern" specifically — flagged as an open question if a Spell.dbc-style
 extract ever becomes available to settle it properly).
 
+### Batch 10 (1741–1940) fixes log
+
+54/200 quests flagged (70 real rows in range, no unused-ID gaps this time — unlike batch 9,
+this range is densely populated with real quests). Continued applying the OpenCC-origin lesson
+from batch 9: several corpus-majority spellings turned out wrong once checked against DBC
+ground truth, and several no-locale-table disputes were settled by fetching the entity's own
+dedicated wowhead page directly via `curl` (title-tag scrape) rather than trusting the
+quest-page fetch or corpus majority — a new, stronger technique introduced this batch.
+
+**Project-wide DBC-confirmed sweeps** (same class as batch 6's Kalimdor fix — corpus majority
+was the error in every case):
+- `亡靈天災`→`天譴軍團` (the Scourge), **26 occurrences**. Not itself DBC-sourced, but the same
+  entity already established via batch 3's wowhead-faction-page check (63 occurrences of
+  `天災軍團`→`天譴軍團` at the time); `亡靈天災` was a second, previously-unswept spelling for
+  the identical entity — verified every one of the ~20 affected quest rows individually against
+  English `quest_template` text ("the Scourge") before sweeping, unlike batch 9's `透過` mistake,
+  because this is a single fixed compound noun (no multi-sense ambiguity), not a general
+  grammar pattern. Also caught and fixed one instance in already-verified batch 5 (quest 1648)
+  that had been missed.
+- `提瑞斯法`→`提里斯法` (Tirisfal Glades), **65 occurrences** — corpus majority was wrong;
+  `AreaTable_zhTW.tsv` (area 85) confirms `提里斯法林地`.
+- `洛丹倫`→`羅德隆` (Lordaeron), **33 occurrences** — corpus majority was wrong; confirmed via
+  `BattlemasterList_zhTW.tsv`/`Map_zhTW.tsv`/`Achievement_Name_zhTW.tsv`/`AreaTable_zhTW.tsv`
+  all agreeing on `羅德隆廢墟` (Ruins of Lordaeron).
+- `阿爾薩斯`→`阿薩斯` (Arthas), **13 occurrences** — matches the existing corpus majority (35);
+  confirmed via `Faction_zhTW.tsv` (`CoT 阿薩斯`, Caverns of Time faction).
+- `碎木哨崗`→`碎木崗哨` (Splintertree Post, word-order fix), **39 occurrences project-wide** —
+  confirmed via `AreaTable_zhTW.tsv` (area 431); scoped to a full corpus sweep since the DBC
+  match is unambiguous, unlike batch 9's `裡`/`里` classifier situation.
+- `扎拉贊恩`→`札拉贊恩` (Zalazane), **12 occurrences** — no locale table for the creature, but
+  matches the existing corpus majority (11:1) and the `扎`→`札` direction already established in
+  batch 6 (`扎瑪`→`札瑪`).
+
+**No-locale-table disputes — settled by fetching the entity's own wowhead page directly**
+(technique introduced this batch: `curl` the `npc=<id>`/`item=<id>` page, read the `<title>`
+tag — faster and more authoritative than the pre-fetched quest-page jsonl for a single-entity
+check):
+- Tiza Battleforge (creature 6179) confirmed as `蒂薩·熱爐` via direct page fetch — fixed the
+  one stray `蒂薩-熱爐` (hyphen) instance in quest 1778 to match the corpus's already-correct
+  majority (8 occurrences).
+- Muiredon Battleforge (creature 6178, Tiza's husband) — name spelling `穆裡頓`→`穆里頓` fixed
+  (6×) per wowhead's quest-page rendering and the batch-9-established rule that personal names
+  use `里`, not the locative `裡`; kept the existing `·` separator (a same-family hyphen claim
+  did not hold up once Tiza's own page was checked directly — see note below).
+- Item 7133 "Brutal Hauberk" (quest 1848's reward): direct item-page fetch confirmed
+  `野蠻鍊衫`, overriding an initial (wrong) decision to keep DB's `野蠻鎖甲` on the reasoning
+  that `鎖甲` was corpus's established 14:0 "Mail" armor-class term — that reasoning didn't
+  hold once the item's own dedicated page was actually checked. **Lesson: an item's own
+  wowhead page outranks corpus-wide class-name convention, even a 14:0 one** — don't stop at
+  the heuristic when a direct, higher-tier check is available.
+- Item 5770 "Robes of Arcana" (quest 1796): direct item-page fetch confirmed `神秘的長袍`,
+  settling a three-way disagreement between DB (`奧法之袍`), wowhead's quest-page Objectives
+  field (`秘法之袍`), and wowhead's quest-page Details field (`神秘的長袍`) — the item's own
+  page matched the Details field, not the Objectives field, showing wowhead's own quest-page
+  fetch was internally inconsistent too.
+- Creature 6266 "Menara **Voidrender**" (quest 1796): DB's `梅納拉·沃倫德` doesn't match the
+  English name at all (fabricated transliteration); fixed to `梅納拉·虛無撕裂者` (a literal
+  match for "Voidrender", not a phonetic name — same class as batch 8's `迅捷的赫格拉姆`
+  finding).
+- Orm Stonehoof (creature 6410) → `歐姆·石蹄` (5×), Wynne Larson (creature 1309) →
+  `威恩·拉爾森` (7×), High Sorcerer Andromath (creature 5694) → `高階巫士安多瑪斯` (5×), Ulag
+  the Cleaver (creature 6390) → `『斬擊者』奧拉格` (3×) — all confirmed via the quest-page
+  wowhead fetch per the user's explicit direction this batch ("if no ground truth in db, use
+  wowhead.com/wotlk/tw as the source").
+- Mage-tastic Gizmonitor (item 7226, quest 1880): `法師文件儲存器`→`法師文檔記憶體` (4×), same
+  no-locale-table/defer-to-wowhead rule.
+
+**Content fixes verified against the real English source**:
+- Quest 1791 (Bath'rah the Windwatcher, `巨魔隱士`→`食人妖隱士`) and quest 1839 (Ula'elek,
+  `巨魔鐵匠`→`食人妖鐵匠`) — both confirmed "troll" in English, matching the established
+  Troll/Ogre convention. Quest 1791's title/body also updated to `『觀風者』` to match the
+  quest-1712 (batch 9) naming decision for the same NPC — note wowhead's own quest-page fetch
+  for 1791 still shows the old `捕風者` in the title (only the body was updated on wowhead's
+  side), the same kind of internal wowhead inconsistency seen with Gakin in batch 9.
+- Quest 1798 (`地精港口城市`→`哥布林港口城市`): English literally says "goblin port" (Ratchet)
+  — also fixed a `我們我們的` and `住在在` doubled-character typo in the same row.
+- Quest 1899 (`阿斯托的的賬本`→`安德隆的帳本`): English is literally "Andron's Ledger" — DB's
+  `阿斯托` was a fabricated name; `安德隆` is also the correct name for the same NPC in the
+  immediately-preceding quest 1898's own (already-correct) text, giving internal corroboration.
+  Also fixed the doubled-`的` typo and `賬本`→`帳本` character variant in the same row.
+- Quest 1920: Objectives dropped "your empty coffers" from "return to me with your filled
+  coffers, your empty coffers and the cantation" — restored using wowhead's phrasing. The
+  identical pre-fix sentence also appears in quest 1960 (outside this batch's range) — flagged,
+  not touched, for whichever future batch reaches it.
+- Quest 1844 (`雌奇美拉`→`奇美拉族母`): English literally says "chimaera matriarch"; `族母` is
+  an established corpus term (9 other occurrences) for "Matriarch"-titled creatures.
+- Quest 1878: DB's Objectives field is empty, matching English `quest_template`'s equally
+  empty `LogDescription`/`QuestDescription` — wowhead's fetch pulled unrelated repeat-quest
+  greeting text into the Objectives slot. Not a real gap; left as-is.
+
+**False positives correctly rejected**: quest 1782 (`弗倫的鎧甲` — English title is literally
+"Furen's Armor", DB's literal rendering is correct; wowhead's `弗倫的護甲` is a looser
+paraphrase).
+
+**`地獄獵犬`→`惡魔獵犬` naming, 11 occurrences total, full corpus sweep**: initially left
+untouched on the reasoning that wowhead itself disagrees within the 1758/1795/1798/1801
+questline (1795's own quest-page fetch uses `地獄獵犬`, matching DB, while the other three use
+`惡魔獵犬`) — the user overrode this directly: `惡魔` (demon) is simply the more semantically
+correct term than `地獄` (hell) for Burning Legion creatures, regardless of what wowhead's own
+inconsistent fetches show. Fixed all 4 in-questline quests (8×). Also swept the 3 remaining
+corpus occurrences (9345, 9379, 10910, all outside this batch's 1741–1940 range) at the user's
+explicit follow-up request — worth noting these 3 aren't even the same creature as the
+questline above: 9345 and 10910's English source says "**felhound**"/"deadly hounds" (a
+different Legion creature from "Felhunter"), only 9379 literally says "the **Felhunter**". The
+user's call was that `惡魔獵犬` fits both creatures better than `地獄獵犬` regardless, so all 3
+were swept too — a rare case of a stylistic/semantic preference override applied across
+creature-identity lines, not a ground-truth-hierarchy resolution.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -799,6 +908,9 @@ extract ever becomes available to settle it properly).
   classifier found 17 high-precision matches project-wide and fixed them, but many more
   ambiguous cases remain unclassified corpus-wide — see batch 9's log entry above for the
   classifier logic and its limits).
+- Quest 1960 (outside all batches reached so far) has the identical pre-fix "filled coffers"
+  sentence that batch 10 fixed in quest 1920 (missing the "empty coffers" clause) — flagged,
+  not touched, since it's out of range; verify against its own English source when reached.
 
 ## Tools
 
@@ -842,10 +954,12 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 1741 (batch 10, target range roughly 1741–1940) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,266 quest IDs
-remain after batch 9 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+Not started. Resume from quest ID 1941 (batch 11, target range roughly 1941–2140) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,196 quest IDs
+remain after batch 10 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
 needs per-instance verification against the real English source before a sweep, not a blind
-regex replace.
+regex replace. Batch 10 introduced a useful technique for no-locale-table disputes: `curl -sL
+"https://www.wowhead.com/wotlk/tw/npc=<id>"` (or `item=<id>`) and read the `<title>` tag —
+faster and more authoritative than the pre-fetched quest-page jsonl for single-entity checks.
