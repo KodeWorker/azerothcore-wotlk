@@ -21,7 +21,7 @@ import json, sys, os, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from scan_missing_zhtw import extract_inserts, unquote
 
-TARGET = "/home/kelvinwu/github/azerothcore-wotlk/data/sql/updates/pending_db_world/rev_1783688290124463491.sql"
+TARGET = "/home/ditcommon/github/azerothcore-wotlk/data/sql/updates/pending_db_world/rev_1783688290124463491.sql"
 SCRATCH = os.environ.get("ZHTW_SCRATCH", "/tmp/zhtw-scratch")
 JSONL = os.path.join(SCRATCH, "quest_text_extracted.jsonl")
 

@@ -15,7 +15,7 @@ org names with digits ("SI:7"), spelled-out number words -- verify each
 against RequiredNpcOrGoCount/RequiredItemCount before "fixing" anything.
 """
 import sys, re
-sys.path.insert(0, "/home/kelvinwu/github/azerothcore-wotlk/doc/zhTW-translation/scripts")
+sys.path.insert(0, "/home/ditcommon/github/azerothcore-wotlk/doc/zhTW-translation/scripts")
 from scan_missing_zhtw import extract_inserts, unquote
 
 if len(sys.argv) != 3:
@@ -23,15 +23,15 @@ if len(sys.argv) != 3:
     sys.exit(1)
 LO, HI = int(sys.argv[1]), int(sys.argv[2])
 
-EN_ROWS = extract_inserts("/home/kelvinwu/github/azerothcore-wotlk/data/sql/base/db_world/quest_template.sql", "quest_template")
+EN_ROWS = extract_inserts("/home/ditcommon/github/azerothcore-wotlk/data/sql/base/db_world/quest_template.sql", "quest_template")
 EN_BY_ID = {unquote(r[0]): r for r in EN_ROWS}
 
-TARGET = "/home/kelvinwu/github/azerothcore-wotlk/data/sql/updates/pending_db_world/rev_1783688290124463491.sql"
+TARGET = "/home/ditcommon/github/azerothcore-wotlk/data/sql/updates/pending_db_world/rev_1783688290124463491.sql"
 DB_ROWS = extract_inserts(TARGET, "quest_template_locale")
 DB_BY_ID = {unquote(r[0]): r for r in DB_ROWS}
 
 skip_ids = set()
-with open("/home/kelvinwu/github/azerothcore-wotlk/doc/zhTW-translation/skip-list.tsv") as f:
+with open("/home/ditcommon/github/azerothcore-wotlk/doc/zhTW-translation/skip-list.tsv") as f:
     for line in f:
         parts = line.rstrip("\n").split("\t")
         if parts and parts[0].isdigit():

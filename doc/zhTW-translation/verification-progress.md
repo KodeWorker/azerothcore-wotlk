@@ -67,8 +67,9 @@ Both phases run on the same small batch before moving to the next.
 | 941–1140 (excl. skip-listed 946, 987–989, 1128, 1129) | 2026-07-15 | ~25 targeted fixes + 3 project-wide term sweeps (卡利姆多→卡林多 138×, 大地之環→陶土議會 82×, 扎瑪→札瑪 等) | Batch 6. See below. Introduced `diff_quest_text.py --strict` (punctuation/$B-normalized diff) to cut the false-positive rate on large batches. |
 | 1141–1340 (excl. skip-listed 1151, 1154–1163, 1165, 1277–1280, 1289–1300) | 2026-07-15 | ~20 targeted fixes + 1 project-wide term sweep (暗夜精靈→夜精靈, 251×) | Batch 7. See below — first batch with a confirmed zhCN-leak race term (暗夜精靈), confirmed by the user directly (matches `ChrRaces_zhTW.tsv` id 4 = 夜精靈); also the first batch where several of my own proposed fixes (Ogre/Gnome race-term guesses, Vimes/Reethe rank direction) were wrong and corrected by the user — see below for what actually held up. |
 | 1341–1540 (excl. skip-listed 1390, 1397, 1441, 1443, 1460, 1461, 1533, 1537, 1538) | 2026-07-15 | ~20 targeted fixes + 3 project-wide term sweeps (幽靈崗哨→鬼旅崗哨 16×, 阿塔萊巨魔→阿塔萊食人妖 4×) | Batch 8. Highest bug density since batch 3 (108/191 flagged). Introduced `creature_template`'s literal in-game `name` field as a first-class ground-truth check (alongside `AreaTable_zhTW.tsv`) for NPC/place-name disputes — see below. |
+| 1541–1740 (excl. skip-listed 1659, 1660, 1662–1664) | 2026-07-16 | ~10 targeted fixes + 1 naming sweep (加科因/黑暗縛靈者→加金/『黑暗縛靈師』, 7 quests) | Batch 9. Lowest bug density yet (42/195 flagged, and 118 of those 195 candidate IDs turned out to be unused quest IDs with no `quest_template` row at all — not gaps, just gaps in the ID space). Several fixes had no `_locale` table to settle them (Gakin/Tormus/Umbral Ore/Bath'rah naming) — resolved by user judgment call rather than the usual ground-truth hierarchy; see below. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 8, **1,524 verified**, **7,343 remaining** — roughly 37 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 9, **1,601 verified**, **7,266 remaining** — roughly 36 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -655,6 +656,127 @@ right):
   `地獄捕獵者`/`惡魔捕獵者` (Felstalker, creature 3102): no locale table exists for either
   creature and no corpus precedent favors one rendering over the other — left alone.
 
+### Batch 9 (1541–1740) fixes log
+
+Lowest bug density yet (42/195 candidate IDs flagged) — but 118 of those 195 candidates turned
+out to be unused quest IDs with no `quest_template` row at all (confirmed by cross-checking
+against the base English table, not assumed), leaving only 77 real rows actually reviewed. This
+batch surfaced a much bigger structural finding than any single quest bug: **the DB's zhTW text
+was majorly OpenCC-converted from zhCN** (a simplified→traditional *character* converter, not a
+re-translation) — confirmed directly by the user. This means corpus-wide self-consistency is a
+much weaker signal than prior batches treated it as, since the whole corpus can share one
+zhCN-origin translation pass. See `[[feedback-zhtw-ground-truth-priority]]` (updated this batch)
+for the full implication. Also produced two mid-batch corrections after applying fixes too
+broadly on the first attempt — recorded below so future batches don't repeat the mistake.
+
+**Content/name fixes with clear ground truth**:
+- Quest 1599 (`開端`): `霜鬃巨魔新兵`→`霜鬃食人妖新兵` — creature_template confirms "Frostmane
+  **Troll**" (matches `[[feedback-zhtw-troll-ogre-terms]]`, no exception for this tribe).
+- Quest 1678 (`維吉雷克`): `這一地區最強大的巨魔`→`...食人妖` — English explicitly "toughest
+  **troll**".
+- Quest 1638 (`戰士的訓練`): Objectives dropped the location entirely (`和哈里·伯加德談一談。`)
+  while English LogDescription says "Speak with Harry Burlguard **in Stormwind**" — replaced
+  with wowhead's verbatim `到暴風城找哈里·伯加德談話。`.
+- Quests 1690/1691 (title + body): `總工程師比格維茲`→`首席工程師比格維茲` — quest 1690's own
+  EndText already said `首席`, corpus-wide 14:3 majority confirms it. Also 1690 Details:
+  `地精們伸張正義`→`哥布林們伸張正義` (English literally says "goblin").
+- Quests 1690/1691 **titles**: `廢土的公正`→`制裁廢土遊民`/`制裁更多廢土遊民` — initially
+  dismissed as "both valid translations, no clear error" per the pre-OpenCC-insight heuristic;
+  the user flagged this specifically as an example of zhCN-style literal noun-phrase titling
+  vs wowhead's more idiomatic verb-first zhTW style. Reversed after the OpenCC finding (see
+  above) — this is the case that triggered updating the ground-truth-priority memory.
+- Quest 1707 (`收集水袋`): `5隻廢土水袋`→`5個廢土水袋` (Objectives + Details) — water pouches
+  aren't animals, `隻` is the wrong measure word.
+- Quest 1719 (`格鬥考驗`): `複命`→`覆命` (corpus-wide 496:2 majority, DB typo) and
+  `圖維基·弗拉海德` left as-is (no ground truth either way — see below).
+- Quest 1701: Title `弗倫的鎧甲`→`淬火鎖甲` — sibling quests in the same armor-crafting chain
+  (1705 `燃燒之血`, 1708 `鐵珊瑚`, 1710 `曬焦的蛋殼`) all use item-name titles matching their
+  English LogTitle exactly; 1701 broke the pattern with a character-name title instead of
+  matching "Fire Hardened Mail".
+- Quest 1645: stray trailing `*` on the title (`聖潔之書*`→`聖潔之書`) — same cosmetic
+  corruption class as batches 2/7.
+
+**No-locale-table naming disputes — resolved by direct user decision** (no
+`creature_template_locale`/`item_template_locale` entry exists for any of these; each was DB
+self-consistent across multiple rows vs. wowhead also self-consistent, with no third source to
+break the tie):
+- **Gakin the Darkbinder** (creature 6122, quests 1685/1688/1689/1715/1717/1738/1739, 7 quests):
+  switched DB's `加科因`/`黑暗縛靈者` to wowhead's `加金`/『黑暗縛靈師』` — "Gakin" is
+  phonetically closer to `加金` (jiā-jīn) than `加科因`. Note wowhead itself was *not* fully
+  self-consistent (1685's own title/Details still said `加科因`, only Objectives said `加金`)
+  — the DB fix is now more internally consistent than wowhead's own page. Quest 1286's
+  unrelated `加科因` (a different NPC, "Balos **Jacken**", confirmed via English
+  `quest_template`) was correctly left untouched — coincidental transliteration overlap.
+- **Tormus Deepforge** (quests 1618/1680/1681) + **Umbral Ore** (quest 1681): switched DB's
+  `託姆斯`/`暗影礦石` to wowhead's `托姆斯`/`陰影礦石`.
+- **Bloodstone Choker** (quests 1688/1689) + **Elura's Medallion** (quest 1686): DB was
+  internally inconsistent on the Choker itself (`血石項圈` in 1688 vs `血石頸環` in 1689 for the
+  *same* item) while wowhead agreed with itself in both — adopted wowhead's `血石頸飾`. Also
+  `徽章`→`勳章` for Elura's Medallion (`勳章`/medal is semantically closer to "Medallion").
+- **Bath'rah the Windwatcher** (quest 1712 only): corpus was split exactly 8:8 across two
+  different quest chains (1712-area uses `捕風者`; a separate chain 8409-8414, outside this
+  batch's range, uses `觀風者`) — switched only 1712 to `觀風者` (more literal match for
+  "Windwatcher"). Quest 8411 itself has both spellings in the same row — flagged for whichever
+  future batch reaches it.
+- Left alone (no ground truth, no strong signal either direction): Luglunket's name
+  (`魯格倫克`, quest 1707), Twiggy Flathead's name (`圖維基`, quest 1719), Anvilmar's spelling
+  (`安威瑪爾` vs `安威瑪`, quest 1599).
+
+**Void terminology — user correction, scoped not swept**: quests 1598/1689/1739 had
+`虛空`(DB)/`虛無`(wowhead) diffs. Corpus-wide `虛空` outnumbers `虛無` 449:16, which initially
+looked like strong evidence `虛空` was correct — the user first confirmed this directly, then
+corrected it: "please use 虛無 for those 3 quests". Applied `虛無` to exactly these 3 quests
+only (not a corpus sweep) — corpus-majority counts are a heuristic, not a substitute for direct
+confirmation when the user has specific knowledge the count doesn't capture.
+
+**Mid-batch process correction — blind pattern-replace walked back**: attempted a corpus-wide
+regex sweep of `透過`→`通過` for the "pass a trial" grammatical sense (26+ raw pattern matches)
+without checking each instance's real English source first. The user stopped this immediately:
+"no simple match and replace, we replace then due to english 'pass'". The sweep had already
+touched 18 rows entirely outside batch 9's scope (spanning already-verified batch 7/8 quests
+and far-future IDs up to 10885) — all 18 reverted to their pre-sweep (git HEAD) text. Kept the
+fix only for the 3 rows within batch 9 (1698/1699/1719), each individually verified against
+`quest_template`'s real English text confirming literal "pass his/the trial/test" wording.
+**Lesson: a plausible grammatical pattern is not itself grounds for a corpus-wide sweep — verify
+each instance against the real English source, the same rule that already applied to counts and
+proper nouns, now confirmed to apply to grammar/idiom choices too.**
+
+**`里`→`裡` locative sweep — built a precision classifier instead of a blind sweep**: initial
+survey showed the raw pattern is dominated by false positives (personal-name transliterations
+ending in that syllable — 奈辛瓦里/Nesingwary 129×, 塞納里 504×, etc. — none of which should be
+touched). Built a classifier requiring the immediately-preceding text to end in a known
+container/place noun (`廢墟`, `協會`, `洞穴`, `沼澤`, etc.) and excluding anything adjacent to a
+name-boundary interpunct `·` or a known unit/idiom word (`英里`/`公里`/`海里`/`千里`/etc.) —
+found 17 high-precision matches (14 are `廢墟裡`/ruins alone) and fixed all 17. Correctly
+excluded `迷霧里斯克` (a proper place name, "Mistlereach" — not "in the mist"). This is not a
+full sweep of the corpus's `裡`/`里` ambiguity, only the subset matched by the container-noun
+whitelist; broader coverage would need either a longer noun list or per-instance manual review.
+
+**Stray fix in an already-verified batch**: while surveying for unconverted-simplified-Chinese
+markers (see below), found quest 755 (batch 5, already marked verified) still had `山后`
+(simplified "after/behind") where traditional requires `山後` — fixed in place.
+
+**Bigger finding, explicitly out of scope for this batch**: the same survey found **40 quest
+rows (IDs 3062–25092, all well past where any batch has reached) containing raw, unconverted
+simplified Chinese** — not vocabulary drift, but literally un-OpenCC'd text (e.g. quest 11435:
+`你好，$n！谢谢你赶走了无头骑士！`). This is a distinct, larger problem from the zhCN-vocabulary
+-leak issue this whole pass has been fixing, and will need its own dedicated pass. Full ID list:
+755 (fixed, see above), 3062, 4496, 4507, 8224, 8365, 9852, 10690, 10999, 11132, 11164, 11272,
+11435, 11452, 11453, 11992, 12024, 12119, 12122, 12123, 12124, 12851, 12918, 13004, 13096,
+13108, 13109, 13248, 13252, 13372, 13375, 13380, 13423, 13959, 13986, 13997, 14032, 14355,
+14409, 25055, 25092 (detection method: scan for common simplified-only characters with no
+traditional overlap — not yet formalized into `scripts/`).
+
+**False positives correctly rejected** (wowhead punctuation/character-variant quirks, or
+legitimate paraphrase — no fix needed): quests 1578/1683 (fullwidth punctuation, 汙/污, 溼/濕
+character variants — cosmetic, below the fix threshold), the `一談`→`話` paraphrase pattern
+across ~10 quests in the warrior-trainer chain (1639/1640/1661/1666/1679/1684/1698/1718 —
+stylistic variance, not a content error), quest 1710 (`雙足飛龍` — briefly reconsidered given
+the OpenCC finding above, since the corpus-majority evidence for it is exactly the weak kind of
+signal this batch learned to distrust, but confirmed correct as-is after all; no ground truth
+exists either way for "Wyvern" specifically — flagged as an open question if a Spell.dbc-style
+extract ever becomes available to settle it properly).
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -665,6 +787,18 @@ right):
   own creature-entry verification (may be a genuinely different trogg family, "Rockjaw" vs
   "Stonesplinter" — don't assume, check `creature_template` for the exact English name used
   in quest 170's `RequiredNpcOrGo`).
+- **40 quest rows contain raw, unconverted simplified Chinese** (found batch 9, not yet fixed
+  except quest 755): 3062, 4496, 4507, 8224, 8365, 9852, 10690, 10999, 11132, 11164, 11272,
+  11435, 11452, 11453, 11992, 12024, 12119, 12122, 12123, 12124, 12851, 12918, 13004, 13096,
+  13108, 13109, 13248, 13252, 13372, 13375, 13380, 13423, 13959, 13986, 13997, 14032, 14355,
+  14409, 25055, 25092 — a distinct, larger issue from the zhCN-vocabulary-leak problem this
+  pass otherwise targets (these rows were never OpenCC-converted at all, not just translated
+  with zhCN word choices). All well past where any batch has reached (1–1740 so far); needs
+  its own dedicated conversion pass whenever a future batch gets there.
+- The `裡`/`里` locative ambiguity is only partially resolved (batch 9's container-noun
+  classifier found 17 high-precision matches project-wide and fixed them, but many more
+  ambiguous cases remain unclassified corpus-wide — see batch 9's log entry above for the
+  classifier logic and its limits).
 
 ## Tools
 
@@ -708,6 +842,10 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 1541 (batch 9, target range roughly 1541–1740) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,343 quest IDs
-remain after batch 8 (see Total scope note above).
+Not started. Resume from quest ID 1741 (batch 10, target range roughly 1741–1940) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,266 quest IDs
+remain after batch 9 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+`[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
+earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
+needs per-instance verification against the real English source before a sweep, not a blind
+regex replace.
