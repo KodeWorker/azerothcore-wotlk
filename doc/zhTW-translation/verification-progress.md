@@ -78,7 +78,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 3141–3340 (189 IDs not in DB — the sparsest range yet, only 10 real quest rows) | 2026-07-16 | 7 targeted fixes across 3 quest rows, no project-wide sweeps | Batch 17. Discovered `diff_quest_text.py` takes no numeric range arguments at all — it diffs the *entire* cached jsonl every run, so results had to be filtered to this batch's ID range in Python before review (earlier batches' re-appearing diffs, e.g. quest 2947 showing an unrelated `基瑟爾` wowhead mis-scrape, are stale noise from that full-corpus rerun, not new findings — ignored). Of the 10 real rows, 8 were flagged; 3 held real content errors after checking English `quest_template` (Gahz'ridian quest 3161: `巨魔`→`食人妖`, trolls not ogres; quest 3182's title `證明信`→`證明文件`, "Proof of **Deed**" is a document not a letter, plus its Details opened with a vague paraphrase instead of the specific "axe head still lodged in it" claim; quest 3201's title was fabricated outright — `館長的證明！`→`終於！`, matching English "At Last!" — plus a bracketed stage-direction that named the wrong action entirely). The other 5 flagged quests were confirmed as punctuation/style-only diffs (case, `！`/`!`, minor synonym swaps) and left untouched. Also checked two corpus-wide patterns the diff surfaced (`透過`/`通過` split 128:66, `亡靈`/`不死族` split 231:11) against the specific flagged instance's context — both were legitimate existing usage in context, not the zhCN-leak error pattern from earlier batches, so left alone rather than blindly swept (per `[[feedback-zhtw-no-blind-sweep]]`). |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 17, **2,035 verified**, **6,832 remaining** — roughly 34 more ~200-ID batches at the current pace.
+| 3341–3540 (excl. 16 skip-listed IDs; 113 more IDs not in DB) | 2026-07-16 | 28 targeted fixes across 20 quest rows, no project-wide sweeps | Batch 18. 71 real rows in range; 54 flagged, moderate-to-high bug density. One severe content bug found (quest 3361: DB's entire Details narrative was fabricated/wrong — described a nonsensical earthquake-and-travel story instead of the real "troggs driven out of Gnomeregan, radiation, trolls stole my belongings" plot; rewritten from the English source). Several proper-noun fixes settled via `creature_template_locale` (Amnennar the Coldbringer → `『寒冰使者』`, not `寒冰之王`; Lord Arkkoroc needed the missing `領主` title added across 3 quests; Magatha **Grimtotem** → `恐怖圖騰`, not the fabricated `野性圖騰`; Dryad race term → `林精`, not `樹妖`; a Kalaran Windblade surname typo `溫佈雷`→`溫布雷`; Golem → `魔像`, not `傀儡`). Extended the Troll-is-always-`食人妖` rule to 4 more quests (3373, 3380, 3445, 3527) and a Gnome/Goblin race mix-up fix (Marvon Rivetseeker is explicitly a goblin in English, quests 3380/3445 both said gnome). A missing item descriptor restored (`bramble wand` → `刺藤魔杖`, not generic `魔杖`) and a dropped narrative detail restored (quest 3521's Grell alternate-ingredient-source, using the established `劣魔` term). Also confirmed 3 wowhead-fetch-error false positives going the *other* direction — DB was already correct and wowhead's rendering was wrong (quest 3376: `勇者風羽` matches English "Brave Windfeather" exactly, wowhead fabricated a first name and wrong rank; quest 3523: `誓言石` matches English "Oathstone", wowhead's `黑曜石` is wrong; quest 3525: `神像` matches English "Idol", wowhead's generic `塑像` loses the religious connotation). See below for the full per-quest log. |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 18, **2,106 verified**, **6,761 remaining** — roughly 33 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1314,6 +1316,80 @@ correct and `透過` is a zhCN looseness, `[[feedback-zhtw-ground-truth-priority
 untouched. `亡靈`'s 231:11 corpus dominance for generic "undead" (not the Forsaken faction) was
 also left as-is — no contradicting locale-table or DBC evidence found.
 
+### Batch 18 (3341–3540) fixes log
+
+71 real rows in range (113 IDs not in DB); 54 flagged by the strict diff. Moderate-to-high bug
+density, and this batch's `creature_template_locale` checks resolved an unusually high number
+of proper-noun disputes cleanly (7 separate NPCs/terms), several of them overturning DB's
+existing text rather than confirming it.
+
+**Severe content bug**: quest 3361 (`逃難者的困境`, "A Refugee's Quandary") — DB's entire
+Details field told a fabricated story (heading to Gnomeregan to meet Gnome brethren, an
+unexplained earthquake, Ogres stealing belongings) that doesn't match the real English source
+at all: "We drove the **troggs** out of Gnomeregan... our home is completely irradiated... we
+gnomes have been scattered... It was the **trolls** that got [my things]." Rewrote the entire
+Details field from the English source (using this session's settled `穴居人`/trogg and
+`食人妖`/troll terms). Also fixed the Objectives field, which was missing the delivery
+destination entirely ("Bring Felix's Box... to **Felix** in **Anvilmar**" — DB only said "find
+Felix's box..." with no delivery instruction).
+
+**NPC-name/title fixes** (via `creature_template_locale`):
+- Amnennar the Coldbringer (quest 3341): DB's `寒冰之王` ("King of Cold") doesn't match either
+  the English epithet or the locale table's `『寒冰使者』` ("Coldbringer," literal) — fixed.
+- Lord Arkkoroc (quests 3509/3510/3511): DB dropped the `領主`/"Lord" title throughout; the
+  locale table (creature 6134) confirms "Lord" is part of his name. Also fixed `惡魔之王`→
+  `惡魔領主` for "demon lord" in the same quest, matching the same `Lord`→`領主` correction.
+- Magatha **Grimtotem** (quest 3518): DB had a fabricated `瑪加薩·野性圖騰` ("Wildtotem") —
+  the locale table (creature 4046) confirms `瑪加薩·恐怖圖騰`, and "Magatha Grimtotem" is
+  also a load-bearing piece of static WoW lore (Grimtotem matriarch), not an ambiguous case.
+- Kalaran Windblade (quests 3442/3443): a `溫佈雷`→`溫布雷` typo (the locale table entry for
+  this creature ID has an unrelated first name, likely a mismatched/bad entry, but both DB's
+  own pre-existing text and wowhead's independent quest-page fetch agree on `卡拉然` for the
+  first name — trusted that agreement over the suspect locale-table entry, and only took the
+  surname spelling `溫布雷` from the locale table since wowhead's quest fetch agreed with it too).
+- Rynthariel's race (quest 3514): English confirms "that scheming **dryad** Rynthariel" — the
+  locale table shows this corpus's Dryad race term is consistently `林精` (checked 3 separate
+  Dryad-named creatures), not DB's `樹妖`. Fixed.
+- Golem terminology (quest 3442, "Golem Oil"/golems): the locale table consistently renders
+  named Golem creatures as `魔像`, not `傀儡` — fixed this quest's occurrences. (Corpus-wide,
+  `傀儡`/`魔像` is split 58:47 — left everything outside this batch's scope untouched per
+  `[[feedback-zhtw-no-blind-sweep]]`; this needs its own dedicated pass later.)
+
+**Race-term fixes** (Troll-is-always-`食人妖`, `[[feedback-zhtw-troll-ogre-terms]]`): quests
+3373 (Eranikus questline — English: "ensure that the **trolls** never again bring forth their
+abomination of a god"), 3527 (Zul'Farrak — English: "the **troll** city of Zul'Farrak" and "the
+long-dead **troll** Theka the Martyr"). Also a Gnome/Goblin mix-up: Marvon Rivetseeker is
+explicitly "a **goblin** named Marvon Rivetseeker" in English, but DB called him `地精` (Gnome)
+in both quests referencing him (3380, 3445) — fixed to `哥布林` in both, alongside the same
+quests' troll-ruins fix (`巨魔遺蹟`/`巨魔遺址`→`食人妖遺蹟`/`食人妖遺址`).
+
+**Missing/dropped content restored**:
+- Quest 3520 (`尖嘯者的靈魂`): English specifies a "**bramble** wand," not a generic wand — DB
+  said plain `魔杖` throughout; fixed to `刺藤魔杖`.
+- Quest 3521 (`埃沃隆的解藥`): DB's Details dropped an entire alternate-ingredient-source detail
+  present in English ("you may collect [Hyacinth mushrooms] from the **grell** south of here").
+  Restored it using this corpus's established Grell term (`劣魔`, confirmed via
+  `creature_template_locale` id 1988).
+
+**Transliteration**: "Suntara" (an altar name, quests 3367/3368/3372) has no locale-table
+entry, but `桑塔拉` is phonetically closer to "SUN-tara" than DB's `蘇塔拉` (which drops the
+"-n" sound entirely) — swept to `桑塔拉` across all 3 quests plus the related quest 3373.
+
+**Wowhead-fetch-error false positives (DB was already correct, no change)**:
+- Quest 3376: DB's `勇者風羽` ("Brave Windfeather") matches English "**Brave** Windfeather"
+  exactly; wowhead's fetch fabricated a first name and the wrong rank (`衛兵維薩羅·風羽`,
+  "Guard Vasarr Windfeather" — no such name in English).
+- Quest 3523: DB's `誓言石` matches English "the **Oathstone** he gave you back to him" —
+  wowhead's `黑曜石` ("Obsidian") is simply wrong. (Quest 3374, earlier in this same batch,
+  has the identical `誓言石`/`黑曜石` disagreement in an unrelated questline — left untouched
+  on the strength of this same confirmed pattern, though not independently re-verified.)
+- Quest 3525: DB's `神像` matches English "Extinguishing the **Idol**" — wowhead's generic
+  `塑像` ("statue") loses the religious/idol connotation that's actually in the English title.
+- Quest 3512 (Umbranse the Spiritspeaker): the locale table confirms DB's `阿姆布蘭希` is
+  correct; wowhead's `昂布蘭希` is a different, wrong spelling.
+- Quest 3520 (Yeh'kinya): the locale table confirms DB's `葉基亞` is correct; wowhead's
+  `葉金亞` is wrong.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1396,12 +1472,15 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 3341 (batch 18, target range roughly 3341–3540) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,832 quest IDs
-remain after batch 17 (see Total scope note above). Remember `diff_quest_text.py` has no range
+Not started. Resume from quest ID 3541 (batch 19, target range roughly 3541–3740) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,761 quest IDs
+remain after batch 18 (see Total scope note above). Remember `diff_quest_text.py` has no range
 arguments — it always diffs the whole cached jsonl, so filter its output to the current batch's
 ID range before reviewing (see batch 17's log for the exact filtering approach and why an
-unfiltered run can resurface stale/already-resolved findings from earlier batches). Keep the
+unfiltered run can resurface stale/already-resolved findings from earlier batches). A follow-up
+worth doing whenever there's spare time: batch 18 found the `傀儡`/`魔像` split (Golem
+terminology) is corpus-wide inconsistent (58:47) with the locale table favoring `魔像` — this
+wasn't swept beyond batch 18's own quest, so it's still an open project-wide cleanup item. Keep the
 OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
