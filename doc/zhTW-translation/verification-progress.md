@@ -73,7 +73,7 @@ Both phases run on the same small batch before moving to the next.
 | 2141–2340 (no skip-listed IDs in range) | 2026-07-16 | ~8 targeted fixes, no project-wide sweeps | Batch 12. Lowest bug density yet again (23/200 flagged). A cluster of jewelry/Uldaman-themed quests (2198-2340) had several title/rank disputes settled via a direct `curl` fetch of the NPC's own wowhead page (Renzik "The Shiv" → `『剃刃』雷吉克`, not DB's `“剃刀”`). Fixed a real mistranslation (English "restorative elixirs" rendered as "fine wine" in DB) alongside missing narrative detail. Confirmed DB's literal `"TdK"` engraving (quest 2198) was correct against a fabricated wowhead Chinese-name substitution. |
 | 2341–2540 (no skip-listed IDs in range) | 2026-07-16 | ~11 targeted fixes, no project-wide sweeps | Batch 13. One genuine content-swap bug found (quest 2499's Details didn't match its own English source at all) and two truncated Objectives restored (2438, 2518), one of which also carried a wrong location (quest 2518 said "river northeast of here" instead of English's "northern borders of Teldrassil"). Direct NPC-page `curl` fetches settled two more no-locale-table disputes (Bena **Winterhoof** → `貝娜·冬蹄`, not `本娜·冰蹄`; Taskmaster Fizzule confirmed `工頭`, not wowhead's own quest-page `監工`). |
 | 2541–2740 (no skip-listed IDs in range) | 2026-07-16 | ~7 targeted fixes, no project-wide sweeps | Batch 14. Lowest bug density yet (18/200 flagged). A wrong location (quest 2561: "door of a nearby room" vs English's "deepest areas of Ban'ethil Barrow Den"), a fabricated NPC name+missing rank (quest 2702, confirmed via `creature_template`'s literal English name "Corporal **Thund** Splithoof" — DB had invented "Sander"), a dropped gender-branch token (quest 2609, hardcoded to one gender instead of the `$g male:female` branch), and a restructured narrative that spoiled its own reveal (quest 2622). |
-| 2741–2940 (excl. skip-listed 2868) | 2026-07-16 | ~35 targeted fixes + 3 project-wide sweeps (質量→品質 8×, 大工匠梅卡托克→高等技工梅卡托克 10×, 惡魔獵手→惡魔獵人 22×) | Batch 15. Highest bug density since batch 3 (76/199 flagged, 104 real rows in range). A zhCN-leak term caught mid-batch (`質量` for "Quality" is mainland usage; zhTW uses `品質`, `質量` means "mass" in Taiwan) and confirmed via NPC-page fetch that corpus-majority `大工匠梅卡托克` (10 occurrences) was wrong the whole time — same pattern as batch 10's Kalimdor and batch 13's Bena Winterhoof. Also found genuinely corrupted/duplicated text in 3 quest rows (2771-2773) and an MT-artifact name bug (`羅克位元`, "Rockbiter" mistranslated as the computing term "bit"). Post-batch: Demon Hunter's official class-page name (`惡魔獵人`) overrides a 22:0 same-corpus majority — kept. Generic "trogg" went through three reversals same-day and settled project-wide on `穴居怪` (lore-based: no trogg is friendly in WotLK content) — see below. |
+| 2741–2940 (excl. skip-listed 2868) | 2026-07-16 | ~35 targeted fixes + 3 project-wide sweeps (質量→品質 8×, 大工匠梅卡托克→高等技工梅卡托克 10×, 惡魔獵手→惡魔獵人 22×) | Batch 15. Highest bug density since batch 3 (76/199 flagged, 104 real rows in range). A zhCN-leak term caught mid-batch (`質量` for "Quality" is mainland usage; zhTW uses `品質`, `質量` means "mass" in Taiwan) and confirmed via NPC-page fetch that corpus-majority `大工匠梅卡托克` (10 occurrences) was wrong the whole time — same pattern as batch 10's Kalimdor and batch 13's Bena Winterhoof. Also found genuinely corrupted/duplicated text in 3 quest rows (2771-2773) and an MT-artifact name bug (`羅克位元`, "Rockbiter" mistranslated as the computing term "bit"). Post-batch: Demon Hunter's official class-page name (`惡魔獵人`) overrides a 22:0 same-corpus majority — kept. Generic "trogg" went through three reversals same-day, settling project-wide on `穴居怪` — later reverted a 4th time in batch 16's follow-up, see below; current answer is `穴居人`. |
 | 2941–3140 (89 IDs not in DB, incl. all of 3003–3081 except a handful — a large real gap in the ID space, not a scan error) | 2026-07-16 | ~26 targeted fixes across 15 quest rows, no new project-wide sweeps | Batch 16. 111 real rows in range; high bug density among them (81 flagged by the strict diff before dedup against non-existent IDs). One genuine content-swap bug (quest 2949's Details wrongly duplicated quest 2947's Ironforge/"TdK" text instead of its own Orgrimmar/"NOG" content — both are "Return of the Ring" but for different factions). One confirmed wowhead-fetch error going the *other* direction (quest 3121: wowhead's own fetch returned an entirely different NPC/location that contradicts the English source; DB's `夏拉什·火刃`/`莫沙徹營地`/`拉瑞斯小亭` was correct all along — false positive, no change). Extended the already-settled Gordunni-Ogre exception (`戈杜尼食人魔`→`戈杜尼巨魔`, 7 quests) and the Troll-is-always-`食人妖` rule (Vilebranch/Witherbark/Sandfury/Nekrum's Zul'Farrak troll, covering quests 2989/2991/2993/2994/3042). A count fix (quest 3127: DB said kill 12 mountain giants, English/wowhead both say 7). Two more NPC names settled via `creature_template_locale` (Krueg **Skullsplitter** id 4544 → `劈顱` not `碎顱`; Oran **Snakewrithe** id 7825 → `蛇繞` not the phonetic `斯內克威瑟`) plus a title mistranslation each for quests 2969 (`精靈龍的自由`→`所有生物的自由`, English is "Freedom for *All Creatures*") and 2995 (`聯絡中心`→`溝通管道` for the title and closing line only — wowhead agrees with DB's `聯絡中心` for the *opening* sentence describing what the lodge *is*, so that occurrence was left alone; only the "destroy their lines of communication" occurrence changed). Also fixed an item-name pair (`徽記之戒`/`戒指`→`璽戒` for "signet ring", quest 2972) and a badge/medal pair (`徽章`→`勳章`, quest 2991, same pattern as batch 13). Resolved an internal DB inconsistency in the Krueg Skullsplitter quest chain (2973/2974: Objectives said Thousand Needles in one row while EndText said Feralas/Camp Mojache in both — English EndText confirms Feralas ["Wildwind Lake in Feralas"] for both quests, so both were harmonized to Camp Mojache/Feralas, matching each quest's own EndText; also fixed a `莫沙沏`→`莫沙徹` typo). See below for the full per-quest log. |
 
 **Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 16, **2,025 verified**, **6,842 remaining** — roughly 34 more ~200-ID batches at the current pace.
@@ -157,9 +157,10 @@ source):
   Excluded 4 occurrences of `俾格米侏儒` ("pygmies" — a legitimate generic-noun use, verified
   against `npc_text.sql`'s English "pygmies", unrelated to the Gnome race).
 - **`石裂`→`碎石怪`/`碎石穴居人`** (wrong term for the "Stonesplinter" trogg family; official
-  per `creature_template_locale`) — *`碎石穴居人` later revised to `碎石穴居怪`, see the trogg
-  note in batch 15's log*: 12 occurrences across 6 quests (170's own `石齶` variant
-  spelling not yet checked — flag for a future batch).
+  per `creature_template_locale`) — *`碎石穴居人` was revised to `碎石穴居怪` in batch 15, then
+  reverted back to `碎石穴居人` in batch 16's follow-up (4th reversal), see the trogg note in
+  batch 16's log*: 12 occurrences across 6 quests (170's own `石齶` variant spelling not yet
+  checked — flag for a future batch).
 - **Goblin/Gnome Engineering questline** (7 quest rows: 3629, 3630, 3632, 3633, 3634, 3637,
   4181): titles and body text had `侏儒`/`地精`/`哥布林` scrambled relative to which trainer
   NPC (Gnome vs Goblin) each quest actually teaches — rebuilt each row's Title/Details/
@@ -1163,23 +1164,26 @@ mix-up like several seen in earlier batches.
   as a class, and the class's official zhTW name outranks a same-corpus 22:0 majority — same
   lesson as batch 9/10/13/15's other "corpus majority was wrong" findings, this time from a
   source category (class pages) not previously used in this pass.
-- **Generic "trogg" — settled after three reversals, ended at `穴居怪` project-wide (all 54
-  occurrences, zero `穴居人` remaining anywhere in the file).** Full saga documented in
-  `[[feedback-zhtw-ground-truth-priority]]`: swept to `穴居怪` for consistency → reverted to
-  `穴居人` after wowhead NPC pages showed Blizzard's own localization is itself inconsistent
-  between bare-family and individually-named variants → **finally settled on `穴居怪` per the
-  user's lore-based call: there is no friendly trogg anywhere in WotLK, so "monster" (`怪`) is
-  thematically correct regardless of what any wowhead page renders.** Don't re-derive this from
-  wowhead again — `穴居怪` is final. (Quest 10999, one of the rows in this sweep, separately
-  still contains unrelated raw unconverted simplified Chinese — already tracked below.)
+- **Generic "trogg" — as of batch 15, ended at `穴居怪` project-wide (all 54 occurrences, zero
+  `穴居人` remaining anywhere in the file). This was reverted a 4th time in batch 16's
+  follow-up (back to `穴居人`) — see that batch's log for the current, current-as-of-this-
+  writing answer; don't treat this batch-15 entry as still current.** Saga at this point:
+  swept to `穴居怪` for consistency → reverted to `穴居人` after wowhead NPC pages showed
+  Blizzard's own localization is itself inconsistent between bare-family and
+  individually-named variants → settled (at the time) on `穴居怪` per the user's lore-based
+  call that no trogg in WotLK is friendly. Full up-to-date saga (all 4 reversals) is in
+  `[[feedback-zhtw-ground-truth-priority]]`. (Quest 10999, one of the rows in this sweep,
+  separately still contains unrelated raw unconverted simplified Chinese — already tracked
+  below.)
 - `遺物` (Mysterious Relic, item 9248, quests 2870/2871) confirmed correct again — same
   "relic not holy item" finding as batch 13's quest 2701, now a second independent
   confirmation that wowhead systematically over-translates this item type as `聖物`.
 - Quests 2741/2749/2878: DB's empty Objectives fields all matched equally-empty English
   `LogDescription`/`QuestDescription` — wowhead's fetch pulled unrelated text into these
   fields each time (same pattern as batches 10/11's quests 1878/2523).
-- Generic Gnomeregan "troggs" (quests 2904/2926/2927/2929) were already `穴居怪` and needed no
-  change once the final trogg decision (above) landed there.
+- Generic Gnomeregan "troggs" (quests 2904/2926/2927/2929) were already `穴居怪` at the time
+  and needed no change once batch 15's trogg decision landed there — swept to `穴居人` along
+  with everything else in batch 16's follow-up reversal (see below).
 - `『長者』加爾文` (Elder Galvan) — considered but **not** applied: creature_template's
   literal English name is "Galvan **the Ancient**," which wowhead's `長者` (Elder) doesn't
   precisely match either. Left DB's title-less `加爾文` as-is rather than adopting a
@@ -1247,15 +1251,32 @@ here too — it invented an unrelated "Thousand Needles vs Feralas" tangent not 
 English at all, so its Objectives value for the same quest was not trusted either). Also fixed
 a `莫沙沏`→`莫沙徹` typo (Camp Mojache) picked up along the way.
 
+**Post-batch 16 correction (from user) — generic "trogg" reverted a 4th time, back to
+`穴居人` (all 54 occurrences project-wide), overturning batch 15's "final" answer.** The user
+found fresh evidence that official zhTW translations are inconsistent here too, and asked for
+a genuine re-evaluation rather than a re-litigation. Checking the DB's own already-settled
+convention for comparable primitive/hostile humanoid races overturned batch 15's lore
+argument: Gnoll (`豺狼人`), Kobold (`狗頭人`), Quilboar (`野豬人`), Murloc (`魚人`), and Harpy
+(`鷹身人`) are all uniformly hostile in WotLK — exactly like troggs — yet all get `人`, not
+`怪`; hostility doesn't predict the split at all. The one race that does get `怪` — Furbolg
+(`熊怪`) — is beast-*derived* (transformed bears), not humanoid-in-origin. Troggs are
+Titan-forged failed proto-Dwarves — a botched *humanoid* race, same category as
+Gnoll/Kobold/Quilboar — so `穴居人` fits the established pattern better. Full saga (now 4
+reversals) documented in `[[feedback-zhtw-ground-truth-priority]]`. **`穴居人` is the current
+answer — but given this term has flipped four times, don't treat any future answer as
+permanently settled either; if fresh evidence surfaces, re-check the comparable-race pattern
+again rather than re-asserting either prior conclusion.**
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
   DELETE+INSERT pairs for the same ID) for quest IDs **1241, 1250, 1264** — needs
   dedup, unrelated to the batches above.
-- Quest 170 uses `石齶穴居怪`/`石齶` (Rockjaw) for what might actually be the "Stonesplinter"
+- Quest 170 uses `石齶穴居人`/`石齶` (Rockjaw) for what might actually be the "Stonesplinter"
   trogg family (`碎石怪`/established convention) — the `怪` vs `人` suffix question is now
-  settled project-wide (see the trogg note above, `穴居怪` throughout), but *which family name*
-  ("Rockjaw" vs "Stonesplinter") is correct for quest 170 specifically is still unverified —
+  settled project-wide (see the trogg note above, `穴居人` throughout as of batch 16), but
+  *which family name* ("Rockjaw" vs "Stonesplinter") is correct for quest 170 specifically is
+  still unverified —
   check `creature_template` for the exact English name used in quest 170's `RequiredNpcOrGo`
   before assuming either way.
 - **40 quest rows contain raw, unconverted simplified Chinese** (found batch 9, not yet fixed
