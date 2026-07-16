@@ -88,7 +88,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 4141–4340 (excl. 2 skip-listed IDs; 143 more IDs not in DB) | 2026-07-17 | 41 targeted fixes across 20 quest rows, no project-wide sweeps | Batch 22. 55 real rows in range; 43 flagged, high density. An Un'Goro Crater quest chain (Muigin and Larion) had both names wrong throughout 5 quests, confirmed via `creature_template_locale`, plus a real count error (20→15, matching `RequiredSourceItemCount`) and the recurring `安戈洛爾`→`安戈洛` typo. 3 more proper-noun fixes via ground truth: Zarrin (missing delivery target restored), the "A-Me 01"→`艾米 01` transliteration (3 quests), and Lady Katrana Prestor's title (`女伯爵`→`女士`). Fixed a creature-type/color mix-up in a dragon-kill quest (`火鱗龍人`→`黑色龍人`, plus disambiguating `龍人`/`龍裔` which DB had conflated). Caught 3 previously-confirmed fixes that had been missed in earlier batches within their own quest chains — Lord Incendius' title, Ginro Hearthkindle's name, and the Golem term — all now applied to their remaining occurrences (quests 4263, 4265, 4282). One item name fix (Badge→Medallion, scoped to just the Objectives field since English's own Details text uses the colloquial "badge" wording too, so that occurrence was left matching its English counterpart). Surfaced a genuinely unusual case to the user rather than resolving it unilaterally: quest 4184's English source explicitly names King Varian Wrynn, but both DB's pre-existing text and wowhead's independent scrape agree with each other on Bolvar Fordragon instead — user confirmed Bolvar is correct lore-wise and the actual quest-ending NPC, so left unchanged (see below). |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 22, **2,317 verified**, **6,550 remaining** — roughly 33 more ~200-ID batches at the current pace.
+| 4341–4540 (no skip-listed IDs; 136 more IDs not in DB) | 2026-07-17 | 16 targeted fixes across 12 quest rows, no project-wide sweeps | Batch 23. 64 real rows in range; 39 flagged, high density. A genuine fabricated-requirement bug (quest 4501: DB invented a second, non-existent kill requirement — English only asks for "10 frenzied pterrordax," DB added "and 15 more"), a garbled placeholder-token bug (quest 4489: literal characters `呂正` where the `$n` name token belongs), and a double-character typo in a title (`希茲爾的的飛行器`). A 5-item Libram series (quests 4463/4481/4482/4483/4484) had DB using the wrong suffix (`聖典` vs the item's own established `聖契`) on all 5, plus one item's core word was completely wrong (`恢復`/"Recovery" for "Resilience," should be `韌性`) and another had both a wrong word and a stray leftover asterisk character. A creature-name fix (Jadefire Rogue) via `creature_template_locale`, a fabricated-narrative-reason fix (quest 4503's flying-machine quest gave a different in-character excuse than English), a title matching an English chess pun the DB version missed entirely (quest 4507, "Pawn Captures Queen"), and a 4-quest title fix where DB's title didn't match "Calm Before the Storm" at all (quests 4508/4509/4510/4511). Confirmed one wowhead-internal-inconsistency false positive (quest 4451: wowhead's own Details field agreed with DB's `廁所`/"Outhouse," but wowhead's Objectives field said `庫房`/"storage" instead — English confirms "Outhouse," so DB was right and wowhead's Objectives field contradicted its own Details). |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 23, **2,381 verified**, **6,486 remaining** — roughly 32 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1611,6 +1613,56 @@ that's a sign the English source itself may reflect a later out-of-band content 
 assume `quest_template.sql` is automatically right just because it's usually the most reliable
 ground truth; check with the user when the disagreement pattern itself looks unusual.
 
+### Batch 23 (4341–4540) fixes log
+
+64 real rows in range (136 IDs not in DB); 39 flagged, high density.
+
+**Fabricated requirement**: quest 4501 (`當心翼手龍`) — DB's Details/Objectives said "殺掉10只
+翼手龍和15只狂怒的翼手龍" (kill 10 pterrordax *and* 15 frenzied pterrordax, two separate
+requirements). English LogDesc: "Decrease the population by slaying **10 frenzied
+pterrordax**" — only one requirement exists at all. DB invented an entire second kill count
+that has no basis in the English source. Rewrote both fields to match. Also fixed another
+instance of the recurring `安戈洛爾`→`安戈洛` typo in the same row.
+
+**Garbled placeholder token**: quest 4489 (`召喚地獄戰馬`) — DB's Details contained the literal
+characters `呂正` mid-sentence ("到光明大教堂去找他吧，呂正，你一定要認真學習這些知識"), which
+isn't a real word or name and doesn't correspond to anything in English. Almost certainly a
+corrupted/garbled `$n` (player-name) token — replaced with `$n`, matching wowhead's own
+rendering at the same spot and restoring a coherent sentence.
+
+**Libram series terminology** (5 items, quests 4463/4481/4482/4483/4484 — each just delivers
+one Libram): `item_template_locale` confirms all 5 use the suffix `聖契`, not DB's `聖典`
+— fixed across the board. Two items also had word-level errors:
+- Libram of **Tenacity** (quest 4482): DB's `堅韌` → the item's own established `堅毅`; also
+  removed a stray leftover `*` character at the end of the title.
+- Libram of **Resilience** (quest 4483): DB's `恢復` ("Recovery") doesn't match "Resilience" at
+  all — fixed to `韌性`, matching the item's own established name exactly.
+
+**Other confirmed fixes**:
+- Quest 4421 (`碧火薩特`): `creature_template_locale` confirms Jadefire **Rogue** → `碧火盜賊`,
+  not DB's `碧火潛行者` (which doesn't match "Rogue" — this project's established Rogue-class
+  term is consistently `盜賊`).
+- Quest 4503 (`希茲爾的的飛行器`): a double-character typo in the title (`的的`) fixed to a
+  single `的`. Also DB's Details gave a fabricated in-character reason for building a flying
+  machine ("I'd get lost if I left") that doesn't match English at all — the real reason is "I'd
+  take a gryphon or wind rider back to Gadgetzan, but those beasts scare me to death." Rewrote
+  to match.
+- Quest 4507 (`捕捉皇后`→`小兵捉蠍后`): English title is "**Pawn Captures Queen**," a chess
+  notation pun — DB's flat `捕捉皇后` ("Capture the Queen") drops the pun entirely. Adopted
+  wowhead's localized version, which cleverly preserves the wordplay (`蠍后`/scorpion-queen
+  sounds like the chess piece `后`/queen).
+- Quests 4508/4509/4510/4511 (`臨危不懼`→`暴風雨前的寧靜`): English title is literally "**Calm
+  Before the Storm**" — DB's `臨危不懼` ("Fearless in the Face of Danger") is an entirely
+  different phrase with no relation to the English title. Fixed across all 4 quests sharing
+  this title.
+
+**False positive confirmed (DB was already correct, no change)**:
+- Quest 4451 (`自由之鑰`): English confirms "the **Grimesilt Outhouse Key**" — DB's `格里塞特
+  廁所鑰匙` ("Outhouse Key") is correct, matching even wowhead's own Details field (which
+  independently says "黑鐵**廁所**"). Wowhead's *Objectives* field instead said `庫房鑰匙`
+  ("storage key"), contradicting its own Details field on the same page — a wowhead
+  internal-inconsistency error, not a real DB mistake. Left untouched.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1693,9 +1745,9 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 4341 (batch 23, target range roughly 4341–4540) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,550 quest IDs
-remain after batch 22 (see Total scope note above). A reminder from batch 22: a proper-noun fix
+Not started. Resume from quest ID 4541 (batch 24, target range roughly 4541–4740) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,486 quest IDs
+remain after batch 23 (see Total scope note above). A reminder from batch 22: a proper-noun fix
 confirmed via `creature_template_locale` in one batch can still resurface, unfixed, several
 batches later — batch 22 caught 3 such cases (Lord Incendius from batch 20's quest 3907, Ginro
 Hearthkindle from batch 21's quests, the Golem term from batches 18/20/21) that reappeared in
