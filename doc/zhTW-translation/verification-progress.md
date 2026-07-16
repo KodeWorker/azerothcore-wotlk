@@ -156,7 +156,8 @@ source):
   Excluded 4 occurrences of `俾格米侏儒` ("pygmies" — a legitimate generic-noun use, verified
   against `npc_text.sql`'s English "pygmies", unrelated to the Gnome race).
 - **`石裂`→`碎石怪`/`碎石穴居人`** (wrong term for the "Stonesplinter" trogg family; official
-  per `creature_template_locale`): 12 occurrences across 6 quests (170's own `石齶` variant
+  per `creature_template_locale`) — *`碎石穴居人` later revised to `碎石穴居怪`, see the trogg
+  note in batch 15's log*: 12 occurrences across 6 quests (170's own `石齶` variant
   spelling not yet checked — flag for a future batch).
 - **Goblin/Gnome Engineering questline** (7 quest rows: 3629, 3630, 3632, 3633, 3634, 3637,
   4181): titles and body text had `侏儒`/`地精`/`哥布林` scrambled relative to which trainer
@@ -1161,33 +1162,23 @@ mix-up like several seen in earlier batches.
   as a class, and the class's official zhTW name outranks a same-corpus 22:0 majority — same
   lesson as batch 9/10/13/15's other "corpus majority was wrong" findings, this time from a
   source category (class pages) not previously used in this pass.
-- Generic "trogg" consistency — attempted, then reverted: corpus was split `穴居怪`(34)/
-  `穴居人`(20) for the same generic concept. First swept the 17 generic `穴居人` occurrences to
-  `穴居怪` (preserving `碎石穴居人`/Stonesplinter and `怒焰穴居人`/Ragefire as established
-  compounds), then tried extending those two compounds to `...穴居怪` too after finding
-  wowhead's `npc=1163` "Stonesplinter Skullthumper" page renders as `碎石怪擊顱者`. But
-  checking the *bare* family form directly (`npc=707` "Rockjaw Trogg") showed `石齶穴居人` —
-  Blizzard's own zhTW localization (as wowhead renders it) is itself inconsistent: bare family
-  forms get `穴居人`, individually-modified/named variants (`npc=724` "Burly Rockjaw Trogg" →
-  `壯實的石齶怪`) drop "穴居" for just `怪`. Rather than chase this, the user chose simplicity:
-  **`穴居人` for every "trogg" reference, no exceptions** — the entire sweep (17 generic + the
-  2 Stonesplinter + 1 Ragefire follow-up) was reverted back to the corpus's original `穴居怪`
-  (34):`穴居人`(20) split, which itself was left untouched (out of scope) rather than swept
-  either direction. Only new trogg fixes going forward use `穴居人`. Full write-up in
-  `[[feedback-zhtw-ground-truth-priority]]`. (Quest 10999, one of the reverted rows, still
-  contains unrelated raw unconverted simplified Chinese — already tracked below.)
+- **Generic "trogg" — settled after three reversals, ended at `穴居怪` project-wide (all 54
+  occurrences, zero `穴居人` remaining anywhere in the file).** Full saga documented in
+  `[[feedback-zhtw-ground-truth-priority]]`: swept to `穴居怪` for consistency → reverted to
+  `穴居人` after wowhead NPC pages showed Blizzard's own localization is itself inconsistent
+  between bare-family and individually-named variants → **finally settled on `穴居怪` per the
+  user's lore-based call: there is no friendly trogg anywhere in WotLK, so "monster" (`怪`) is
+  thematically correct regardless of what any wowhead page renders.** Don't re-derive this from
+  wowhead again — `穴居怪` is final. (Quest 10999, one of the rows in this sweep, separately
+  still contains unrelated raw unconverted simplified Chinese — already tracked below.)
 - `遺物` (Mysterious Relic, item 9248, quests 2870/2871) confirmed correct again — same
   "relic not holy item" finding as batch 13's quest 2701, now a second independent
   confirmation that wowhead systematically over-translates this item type as `聖物`.
 - Quests 2741/2749/2878: DB's empty Objectives fields all matched equally-empty English
   `LogDescription`/`QuestDescription` — wowhead's fetch pulled unrelated text into these
   fields each time (same pattern as batches 10/11's quests 1878/2523).
-- Generic Gnomeregan "troggs" (quests 2904/2926/2927/2929, currently `穴居怪`) left unchanged
-  in-batch — at the time this looked like "no basis to prefer wowhead's substitution," but the
-  settled rule above (`穴居人` for all "trogg") means these 4 are actually on the wrong side of
-  that rule too. Not fixed now since they're part of the same pre-existing 34-count `穴居怪`
-  bucket deliberately left out of scope (see the trogg write-up above) — flag for whenever a
-  future pass decides to clean up that remaining pre-existing split project-wide.
+- Generic Gnomeregan "troggs" (quests 2904/2926/2927/2929) were already `穴居怪` and needed no
+  change once the final trogg decision (above) landed there.
 - `『長者』加爾文` (Elder Galvan) — considered but **not** applied: creature_template's
   literal English name is "Galvan **the Ancient**," which wowhead's `長者` (Elder) doesn't
   precisely match either. Left DB's title-less `加爾文` as-is rather than adopting a
@@ -1198,18 +1189,12 @@ mix-up like several seen in earlier batches.
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
   DELETE+INSERT pairs for the same ID) for quest IDs **1241, 1250, 1264** — needs
   dedup, unrelated to the batches above.
-- Quest 170 uses `石齶穴居怪`/`石齶` — per the settled trogg rule (batch 15, "trogg" always
-  `穴居人`, see `[[feedback-zhtw-ground-truth-priority]]`), this likely needs to become
-  `石齶穴居人`, but still needs its own creature-entry verification first (may be a genuinely
-  different trogg family, "Rockjaw" vs "Stonesplinter" — don't assume, check
-  `creature_template` for the exact English name used in quest 170's `RequiredNpcOrGo`).
-- **The pre-existing `穴居怪`(34)/`穴居人`(20) split for generic "trogg" was deliberately left
-  unswept** (batch 15) — the settled rule is `穴居人` for all "trogg" going forward, but the
-  34 pre-existing `穴居怪` occurrences (including quests 2904/2926/2927/2929 from batch 15
-  itself, and quest 432's `該死的穴居怪!` fix from batch 3) were left as-is rather than swept.
-  A future pass could clean these up to `穴居人` for full consistency, but it's cosmetic/lower
-  priority since both terms are comprehensible — don't confuse this with quest 170's
-  `石齶穴居怪` above, which is the same underlying issue but already individually flagged.
+- Quest 170 uses `石齶穴居怪`/`石齶` (Rockjaw) for what might actually be the "Stonesplinter"
+  trogg family (`碎石怪`/established convention) — the `怪` vs `人` suffix question is now
+  settled project-wide (see the trogg note above, `穴居怪` throughout), but *which family name*
+  ("Rockjaw" vs "Stonesplinter") is correct for quest 170 specifically is still unverified —
+  check `creature_template` for the exact English name used in quest 170's `RequiredNpcOrGo`
+  before assuming either way.
 - **40 quest rows contain raw, unconverted simplified Chinese** (found batch 9, not yet fixed
   except quest 755): 3062, 4496, 4507, 8224, 8365, 9852, 10690, 10999, 11132, 11164, 11272,
   11435, 11452, 11453, 11992, 12024, 12119, 12122, 12123, 12124, 12851, 12918, 13004, 13096,
