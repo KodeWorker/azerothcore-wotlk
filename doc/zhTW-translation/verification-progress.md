@@ -73,9 +73,10 @@ Both phases run on the same small batch before moving to the next.
 | 2141–2340 (no skip-listed IDs in range) | 2026-07-16 | ~8 targeted fixes, no project-wide sweeps | Batch 12. Lowest bug density yet again (23/200 flagged). A cluster of jewelry/Uldaman-themed quests (2198-2340) had several title/rank disputes settled via a direct `curl` fetch of the NPC's own wowhead page (Renzik "The Shiv" → `『剃刃』雷吉克`, not DB's `“剃刀”`). Fixed a real mistranslation (English "restorative elixirs" rendered as "fine wine" in DB) alongside missing narrative detail. Confirmed DB's literal `"TdK"` engraving (quest 2198) was correct against a fabricated wowhead Chinese-name substitution. |
 | 2341–2540 (no skip-listed IDs in range) | 2026-07-16 | ~11 targeted fixes, no project-wide sweeps | Batch 13. One genuine content-swap bug found (quest 2499's Details didn't match its own English source at all) and two truncated Objectives restored (2438, 2518), one of which also carried a wrong location (quest 2518 said "river northeast of here" instead of English's "northern borders of Teldrassil"). Direct NPC-page `curl` fetches settled two more no-locale-table disputes (Bena **Winterhoof** → `貝娜·冬蹄`, not `本娜·冰蹄`; Taskmaster Fizzule confirmed `工頭`, not wowhead's own quest-page `監工`). |
 | 2541–2740 (no skip-listed IDs in range) | 2026-07-16 | ~7 targeted fixes, no project-wide sweeps | Batch 14. Lowest bug density yet (18/200 flagged). A wrong location (quest 2561: "door of a nearby room" vs English's "deepest areas of Ban'ethil Barrow Den"), a fabricated NPC name+missing rank (quest 2702, confirmed via `creature_template`'s literal English name "Corporal **Thund** Splithoof" — DB had invented "Sander"), a dropped gender-branch token (quest 2609, hardcoded to one gender instead of the `$g male:female` branch), and a restructured narrative that spoiled its own reveal (quest 2622). |
-| 2741–2940 (excl. skip-listed 2868) | 2026-07-16 | ~35 targeted fixes + 3 project-wide sweeps (質量→品質 8×, 大工匠梅卡托克→高等技工梅卡托克 10×, 惡魔獵手→惡魔獵人 22×) | Batch 15. Highest bug density since batch 3 (76/199 flagged, 104 real rows in range). A zhCN-leak term caught mid-batch (`質量` for "Quality" is mainland usage; zhTW uses `品質`, `質量` means "mass" in Taiwan) and confirmed via NPC-page fetch that corpus-majority `大工匠梅卡托克` (10 occurrences) was wrong the whole time — same pattern as batch 10's Kalimdor and batch 13's Bena Winterhoof. Also found genuinely corrupted/duplicated text in 3 quest rows (2771-2773) and an MT-artifact name bug (`羅克位元`, "Rockbiter" mistranslated as the computing term "bit"). Post-batch: Demon Hunter's official class-page name (`惡魔獵人`) overrides a 22:0 same-corpus majority — kept. A generic "trogg" consistency sweep to `穴居怪` was attempted, found to be based on a flawed premise once individual wowhead NPC pages were checked (Blizzard's own localization is itself inconsistent here), and fully reverted — see below; the settled rule going forward is `穴居人`. |
+| 2741–2940 (excl. skip-listed 2868) | 2026-07-16 | ~35 targeted fixes + 3 project-wide sweeps (質量→品質 8×, 大工匠梅卡托克→高等技工梅卡托克 10×, 惡魔獵手→惡魔獵人 22×) | Batch 15. Highest bug density since batch 3 (76/199 flagged, 104 real rows in range). A zhCN-leak term caught mid-batch (`質量` for "Quality" is mainland usage; zhTW uses `品質`, `質量` means "mass" in Taiwan) and confirmed via NPC-page fetch that corpus-majority `大工匠梅卡托克` (10 occurrences) was wrong the whole time — same pattern as batch 10's Kalimdor and batch 13's Bena Winterhoof. Also found genuinely corrupted/duplicated text in 3 quest rows (2771-2773) and an MT-artifact name bug (`羅克位元`, "Rockbiter" mistranslated as the computing term "bit"). Post-batch: Demon Hunter's official class-page name (`惡魔獵人`) overrides a 22:0 same-corpus majority — kept. Generic "trogg" went through three reversals same-day and settled project-wide on `穴居怪` (lore-based: no trogg is friendly in WotLK content) — see below. |
+| 2941–3140 (89 IDs not in DB, incl. all of 3003–3081 except a handful — a large real gap in the ID space, not a scan error) | 2026-07-16 | ~26 targeted fixes across 15 quest rows, no new project-wide sweeps | Batch 16. 111 real rows in range; high bug density among them (81 flagged by the strict diff before dedup against non-existent IDs). One genuine content-swap bug (quest 2949's Details wrongly duplicated quest 2947's Ironforge/"TdK" text instead of its own Orgrimmar/"NOG" content — both are "Return of the Ring" but for different factions). One confirmed wowhead-fetch error going the *other* direction (quest 3121: wowhead's own fetch returned an entirely different NPC/location that contradicts the English source; DB's `夏拉什·火刃`/`莫沙徹營地`/`拉瑞斯小亭` was correct all along — false positive, no change). Extended the already-settled Gordunni-Ogre exception (`戈杜尼食人魔`→`戈杜尼巨魔`, 7 quests) and the Troll-is-always-`食人妖` rule (Vilebranch/Witherbark/Sandfury/Nekrum's Zul'Farrak troll, covering quests 2989/2991/2993/2994/3042). A count fix (quest 3127: DB said kill 12 mountain giants, English/wowhead both say 7). Two more NPC names settled via `creature_template_locale` (Krueg **Skullsplitter** id 4544 → `劈顱` not `碎顱`; Oran **Snakewrithe** id 7825 → `蛇繞` not the phonetic `斯內克威瑟`) plus a title mistranslation each for quests 2969 (`精靈龍的自由`→`所有生物的自由`, English is "Freedom for *All Creatures*") and 2995 (`聯絡中心`→`溝通管道` for the title and closing line only — wowhead agrees with DB's `聯絡中心` for the *opening* sentence describing what the lodge *is*, so that occurrence was left alone; only the "destroy their lines of communication" occurrence changed). Also fixed an item-name pair (`徽記之戒`/`戒指`→`璽戒` for "signet ring", quest 2972) and a badge/medal pair (`徽章`→`勳章`, quest 2991, same pattern as batch 13). Resolved an internal DB inconsistency in the Krueg Skullsplitter quest chain (2973/2974: Objectives said Thousand Needles in one row while EndText said Feralas/Camp Mojache in both — English EndText confirms Feralas ["Wildwind Lake in Feralas"] for both quests, so both were harmonized to Camp Mojache/Feralas, matching each quest's own EndText; also fixed a `莫沙沏`→`莫沙徹` typo). See below for the full per-quest log. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 15, **1,914 verified**, **6,953 remaining** — roughly 34 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 16, **2,025 verified**, **6,842 remaining** — roughly 34 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1184,6 +1185,68 @@ mix-up like several seen in earlier batches.
   precisely match either. Left DB's title-less `加爾文` as-is rather than adopting a
   half-correct alternative; flagged as unresolved rather than silently "fixed."
 
+### Batch 16 (2941–3140) fixes log
+
+High bug density (81 flagged by the strict diff, 111 real rows in range — the range also has
+an unusually large gap of 89 non-existent quest IDs, mostly a contiguous block 3003–3081).
+
+**Content-swap bug**: quest 2949 (`戒指歸來`, "Return of the Ring" — paired with quest 2947,
+same title/mechanic but different faction) had its entire Details field wrongly duplicated
+from quest 2947: DB's 2949 said the ring bore an **Ironforge** seal and "**TdK**" engraving —
+identical, word-for-word, to 2947's text. English confirms 2949 should be the **Orgrimmar**
+variant with an "**NOG**..." engraving; wowhead's own fetch for 2949 already had the correct
+distinct text, used verbatim to replace DB's copy-pasted Details field.
+
+**Wowhead-fetch error (false positive, no DB change)**: quest 3121 ("A Strange Request") —
+wowhead's fetched Details named a completely different NPC/location (`尼爾魯·火刃`/`奧格瑪`)
+than DB's (`夏拉什·火刃`/`莫沙徹營地`/`拉瑞斯小亭`). Checked English `quest_template` source
+directly: it explicitly says "**Xerash Fireblade**, located at the **Lariss Pavilion, north of
+Camp Mojache**" — matches DB exactly, contradicts wowhead. Concluded wowhead scraped/matched
+the wrong quest for this ID; DB was already correct. Same false-positive class as batches
+11/13/15's other wowhead-fetch errors.
+
+**Race-term fixes** (`[[feedback-zhtw-troll-ogre-terms]]`):
+- Gordunni Ogre exception (`巨魔`, not the default `食人魔`) extended to quests
+  2975/2980/2981 (title `菲拉斯的食人魔`→`菲拉斯的巨魔` in 2975/2980, plus all body-text
+  Gordunni references) — same confirmed clan exception from batch 4.
+- Troll-is-always-`食人妖` rule applied to: Vilebranch trolls (quests 2989/2993/2994, incl.
+  the generic "troll city" descriptor for Zul'Aman), Sandfury trolls (quest 3042, title
+  `巨魔調和劑`→`食人妖調和劑`), and Nekrum Gutchewer's own tribe in Zul'Farrak (quest 2991).
+
+**Count fix**: quest 3127 (`山嶺巨人靈魂精華`) — DB said kill "十二個" (12) mountain giants;
+English `quest_template` and wowhead both confirm 7 (`RequiredNpcOrGoCount` field + repeated
+in both Details and Objectives prose). Fixed to `7個`.
+
+**NPC-name fixes** (via `creature_template_locale`):
+- Krueg **Skullsplitter** (id 4544, quests 2973/2974): DB had `碎顱` ("shatter-skull");
+  canonical table confirms `劈顱` ("split-skull," matching wowhead too).
+- Oran **Snakewrithe** (id 7825, quest 2995): DB had transliterated `斯內克威瑟`; canonical
+  table confirms the semantic translation `蛇繞` ("snake-coil"), matching wowhead.
+
+**Title mistranslations**:
+- Quest 2969: `精靈龍的自由` ("Freedom of the Sprite Dragons") → `所有生物的自由` — English
+  title is literally "Freedom for **All Creatures**".
+- Quest 2995: `聯絡中心`→`溝通管道` for the title and the closing "destroy their lines of
+  communication" sentence only. Wowhead's own Details field *agrees* with DB's `聯絡中心` for
+  the opening sentence ("Quel'Danil Lodge is a center of communication") — left that one
+  occurrence alone rather than blanket-replacing every instance of the term in the row.
+
+**Item-name fixes**:
+- Quest 2972: "signet ring" rendered generically as `徽記之戒`/`戒指` — fixed to `璽戒`
+  (matches wowhead, and `璽` specifically means an official/personal seal, matching "signet").
+- Quest 2991: `徽章` (badge) → `勳章` (medallion) — same Badge/Medal distinction established
+  in batch 13.
+
+**Internal-consistency fix**: quests 2973/2974 (the Krueg Skullsplitter chain) had their
+Objectives and EndText fields disagreeing on location — 2974's Objectives said `千針石林`
+(Thousand Needles) while both quests' EndText said `莫沙徹營地`/Feralas. English `quest_template`
+EndText confirms "Return to Krueg Skullsplitter at **Wildwind Lake in Feralas**" for both
+quests — harmonized both to the Feralas/Camp Mojache wording already used in each quest's own
+EndText (note: wowhead's own Details field for 2973 was independently confirmed garbled/wrong
+here too — it invented an unrelated "Thousand Needles vs Feralas" tangent not present in
+English at all, so its Objectives value for the same quest was not trusted either). Also fixed
+a `莫沙沏`→`莫沙徹` typo (Camp Mojache) picked up along the way.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1265,13 +1328,13 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 2941 (batch 16, target range roughly 2941–3140) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,953 quest IDs
-remain after batch 15 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+Not started. Resume from quest ID 3141 (batch 17, target range roughly 3141–3340) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,842 quest IDs
+remain after batch 16 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
 needs per-instance verification against the real English source before a sweep, not a blind
-regex replace. Batches 10-15 used a technique for no-locale-table disputes: `curl -sL
+regex replace. Batches 10-16 used a technique for no-locale-table disputes: `curl -sL
 "https://www.wowhead.com/wotlk/tw/npc=<id>"` (or `item=<id>`) and read the `<title>` tag —
 faster and more authoritative than the pre-fetched quest-page jsonl for single-entity checks;
 this caught two more corpus-majority-was-wrong cases in batch 15 (Mekkatorque's title, 10:0
@@ -1287,4 +1350,8 @@ convention. Batch 15 flagged two things worth carrying forward: (1) `質量`/`�
 per-instance verification when the corpus reaches IDs 4323+ (list in Known Issues above) since
 `質量` can rarely mean "mass" legitimately; (2) Galvan the Ancient's title is still unresolved
 (neither DB's no-title nor wowhead's `長者`/"Elder" matches "the Ancient" precisely) — don't
-assume it's settled if it resurfaces in a later batch.
+assume it's settled if it resurfaces in a later batch. Batch 16 reconfirmed that a wowhead/DB
+mismatch can go *either* direction even within the same batch (quest 2949 was a real DB
+content-swap bug; quest 3121 was a wowhead fetch-error false positive) — always check the raw
+English `quest_template` source directly before trusting either side when they disagree on
+something as fundamental as which NPC/location a quest is about, not just wording.
