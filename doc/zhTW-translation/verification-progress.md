@@ -80,7 +80,7 @@ Both phases run on the same small batch before moving to the next.
 
 | 3341–3540 (excl. 16 skip-listed IDs; 113 more IDs not in DB) | 2026-07-16 | 28 targeted fixes across 20 quest rows, no project-wide sweeps | Batch 18. 71 real rows in range; 54 flagged, moderate-to-high bug density. One severe content bug found (quest 3361: DB's entire Details narrative was fabricated/wrong — described a nonsensical earthquake-and-travel story instead of the real "troggs driven out of Gnomeregan, radiation, trolls stole my belongings" plot; rewritten from the English source). Several proper-noun fixes settled via `creature_template_locale` (Amnennar the Coldbringer → `『寒冰使者』`, not `寒冰之王`; Lord Arkkoroc needed the missing `領主` title added across 3 quests; Magatha **Grimtotem** → `恐怖圖騰`, not the fabricated `野性圖騰`; Dryad race term → `林精`, not `樹妖`; a Kalaran Windblade surname typo `溫佈雷`→`溫布雷`; Golem → `魔像`, not `傀儡`). Extended the Troll-is-always-`食人妖` rule to 4 more quests (3373, 3380, 3445, 3527) and a Gnome/Goblin race mix-up fix (Marvon Rivetseeker is explicitly a goblin in English, quests 3380/3445 both said gnome). A missing item descriptor restored (`bramble wand` → `刺藤魔杖`, not generic `魔杖`) and a dropped narrative detail restored (quest 3521's Grell alternate-ingredient-source, using the established `劣魔` term). Also confirmed 3 wowhead-fetch-error false positives going the *other* direction — DB was already correct and wowhead's rendering was wrong (quest 3376: `勇者風羽` matches English "Brave Windfeather" exactly, wowhead fabricated a first name and wrong rank; quest 3523: `誓言石` matches English "Oathstone", wowhead's `黑曜石` is wrong; quest 3525: `神像` matches English "Idol", wowhead's generic `塑像` loses the religious connotation). See below for the full per-quest log. |
 
-| 3541–3740 (excl. 4 skip-listed IDs; 153 more IDs not in DB) | 2026-07-16 | 12 targeted fixes across 9 quest rows, no project-wide sweeps | Batch 19. 43 real rows in range; 29 flagged, moderate density. Mostly a dense run of near-identical Gnome/Goblin Engineering trainer-questline template text (3629–3643), which surfaced a real trainer-identity swap (quest 3638 said "become a Gnome technician" when the quest's own content and trainer are explicitly Goblin) and a confirmed NPC-title fix via `creature_template_locale` (Tinkmaster Overspark → `技工大師`, not `工匠大師` — applied project-wide including one occurrence outside this batch, quest 2922, since it's a single confirmed proper noun). Also fixed a Felhound race-term error (matches the batch-10 established `惡魔` > `地獄` preference for Fel creatures), a missing title (`Lady Sevine`), a location nuance ("overlooking Azshara"), and an Arcane/generic-magic distinction. Left quest 3621 (Mosh'Ogg ogre mound) untouched — DB's `食人魔山` and wowhead's `巨魔山` are both legitimate zhTW renderings of Ogre (per the established Gordunni precedent that `巨魔` isn't purely a zhCN Troll-leak, `[[feedback-zhtw-troll-ogre-terms]]`; the corpus itself already has both `莫什奧格食人魔` and `莫什奧格巨魔` for this exact place). Confirmed one race-identity false positive (quest 3542: DB's `上層精靈` correctly matches "Highborne," wowhead's `高等精靈` conflates it with the distinct "High Elf" race). |
+| 3541–3740 (excl. 4 skip-listed IDs; 153 more IDs not in DB) | 2026-07-16 | 12 targeted fixes across 9 quest rows, no project-wide sweeps | Batch 19. 43 real rows in range; 29 flagged, moderate density. Mostly a dense run of near-identical Gnome/Goblin Engineering trainer-questline template text (3629–3643), which surfaced a real trainer-identity swap (quest 3638 said "become a Gnome technician" when the quest's own content and trainer are explicitly Goblin) and a confirmed NPC-title fix via `creature_template_locale` (Tinkmaster Overspark → `技工大師`, not `工匠大師` — applied project-wide including one occurrence outside this batch, quest 2922, since it's a single confirmed proper noun). Also fixed a Felhound race-term error (matches the batch-10 established `惡魔` > `地獄` preference for Fel creatures), a missing title (`Lady Sevine`), a location nuance ("overlooking Azshara"), and an Arcane/generic-magic distinction. Quest 3621's `莫什奧格食人魔山` → `莫什奧格巨魔山` (Mosh'Ogg ogre mound): initially left as-is on the theory that both `食人魔`/`巨魔` are valid Ogre terms, but a follow-up DBC check (`AreaTable_zhTW.tsv`, AreaID 105) found this is the *official client zone name* — `莫什奧格巨魔山`, no ambiguity. Fixed project-wide (3 occurrences: quests 591, 2760, 3621 — the first two outside this batch's range, swept anyway since it's a single confirmed proper noun from the highest-tier ground truth). See the corrected note below. Confirmed one race-identity false positive (quest 3542: DB's `上層精靈` correctly matches "Highborne," wowhead's `高等精靈` conflates it with the distinct "High Elf" race). |
 
 **Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 19, **2,149 verified**, **6,718 remaining** — roughly 33 more ~200-ID batches at the current pace.
 
@@ -1427,17 +1427,21 @@ not a pattern needing per-instance risk assessment.
   fixed `魔法`→`秘法`. (The race term in the same sentence, `上層精靈`/Highborne, was already
   correct on DB's side — see false positives below.)
 
-**False positives confirmed (DB was already correct, no change)**:
-- Quest 3621 (`邪能武器的鑄成`): English confirms "the Mosh'**Ogg** ogre mound" — an Ogre, not
-  a Troll. Initially logged this as a wowhead scrape error (`巨魔山` = "Troll Mountain," seemingly
-  the wrong race), but the user corrected this: `巨魔` is not purely a zhCN Troll-leak — it's
-  also a legitimate zhTW term for **Ogre** in established contexts (the Gordunni precedent,
-  `[[feedback-zhtw-troll-ogre-terms]]`), and the corpus itself already has both `莫什奧格食人魔`
-  and `莫什奧格巨魔` for this exact place. So wowhead's `巨魔山` isn't an error at all — it's an
-  equally valid Ogre rendering, not a race mix-up. DB's `食人魔山` was left as-is regardless
-  (no reason to change a correct term), but the false-positive characterization was wrong and
-  is corrected here. Also reconfirms Galvan the Ancient's title is still correctly left
-  unresolved per batch 15's prior decision — no new information here.
+**Mosh'Ogg ogre mound naming — settled via DBC, 3 occurrences fixed project-wide** (quests
+591, 2760, 3621): `莫什奧格食人魔山` → `莫什奧格巨魔山`. This went through two prior framings
+before landing here — worth recording since it shows even the troll/ogre `[[feedback-zhtw-troll-ogre-terms]]`
+hierarchy has a tier above corpus/wowhead disagreement: (1) initially flagged as a wowhead
+scrape error (`巨魔山` looked like a Troll/Ogre race mix-up); (2) the user corrected this —
+`巨魔` is a legitimate zhTW Ogre term too (Gordunni precedent), so both `食人魔山`/`巨魔山`
+seemed equally valid and DB was left untouched; (3) the user then asked to check for an
+*official* in-game zone name, which surfaced `AreaTable_zhTW.tsv` AreaID 105 = `莫什奧格巨魔山`
+— DBC ground truth, tier #1, outranks the "both valid" framing entirely. Fixed to match,
+including 2 occurrences outside this batch's own range (591, 2760) since it's a single
+confirmed proper noun. **Takeaway: "both terms are contextually valid in general" doesn't mean
+a *specific* place/entity's name is ambiguous — always check whether a dedicated DBC entry
+exists for the specific proper noun before settling for "either is fine."**
+
+**False positive confirmed (DB was already correct, no change)**:
 - Quest 3542: DB's `上層精靈` correctly matches "Highborne" (a distinct Night Elf social class
   from antiquity); wowhead's `高等精靈` conflates it with the separate "High Elf" race — same
   distinction already established in `[[feedback-zhtw-ground-truth-priority]]`'s Highborne/Demon
