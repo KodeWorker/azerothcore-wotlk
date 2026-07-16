@@ -90,7 +90,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 4341–4540 (no skip-listed IDs; 136 more IDs not in DB) | 2026-07-17 | 16 targeted fixes across 12 quest rows, no project-wide sweeps | Batch 23. 64 real rows in range; 39 flagged, high density. A genuine fabricated-requirement bug (quest 4501: DB invented a second, non-existent kill requirement — English only asks for "10 frenzied pterrordax," DB added "and 15 more"), a garbled placeholder-token bug (quest 4489: literal characters `呂正` where the `$n` name token belongs), and a double-character typo in a title (`希茲爾的的飛行器`). A 5-item Libram series (quests 4463/4481/4482/4483/4484) had DB using the wrong suffix (`聖典` vs the item's own established `聖契`) on all 5, plus one item's core word was completely wrong (`恢復`/"Recovery" for "Resilience," should be `韌性`) and another had both a wrong word and a stray leftover asterisk character. A creature-name fix (Jadefire Rogue) via `creature_template_locale`, a fabricated-narrative-reason fix (quest 4503's flying-machine quest gave a different in-character excuse than English), a title matching an English chess pun the DB version missed entirely (quest 4507, "Pawn Captures Queen"), and a 4-quest title fix where DB's title didn't match "Calm Before the Storm" at all (quests 4508/4509/4510/4511). Confirmed one wowhead-internal-inconsistency false positive (quest 4451: wowhead's own Details field agreed with DB's `廁所`/"Outhouse," but wowhead's Objectives field said `庫房`/"storage" instead — English confirms "Outhouse," so DB was right and wowhead's Objectives field contradicted its own Details). |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 23, **2,381 verified**, **6,486 remaining** — roughly 32 more ~200-ID batches at the current pace.
+| 4541–4740 (excl. 1 skip-listed ID; 164 more IDs not in DB) | 2026-07-17 | 8 targeted fixes across 4 quest rows, no project-wide sweeps | Batch 24. 35 real rows in range; 14 flagged, low density. A dropped sentence (quest 4740, "WANTED: Murkdeep!" — DB was missing English's entire final instruction to report the kill to Sentinel Glynda Nal'Shea, restored using her name confirmed earlier this session via `creature_template_locale`), a "Broodling" terminology fix reusing the batch-22 precedent (quest 4726, `雛龍`→`小龍`), a creature-name fix via `creature_template_locale` (quest 4729, Bloodaxe Worg Pup), and a Baron Revilgaz spelling fix reusing the batch-21 precedent (quest 4621, `裡維加茲`→`里維加茲`). All four fixes reused ground truth already confirmed in earlier batches or earlier this session, rather than requiring new lookups. |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 24, **2,416 verified**, **6,451 remaining** — roughly 32 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1663,6 +1665,27 @@ one Libram): `item_template_locale` confirms all 5 use the suffix `聖契`, not 
   ("storage key"), contradicting its own Details field on the same page — a wowhead
   internal-inconsistency error, not a real DB mistake. Left untouched.
 
+### Batch 24 (4541–4740) fixes log
+
+35 real rows in range (164 IDs not in DB); 14 flagged, the lowest density in several batches.
+All 4 confirmed fixes reused ground truth already established in earlier batches or earlier
+this session, rather than requiring fresh lookups — worth noting as a sign the confirmed-term
+list from prior batches is paying off.
+
+- Quest 4740 (`懸賞:莫克迪普!`, "WANTED: Murkdeep!"): DB's Objectives dropped English's entire
+  final sentence — "**Report the death of Murkdeep to Sentinel Glynda Nal'Shea in
+  Auberdine.**" Restored it using her name (`哨兵戈琳達·納希恩`), which this session already
+  confirmed via `creature_template_locale` while adding her missing greeting translation
+  earlier (see the `npc_text` 50023 work above the batch log).
+- Quest 4726 (`雛龍精華`→`小龍精華`, "Broodling Essence"): DB used `雛龍` throughout; this
+  corpus's established term for "Broodling" is `小龍` (confirmed in batch 22 via
+  `creature_template_locale`'s Black Broodling → `黑色小龍`). Fixed the title and all 4 body
+  occurrences to match.
+- Quest 4729 (`基布雷爾的特殊寵物`): `creature_template_locale` confirms Bloodaxe Worg **Pup**
+  (id 10221) → `小血斧座狼`, not DB's differently-structured `血斧座狼幼崽`.
+- Quest 4621 (`敬禮，艦隊司令！`): Baron Revilgaz's established spelling (`里維加茲`, confirmed
+  batch 21) — DB had `裡維加茲` (wrong radical) in both Details and Objectives.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1745,9 +1768,10 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 4541 (batch 24, target range roughly 4541–4740) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,486 quest IDs
-remain after batch 23 (see Total scope note above). A reminder from batch 22: a proper-noun fix
+Not started. Resume from quest ID 4741 (batch 25, target range roughly 4741–4940) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,451 quest IDs
+remain after batch 24 (see Total scope note above). A reminder from batch 22 (reused
+successfully in batch 24): a proper-noun fix
 confirmed via `creature_template_locale` in one batch can still resurface, unfixed, several
 batches later — batch 22 caught 3 such cases (Lord Incendius from batch 20's quest 3907, Ginro
 Hearthkindle from batch 21's quests, the Golem term from batches 18/20/21) that reappeared in
