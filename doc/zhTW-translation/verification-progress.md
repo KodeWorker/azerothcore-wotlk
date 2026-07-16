@@ -69,8 +69,9 @@ Both phases run on the same small batch before moving to the next.
 | 1341–1540 (excl. skip-listed 1390, 1397, 1441, 1443, 1460, 1461, 1533, 1537, 1538) | 2026-07-15 | ~20 targeted fixes + 3 project-wide term sweeps (幽靈崗哨→鬼旅崗哨 16×, 阿塔萊巨魔→阿塔萊食人妖 4×) | Batch 8. Highest bug density since batch 3 (108/191 flagged). Introduced `creature_template`'s literal in-game `name` field as a first-class ground-truth check (alongside `AreaTable_zhTW.tsv`) for NPC/place-name disputes — see below. |
 | 1541–1740 (excl. skip-listed 1659, 1660, 1662–1664) | 2026-07-16 | ~10 targeted fixes + 1 naming sweep (加科因/黑暗縛靈者→加金/『黑暗縛靈師』, 7 quests) | Batch 9. Lowest bug density yet (42/195 flagged, and 118 of those 195 candidate IDs turned out to be unused quest IDs with no `quest_template` row at all — not gaps, just gaps in the ID space). Several fixes had no `_locale` table to settle them (Gakin/Tormus/Umbral Ore/Bath'rah naming) — resolved by user judgment call rather than the usual ground-truth hierarchy; see below. |
 | 1741–1940 (no skip-listed IDs in range) | 2026-07-16 | ~20 targeted fixes + 6 project-wide term sweeps (亡靈天災→天譴軍團 26×, 提瑞斯法→提里斯法 65×, 洛丹倫→羅德隆 33×, 阿爾薩斯→阿薩斯 13×, 碎木哨崗→碎木崗哨 39×, 扎拉贊恩→札拉贊恩 12×) | Batch 10. See below — DBC ground truth (`AreaTable_zhTW.tsv`/`Faction_zhTW.tsv`) again showed the corpus-majority spelling was wrong in every case (Tirisfal 65:41, Lordaeron 33:11), same pattern as batch 6's Kalimdor. Also the first batch to directly fetch item/NPC wowhead pages via `curl` mid-session (not the pre-fetched quest jsonl) to settle no-locale-table disputes — see below. |
+| 1941–2140 (excl. skip-listed 2018, 2020, 2058, 2059) | 2026-07-16 | ~15 targeted fixes, no project-wide sweeps | Batch 11. Lowest bug density yet (28/196 flagged). Two genuine truncation bugs found and restored (quest 2038's item list, quest 2118's severely truncated/corrupted Objectives). Confirmed two more cases of wowhead's own quest-page fetch being wrong where DB was already correct (`祈倫托` vs zhCN-leak `肯瑞托`, matching batch 3's established finding; `亡靈哨兵` vs generic `不死生物哨兵`). |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 10, **1,671 verified**, **7,196 remaining** — roughly 36 more ~200-ID batches at the current pace.
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 11, **1,712 verified**, **7,155 remaining** — roughly 36 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -886,6 +887,70 @@ user's call was that `惡魔獵犬` fits both creatures better than `地獄獵�
 were swept too — a rare case of a stylistic/semantic preference override applied across
 creature-identity lines, not a ground-truth-hierarchy resolution.
 
+### Batch 11 (1941–2140) fixes log
+
+Lowest bug density yet (28/196 flagged) and no project-wide sweeps this batch — every fix was
+scoped to its own quest. Notably quiet on the "corpus majority is wrong" front that dominated
+batches 6/10; this range's issues were mostly one-off truncations, typos, and title/rank
+disputes rather than systemic zhCN-leak vocabulary.
+
+**Genuine truncation bugs restored** (verified against `quest_template`'s real English source):
+- Quest 2038 (`賓格斯的補給品`): Objectives ended abruptly at a bare colon
+  (`找回賓格斯的裝備:`), dropping the entire item list. English confirms 4 required items in
+  order (`RequiredItemId1-4`: Wrench, Screwdriver, Hammer, Blastencapper) — restored using that
+  canonical order rather than wowhead's scrambled item order, and used the row's own established
+  `氣壓爆裂物` term for "Blastencapper" (matching the Details field) instead of wowhead's
+  `氣壓炸彈` variant.
+- Quest 2118 (`瘟疫蔓延`): Objectives was severely truncated and had a corrupted placeholder
+  (`你帶回染病的薊熊了嗎，小心慢慢?` — "小心慢慢" is nonsense text, not a `$N`/`$n` token) that
+  dropped the entire second half of the sentence (the "if your trap fails, get a new one"
+  clause). Restored using wowhead's more complete text, replacing the corrupted placeholder
+  with `$N` to match the row's own Details field convention.
+
+**Content/title fixes verified against the real English source**:
+- Quest 1943 (`巨魔法師迪諾`→`食人妖法師迪諾`): English literally "the troll mage Deino".
+- Quest 1945: `樹妖`→`林精` (Dryad, no locale table, split 6:5 corpus-wide — deferred to
+  wowhead per the user's standing rule) and `巨魔裁縫`→`食人妖裁縫` (confirmed "dryads" +
+  contextual troll tailor, matching the Troll/Ogre convention).
+- Quest 1949 (`隱藏的秘密`): `大法師提爾斯`→`魔導師提爾斯` — English title is literally "Magus
+  Tirth", not "Archmage" (a different, higher rank); also `地精與地精的車賽`→
+  `地精與哥布林的車賽` — DB had a duplicated-race typo, English confirms "the gnome and goblin
+  races".
+- Quest 1950 (`解封咒語`): Details said `魔法箱`/`箱子` three times while the row's own
+  Objectives field already correctly said `保險箱` — unified to match, and English "magically
+  locked strongbox" confirms `保險箱` (strongbox) over the generic `魔法箱` (magic box).
+- Quest 1951 (`能量儀祭`→`能量儀式`, title + 2 body occurrences): English title is "**Rituals**
+  of Power" — `儀式` (ritual/ceremony) is correct, `儀祭` isn't an established term.
+- Quest 1941: Title `法紋長袍`→`法力之紋長袍` — confirmed via item 7509's own dedicated wowhead
+  page (`<title>` tag fetch), matching "Manaweave Robe" more completely than DB's version
+  which dropped the "mana" (法力) component.
+- Quest 1978 (`賬本`→`帳本`) and quest 2098 (`基爾卡可`→`基爾卡克`, typo matching the NPC's own
+  name spelled correctly elsewhere in the same row) — both simple typo/variant fixes.
+
+**False positives correctly rejected** (wowhead's own fetch was wrong, or DB was already
+right — including two direct re-confirmations of prior-batch findings):
+- Quest 1999: DB's `祈倫托` confirmed correct again — wowhead's quest-page fetch showed the
+  zhCN-leak `肯瑞托`, the exact error batch 3 already settled via the faction's own page
+  (`faction=1090`). Same corpus, same wrong wowhead answer, different quest.
+- Quest 1998: DB's `亡靈哨兵` (Deathstalkers, an established faction-title term used
+  consistently since batch 10) confirmed correct — English literally says "the
+  **Deathstalkers** in Silverpine"; wowhead's `不死生物哨兵` is a generic paraphrase that drops
+  the proper title.
+- Quest 2098's own `基爾卡可` typo (see above) turned out to also be present in wowhead's own
+  fetch — wowhead scraped the same broken source data, another reminder that wowhead isn't an
+  independent check when both sides ultimately derive from the same client strings.
+- Quest 2019: wowhead's fetch returned page-navigation text ("巫妖王之怒 任務" / a page
+  description sentence) instead of real quest content — a scrape failure, not a real diff;
+  DB's text was left untouched.
+- Quest 1942 (`星結之衣` vs wowhead's `星界之衣`) and quest 1944 (`克薩維亞之水` vs wowhead's
+  `薩維亞之水`, missing a character) — DB's version more completely captures the English title
+  ("Astral **Knot** Garment") or is simply more complete; no item/locale table to fully settle
+  either, left as-is.
+- Quest 1958 (`蒼穹之力` vs wowhead's `天國之力` for "Celestial Power") and quest 1963/2040
+  (`背袋`/`背包`, `穴居怪`/`穴居人` — synonym-level disagreements with no clear winner) — left
+  untouched, genuinely ambiguous with no locale table and no reward/required item to check
+  against.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -954,12 +1019,16 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 1941 (batch 11, target range roughly 1941–2140) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,196 quest IDs
-remain after batch 10 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+Not started. Resume from quest ID 2141 (batch 12, target range roughly 2141–2340) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 7,155 quest IDs
+remain after batch 11 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
 needs per-instance verification against the real English source before a sweep, not a blind
-regex replace. Batch 10 introduced a useful technique for no-locale-table disputes: `curl -sL
+regex replace. Batches 10-11 used a technique for no-locale-table disputes: `curl -sL
 "https://www.wowhead.com/wotlk/tw/npc=<id>"` (or `item=<id>`) and read the `<title>` tag —
 faster and more authoritative than the pre-fetched quest-page jsonl for single-entity checks.
+Also remember: wowhead's own quest-page fetch is not an independent source when it derives
+from the same broken client string DB does (batch 11's quest 2098 `基爾卡可` typo appeared
+identically on both sides) — a match between DB and wowhead isn't automatic proof of
+correctness if a locale table or dedicated page contradicts them.
