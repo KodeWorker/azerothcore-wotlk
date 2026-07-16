@@ -86,7 +86,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 3941–4140 (no skip-listed IDs; 141 more IDs not in DB) | 2026-07-17 | 28 targeted fixes across 15 quest rows, no project-wide sweeps | Batch 21. 59 real rows in range; 39 flagged, high density. A dense Blackrock Depths/Burning Steppes cluster surfaced 4 confirmed proper-noun fixes via `creature_template_locale`/`item_template_locale`: Ginro **Hearthkindle** (`基恩諾·火花`→`燃爐`, 3 quests — the old name didn't match "Hearthkindle" at all), Felpaw **Ravager** (`魔爪掠奪者`→`劫毀者`), Maxwort **Uberglint** (`尤博格林`→`尤柏格林`), and Black Dragonflight Molt / Fractured Elemental Shard (both items DB shortened to generic names, restored to their full established item names, quests 4022/4024/4061/4062/4063). Also resolved a 3-quest title inconsistency for **Warlord** Goretooth (DB rendered his title three different wrong ways — `軍官`/`大人`/`軍閥` — across quests 4081/4082/4132; fixed all to this corpus's established `督軍`), extended the `傀儡`→`魔像` (Golem) fix to 3 more quests (4061/4062/4063), a title fix matching English "Corruption" over DB's "Fallen" (quest 4120), and a title+location fix for Shadowmaster Vivian Lagrave (quest 4133, DB dropped both her rank and the specific "Blackrock Depths" location). |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 21, **2,262 verified**, **6,605 remaining** — roughly 33 more ~200-ID batches at the current pace.
+| 4141–4340 (excl. 2 skip-listed IDs; 143 more IDs not in DB) | 2026-07-17 | 41 targeted fixes across 20 quest rows, no project-wide sweeps | Batch 22. 55 real rows in range; 43 flagged, high density. An Un'Goro Crater quest chain (Muigin and Larion) had both names wrong throughout 5 quests, confirmed via `creature_template_locale`, plus a real count error (20→15, matching `RequiredSourceItemCount`) and the recurring `安戈洛爾`→`安戈洛` typo. 3 more proper-noun fixes via ground truth: Zarrin (missing delivery target restored), the "A-Me 01"→`艾米 01` transliteration (3 quests), and Lady Katrana Prestor's title (`女伯爵`→`女士`). Fixed a creature-type/color mix-up in a dragon-kill quest (`火鱗龍人`→`黑色龍人`, plus disambiguating `龍人`/`龍裔` which DB had conflated). Caught 3 previously-confirmed fixes that had been missed in earlier batches within their own quest chains — Lord Incendius' title, Ginro Hearthkindle's name, and the Golem term — all now applied to their remaining occurrences (quests 4263, 4265, 4282). One item name fix (Badge→Medallion, scoped to just the Objectives field since English's own Details text uses the colloquial "badge" wording too, so that occurrence was left matching its English counterpart). Surfaced a genuinely unusual case to the user rather than resolving it unilaterally: quest 4184's English source explicitly names King Varian Wrynn, but both DB's pre-existing text and wowhead's independent scrape agree with each other on Bolvar Fordragon instead — user confirmed Bolvar is correct lore-wise and the actual quest-ending NPC, so left unchanged (see below). |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 22, **2,317 verified**, **6,550 remaining** — roughly 33 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1543,6 +1545,72 @@ batches 18/20, applied to 3 more occurrences (`石頭傀儡`/`機械傀儡`/`傀
   precisely, and DB's Details dropped the specific "Blackrock Depths" location entirely
   (just said "something about Dark Iron dwarves"). Fixed both.
 
+### Batch 22 (4141–4340) fixes log
+
+55 real rows in range (143 IDs not in DB); 43 flagged, high density.
+
+**Muigin and Larion questline** (5 quests: 4141/4143/4145/4146/4147, an Un'Goro Crater chain)
+— both names were wrong throughout: `creature_template_locale` confirms Larion (id 9118) →
+`拉里安` (DB had `拉瑞安`) and Muigin (id 9119) → `莫爾金` (DB had `穆爾金`). Fixed every
+occurrence across all 5 quests, titles included. Quest 4141 also had a real count error — DB's
+Objectives said "收集20個血瓣花" but English LogDesc explicitly says "Collect **15**
+Bloodpetals" (matching `RequiredSourceItemCount1`=15 exactly) — fixed to 15. Also fixed another
+instance of the recurring `安戈洛爾`→`安戈洛` typo (Un'Goro Crater; third occurrence found
+across batches 20-22, always the same spurious extra `爾`).
+
+**Missed occurrences of already-confirmed fixes** — three separate proper-noun fixes settled in
+earlier batches turned out to have more occurrences later in the corpus that weren't caught at
+the time (a reminder that a "confirmed fix" from a prior batch should still be re-checked
+whenever the same name/term resurfaces, not assumed already-complete):
+- Lord Incendius (quest 4263, settled in batch 20's quest 3907): `伊森迪奧斯` → `伊森迪奧斯領主`,
+  5 occurrences in this one quest row.
+- Ginro Hearthkindle (quest 4265, settled in batch 21's quests 4124/4127/4130): `基恩諾·火花`
+  → `基恩諾·燃爐`, 2 occurrences.
+- Golem term (quest 4282, settled in batches 18/20/21): `傀儡統帥阿格曼奇` → `魔像領主阿格曼奇`,
+  2 occurrences.
+
+**Other proper-noun fixes** (via `creature_template_locale`):
+- Zarrin (quest 4161): English LogDesc "Collect 7 Small Spider Legs for **Zarrin** in
+  **Dolanaar**" — DB's Objectives dropped the delivery target entirely (`收集7條小蜘蛛腿`, no
+  name/location). Restored using the locale table's confirmed spelling `札瑞恩` (also fixed
+  this row's own EndText, which already had the name but with a typo'd radical, `扎`→`札`).
+- "A-Me 01" (quests 4243/4244/4245): the locale table (id 9623) confirms this untranslated
+  literal string should be transliterated `艾米 01` — fixed throughout all 3 quests (titles
+  included).
+- Lady Katrana Prestor (quest 4185): the locale table (id 1749) confirms her title is `女士`
+  ("Lady"), not DB's `女伯爵` ("Countess") — fixed in Details/Objectives/CompletedText.
+
+**Creature-type/color mix-up**: quest 4182 (`黑龍的威脅`) — English LogDesc: "Slay 15 Black
+Broodlings, 10 Black Dragonspawn, 4 Black Wyrmkin and 1 Black Drake." DB's Objectives used the
+same term `龍人` for two different creature types (Dragonspawn and Wyrmkin, which the locale
+table distinguishes as `龍裔` vs `龍人` respectively) and used the wrong color entirely for the
+Wyrmkin entry (`火鱗龍人`/"Firescale," should be `黑色龍人`/"Black"). Fixed to match the locale
+table's per-creature breakdown exactly.
+
+**Item-name fix**: quest 4283 (`五十個！`) — English LogDesc: "Collect 50 Blackrock
+**Medallions**." DB's Objectives said `黑石徽章`("badges"); fixed to `黑石勳章`, matching the
+concrete item name (same Badge/Medal pattern as batch 13/20). Left Details' own colloquial
+"collecting badges" references (`徽章`) untouched — English's own Details text also uses the
+casual word "badges" repeatedly, so that occurrence already matches its English counterpart;
+only the Objectives field (which should name the actual required item) needed the fix. Also
+reconfirmed Details' `食人魔耳朵` ("ogre ear collection") is correct against English — wowhead's
+`巨魔耳朵` there is wrong.
+
+**Surfaced to the user rather than resolved unilaterally**: quest 4184 (`真正的主人`) — its
+English `quest_template` source explicitly names **King Varian Wrynn** as the recipient, in
+both LogDescription and Details independently. But both DB's pre-existing zhTW text and
+wowhead's own scrape agree with each other that the recipient is **Duke/Lord Bolvar Fordragon**
+instead — an unusual pattern, since normally a DB/wowhead disagreement means one side is wrong,
+not that both agree against the English source. Asked the user directly rather than guessing;
+confirmed **Bolvar is correct lore-wise and is the actual quest-ending NPC** (Bolvar was
+Stormwind's regent in original vanilla-era lore; Varian Wrynn's return was a later revision that
+likely only touched this specific quest_template row's English text, not the actual live
+quest content). Left DB's text unchanged. **Worth remembering**: when two independent zhTW
+sources agree with each other but disagree with the current `quest_template.sql` English text,
+that's a sign the English source itself may reflect a later out-of-band content revision — don't
+assume `quest_template.sql` is automatically right just because it's usually the most reliable
+ground truth; check with the user when the disagreement pattern itself looks unusual.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1625,9 +1693,16 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 4141 (batch 22, target range roughly 4141–4340) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,605 quest IDs
-remain after batch 21 (see Total scope note above). Remember `diff_quest_text.py` has no range
+Not started. Resume from quest ID 4341 (batch 23, target range roughly 4341–4540) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,550 quest IDs
+remain after batch 22 (see Total scope note above). A reminder from batch 22: a proper-noun fix
+confirmed via `creature_template_locale` in one batch can still resurface, unfixed, several
+batches later — batch 22 caught 3 such cases (Lord Incendius from batch 20's quest 3907, Ginro
+Hearthkindle from batch 21's quests, the Golem term from batches 18/20/21) that reappeared in
+new quest rows the original batch never touched (they weren't part of that batch's ID range at
+all). This isn't something to fix by re-sweeping past batches — just keep the confirmed-term
+list in mind when a name/term looks familiar in a new batch, even one already "settled" long
+ago. Remember `diff_quest_text.py` has no range
 arguments — it always diffs the whole cached jsonl, so filter its output to the current batch's
 ID range before reviewing (see batch 17's log for the exact filtering approach and why an
 unfiltered run can resurface stale/already-resolved findings from earlier batches). A follow-up
