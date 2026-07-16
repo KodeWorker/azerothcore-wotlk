@@ -76,7 +76,9 @@ Both phases run on the same small batch before moving to the next.
 | 2741–2940 (excl. skip-listed 2868) | 2026-07-16 | ~35 targeted fixes + 3 project-wide sweeps (質量→品質 8×, 大工匠梅卡托克→高等技工梅卡托克 10×, 惡魔獵手→惡魔獵人 22×) | Batch 15. Highest bug density since batch 3 (76/199 flagged, 104 real rows in range). A zhCN-leak term caught mid-batch (`質量` for "Quality" is mainland usage; zhTW uses `品質`, `質量` means "mass" in Taiwan) and confirmed via NPC-page fetch that corpus-majority `大工匠梅卡托克` (10 occurrences) was wrong the whole time — same pattern as batch 10's Kalimdor and batch 13's Bena Winterhoof. Also found genuinely corrupted/duplicated text in 3 quest rows (2771-2773) and an MT-artifact name bug (`羅克位元`, "Rockbiter" mistranslated as the computing term "bit"). Post-batch: Demon Hunter's official class-page name (`惡魔獵人`) overrides a 22:0 same-corpus majority — kept. Generic "trogg" went through three reversals same-day, settling project-wide on `穴居怪` — later reverted a 4th time in batch 16's follow-up, see below; current answer is `穴居人`. |
 | 2941–3140 (89 IDs not in DB, incl. all of 3003–3081 except a handful — a large real gap in the ID space, not a scan error) | 2026-07-16 | ~26 targeted fixes across 15 quest rows, no new project-wide sweeps | Batch 16. 111 real rows in range; high bug density among them (81 flagged by the strict diff before dedup against non-existent IDs). One genuine content-swap bug (quest 2949's Details wrongly duplicated quest 2947's Ironforge/"TdK" text instead of its own Orgrimmar/"NOG" content — both are "Return of the Ring" but for different factions). One confirmed wowhead-fetch error going the *other* direction (quest 3121: wowhead's own fetch returned an entirely different NPC/location that contradicts the English source; DB's `夏拉什·火刃`/`莫沙徹營地`/`拉瑞斯小亭` was correct all along — false positive, no change). Extended the already-settled Gordunni-Ogre exception (`戈杜尼食人魔`→`戈杜尼巨魔`, 7 quests) and the Troll-is-always-`食人妖` rule (Vilebranch/Witherbark/Sandfury/Nekrum's Zul'Farrak troll, covering quests 2989/2991/2993/2994/3042). A count fix (quest 3127: DB said kill 12 mountain giants, English/wowhead both say 7). Two more NPC names settled via `creature_template_locale` (Krueg **Skullsplitter** id 4544 → `劈顱` not `碎顱`; Oran **Snakewrithe** id 7825 → `蛇繞` not the phonetic `斯內克威瑟`) plus a title mistranslation each for quests 2969 (`精靈龍的自由`→`所有生物的自由`, English is "Freedom for *All Creatures*") and 2995 (`聯絡中心`→`溝通管道` for the title and closing line only — wowhead agrees with DB's `聯絡中心` for the *opening* sentence describing what the lodge *is*, so that occurrence was left alone; only the "destroy their lines of communication" occurrence changed). Also fixed an item-name pair (`徽記之戒`/`戒指`→`璽戒` for "signet ring", quest 2972) and a badge/medal pair (`徽章`→`勳章`, quest 2991, same pattern as batch 13). Resolved an internal DB inconsistency in the Krueg Skullsplitter quest chain (2973/2974: Objectives said Thousand Needles in one row while EndText said Feralas/Camp Mojache in both — English EndText confirms Feralas ["Wildwind Lake in Feralas"] for both quests, so both were harmonized to Camp Mojache/Feralas, matching each quest's own EndText; also fixed a `莫沙沏`→`莫沙徹` typo). See below for the full per-quest log. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 16, **2,025 verified**, **6,842 remaining** — roughly 34 more ~200-ID batches at the current pace.
+| 3141–3340 (189 IDs not in DB — the sparsest range yet, only 10 real quest rows) | 2026-07-16 | 7 targeted fixes across 3 quest rows, no project-wide sweeps | Batch 17. Discovered `diff_quest_text.py` takes no numeric range arguments at all — it diffs the *entire* cached jsonl every run, so results had to be filtered to this batch's ID range in Python before review (earlier batches' re-appearing diffs, e.g. quest 2947 showing an unrelated `基瑟爾` wowhead mis-scrape, are stale noise from that full-corpus rerun, not new findings — ignored). Of the 10 real rows, 8 were flagged; 3 held real content errors after checking English `quest_template` (Gahz'ridian quest 3161: `巨魔`→`食人妖`, trolls not ogres; quest 3182's title `證明信`→`證明文件`, "Proof of **Deed**" is a document not a letter, plus its Details opened with a vague paraphrase instead of the specific "axe head still lodged in it" claim; quest 3201's title was fabricated outright — `館長的證明！`→`終於！`, matching English "At Last!" — plus a bracketed stage-direction that named the wrong action entirely). The other 5 flagged quests were confirmed as punctuation/style-only diffs (case, `！`/`!`, minor synonym swaps) and left untouched. Also checked two corpus-wide patterns the diff surfaced (`透過`/`通過` split 128:66, `亡靈`/`不死族` split 231:11) against the specific flagged instance's context — both were legitimate existing usage in context, not the zhCN-leak error pattern from earlier batches, so left alone rather than blindly swept (per `[[feedback-zhtw-no-blind-sweep]]`). |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 17, **2,035 verified**, **6,832 remaining** — roughly 34 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1267,6 +1269,51 @@ answer — but given this term has flipped four times, don't treat any future an
 permanently settled either; if fresh evidence surfaces, re-check the comparable-race pattern
 again rather than re-asserting either prior conclusion.**
 
+### Batch 17 (3141–3340) fixes log
+
+The sparsest range yet: only 10 of 199 candidate IDs are real quests (matches `quest_template`'s
+English base exactly, so this is a genuine gap in the ID space, same pattern as batch 16's
+3003–3081 gap — not a scan error).
+
+**Tooling note**: `diff_quest_text.py` has no numeric range arguments — despite the `[lo] [hi]`
+in the "Next batch" instructions below, it always diffs the *entire* cached
+`quest_text_extracted.jsonl` (every ID ever fetched across all batches), not just the current
+batch. Had to filter its output to this batch's ID range in Python before reviewing. One
+side-effect worth flagging: the unfiltered run re-surfaced quest 2947 (already verified correct
+in batch 16) with a wowhead Details field naming a completely different engraving word
+(`基瑟爾` instead of "TdK") — this is stale re-fetched noise from an old mis-scrape, not a new
+finding, and was ignored per batch 16's already-confirmed English-source verification.
+
+**Race-term fix**: quest 3161 (`加茲瑞迪安`/Gahz'ridian) — Details said `巨魔` for the tribe that
+worshipped Gahz'rilla; English confirms "trolls used to occupy this land" — fixed to `食人妖`
+per the settled Troll-is-always-`食人妖` rule.
+
+**Title/content fixes** (Curator Thorius questline, quests 3182/3201):
+- Quest 3182: title `證明信` ("proof letter") → `證明文件` — English title is "Proof of
+  **Deed**," a legal/certificate document, not a letter. Details also opened with a vague
+  paraphrase ("how could a real horn look like this?") where English makes a specific claim
+  ("The real horn would have had my broken axe head still lodged into its surface") — rewrote
+  to match.
+- Quest 3201: title `館長的證明！` ("The Curator's Proof!") → `終於！` — English title is
+  literally "At Last!"; DB's title was fabricated, unrelated to the source. Also `你的“意外的
+  成功”` ("your 'successful accident'") → `你的「意外」` — English says only "the 'incident'",
+  no "successful" qualifier. Also a bracketed stage-direction named the wrong action entirely:
+  `<索里奧斯館長從一大堆檔案中翻找東西。>` ("Curator Thorius rummages through a pile of
+  files") → `<索里奧斯館長開始填寫一張很大的文件。>` ("Curator Thorius begins to fill out a
+  large document"), matching English exactly. Also updated quest 3182's own quest-giver
+  Objectives cross-reference (`索里奧斯的證明信`→`索里奧斯的證明文件`) to stay consistent with
+  its renamed title.
+
+**Corpus-wide patterns checked but not swept** (per `[[feedback-zhtw-no-blind-sweep]]` — a
+skewed corpus split alone doesn't justify a sweep without checking the flagged instance's own
+context): quest 3301 flagged both `透過`/`通過` (128:66 split project-wide) and `亡靈`/`不死族`
+(231:11 split) against wowhead. Checked English: "Mura ... hope was to bring it new life
+**through** her own effort" — this is the "by means of" sense of `透過`, which is standard
+correct zhTW (distinct from the previously-confirmed "pass a trial" sense where `通過` is
+correct and `透過` is a zhCN looseness, `[[feedback-zhtw-ground-truth-priority]]`). Left
+untouched. `亡靈`'s 231:11 corpus dominance for generic "undead" (not the Forsaken faction) was
+also left as-is — no contradicting locale-table or DBC evidence found.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1349,9 +1396,13 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 3141 (batch 17, target range roughly 3141–3340) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,842 quest IDs
-remain after batch 16 (see Total scope note above). Keep the OpenCC-origin insight in mind (see
+Not started. Resume from quest ID 3341 (batch 18, target range roughly 3341–3540) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,832 quest IDs
+remain after batch 17 (see Total scope note above). Remember `diff_quest_text.py` has no range
+arguments — it always diffs the whole cached jsonl, so filter its output to the current batch's
+ID range before reviewing (see batch 17's log for the exact filtering approach and why an
+unfiltered run can resurface stale/already-resolved findings from earlier batches). Keep the
+OpenCC-origin insight in mind (see
 `[[feedback-zhtw-ground-truth-priority]]`) — corpus self-consistency is weaker evidence than
 earlier batches treated it as, but any pattern-based fix (grammar, idiom, orthography) still
 needs per-instance verification against the real English source before a sweep, not a blind
