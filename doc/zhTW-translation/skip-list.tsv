@@ -202,6 +202,8 @@ quest_id	english_title	reason
 7384	<nyi> <txt> The Scale Crafters	English title marker: <nyi> <txt> The Scale Crafters
 7521	Thunderaan the Windseeker	Thunderaan the Windseeker -- obsolete duplicate of quest 7786 (real live version, already translated); requires item 18566 which Wowhead flags DEPRECATED
 7561	Rise,Thunderfury!	Rise,Thunderfury! -- same obsolete Thunderfury chain as 7521; requires item 18589 which Wowhead flags DEPRECATED
+7681	Hunter test quest	Hunter test quest -- unfinished dev/QA quest; CompletedText literally reads "Return to GOSSIP TEST DUDE." untranslated even in the DB row
+7682	Hunter test quest2	Hunter test quest2 -- same as 7681, second copy of the same dev/QA test quest
 7741	Praise from the Emerald Circle <NYI> <TXT>	English title marker: Praise from the Emerald Circle <NYI> <TXT>
 7790	REUSE	English title marker: REUSE
 7869	test quest - do not use	English title marker: test quest - do not use
