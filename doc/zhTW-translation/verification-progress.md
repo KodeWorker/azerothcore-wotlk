@@ -92,7 +92,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 4541–4740 (excl. 1 skip-listed ID; 164 more IDs not in DB) | 2026-07-17 | 8 targeted fixes across 4 quest rows, no project-wide sweeps | Batch 24. 35 real rows in range; 14 flagged, low density. A dropped sentence (quest 4740, "WANTED: Murkdeep!" — DB was missing English's entire final instruction to report the kill to Sentinel Glynda Nal'Shea, restored using her name confirmed earlier this session via `creature_template_locale`), a "Broodling" terminology fix reusing the batch-22 precedent (quest 4726, `雛龍`→`小龍`), a creature-name fix via `creature_template_locale` (quest 4729, Bloodaxe Worg Pup), and a Baron Revilgaz spelling fix reusing the batch-21 precedent (quest 4621, `裡維加茲`→`里維加茲`). All four fixes reused ground truth already confirmed in earlier batches or earlier this session, rather than requiring new lookups. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 24, **2,416 verified**, **6,451 remaining** — roughly 32 more ~200-ID batches at the current pace.
+| 4741–4940 (excl. 1 skip-listed ID; 143 more IDs not in DB) | 2026-07-17 | 38 targeted fixes across 16 quest rows, no project-wide sweeps | Batch 25. 56 real rows in range; 45 flagged, very high density (80%). A Blackrock Spire "Seal of Ascension" questline had the item's own established name wrong throughout (`印章`→`徽印`, confirmed via `item_template_locale`), plus a missing "Overlord" title for Wyrmthalak and a name-spelling fix for Emberstrife. A completely wrong NPC surname across 6 quests (Menara **Voidrender**, DB had an unrelated phonetic-ish `沃倫德` instead of `虛無撕裂者`). Two more Troll-race fixes (Zul'Aman/Sandfury, Smolderthorn — the latter newly confirmed via unit-title evidence: Headhunter/Witch Doctor/Shadow Hunter are Troll-only role names in this corpus). A genuine mistranslation (quest 4867: "Mojo" rendered as `蟑螂`/"cockroach," fixed to `魔精`), a character-level typo appearing 4 times in one quest (`蛛後`→`蛛后`, "after" vs "queen" — different characters), a stray leftover asterisk in a title (same pattern as batch 23), an item-name character fix (`釦環`→`扣環`, confirmed via `item_template_locale`), a creature-name fix (Pao'ka **Swiftmountain**), and another missed occurrence of the batch-21 Warlord Goretooth title fix. Confirmed one title false positive going the *other* direction: quest 4767's English title is literally "Wind Rider" (`馭風者`), matching DB exactly — wowhead's own title (`雙足飛龍`) doesn't match the English title at all and was left uncorrected on DB's side. |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 25, **2,472 verified**, **6,395 remaining** — roughly 32 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1686,6 +1688,62 @@ list from prior batches is paying off.
 - Quest 4621 (`敬禮，艦隊司令！`): Baron Revilgaz's established spelling (`里維加茲`, confirmed
   batch 21) — DB had `裡維加茲` (wrong radical) in both Details and Objectives.
 
+### Batch 25 (4741–4940) fixes log
+
+56 real rows in range (143 IDs not in DB); 45 flagged — the highest density seen yet (80% of
+real rows flagged), dominated by a Blackrock Spire questline cluster.
+
+**"Seal of Ascension" questline** (quests 4742/4743, plus a missed occurrence in 4903):
+`item_template_locale` confirms both the Unadorned and Unforged Seal of Ascension items are
+`...徽印`, not DB's `...印章` — fixed the title and every body occurrence in both quests. Also
+fixed: English confirms "**Overlord** Wyrmthalak" — DB variously dropped the title entirely
+(`維姆薩拉克`) or used the wrong word for it (`監督者維姆薩拉克`, "Supervisor") — all three
+occurrences (4742, 4743, 4903) fixed to `維姆薩拉克主宰`. `creature_template_locale` also
+confirms Emberstrife (id 10321) → `艾博斯塔夫`, not DB's `埃博斯塔夫`. And English confirms
+"Black **Dragonflight**" specifically — DB's generic `黑龍` fixed to `黑龍軍團` in quest 4743.
+
+**Wrong NPC surname across 6 quests**: Menara **Voidrender** (quests 4782/4783/4784/4786) —
+`creature_template_locale` (id 6266) confirms `梅納拉·虛無撕裂者`; DB had an unrelated
+phonetic-ish `梅納拉·沃倫德` throughout the entire "Enchanted Gold Bloodrobe" questline.
+
+**More Troll-race fixes** (`[[feedback-zhtw-troll-ogre-terms]]`):
+- Quest 4787 (`遠古之卵`): Zul'Aman/Sandfury context — `巨魔`→`食人妖`, 2 occurrences.
+- Quest 4788 (`最後的石板`): Smolderthorn clan — confirmed **Troll**, not Ogre, via unit-title
+  evidence in `creature_template` (Smolderthorn **Headhunter**, **Witch Doctor**, **Shadow
+  Hunter** — these role names are Troll-exclusive in this corpus, unlike the Spirestone clan
+  in the same questline, which is confirmed Ogre via "Spirestone **Ogre** Magus"). Also
+  directly confirmed via quest 4903's own English Details: "the cruel and ruthless **troll**,
+  War Master Voone" — fixed `巨魔指揮官沃恩`→`食人妖指揮官沃恩`.
+
+**Genuine mistranslation**: quest 4867 (`烏洛克`) — English LogDesc: "Bring **Warosh's Mojo**
+to Warosh." DB rendered "Mojo" (a voodoo/troll-flavor magical charm) as `蟑螂` ("cockroach"),
+nonsensical in context — fixed to `魔精`, matching wowhead and the actual concept.
+
+**Character-level typo**: quest 4866 (`蛛後的乳汁`→`蛛后的乳汁`, "Spider Queen's Milk") — `後`
+("after/behind") and `后` ("queen/empress") are different characters; the quest is about a
+Spider *Queen* (`蛛后`), not "after the spider." Fixed all 4 occurrences across the title,
+Details, and Objectives.
+
+**Other confirmed fixes**:
+- Quest 4764/4765 (`末日扣環`, "Doomrigger's Clasp"): `item_template_locale` confirms `扣環`,
+  not DB's `釦環` — fixed across both quests in the mini-chain.
+- Quest 4770 (`回家`): `creature_template_locale` confirms Pao'ka **Swiftmountain** →
+  `波卡·捷山`; DB's `波卡·雨山` doesn't match "Swiftmountain" at all. Also fixed the same
+  `雙足飛龍`→`雙足翼龍` Wyvern-term issue found in quest 4767 (same creature, same fix).
+- Quest 4767 (`馭風者`): `creature_template_locale` confirms Highperch Wyvern → `風巢雙足翼龍`
+  — DB's body text used a different core term (`雙足飛龍`) throughout; fixed to `雙足翼龍`
+  (with the full `風巢` prefix restored in the Objectives field specifically, matching how
+  English uses the full name only in the concrete item-count instruction).
+- Quest 4822 (`草莓冰激凌`): removed a stray leftover `*` character from the title (identical
+  pattern to batch 23's quest 4482).
+- Quest 4903: another missed occurrence of the batch-21 Warlord Goretooth fix (`軍官高圖斯`→
+  `督軍高圖斯`, 3 occurrences in this one row).
+
+**False positive confirmed (DB was already correct, no change)**:
+- Quest 4767: English title is literally "**Wind Rider**," matching DB's `馭風者` exactly.
+  Wowhead's own title for this quest (`雙足飛龍`, "Wyvern") doesn't match the English title at
+  all — left DB's title unchanged despite the diff flag.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1768,10 +1826,11 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 4741 (batch 25, target range roughly 4741–4940) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,451 quest IDs
-remain after batch 24 (see Total scope note above). A reminder from batch 22 (reused
-successfully in batch 24): a proper-noun fix
+Not started. Resume from quest ID 4941 (batch 26, target range roughly 4941–5140) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,395 quest IDs
+remain after batch 25 (see Total scope note above). A reminder from batch 22 (reused
+successfully in batches 24 and 25 — Warlord Goretooth's title fix resurfaced yet again in
+batch 25's quest 4903): a proper-noun fix
 confirmed via `creature_template_locale` in one batch can still resurface, unfixed, several
 batches later — batch 22 caught 3 such cases (Lord Incendius from batch 20's quest 3907, Ginro
 Hearthkindle from batch 21's quests, the Golem term from batches 18/20/21) that reappeared in
