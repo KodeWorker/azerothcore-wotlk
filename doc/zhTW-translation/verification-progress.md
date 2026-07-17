@@ -119,8 +119,10 @@ Both phases run on the same small batch before moving to the next.
 
 | 6341–6540 (no skip-listed IDs in range) | 2026-07-17 | 6 targeted fixes across 5 quest rows (one a resurfacing fix in an already-verified batch-29 row) | Batch 33. 41 real rows in range; 21 flagged, moderate-high density (51%). A genuine NPC-swap content bug (quest 6521: Objectives said turn in Ambassador Malcin's head to Varimathras, but English and this row's own `ObjectiveText1` sub-hint both confirm Bragor Bloodfist — fixed using the row's own already-correct spelling `布拉貢·血拳` over wowhead's independent `貝拉戈`). A Troll-term resurfacing (quest 6461, `巨魔`→`食人妖`, "We **Trolls** here at Malaka'Jin"). Extended the Chillwind Camp/Post DBC distinction to one more quest (6389) — and while checking it, found and fixed the *same* bug resurfacing in already-verified quest 5903 (batch 29's range): its Objectives field already correctly said `冰風營地`, but its CompletedText field still had the old `冰風崗` — the kind of resurfacing-in-already-fixed-rows this pass watches for. **Three same-day reversals, all after user follow-up questions caught insufficient initial checks** — a literal English-word match isn't automatically right when official localization made a deliberate lore-based word choice instead: (1) quests 6384/6385/6386 (Wind Rider Master cluster) — initially "fixed" toward `馭風者`/"Wind Rider" reasoning that `creature_template`'s literal English title "Wind Rider Master" settled it; reverted per user lore correction (the Wind Rider mount is lore-wise a Wyvern, and wowhead's `雙足飛龍` rendering is the good, accepted zhTW term for it). All three quests now consistently use `雙足飛龍`/`雙足飛龍管理員`, matching wowhead. (2) quest 6481 — initially kept DB's `開啟`/`共鳴桶` as a literal match for English "open the Resonite cask"; reverted per user correction that the in-game object is actually a large crystal, not a barrel/cask, making wowhead's `粉碎`/`共鳴石`("smash the Resonite stone") the lore-accurate rendering. Also aligned `魔化`→`附魔` in the same quest while fixing it, matching the already-established batch-29 "Enchanted" convention. (3) `龍人`/`龍裔` and `巨龍沼澤`/`巨龍泥沼` (quests 6501/6502) — initially left as false positives on a "DB's own corpus majority, no locale table" basis without actually searching for ground truth; user pushed back and a proper check found both settled: `AreaTable_zhTW.tsv` id 511 = `巨龍泥沼` (tier-1 DBC, found this time by searching the Chinese candidate spelling directly rather than stopping at "no locale table exists" — same technique the Elune miss should have already taught); wowhead's own dedicated NPC page (`npc=7040`, "Black Dragonspawn") confirms `黑色龍裔`, settling `龍裔` for "Dragonspawn" specifically (tier-3). Fixed both quests; the corpus's other ~7 `龍人` occurrences remain unverified (some are plausibly the same "Dragonspawn" concept given "Black"/Nefarian context clues, but not individually confirmed — see Established terms for the open item). See Established terms for the remaining open scope on Wind Rider (16 more `馭風者` occurrences elsewhere in the corpus, not swept). |
 
+| 6541–6740 (excl. 11 skip-listed; 133 IDs not in DB) | 2026-07-17 | 11 targeted fixes across 11 quest rows + 2 project-wide resurfacing sweeps (39×, mostly outside batch) | Batch 34. 56 real rows in range; 39 flagged, very high density (70%) — dominated by two large clusters (a Splintertree/Zoram'gar Naga questline and a Blackrock Spire black-dragon-disguise questline). One confirmed resurfacing sweep of an already-settled term, applied file-wide: `埃博斯塔夫`→`艾博斯塔夫` (Emberstrife, an already-established rule from batch 24/25 that had never been swept past that batch's own range, 14×). A title/content fix for a wrong epithet (`夢遊者`→`暮光領主`, "**Twilight Lord** Kelris," quest 6561 — "Dreamwalker" doesn't match at all). A singular/plural fix (`上古之神`→`上古諸神`, "Allegiance to the **Old Gods**," quests 6564/6565 — scoped to the specific instances confirmed plural in English, not swept corpus-wide since "an Old God" singular is also legitimate in other contexts). A location fix (`慰藉之林`→`碎木崗哨`, "**Splintertree Post**," quest 6544) plus matching the corpus's own established `托雷克`/`埃爾托格` spelling over this quest's outlier `託`-variant. A resurfacing Dragonspawn-term fix (`龍人`→`龍裔`, batch-33-established rule, quests 6569/6570). A dropped-token bug restored (quest 6611: DB hardcoded the `$r` race placeholder as `亡靈`/"Undead" instead of preserving it) alongside the established Goblin race-term fix (`地精`→`哥布林`). Two name-spelling fixes leaning wowhead on cross-page consistency grounds (not just one quest's prose, but 4-5 independently-fetched quest pages all agreeing): `羅卡魯`→`羅卡洛` (Rokaro) and `麥蘭達`→`米蘭達` (Myranda the Hag — also matches this corpus's own 18:6 majority spelling *elsewhere*, confirming the cluster's `麥蘭達` was the OpenCC-error outlier). A word-choice fix matching the specific English noun (`騙過那些黑龍的眼睛`→`騙過黑龍軍團`, "fool the **Black Dragonflight**," not "eyes"). A title fix where neither side's rendering was a literal match, but wowhead's was much closer to the actual English idiom (`青出於藍！`→`我已經傾囊相授了！`, "**I Got Nothin' Left!**"). Confirmed two false positives going the *other* direction — DB was right, wowhead's own fetch was wrong: quest 6606 (`冬泉谷永望鎮` — Everlook genuinely is in Winterspring; wowhead's `奧格瑪` doesn't match "Witch Doctor Mau'ari in **Everlook**" at all) and quest 6610 (DB's "10 Giant Eggs" count and `迪爾格` name spelling both matched English exactly; wowhead's "12" and `戴格` did not). |
+
 **Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs
-span 1–26034). After batch 33, **2,969 verified**, **5,898 remaining** — roughly 30 more
+span 1–26034). After batch 34, **3,025 verified**, **5,842 remaining** — roughly 30 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -252,6 +254,30 @@ batch's ID range (a confirmed fix does not mean every occurrence has been swept)
   hierarchy, then the user overrode this in favor of wowhead's spelling as phonetically closer
   to English "Aurius." Same override pattern as Felhunter, triggered by sound rather than
   semantic fit.
+- **Blackfathom Deeps = `黑澗深淵`, kept as DB already had it — final answer, user
+  semantic-preference override (batch 34).** Initially swept DB's `黑澗深淵`→`黑暗深淵` project-wide
+  (25×) on `AreaTable_zhTW.tsv` tier-1 DBC grounds (ids 719/2797 = `黑暗深淵`, also corroborated
+  independently by `Map_zhTW.tsv`, `LFGDungeons_zhTW.tsv`, `Faction_zhTW.tsv`, and
+  `Achievement_Name_zhTW.tsv` — five separate DBC files all agreeing, and the files
+  cross-checked as genuinely zhTW-sourced via two already-settled spot checks, Kirin Tor and
+  Un'Goro). User then supplied a genuinely fascinating wrinkle: wowhead's own
+  expansion-tagged pages show this zone was **renamed by Blizzard between eras** —
+  `wotlk/tw/zone=719` and `tbc/tw/zone=719` both show `黑暗深淵` (matching the DBC, since this
+  project's ground truth is extracted from the WotLK-era client specifically), while
+  `classic/tw/zone=719`, `cata/tw/zone=719`, `mop-classic/tw/zone=719`, and current
+  `tw/zone=719` (retail) all show `黑澗深淵` — a rename introduced then later reverted, not a
+  zhCN/zhTW split. So `黑暗深淵` genuinely was the era-accurate, DBC-confirmed WotLK name.
+  **Despite that, the user's final call is `黑澗深淵`** on a semantic-fit preference ("more
+  fitting for blackfathom") — reverted all 25 occurrences back. Same override pattern as
+  Felhunter/Aurius: even solid, multiply-corroborated tier-1 DBC evidence for the *WotLK-era*
+  name doesn't automatically win when the user has a deliberate semantic/preference call to
+  make about which era's name to use for this project.
+- **`埃博斯塔夫`→`艾博斯塔夫`** (Emberstrife) — already settled as a rule back in batch 24/25 (see
+  NPC table below) but never actually swept past that batch's own ID range; resurfaced with 14
+  more occurrences in batch 34's Blackrock Spire black-dragon questline cluster. Swept
+  file-wide again — a reminder that "confirmed as a rule" and "swept everywhere it currently
+  appears" are two different states, and a rule confirmed early in the pass can still have a
+  large unswept tail many batches later.
 
 ### NPC name/title rulings
 
@@ -350,6 +376,12 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
 | Commander Louis Philips (npc=13154) | `路易斯` | NOT `劉易斯` — zhCN leak, user-confirmed via wowhead's own dedicated NPC page (full name `路易斯·菲力浦`); quests 6181/6281 refer to him only by given name ("Lewis'/Louis' Note") |
 | Doras / wind rider masters generally (Horde) | `馭風者管理員` | not `雙足飛龍管理員`(Gryphon/Wyvern Master) — `creature_template`'s own literal title for Doras (3310) is "Wind Rider Master"; fixed quests 6384/6385. Keep this cluster distinct from the unrelated Alliance `獅鷲`(Gryphon) quests (6391/6392 etc.) — different flying-mount terms for different factions, don't conflate. |
 | Bragor Bloodfist | `布拉貢·血拳` | not `瓦里瑪薩斯`(Varimathras, a genuine NPC-swap bug, quest 6521) — spelling matches this row's own pre-existing `ObjectiveText1` field, not wowhead's independent `貝拉戈` |
+| Twilight Lord Kelris | needs `暮光領主` title | not `夢遊者`("Dreamwalker") — doesn't match at all, quest 6561 |
+| Rokaro (npc=10182) | `羅卡洛` | not `羅卡魯` — no locale table, but wowhead is cross-page consistent (4-5 independently-fetched quest pages all agree), a stronger signal than one quest's prose alone; quests 6567/6568/6601/6602 |
+| Myranda the Hag (npc=11872) | `米蘭達` | not `麥蘭達` — matches this corpus's own 18:6 majority spelling elsewhere; the `麥蘭達` cluster in this batch's questline was the OpenCC-error outlier, not the other way around |
+| Torek (npc=12858) / Ertog Ragetusk (npc=12877) | `托雷克` / `埃爾托格` | not `託雷克`/`埃爾託格` — matches this corpus's own established spelling elsewhere (托 not 託) |
+| Dirge Quikcleave | `迪爾格` (name), count/spelling as DB had it | confirmed correct — quest 6610: wowhead's own fetch had both a wrong count (12 vs the correct English "10 Giant Eggs") and a wrong name (`戴格`) that don't match English at all; a wowhead scrape error, not a DB error |
+| Witch Doctor Mau'ari (Everlook) | `冬泉谷永望鎮` | confirmed correct — quest 6606: Everlook genuinely is located in Winterspring; wowhead's own fetch said `奧格瑪`(Orgrimmar), which doesn't match "Witch Doctor Mau'ari in **Everlook**" at all — a wowhead scrape error |
 
 ### Location / faction / item rulings
 
@@ -404,7 +436,7 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
 | the Forsaken (as a faction reference) | `被遺忘者` | not generic `亡靈`/"undead" — quest 6186 had substituted the generic race term for the specific faction name |
 | Resonite cask (Earthen Ring/Goggeroc questline) | `共鳴石`, action `粉碎`("smash") | NOT literal `共鳴桶`/"cask" + `開啟`/"open" — user-confirmed lore correction (batch 33): the in-game object is actually a large crystal, not a barrel, so wowhead's rendering matches what players actually see despite not matching the English string "cask"/"open" literally. Quest 6481. |
 | the Wyrmbog (Dustwallow Marsh) | `巨龍泥沼` | NOT `巨龍沼澤` — `AreaTable_zhTW.tsv` id 511, tier-1 DBC. Missed on first pass because the search only tried "no locale table exists" instead of searching the DBC files by the Chinese candidate spelling directly — same technique gap as the Elune miss (batch 29). Quest 6501. |
-| Dragonspawn (creature type) | `龍裔` | NOT `龍人` — wowhead's own dedicated NPC page (`npc=7040`, "Black Dragonspawn") confirms `黑色龍裔`. Fixed quest 6502 only; ~7 more `龍人` occurrences elsewhere in the corpus are unverified — some plausibly reference the same "Dragonspawn" concept (Black/Nefarian context) but were not individually confirmed, see Unresolved items. |
+| Dragonspawn (creature type) | `龍裔` | NOT `龍人` — wowhead's own dedicated NPC page (`npc=7040`, "Black Dragonspawn") confirms `黑色龍裔`. Fixed quests 6502 (batch 33), 6569/6570 (batch 34, same Blackrock Spire questline cluster as Emberstrife); remaining `龍人` occurrences elsewhere in the corpus are unverified, see Unresolved items. |
 | Valley of Honor (Orgrimmar) | `榮譽谷` | quest 6081: DB had a fabricated `士兵大廳`("Hall of Soldiers") instead; matches corpus's own established term (10 occurrences elsewhere) |
 | Adult Plainstrider | `成年平原陸行鳥` | not bare `成年陸行鳥` — dropped "Plains"; matches corpus's own 3 other occurrences |
 | Elune | `伊露恩` | NOT `艾露恩` — DBC-confirmed: `Achievement_Name_zhTW.tsv` id 937 = `伊露恩的祝福` ("Elune's Grace"), tier-1 ground truth. **Reversed same-day (batch 29) from an initial wrong call**: originally judged `艾露恩` "confirmed correct" on corpus breadth alone (89 occurrences across 7 pending files, including pre-existing `page_text_locale`/`quest_request_items_locale` text, vs wowhead's `伊露恩` at 37 in 2 files) — this reasoning was backwards. Corpus breadth from a text corpus majorly OpenCC-converted from zhCN is not independent corroboration; it's evidence the *same* wrong term propagated everywhere the conversion touched. **Lesson: for a proper-noun dispute, search the DBC ground-truth files by BOTH candidate Chinese spellings, not just the English word** — the batch-29 miss happened because `AreaTable_zhTW.tsv`-style files have no English column, so an English-only search (`grep -i elune`) finds nothing even when the answer is sitting right there under a Chinese-spelling search. Swept 103× project-wide. |
@@ -465,10 +497,10 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
   needing individual `item_template_locale` verification (confirmed the correct word varies by
   specific item, not a uniform swap — do not blind-sweep).
 - **Middle-dot `‧`/`·`** — 2568:534 split project-wide, only fixed per-instance so far.
-- **`龍人`/`龍裔` (Dragonspawn)** — settled `龍裔` is correct (wowhead NPC page, batch 33), but
-  only 1 of ~8 corpus occurrences fixed (quest 6502). The rest need individual verification —
-  some look plausibly like the same "Dragonspawn" concept (Black/Nefarian context clues) but
-  weren't individually confirmed against their own English source.
+- **`龍人`/`龍裔` (Dragonspawn)** — settled `龍裔` is correct (wowhead NPC page, batch 33), 3 of
+  ~8 corpus occurrences fixed so far (quests 6502, 6569, 6570). The rest need individual
+  verification — some look plausibly like the same "Dragonspawn" concept (Black/Nefarian
+  context clues) but weren't individually confirmed against their own English source.
 - **`馭風者` (Wind Rider, generic mount references)** — `雙足飛龍` confirmed as the
   lore-preferred term (batch 33, user correction), fixed in one quest cluster (6384-6386).
   ~16 more `馭風者` occurrences remain elsewhere in the corpus, unverified.
@@ -549,9 +581,9 @@ established terms/rulings, and move the Next-batch pointer.
 
 ## Next batch
 
-Resume from quest ID 6541 (batch 34, target range roughly 6541–6740) following the same
-two-phase methodology, skipping any ID present in `skip-list.tsv`. 5,898 quest IDs remain
-after batch 33 (see Total scope note above).
+Resume from quest ID 6741 (batch 35, target range roughly 6741–6940) following the same
+two-phase methodology, skipping any ID present in `skip-list.tsv`. 5,842 quest IDs remain
+after batch 34 (see Total scope note above).
 
 Watch in particular for newly-settled rulings resurfacing wrong: Kel'Thuzad (`克爾蘇加德`, not
 `科爾蘇加德`), Lord Maxwell Tyrosus (`瑪克斯韋爾·泰羅索斯領主`, not `...男爵` or the
