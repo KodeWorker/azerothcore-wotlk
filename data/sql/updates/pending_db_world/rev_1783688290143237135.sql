@@ -634,7 +634,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 357 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (357,'zhTW','IV.流量控制器$B$B升高或降低流量。由主動式負載平衡器自動控制。$B$BV. 溫度指使計$B$B顯示系統的操作溫度。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 358 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (358,'zhTW','星辰的孩子已經在永恆之井閃光的湖水邊定居了很久。眾所周知，象徵永恆曙光的艾露恩在就在這水中休憩。岸邊住著星辰的孩子們，艾露恩眷顧著他們，給他們安家，而他們也總在夜晚虔誠地凝望月空。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (358,'zhTW','星辰的孩子已經在永恆之井閃光的湖水邊定居了很久。眾所周知，象徵永恆曙光的伊露恩在就在這水中休憩。岸邊住著星辰的孩子們，伊露恩眷顧著他們，給他們安家，而他們也總在夜晚虔誠地凝望月空。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 359 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (359,'zhTW','當森林中的古樹被連根拔起的時候，由塞納留斯的兒女們看守的樹林，還有星辰之子們的石塔，整個世界都在顫抖。我們的女王即使在絕望和混亂的戰爭期間仍保持著她的優雅。在魔法的作用下，天空都變了顏色，爆炸好像要將世界撕成碎片。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 360 AND `locale` = 'zhTW';
@@ -888,7 +888,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 639 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (639,'zhTW','這個當時尚未開化的，過著遊牧生活的類人生物族群被井中的奇異能量所吸引而來，並在它寧靜海岸邊上建立起了永久性的居所。隨著時間的流逝，井中的大宇宙力量對這個族群產成了潛移默化的影響，讓他們更加強壯，睿智並擁有了不朽的生命。這個部族自稱為卡多雷，這個名字在他們的語言中意為“星辰之子”。為了慶賀新的社會制度的誕生，他們沿著湖泊建立起雄偉的居所與廟宇。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 640 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (640,'zhTW','卡多雷，或稱呼他們為夜精靈，崇拜月神艾露恩。他們相信她白天就睡在井中心最閃光的地方。由於受到井中所蘊涵著的秘密與魔力所吸引，早期的夜精靈祭司和先知們總是對井充滿好奇，並孜孜不倦地研究著它。隨著他們社會的發展，夜精靈終於瞭解到了卡林多大陸的寬廣幅度並發現了生活在這片大陸上的無數居民。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (640,'zhTW','卡多雷，或稱呼他們為夜精靈，崇拜月神伊露恩。他們相信她白天就睡在井中心最閃光的地方。由於受到井中所蘊涵著的秘密與魔力所吸引，早期的夜精靈祭司和先知們總是對井充滿好奇，並孜孜不倦地研究著它。隨著他們社會的發展，夜精靈終於瞭解到了卡林多大陸的寬廣幅度並發現了生活在這片大陸上的無數居民。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 641 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (641,'zhTW','唯一能阻止他們探索這片大陸的只有古老而強大的龍了。雖然這些身形巨大而蜿蜒的生物總是過著遁世隱居的生活，但它們會為防止任何潛在的威脅波及這片大陸而做出努力。夜精靈們認為這些龍正是這個世界的守護者，並且最好不要打擾它們和它們的秘密。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 642 AND `locale` = 'zhTW';
@@ -1064,7 +1064,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 951 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (951,'zhTW','（這本又髒又破的日誌只有一部分能夠認清楚了。）$B$B奧達曼，第三天$B$B我不敢相信自己居然會有那麼愚蠢。只有沒經驗的新手才會被暗爐矮人偷襲！我的傷口遲遲不能痊癒，顯然我中了毒。我感到自己的體力越來越不行了。即使如此，我還得繼續前行……$B$B……事情變的更糟了，地精為我製作的項鍊被打碎了！項鍊上最大的三顆寶石都不見了。我必須找到寶石，沒有它們的話，項鍊根本沒有用……',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 953 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (953,'zhTW','星辰的孩子已經在永恆之井閃光的湖水邊定居了很久。眾所周知，象徵永恆曙光的艾露恩在就在這水中休憩。岸邊住著星辰的孩子們，艾露恩眷顧著他們，給他們安家，而他們也總在夜晚虔誠地凝望月空。',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (953,'zhTW','星辰的孩子已經在永恆之井閃光的湖水邊定居了很久。眾所周知，象徵永恆曙光的伊露恩在就在這水中休憩。岸邊住著星辰的孩子們，伊露恩眷顧著他們，給他們安家，而他們也總在夜晚虔誠地凝望月空。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 954 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (954,'zhTW','當森林中的古樹被連根拔起的時候，由塞納留斯的兒女們看守的樹林，還有星辰之子們的石塔，整個世界都在顫抖。我們的女王即使在絕望和混亂的戰爭期間仍保持著她的優雅。在魔法的作用下，天空都變了顏色，爆炸好像要將世界撕成碎片。',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 970 AND `locale` = 'zhTW';
@@ -2160,7 +2160,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2434 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2434,'zhTW','你好，$N。寫這封信的時候，我陷入了沉思。$B$B我們中的許多人都認為薩滿是我們的精神領袖，就好像我們的酋長一樣。其他人會認為劍和斧才是更加高貴的追求，但是不要忘了戰鬥——甚至是戰爭——是要靠那些有一技之長的人獲勝的。這就是我想要和你說的，$N。到試煉谷裡的大獸穴來找我吧。$B$B——魯瓦格，潛行者訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2435 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2435,'zhTW','我的$g兄弟:姐妹，希望這塊符石能夠安全地送到你手中。我費盡心機讓這件事情看起來不是那麼明顯，你可能甚至都沒有發現自己的揹包中有這麼一封信。看來我的計劃不錯，不是嗎？$B$B我想要你知道，我在寒脊山谷的安威瑪爾等你。我很清楚大家團結在一起的重要性，特別在眼下的緊張時期，我們更應該在一起。當你有時間的時候就來找我吧。$B$B——索姆·哈格林，潛行者訓練師',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2435,'zhTW','我的$g兄弟:姐妹，希望這塊符石能夠安全地送到你手中。我費盡心機讓這件事情看起來不是那麼明顯，你可能甚至都沒有發現自己的背包中有這麼一封信。看來我的計劃不錯，不是嗎？$B$B我想要你知道，我在寒脊山谷的安威瑪爾等你。我很清楚大家團結在一起的重要性，特別在眼下的緊張時期，我們更應該在一起。當你有時間的時候就來找我吧。$B$B——索姆·哈格林，潛行者訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2436 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2436,'zhTW','記住我的話，$N。現在是一個到處都充滿藉口和欺騙的時代……即使我們偉大的幽暗城也是一樣。每個忠誠於希爾瓦娜斯的人都在為了開創一個新的時代而努力，一個由被遺忘者控制的時代。雖然我們不具有魔法技能，也不會拿起武器保衛邊疆，但是這世上依然有許多事情只有我們才能做。$B$B到喪鐘鎮的旅店裡來找我吧，我會和你討論更多問題的。$B$B——大衛·提亞斯，盜賊訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2437 AND `locale` = 'zhTW';
@@ -2202,7 +2202,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2455 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2455,'zhTW','馴服野獸，強大的射擊技巧，縝密的追蹤技能——你此生還想要達成什麼樣的偉績？以上我所說的這些都需要相當的智力和耐心才能成就。$B$B獵人之道並不簡單，這一點是肯定的。即便只是要達到我們最低的要求，你也需要接受大量的訓練。這就是我找你的原因。$B$B到寒脊山腳下的安威瑪爾來找我吧，我會等著你的。$B$B——索加斯·格瑞姆森，獵人訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2456 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2456,'zhTW','願艾露恩與你同在，$N。我很高興能直接參與培養下一代獵人的工作。$B$B根據我所瞭解到的情況，你就在泰達希爾附近。如果你有時間的話，我會在泰達希爾樹上等你的。$B$B我們的長者要求我好好訓練新的獵人，使他們有能力透過即將到來的試煉。你是我的新學生之一，希望你能夠來找我。祝你一路順風。$B$B——阿亞娜·遠途，獵人訓練師',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2456,'zhTW','願伊露恩與你同在，$N。我很高興能直接參與培養下一代獵人的工作。$B$B根據我所瞭解到的情況，你就在泰達希爾附近。如果你有時間的話，我會在泰達希爾樹上等你的。$B$B我們的長者要求我好好訓練新的獵人，使他們有能力透過即將到來的試煉。你是我的新學生之一，希望你能夠來找我。祝你一路順風。$B$B——阿亞娜·遠途，獵人訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2457 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2457,'zhTW','很高興得知又有一個基沙的$g兄弟:姐妹到試煉谷來檢驗$g他:她的能力，基沙很高興！$B$B我無須再告訴你獵人有多麼強壯和靈活——你已經知道這一點了。基沙要告訴你的是，你還需要變得更加強壯和靈活。$B$B你可以在試煉谷裡找到基沙，她會教你很多東西。她會教你如何馴服最強大的野獸，以及更多其他的東西。$B$B——基沙，獵人訓練師',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2458 AND `locale` = 'zhTW';
@@ -3416,7 +3416,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 3395 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3395,'zhTW','因此我們啟動了名為“反對濫用魔法教育”的專案（簡稱M.A.R.E.，旨在向世人展示濫用魔法的危險後果。我們的目標是讓所有人都意識到：沒有魔法也能生存。生活的樂趣是無所不在的，例如花藝或是藤藝。這些難道不是令人興奮的娛樂方式嗎？',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3396 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3396,'zhTW','此外，該專案為魔法沉迷者提供了一系列的康復課程，幫助他們迴歸正常的社會生活。經過近6年的努力，我們與艾露恩姐妹會以及塞納里奧議會建立了密切的關係。這些組織有能力並且樂意幫助世人迅速擺脫魔法沉迷的病症。記住，關愛自己，就從現在開始！',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3396,'zhTW','此外，該專案為魔法沉迷者提供了一系列的康復課程，幫助他們迴歸正常的社會生活。經過近6年的努力，我們與伊露恩姐妹會以及塞納里奧議會建立了密切的關係。這些組織有能力並且樂意幫助世人迅速擺脫魔法沉迷的病症。記住，關愛自己，就從現在開始！',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3397 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (3397,'zhTW','艾澤拉斯世界充滿各種各樣的挑戰，想要維持安全且不受魔法困擾的生活方式是很難的。我們可以指引你找到這樣一條安全而舒適的道路。許多人已經從我們推崇的，涵蓋多種魔法替代品元素的生活方式中獲益。你不想成為下一個嗎？',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 3398 AND `locale` = 'zhTW';

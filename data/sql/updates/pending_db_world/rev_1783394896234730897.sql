@@ -15,7 +15,7 @@ INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALU
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1250 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1250,'zhTW','臭臭的新家','我聽說了你很喜歡養一些毛茸茸小動物的事，我希望你不會介意為我的臭臭找一個新家吧——它拒絕和我這裡的小動物一起玩耍。$B$B如果你收下，請確保一天餵它兩次。然後，嗯，它貌似對黑貓挺有興趣的，雖然不知道為什麼。$B$B - 布琳妮');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1681 AND `Locale` = 'zhTW';
-INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1681,'zhTW','來自達納蘇斯的問候','你的成就是意義重大且影響深遠的。一直以來飽受折磨的艾澤拉斯因為你的這次行為而擺脫了惡魔的束縛。$B$B只有那些願意花時間去了解我們土地的人才能明白我們的那些勇士前仆後繼守護這片大陸的意義，而你正是其中之一。很高興你能順利結束你的探險，願艾露恩祝福你。$B$B一切為了聯盟，感謝你，博學者。$B$B - 泰蘭妲·語風');
+INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1681,'zhTW','來自達納蘇斯的問候','你的成就是意義重大且影響深遠的。一直以來飽受折磨的艾澤拉斯因為你的這次行為而擺脫了惡魔的束縛。$B$B只有那些願意花時間去了解我們土地的人才能明白我們的那些勇士前仆後繼守護這片大陸的意義，而你正是其中之一。很高興你能順利結束你的探險，願伊露恩祝福你。$B$B一切為了聯盟，感謝你，博學者。$B$B - 泰蘭妲·語風');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1682 AND `Locale` = 'zhTW';
 INSERT INTO `achievement_reward_locale` (`ID`, `Locale`, `Subject`, `Text`) VALUES (1682,'zhTW','來自雷霆崖的問候','你的故事被廣為流傳， 猶如一股颶風席捲了整個大陸。那些敢於和惡魔戰鬥的人是我們唯一的期望。$B$B只有那些聽懂風的語言的人才能明白我們欠那些為保護這片大陸而倒下的勇士們多少。希望你能把探險的故事告訴更多在世的年輕人，讓我們記得這世上還有多少值得感恩的事。$B$B向你致以深深的感謝，博學者，大地母親與你同在。$B$B為了部落！$B$B - 凱恩·血蹄');
 DELETE FROM `achievement_reward_locale` WHERE `ID` = 1956 AND `Locale` = 'zhTW';

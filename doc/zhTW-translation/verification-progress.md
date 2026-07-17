@@ -108,9 +108,11 @@ Both phases run on the same small batch before moving to the next.
 | 4741–4940 (excl. 1 skip-listed; 143 IDs not in DB) | 2026-07-17 | 38 targeted fixes across 16 quest rows | Batch 25. Highest density yet (80%). Blackrock Spire cluster; Menara Voidrender surname fix. |
 | 4941–5140 (excl. 1 skip-listed; 114 IDs not in DB) | 2026-07-17 | 39 targeted fixes across 19 quest rows | Batch 26. Very high density (67%); 3 resurfacing fixes across 15 quests. Aurius phonetic override. |
 | 5141–5340 (excl. 6 skip-listed; 100 IDs not in DB) | 2026-07-17 | 2 project-wide grammar sweeps (73×) + 27 targeted fixes across 16 quest rows | Batch 27. Very high density (63%). Leatherworking/Moonwell character-level sweeps. |
+| 5341–5540 (excl. 8 skip-listed; 133 IDs not in DB) | 2026-07-17 | 4 project-wide sweeps (71×) + 2 targeted fixes across 3 quest rows | Batch 28. Moderate density (44%). `想象`→`想像` orthography sweep and a `天災石`→`天譴石` resurfacing of the established Scourge term (both swept file-wide, including 3 occurrences of the latter far outside current progress). Gordok Ogre/Troll term initially misjudged as a false positive same-day, corrected after a user challenge — `戈多克巨魔` is in fact correct (9× swept). Iruxos name spelling settled same-day (zhCN-leak `埃魯索斯`→`埃盧梭斯`, 3×). One fix (Krastinov's "Butcher" epithet) applied then reverted same-day per user override — see Established terms. |
+| 5541–5740 (excl. 42 skip-listed; 88 IDs not in DB) | 2026-07-17 | 12 targeted fixes across 11 quest rows, + 2 same-day corrected sweeps (169×) | Batch 29. 70 real rows in range; 40 flagged, high density (57%) — dominated by a large priest/class-quest-chain cluster (race-variant "Returning Home"/"Desperate Prayer"/"In Favor of..." templates). Two genuine content-swap bugs found (quests 5628, 5631 — both had an identical duplicate of quest 5629's Details text instead of their own unique English-sourced content; DB's own internal 3-way duplication, not a wowhead disagreement alone). A dropped trailing sentence restored (quest 5623). Confirmed Troll term resurfacing (quest 5642, `巨魔`→`食人妖`) and a Burning Blade/Fireblade resurfacing matching this same file's own quest 5381 (`燃刃`→`火刃`, quests 5726/5727). An "Arcane Feedback" term fix matching the corpus's 176:73 `秘法` majority (quests 5676/5677). Five stray trailing-asterisk titles stripped. One lower-confidence fix (quest 5648, Grunt Kor'ja `步兵`→`蠻兵`). **Two same-day reversals after user correction**: `艾露恩`→`伊露恩` (Elune) was initially left as a "confirmed false positive" based on corpus breadth (89 occurrences vs wowhead's 37) — wrong call, corpus breadth was itself the OpenCC-conversion artifact; `Achievement_Name_zhTW.tsv` id 937 (`伊露恩的祝福`) is tier-1 DBC proof, swept 103× project-wide. `揹包`→`背包` (Satchel/backpack) similarly reversed per direct user correction (no DBC exists for this generic term; user's real-world zhTW usage knowledge is the source), swept 66× project-wide. See Established terms. |
 
 **Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs
-span 1–26034). After batch 27, **2,648 verified**, **6,219 remaining** — roughly 31 more
+span 1–26034). After batch 29, **2,777 verified**, **6,090 remaining** — roughly 31 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -127,9 +129,19 @@ batch's ID range (a confirmed fix does not mean every occurrence has been swept)
   tribe. See `[[feedback-zhtw-troll-ogre-terms]]`.
 - **Ogre = `食人魔` normally, but `巨魔` is also legitimate zhTW for specific confirmed clans**:
   Gordunni, Boulderfist, Mosh'Ogg (DBC-confirmed zone name, `AreaTable_zhTW.tsv` AreaID 105 =
-  `莫什奧格巨魔山`). **Not** Firegut (confirmed still `食人魔`, English explicitly says "Firegut
-  ogres" repeatedly, no exception applies). Never sweep `巨魔` without checking the specific
-  clan/tribe first — this is a per-clan fact, not a blanket rule.
+  `莫什奧格巨魔山`), and **Gordok** (batch 28, corrected same-day: initially misjudged as
+  `食人魔` based only on `creature_template`'s literal English name "Gordok Ogre-Mage" — that
+  only confirms the *English race* is Ogre, it does not settle the zhTW word choice, since
+  confirmed exceptions above are ALSO English "ogre" clans rendered `巨魔` in official
+  localization. The actual settling evidence is `npc_text_locale` id 6901 — genuine
+  pre-existing DB dialogue text, independent of wowhead — which already said `戈多克巨魔`;
+  wowhead agrees. Swept 9× within `rev_1783688290124463491.sql`). **Not** Firegut (confirmed
+  still `食人魔`, English explicitly says "Firegut ogres" repeatedly, no exception applies —
+  this one has no countervailing same-corpus evidence like Gordok did). Never sweep `巨魔`
+  without checking the specific clan/tribe first — this is a per-clan fact, not a blanket rule,
+  and a `creature_template` English-name match alone is not sufficient evidence either way;
+  check for independent same-corpus text (`npc_text_locale`, `page_text_locale`, etc.) or a
+  locale-table entry before concluding either direction.
 - **Gnome = `地精`, Goblin = `哥布林`** (per `ChrRaces_zhTW.tsv`; `侏儒` is the wrong fan-term
   for Gnome, swept 283× project-wide). Individual questlines routinely mix Gnome and Goblin
   NPCs even within the same chain — always verify per-NPC/quest against English, never assume
@@ -153,6 +165,10 @@ batch's ID range (a confirmed fix does not mean every occurrence has been swept)
 - **`亡靈天災`/`天災軍團`→`天譴軍團`** (the Scourge) — confirmed via wowhead faction page.
   Swept 63× + 26× in two separate passes (two different pre-existing wrong spellings for the
   same entity).
+- **`天災石`→`天譴石`** (Scourgestone item name, batch 28) — same underlying English word
+  ("Scourge") as the rule above, resurfacing in a different compound noun the earlier sweeps
+  didn't target. Swept 18× file-wide (including 3 occurrences far outside current progress,
+  quests ~10590/10592/10593).
 - **`肯瑞托` is zhCN, `祈倫托` is correct zhTW** (Kirin Tor) — settled definitively via the
   faction's own page (`wowhead.com/wotlk/tw/faction=1090`). Re-confirmed multiple times
   (batches 3, 11) whenever a single quest's wowhead prose showed `肯瑞托` — that's always the
@@ -186,6 +202,8 @@ batch's ID range (a confirmed fix does not mean every occurrence has been swept)
   `rev_1783688290124463491.sql`.
 - **`制皮`→`製皮`** (Leatherworking, "to manufacture") — `制` is the wrong character in this
   compound, `製` is correct Traditional Chinese. Swept 47× within the same file.
+- **`想象`→`想像`** ("to imagine") — `想象` is missing the correct traditional radical; corpus
+  was 41:20 wrong (majority in the wrong direction). Swept 41× within the same file (batch 28).
 - **Dryad = `林精`, not `樹妖`.** Originally a single-NPC fix for Rynthariel (batch 18), then
   re-verified corpus-wide — checked every existing `林精` occurrence (458, 1021, 1024, 1031,
   1945, 3514) against its English source, all 6 confirmed genuine "dryad" references, no false
@@ -307,6 +325,12 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
 | Vosh'gajin | `沃許加斯` | not `沃什加斯` |
 | Kel'Thuzad | `克爾蘇加德` | see Systemic sweeps above |
 | Lord Maxwell Tyrosus | `瑪克斯韋爾·泰羅索斯領主` | title `領主` not `男爵`; name spelling stays `瑪克斯韋爾` — do NOT confuse with the different character "Marshal Maxwell" of Burning Steppes, who is `麥克斯韋爾` |
+| Doctor Theolen Krastinov | `瑟爾林·卡斯迪諾夫教授`, no epithet | User override, not a source-hierarchy finding: WotLK-era zhTW had `屠夫`("the Butcher") in the title, but later-expansion official Chinese localization resolved it to plain `教授`(Professor) with no epithet — user judges the later, epithet-free form the more polished translation and prefers it here. (English version history is not the basis for this — don't reintroduce a claim about whether "the Butcher" is WotLK-original in English.) Initial batch-28 fix (adding `『屠夫』`, matching this repo's own WotLK-era English source text) reverted same-day per this override. |
+| Sylvanas / "the Banshee Queen" | verify per-instance which one English actually names | quest 5462: English says "freed by **the Banshee Queen**," not "Sylvanas" by name — DB had substituted the personal name; don't assume these are interchangeable elsewhere without checking |
+| Leonid Barthalomew | `可敬的` ("the Revered") title is inconsistent **in the English source itself** | quest 5462 confirmed it, but 8 other corpus occurrences are bare — verify per-quest's own English text, do not sweep |
+| Hand of Iruxos | `埃盧梭斯` | not `埃魯索斯` — zhCN leak, user-confirmed; swept 3× (quests 5381, 5581) |
+| Neeru Fireblade / the Burning Blade | `火刃` | not `燃刃` — matches this same file's own quest 5381 ("The Burning Blade" → `火刃氏族`) plus corpus-wide 52:21 majority; fixed quests 5726/5727 (4 occurrences: the NPC's own surname + 3 "氏族" clan references) |
+| Grunt Kor'ja (12430) | `蠻兵科雅` | not `步兵科雅` — no locale table; corpus itself uses both `步兵`/`蠻兵` for different named "Grunt X" NPCs elsewhere with no clear pattern, leaned wowhead per the no-tiebreaker default (lower confidence than most entries here) |
 
 ### Location / faction / item rulings
 
@@ -356,6 +380,9 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
 | Moonwell | `月井` | see Systemic sweeps above |
 | Mosh'Ogg ogre mound | `莫什奧格巨魔山` | see Systemic sweeps above |
 | Deep Elem Mine | `深埃連礦坑` | see Systemic sweeps above |
+| Elune | `伊露恩` | NOT `艾露恩` — DBC-confirmed: `Achievement_Name_zhTW.tsv` id 937 = `伊露恩的祝福` ("Elune's Grace"), tier-1 ground truth. **Reversed same-day (batch 29) from an initial wrong call**: originally judged `艾露恩` "confirmed correct" on corpus breadth alone (89 occurrences across 7 pending files, including pre-existing `page_text_locale`/`quest_request_items_locale` text, vs wowhead's `伊露恩` at 37 in 2 files) — this reasoning was backwards. Corpus breadth from a text corpus majorly OpenCC-converted from zhCN is not independent corroboration; it's evidence the *same* wrong term propagated everywhere the conversion touched. **Lesson: for a proper-noun dispute, search the DBC ground-truth files by BOTH candidate Chinese spellings, not just the English word** — the batch-29 miss happened because `AreaTable_zhTW.tsv`-style files have no English column, so an English-only search (`grep -i elune`) finds nothing even when the answer is sitting right there under a Chinese-spelling search. Swept 103× project-wide. |
+| Satchel/backpack items | `背包` | NOT `揹包` — reversed same-day (batch 29) per direct user correction (real-world zhTW usage; no DBC exists for this generic non-proper-noun term, so this is a user judgment call, not a ground-truth-hierarchy finding). Same corpus-breadth trap as Elune: originally kept `揹包` because it had 50 occurrences across 6 files vs wowhead's 10 — that breadth argument is unreliable for exactly the same OpenCC-conversion reason. Swept 66× project-wide. |
+| Arcane (generic) | `秘法` | corpus favors this 176:73 over `奧術`; confirmed for "Arcane Feedback" title (quests 5676/5677, also matches English "Feedback" as a bare noun, not `回饋者`/"one who gives feedback") |
 
 ### Recurring typo / formatting classes
 
@@ -488,14 +515,21 @@ established terms/rulings, and move the Next-batch pointer.
 
 ## Next batch
 
-Resume from quest ID 5341 (batch 28, target range roughly 5341–5540) following the same
-two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,219 quest IDs remain
-after batch 27 (see Total scope note above).
+Resume from quest ID 5741 (batch 30, target range roughly 5741–5940) following the same
+two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,090 quest IDs remain
+after batch 29 (see Total scope note above).
 
-Watch in particular for two newly-settled batch-27 rulings resurfacing wrong: Kel'Thuzad
-(`克爾蘇加德`, not `科爾蘇加德`) and Lord Maxwell Tyrosus (`瑪克斯韋爾·泰羅索斯領主`, not
-`...男爵` or the different-character spelling `麥克斯韋爾·泰羅索斯`). More generally, check the
-Established terms and rulings section above whenever a name/term looks familiar in a new
-batch — a confirmed fix from an earlier batch regularly resurfaces unfixed in a later batch's
-ID range that the original batch never touched (Menara Voidrender alone has resurfaced across
-3 separate batches).
+Watch in particular for newly-settled rulings resurfacing wrong: Kel'Thuzad (`克爾蘇加德`, not
+`科爾蘇加德`), Lord Maxwell Tyrosus (`瑪克斯韋爾·泰羅索斯領主`, not `...男爵` or the
+different-character spelling `麥克斯韋爾·泰羅索斯`), the `天災石`→`天譴石` Scourgestone term
+(batch 28), and Neeru Fireblade/the Burning Blade (`火刃`, not `燃刃`, batch 29). Also watch for
+more instances of the batch-29 content-swap pattern: this DB has several near-identical
+race/class-variant quest-chain templates (priest "Returning Home"/"Desperate Prayer"/etc. was
+one; there are likely equivalent warrior/mage/paladin/etc. chains elsewhere) where one row's
+Details can get silently duplicated into a sibling row that should have its own unique
+English-sourced text — a same-diff-block match to another quest in the same template cluster is
+a red flag worth checking even when wowhead shows no diff for the row itself. More generally,
+check the Established terms and rulings section above whenever a name/term looks familiar in a
+new batch — a confirmed fix from an earlier batch regularly resurfaces unfixed in a later
+batch's ID range that the original batch never touched (Menara Voidrender alone has resurfaced
+across 3 separate batches).
