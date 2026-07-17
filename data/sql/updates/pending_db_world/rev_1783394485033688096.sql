@@ -1223,7 +1223,7 @@ INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `Ver
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 737 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (737,'zhTW','有些日子沒見你了，拿到筆記了嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 739 AND `locale` = 'zhTW';
-INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (739,'zhTW','你有關於阿戈莫德的訊息嗎？你找到他了嗎？',0);
+INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (739,'zhTW','你有關於埃格蒙德的訊息嗎？你找到他了嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 741 AND `locale` = 'zhTW';
 INSERT INTO `quest_request_items_locale` (`ID`, `locale`, `CompletionText`, `VerifiedBuild`) VALUES (741,'zhTW','$C，有什麼我可以幫你的嗎？',0);
 DELETE FROM `quest_request_items_locale` WHERE `ID` = 743 AND `locale` = 'zhTW';

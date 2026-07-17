@@ -1370,7 +1370,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 703 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (703,'zhTW','啊，我現在就來處理這些禿鷲的翅膀。我幾乎可以聞到它們的美味了！$B$B烹飪方法在這兒，如果你願意自己親自烹飪它們的話，就拿去吧。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 704 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (704,'zhTW','做得不錯！只要有些許運氣，再加上足夠的努力，我們會發現穴居人與這些古物的聯絡。$B$B你為勘察隊做出了巨大的貢獻，$N。我們不會忘記你的功勞。阿戈莫德也不會。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (704,'zhTW','做得不錯！只要有些許運氣，再加上足夠的努力，我們會發現穴居人與這些古物的聯絡。$B$B你為勘察隊做出了巨大的貢獻，$N。我們不會忘記你的功勞。埃格蒙德也不會。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 705 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (705,'zhTW','這些一定會派上大用場！我只要把它們碾碎……然後混合上一點點這個，還有這個。$B$B小心，有野獸朝這邊來了！準備點燃閃光彈！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 706 AND `locale` = 'zhTW';
@@ -1438,9 +1438,9 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 737 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (737,'zhTW','你拿到它了！我們又有希望啦！$B$B你所做的一切也許能拯救我們，$N。他們應該為你築一座紀念碑！他們應該為你建一座神殿！你的名字將名垂千古！$B$B除非……那些傢伙獲得了自由，重新回到了地面。如果是那樣的話，就別想著什麼千古啦。$B$B如果它們自由了，我們都會萬劫不復！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 738 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (738,'zhTW','這具骷髏一定是可憐的阿戈莫德留下的。他的屍體四分五裂，只剩下了一副空架子。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (738,'zhTW','這具骷髏一定是可憐的埃格蒙德留下的。他的屍體四分五裂，只剩下了一副空架子。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 739 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (739,'zhTW','這真是令人震驚的訊息，$N。阿戈莫德是個強壯勇敢、久經沙場的矮人，而且他生來就是個出色的戰士！儘管他最終還是被那幫該死的穴居人殺害了，但我確信他肯定在戰死之前幹掉了一大票穴居人。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (739,'zhTW','這真是令人震驚的訊息，$N。埃格蒙德是個強壯勇敢、久經沙場的矮人，而且他生來就是個出色的戰士！儘管他最終還是被那幫該死的穴居人殺害了，但我確信他肯定在戰死之前幹掉了一大票穴居人。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 741 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (741,'zhTW','哦，天哪！把這個發現留給勘察員雷姆塔維爾吧！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 742 AND `locale` = 'zhTW';
