@@ -197,6 +197,7 @@ quest_id	english_title	reason
 6711	<TXT> UBRS,STRATH,SCHOL - Repeatable	English title marker: <TXT> UBRS,STRATH,SCHOL - Repeatable
 6841	<UNUSED>	
 6842	<UNUSED>	English title marker: <UNUSED>
+6843	Da Foo	Da Foo -- unfinished dev/QA quest, English source is entirely blank/zero fields (level 0, no requirements, no Details/EndText, placeholder title); DB's zhTW row removed, no translation needed
 7069	<UNUSED>	
 7384	<nyi> <txt> The Scale Crafters	English title marker: <nyi> <txt> The Scale Crafters
 7521	Thunderaan the Windseeker	Thunderaan the Windseeker -- obsolete duplicate of quest 7786 (real live version, already translated); requires item 18566 which Wowhead flags DEPRECATED
