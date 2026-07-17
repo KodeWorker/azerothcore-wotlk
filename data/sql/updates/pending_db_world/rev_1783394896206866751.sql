@@ -172,7 +172,7 @@ INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `Title`, `Ver
 DELETE FROM `creature_template_locale` WHERE `entry` = 22727 AND `locale` = 'zhTW';
 INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `Title`, `VerifiedBuild`) VALUES (22727,'zhTW','奧特蘭克山羊',NULL,0);
 DELETE FROM `creature_template_locale` WHERE `entry` = 22760 AND `locale` = 'zhTW';
-INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `Title`, `VerifiedBuild`) VALUES (22760,'zhTW','亞斯拉·血矛',NULL,0);
+INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `Title`, `VerifiedBuild`) VALUES (22760,'zhTW','亞斯拉·血牙',NULL,0);
 DELETE FROM `creature_template_locale` WHERE `entry` = 24857 AND `locale` = 'zhTW';
 INSERT INTO `creature_template_locale` (`entry`, `locale`, `Name`, `Title`, `VerifiedBuild`) VALUES (24857,'zhTW','凱爾薩斯‧逐日者','血精靈之王',0);
 DELETE FROM `creature_template_locale` WHERE `entry` = 25541 AND `locale` = 'zhTW';
