@@ -94,7 +94,9 @@ Both phases run on the same small batch before moving to the next.
 
 | 4741–4940 (excl. 1 skip-listed ID; 143 more IDs not in DB) | 2026-07-17 | 38 targeted fixes across 16 quest rows, no project-wide sweeps | Batch 25. 56 real rows in range; 45 flagged, very high density (80%). A Blackrock Spire "Seal of Ascension" questline had the item's own established name wrong throughout (`印章`→`徽印`, confirmed via `item_template_locale`), plus a missing "Overlord" title for Wyrmthalak and a name-spelling fix for Emberstrife. A completely wrong NPC surname across 6 quests (Menara **Voidrender**, DB had an unrelated phonetic-ish `沃倫德` instead of `虛無撕裂者`). Two more Troll-race fixes (Zul'Aman/Sandfury, Smolderthorn — the latter newly confirmed via unit-title evidence: Headhunter/Witch Doctor/Shadow Hunter are Troll-only role names in this corpus). A genuine mistranslation (quest 4867: "Mojo" rendered as `蟑螂`/"cockroach," fixed to `魔精`), a character-level typo appearing 4 times in one quest (`蛛後`→`蛛后`, "after" vs "queen" — different characters), a stray leftover asterisk in a title (same pattern as batch 23), an item-name character fix (`釦環`→`扣環`, confirmed via `item_template_locale`), a creature-name fix (Pao'ka **Swiftmountain**), and another missed occurrence of the batch-21 Warlord Goretooth title fix. Confirmed one title false positive going the *other* direction: quest 4767's English title is literally "Wind Rider" (`馭風者`), matching DB exactly — wowhead's own title (`雙足飛龍`) doesn't match the English title at all and was left uncorrected on DB's side. |
 
-**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 25, **2,472 verified**, **6,395 remaining** — roughly 32 more ~200-ID batches at the current pace.
+| 4941–5140 (excl. 1 skip-listed ID; 114 more IDs not in DB) | 2026-07-17 | 39 targeted fixes across 19 quest rows, no project-wide sweeps | Batch 26. 85 real rows in range; 57 flagged, very high density (67%). Three previously-confirmed fixes resurfaced yet again across a combined 15 quests: Menara Voidrender (6 quests, `沃倫德`→`虛無撕裂者`), Magatha Grimtotem (3 occurrences, `野性圖騰`→`恐怖圖騰`), and War Master Voone/Overlord Wyrmthalak (both in quest 5081). A confirmed Felhound fix reusing the batch-10 preference. Six item-name fixes via `item_template_locale`, two of which overturned my own initial literal-English assumption (`板甲`/"Plate," matching English precisely, turned out wrong — the item's own established name uses generic `鎧甲` instead) — a reminder that the item's own canonical name always outranks a literal English-word guess. Two more `creature_template_locale` name fixes (Bauhaus's title, Ashlam Valorfist's spelling), a word-order fix, a title fix matching an English theme word ("Spying") the DB title missed, and a name-spelling correction for Aurius, later revised to `奧里爾斯` per the user's phonetic preference (see below — the locale table's own `奧里克斯` was judged less phonetically accurate than wowhead's rendering). One false positive confirmed (Blizzard's own intentional inconsistency in a joke/test quest, "Lee's Ultimate Test Quest... of Doom!" — no fix needed). |
+
+**Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs span 1–26034). After batch 26, **2,557 verified**, **6,310 remaining** — roughly 31 more ~200-ID batches at the current pace.
 
 ## Fixes log
 
@@ -1744,6 +1746,61 @@ Details, and Objectives.
   Wowhead's own title for this quest (`雙足飛龍`, "Wyvern") doesn't match the English title at
   all — left DB's title unchanged despite the diff flag.
 
+### Batch 26 (4941–5140) fixes log
+
+85 real rows in range (114 IDs not in DB); 57 flagged — the second-highest density seen
+(67%), dominated by a Barrens/Blackrock questline cluster.
+
+**Resurfacing fixes** (confirmed in earlier batches, found again here — a growing pattern
+worth actively watching for whenever a familiar name/term reappears, not just when the diff
+flags it):
+- Menara Voidrender (`沃倫德`→`虛無撕裂者`, confirmed batch 25): 6 more quests in this batch
+  (4962, 4964, 4965, 4967, 4968, 4969) — the entire "Orb of Orahil" questline.
+- Magatha Grimtotem (`野性圖騰`→`恐怖圖騰`, confirmed batch 20): quest 5062, 3 occurrences.
+- War Master Voone / Overlord Wyrmthalak (confirmed batch 25): both resurfaced together in
+  quest 5081 (`巨魔沃恩`→`食人妖沃恩`; `核心將領維姆薩拉克`→`維姆薩拉克主宰`).
+- Felhound (`地獄犬`→`惡魔犬`, established batch-10 user preference): quest 4962, title and
+  4 body occurrences.
+
+**Item-name fixes via `item_template_locale`** — two of these overturned an initial
+literal-English-word assumption, worth flagging as a lesson:
+- Breastplate of Bloodthirst (quest 5068): `血嗜胸甲`, not DB's reversed word order `嗜血胸甲`.
+- Empty Firewater Flask (quest 5083): `空的火水瓶` confirms `火水`, not DB's `火酒` — fixed the
+  title and Objectives.
+- Medallion of Faith (quest 5122): `信仰勳章`, not DB's `信仰獎章`.
+- Glyphed Oaken Branch (quest 4986): the item's own exact name is `雕紋橡木樹枝` — DB's title
+  (`雕文橡木枝`) was wrong on both the core word and missing a character.
+- **Fiery/Unfired Plate Gauntlets** (quest 5124): English literally says "**Plate**"
+  Gauntlets, which seemed like an obvious match for `板甲` (Plate armor) — but the item's own
+  established name uses generic `鎧甲` instead. Also Enchanted Thorium Bar → `附魔`, not `魔化`.
+  **Lesson**: a literal English-word match is not proof of the correct term when the item's own
+  canonical name says otherwise — always check `item_template_locale` even when the English
+  seems to obviously settle it.
+
+**More `creature_template_locale` fixes**:
+- Shardtooth Bear (quest 4970): `裂齒熊`, not DB's `碎齒熊` (a case where my own initial
+  literal-translation guess, "shard→碎," was also wrong — the locale table settled it).
+- Royal Overseer Bauhaus (quest 5023): `監督者`, not DB's generic `管理人`.
+- Commander Ashlam Valorfist (quest 5091): `阿胥拉姆`, not DB's `阿什拉姆`.
+- Aurius (quests 5122/5125): initially fixed to `奧里克斯` (matching `creature_template_locale`
+  exactly — neither DB's `奧裡克斯` nor wowhead's `奧里爾斯` matched it). **The user overrode
+  this afterward**: preference is wowhead's `奧里爾斯`, judged phonetically closer to English
+  "Aurius" than the locale table's own `奧里克斯`. Settled on `奧里爾斯` — a case of user
+  phonetic judgment outranking the locale-table spelling, similar to batch 10's Felhunter
+  precedent (`[[feedback-zhtw-ground-truth-priority]]`).
+
+**Other fixes**:
+- Quest 5064 (`偵察恐怖圖騰族`): English title "Grimtotem **Spying**" — DB's title
+  (`恐怖圖騰的密信`, "Grimtotem's Secret Letters") missed the spying theme entirely; adopted
+  wowhead's closer rendering.
+
+**False positive confirmed (DB was already correct, no change)**:
+- Quest 5101 ("Lee's Ultimate Test Quest... of Doom!"): a Blizzard developer joke/test quest
+  that self-referentially jokes about its own typos ("I be there even be typos in it!").
+  Details says "kill **ten** sheep," Objectives says "kill **six** sheep" — a genuine numeric
+  mismatch, but it exists in Blizzard's own English source (and wowhead's independent fetch
+  matches it exactly), so it's an intentional part of the joke, not a translation error.
+
 ## Known pre-existing issues found but not yet fixed (out of scope so far)
 
 - `quest_template_locale` in `rev_1783688290124463491.sql` has duplicate rows (two
@@ -1826,11 +1883,11 @@ Fixes log, and this Next-batch pointer.
 
 ## Next batch
 
-Not started. Resume from quest ID 4941 (batch 26, target range roughly 4941–5140) following
-the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,395 quest IDs
-remain after batch 25 (see Total scope note above). A reminder from batch 22 (reused
-successfully in batches 24 and 25 — Warlord Goretooth's title fix resurfaced yet again in
-batch 25's quest 4903): a proper-noun fix
+Not started. Resume from quest ID 5141 (batch 27, target range roughly 5141–5340) following
+the same two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,310 quest IDs
+remain after batch 26 (see Total scope note above). A reminder from batch 22 (reused
+successfully in batches 24, 25, and 26 — Menara Voidrender alone resurfaced in 6 more quests
+in batch 26): a proper-noun fix
 confirmed via `creature_template_locale` in one batch can still resurface, unfixed, several
 batches later — batch 22 caught 3 such cases (Lord Incendius from batch 20's quest 3907, Ginro
 Hearthkindle from batch 21's quests, the Golem term from batches 18/20/21) that reappeared in
