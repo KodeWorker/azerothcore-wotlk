@@ -111,8 +111,10 @@ Both phases run on the same small batch before moving to the next.
 | 5341–5540 (excl. 8 skip-listed; 133 IDs not in DB) | 2026-07-17 | 4 project-wide sweeps (71×) + 2 targeted fixes across 3 quest rows | Batch 28. Moderate density (44%). `想象`→`想像` orthography sweep and a `天災石`→`天譴石` resurfacing of the established Scourge term (both swept file-wide, including 3 occurrences of the latter far outside current progress). Gordok Ogre/Troll term initially misjudged as a false positive same-day, corrected after a user challenge — `戈多克巨魔` is in fact correct (9× swept). Iruxos name spelling settled same-day (zhCN-leak `埃魯索斯`→`埃盧梭斯`, 3×). One fix (Krastinov's "Butcher" epithet) applied then reverted same-day per user override — see Established terms. |
 | 5541–5740 (excl. 42 skip-listed; 88 IDs not in DB) | 2026-07-17 | 12 targeted fixes across 11 quest rows, + 2 same-day corrected sweeps (169×) | Batch 29. 70 real rows in range; 40 flagged, high density (57%) — dominated by a large priest/class-quest-chain cluster (race-variant "Returning Home"/"Desperate Prayer"/"In Favor of..." templates). Two genuine content-swap bugs found (quests 5628, 5631 — both had an identical duplicate of quest 5629's Details text instead of their own unique English-sourced content; DB's own internal 3-way duplication, not a wowhead disagreement alone). A dropped trailing sentence restored (quest 5623). Confirmed Troll term resurfacing (quest 5642, `巨魔`→`食人妖`) and a Burning Blade/Fireblade resurfacing matching this same file's own quest 5381 (`燃刃`→`火刃`, quests 5726/5727). An "Arcane Feedback" term fix matching the corpus's 176:73 `秘法` majority (quests 5676/5677). Five stray trailing-asterisk titles stripped. One lower-confidence fix (quest 5648, Grunt Kor'ja `步兵`→`蠻兵`). **Two same-day reversals after user correction**: `艾露恩`→`伊露恩` (Elune) was initially left as a "confirmed false positive" based on corpus breadth (89 occurrences vs wowhead's 37) — wrong call, corpus breadth was itself the OpenCC-conversion artifact; `Achievement_Name_zhTW.tsv` id 937 (`伊露恩的祝福`) is tier-1 DBC proof, swept 103× project-wide. `揹包`→`背包` (Satchel/backpack) similarly reversed per direct user correction (no DBC exists for this generic term; user's real-world zhTW usage knowledge is the source), swept 66× project-wide. See Established terms. |
 
+| 5741–5940 (no skip-listed IDs in range) | 2026-07-17 | 10 targeted fixes across 9 quest rows + 1 established-typo resweep (9×, mostly outside batch) | Batch 30. 52 real rows in range; 20 flagged, moderate density (38%). A garbled-word typo fix (`大長`→`酋長`, "Warchief") and a two-clan disambiguation in the same quest (5761: "The Burning Blade" → `火刃氏族` per the established rule, but its sibling clan "the Searing Blade" in the same Details field was *already correctly* `灼刃氏族` and deliberately left untouched — two similar-sounding clan names in one quest, don't let fixing one accidentally flatten the other). A real character-identity bug (quest 5762: DB conflated "Hemet Nesingwary" with his distinct son "Hemet Nesingwary **Jr.**" — wrong title, "old" vs "new customer" reversed, and a dropped "take his father's place" clause, all restored from English). Confirmed/extended the established Un'Goro Crater typo fix (`安戈洛爾`→`安戈洛`) to 2 more quests in range plus resurfaced instances in already-verified batches (9 total occurrences swept file-wide, most outside this batch's own range — same precedent as prior batches). An Alchemist/Chemist title fix and a literal surname fix (Grish "**Longrunner**" → `長跑者`, not the paraphrase `遠行者`). A same-template phrase fix across all 8 corpus instances of the Collector's Edition pet-delivery quest (`感謝您的支援`→`感謝您的支持`, more idiomatic for a customer-thank-you context; not a generic-word sweep — verified as the exact same boilerplate text in every instance, 5 of 8 in this batch's own range). One low-confidence name-spelling fix (Claire → `克雷爾`, no locale table). **Self-caught and reverted a same-day mistake**: an initial "trogg term" fix for quest 5892 (`石顎`→`石齶`, matching the established Rockjaw precedent) used an unscoped global replace that accidentally altered quests 432/433 too, which were untouched, already-correct, unrelated content — caught before finishing the batch, reverted those two rows to their exact prior committed state via `git show HEAD`, keeping only quest 5892's verified fix. Confirmed several false positives, all left unchanged: quest 5741's `節杖`/`權杖` and `艾瑟雷索塔裡`/`...高塔` (DB's structure is the more literal English match), `深鐵礦洞`/wowhead's `...礦坑` (matches the corpus's overwhelming `礦洞` convention for "mine" generally, not just this one item), and `響應召喚`/wowhead's `回應召喚` (DB's existing 5:1 majority plus a stronger idiom argument for "heeding a call"). |
+
 **Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs
-span 1–26034). After batch 29, **2,777 verified**, **6,090 remaining** — roughly 31 more
+span 1–26034). After batch 30, **2,829 verified**, **6,038 remaining** — roughly 31 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -331,6 +333,12 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
 | Hand of Iruxos | `埃盧梭斯` | not `埃魯索斯` — zhCN leak, user-confirmed; swept 3× (quests 5381, 5581) |
 | Neeru Fireblade / the Burning Blade | `火刃` | not `燃刃` — matches this same file's own quest 5381 ("The Burning Blade" → `火刃氏族`) plus corpus-wide 52:21 majority; fixed quests 5726/5727 (4 occurrences: the NPC's own surname + 3 "氏族" clan references) |
 | Grunt Kor'ja (12430) | `蠻兵科雅` | not `步兵科雅` — no locale table; corpus itself uses both `步兵`/`蠻兵` for different named "Grunt X" NPCs elsewhere with no clear pattern, leaned wowhead per the no-tiebreaker default (lower confidence than most entries here) |
+| "our great Warchief" | `酋長` | quest 5761: DB had a garbled non-word `大長` in place of `酋長` — a typo, not a translation dispute |
+| The Searing Blade (Ragefire Chasm cult) | `灼刃氏族` | confirmed correct as-is, a DIFFERENT clan from "the Burning Blade" (`火刃氏族`) despite the similar English/Chinese names — don't conflate when fixing one in the same quest |
+| Hemet Nesingwary **Jr.** | `小赫米特·奈辛瓦里` | distinct character from "Hemet Nesingwary" (Sr., the classic hunting-chain NPC, batch-2 note) — quest 5762 had dropped the "Jr."/`小` throughout title/objectives/details, plus reversed "new customer" as "old" and dropped a "take his father's place" clause; all restored from English. Do not sweep the ~28 other bare `赫米特·奈辛瓦里` occurrences elsewhere — those are almost certainly the distinct Sr. character and correct as-is. |
+| Grish Longrunner (12576) | `瑞什·長跑者` | surname only — `長跑者` (literally "Long"+"Runner") not `遠行者` ("wanderer/far-traveler"); no locale table, but "Longrunner" is unambiguous. Given name `瑞什` for "Grish" already agreed DB/wowhead, left unchanged despite not phonetically matching the initial "Gr-" sound — no better alternative available. |
+| Claire Willower (11945) | `克雷爾·韋洛` | not `克萊爾·韋洛` — no locale table, low-confidence lean-wowhead default |
+| Alchemist Arbington | `鍊金師阿爾比頓` | not `化學家`/"Chemist" — quest 5801 only; quest 5802's sibling NPC (Apothecary Dithers, `藥劑師迪瑟斯`) was already correct, don't confuse the two |
 
 ### Location / faction / item rulings
 
@@ -515,21 +523,37 @@ established terms/rulings, and move the Next-batch pointer.
 
 ## Next batch
 
-Resume from quest ID 5741 (batch 30, target range roughly 5741–5940) following the same
-two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,090 quest IDs remain
-after batch 29 (see Total scope note above).
+Resume from quest ID 5941 (batch 31, target range roughly 5941–6140) following the same
+two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,038 quest IDs remain
+after batch 30 (see Total scope note above).
 
 Watch in particular for newly-settled rulings resurfacing wrong: Kel'Thuzad (`克爾蘇加德`, not
 `科爾蘇加德`), Lord Maxwell Tyrosus (`瑪克斯韋爾·泰羅索斯領主`, not `...男爵` or the
 different-character spelling `麥克斯韋爾·泰羅索斯`), the `天災石`→`天譴石` Scourgestone term
-(batch 28), and Neeru Fireblade/the Burning Blade (`火刃`, not `燃刃`, batch 29). Also watch for
-more instances of the batch-29 content-swap pattern: this DB has several near-identical
-race/class-variant quest-chain templates (priest "Returning Home"/"Desperate Prayer"/etc. was
-one; there are likely equivalent warrior/mage/paladin/etc. chains elsewhere) where one row's
-Details can get silently duplicated into a sibling row that should have its own unique
-English-sourced text — a same-diff-block match to another quest in the same template cluster is
-a red flag worth checking even when wowhead shows no diff for the row itself. More generally,
-check the Established terms and rulings section above whenever a name/term looks familiar in a
-new batch — a confirmed fix from an earlier batch regularly resurfaces unfixed in a later
-batch's ID range that the original batch never touched (Menara Voidrender alone has resurfaced
-across 3 separate batches).
+(batch 28), Neeru Fireblade/the Burning Blade (`火刃`, not `燃刃`, batch 29) — but NOT its
+similar-sounding sibling clan "the Searing Blade" (`灼刃氏族`, a different clan, batch 30), and
+Hemet Nesingwary **Jr.** (`小赫米特·奈辛瓦里`, a distinct character from the classic Sr. hunting
+NPC, batch 30). Also watch for more instances of the batch-29 content-swap pattern: this DB has
+several near-identical race/class-variant quest-chain templates (priest "Returning Home"/
+"Desperate Prayer"/etc. was one; there are likely equivalent warrior/mage/paladin/etc. chains
+elsewhere) where one row's Details can get silently duplicated into a sibling row that should
+have its own unique English-sourced text — a same-diff-block match to another quest in the same
+template cluster is a red flag worth checking even when wowhead shows no diff for the row
+itself.
+
+**Process reminder from batch 30** (self-caught, not a ground-truth error): when a fix is meant
+to apply to exactly ONE quest row (not a corpus-wide sweep), scope the find-replace to that
+row specifically — a plain `content.replace(old, new)` across the whole file will silently
+sweep every other occurrence of the same substring too, even ones never reviewed. This is
+different from an *intentional* project-wide sweep of a confirmed single proper noun (which is
+correct and expected, e.g. Un'Goro Crater). Batch 30 caught this immediately via `git diff`
+before the batch was reported done (an unscoped "trogg term" fix for quest 5892 had also
+silently altered quests 432/433, which were untouched and already correct) and reverted the
+unintended part using `git show HEAD:<path>` to restore the exact original row content — worth
+doing a `git diff` sanity pass on the full file before finishing any batch with a "single-quest"
+fix, not just the field-count/duplicate check.
+
+More generally, check the Established terms and rulings section above whenever a name/term
+looks familiar in a new batch — a confirmed fix from an earlier batch regularly resurfaces
+unfixed in a later batch's ID range that the original batch never touched (Menara Voidrender
+alone has resurfaced across 3 separate batches).
