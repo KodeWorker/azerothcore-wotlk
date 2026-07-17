@@ -113,8 +113,10 @@ Both phases run on the same small batch before moving to the next.
 
 | 5741–5940 (no skip-listed IDs in range) | 2026-07-17 | 10 targeted fixes across 9 quest rows + 1 established-typo resweep (9×, mostly outside batch) | Batch 30. 52 real rows in range; 20 flagged, moderate density (38%). A garbled-word typo fix (`大長`→`酋長`, "Warchief") and a two-clan disambiguation in the same quest (5761: "The Burning Blade" → `火刃氏族` per the established rule, but its sibling clan "the Searing Blade" in the same Details field was *already correctly* `灼刃氏族` and deliberately left untouched — two similar-sounding clan names in one quest, don't let fixing one accidentally flatten the other). A real character-identity bug (quest 5762: DB conflated "Hemet Nesingwary" with his distinct son "Hemet Nesingwary **Jr.**" — wrong title, "old" vs "new customer" reversed, and a dropped "take his father's place" clause, all restored from English). Confirmed/extended the established Un'Goro Crater typo fix (`安戈洛爾`→`安戈洛`) to 2 more quests in range plus resurfaced instances in already-verified batches (9 total occurrences swept file-wide, most outside this batch's own range — same precedent as prior batches). An Alchemist/Chemist title fix and a literal surname fix (Grish "**Longrunner**" → `長跑者`, not the paraphrase `遠行者`). A same-template phrase fix across all 8 corpus instances of the Collector's Edition pet-delivery quest (`感謝您的支援`→`感謝您的支持`, more idiomatic for a customer-thank-you context; not a generic-word sweep — verified as the exact same boilerplate text in every instance, 5 of 8 in this batch's own range). One low-confidence name-spelling fix (Claire → `克雷爾`, no locale table). **Self-caught and reverted a same-day mistake**: an initial "trogg term" fix for quest 5892 (`石顎`→`石齶`, matching the established Rockjaw precedent) used an unscoped global replace that accidentally altered quests 432/433 too, which were untouched, already-correct, unrelated content — caught before finishing the batch, reverted those two rows to their exact prior committed state via `git show HEAD`, keeping only quest 5892's verified fix. Confirmed several false positives, all left unchanged: quest 5741's `節杖`/`權杖` and `艾瑟雷索塔裡`/`...高塔` (DB's structure is the more literal English match), `深鐵礦洞`/wowhead's `...礦坑` (matches the corpus's overwhelming `礦洞` convention for "mine" generally, not just this one item), and `響應召喚`/wowhead's `回應召喚` (DB's existing 5:1 majority plus a stronger idiom argument for "heeding a call"). |
 
+| 5941–6140 (excl. 1 skip-listed; 133 IDs not in DB) | 2026-07-17 | 9 targeted fixes across 6 quest rows | Batch 31. 67 real rows in range; 40 flagged, high density (60%) — dominated by a 5-race-variant Hunter "The Hunter's Path"/pet-taming quest-chain cluster (Tauren/Orc-Troll/Night-Elf/Dwarf-Gnome each with their own trainer NPC). Two more content-swap bugs found in that cluster (quests 6066, 6070 — each had the Night Elf variant's NPC/location text leaked into their own row, matching the exact batch-29/30 pattern; scoped fixes only, the other 8 quests in the cluster were already correct). A dropped word restored via corpus+English match (`成年陸行鳥`→`成年平原陸行鳥`, "Adult **Plainstrider**", quest 6061). A DBC-settled location fix (`冰風崗`→`冰風營地`, quest 6028 only — `AreaTable_zhTW.tsv` confirms these are two *distinct* real places, id 1684 "Chillwind Post" vs id 3197 "Chillwind Camp"; English for this quest specifically says "Camp", not a corpus-wide sweep since both terms are legitimately correct elsewhere for the other place). A fabricated-location fix (`士兵大廳`→`榮譽谷`, "Valley of Honor," quest 6081). A dropped zone name restored (`科多獸墳場`→adds `淒涼之地`, quest 6132). Confirmed several false positives, left unchanged: quest 5941's `遺物`/wowhead's `聖物` (established rule), the `達扎拉`/`達札拉` (Dazalar) name-spelling split (DB's own 17:2 majority, no locale table), `未完的任務`/`未完成的任務` and `梅羅什`/`梅羅西` (DB majority in each case, no locale table). Every fix this batch was applied with an exact-match-count check (`replace_once` asserting exactly 1 occurrence) after batch 30's self-caught unscoped-replace mistake — `git diff` confirmed only the 6 intended quest rows were touched. |
+
 **Total scope**: `quest_template_locale` in this pending file holds **8,867 quest rows** (IDs
-span 1–26034). After batch 30, **2,829 verified**, **6,038 remaining** — roughly 31 more
+span 1–26034). After batch 31, **2,896 verified**, **5,971 remaining** — roughly 30 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -388,6 +390,9 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
 | Moonwell | `月井` | see Systemic sweeps above |
 | Mosh'Ogg ogre mound | `莫什奧格巨魔山` | see Systemic sweeps above |
 | Deep Elem Mine | `深埃連礦坑` | see Systemic sweeps above |
+| Chillwind Post vs. Chillwind Camp | `冰風崗哨`/`冰風崗` vs `冰風營地` | two DISTINCT real places — `AreaTable_zhTW.tsv` id 1684 = `冰風崗哨` ("Post"), id 3197 = `冰風營地` ("Camp"). Corpus has both spread throughout (36:29 as of batch 31) — this is NOT a corpus-wide term dispute to sweep either direction; check each quest's own English ("Post" vs "Camp") individually. Quest 6028 confirmed "Camp" and was fixed; do not assume other `冰風崗` occurrences are wrong without checking their own English text first. |
+| Valley of Honor (Orgrimmar) | `榮譽谷` | quest 6081: DB had a fabricated `士兵大廳`("Hall of Soldiers") instead; matches corpus's own established term (10 occurrences elsewhere) |
+| Adult Plainstrider | `成年平原陸行鳥` | not bare `成年陸行鳥` — dropped "Plains"; matches corpus's own 3 other occurrences |
 | Elune | `伊露恩` | NOT `艾露恩` — DBC-confirmed: `Achievement_Name_zhTW.tsv` id 937 = `伊露恩的祝福` ("Elune's Grace"), tier-1 ground truth. **Reversed same-day (batch 29) from an initial wrong call**: originally judged `艾露恩` "confirmed correct" on corpus breadth alone (89 occurrences across 7 pending files, including pre-existing `page_text_locale`/`quest_request_items_locale` text, vs wowhead's `伊露恩` at 37 in 2 files) — this reasoning was backwards. Corpus breadth from a text corpus majorly OpenCC-converted from zhCN is not independent corroboration; it's evidence the *same* wrong term propagated everywhere the conversion touched. **Lesson: for a proper-noun dispute, search the DBC ground-truth files by BOTH candidate Chinese spellings, not just the English word** — the batch-29 miss happened because `AreaTable_zhTW.tsv`-style files have no English column, so an English-only search (`grep -i elune`) finds nothing even when the answer is sitting right there under a Chinese-spelling search. Swept 103× project-wide. |
 | Satchel/backpack items | `背包` | NOT `揹包` — reversed same-day (batch 29) per direct user correction (real-world zhTW usage; no DBC exists for this generic non-proper-noun term, so this is a user judgment call, not a ground-truth-hierarchy finding). Same corpus-breadth trap as Elune: originally kept `揹包` because it had 50 occurrences across 6 files vs wowhead's 10 — that breadth argument is unreliable for exactly the same OpenCC-conversion reason. Swept 66× project-wide. |
 | Arcane (generic) | `秘法` | corpus favors this 176:73 over `奧術`; confirmed for "Arcane Feedback" title (quests 5676/5677, also matches English "Feedback" as a bare noun, not `回饋者`/"one who gives feedback") |
@@ -523,9 +528,9 @@ established terms/rulings, and move the Next-batch pointer.
 
 ## Next batch
 
-Resume from quest ID 5941 (batch 31, target range roughly 5941–6140) following the same
-two-phase methodology, skipping any ID present in `skip-list.tsv`. 6,038 quest IDs remain
-after batch 30 (see Total scope note above).
+Resume from quest ID 6141 (batch 32, target range roughly 6141–6340) following the same
+two-phase methodology, skipping any ID present in `skip-list.tsv`. 5,971 quest IDs remain
+after batch 31 (see Total scope note above).
 
 Watch in particular for newly-settled rulings resurfacing wrong: Kel'Thuzad (`克爾蘇加德`, not
 `科爾蘇加德`), Lord Maxwell Tyrosus (`瑪克斯韋爾·泰羅索斯領主`, not `...男爵` or the
@@ -533,13 +538,17 @@ different-character spelling `麥克斯韋爾·泰羅索斯`), the `天災石`�
 (batch 28), Neeru Fireblade/the Burning Blade (`火刃`, not `燃刃`, batch 29) — but NOT its
 similar-sounding sibling clan "the Searing Blade" (`灼刃氏族`, a different clan, batch 30), and
 Hemet Nesingwary **Jr.** (`小赫米特·奈辛瓦里`, a distinct character from the classic Sr. hunting
-NPC, batch 30). Also watch for more instances of the batch-29 content-swap pattern: this DB has
-several near-identical race/class-variant quest-chain templates (priest "Returning Home"/
-"Desperate Prayer"/etc. was one; there are likely equivalent warrior/mage/paladin/etc. chains
-elsewhere) where one row's Details can get silently duplicated into a sibling row that should
-have its own unique English-sourced text — a same-diff-block match to another quest in the same
-template cluster is a red flag worth checking even when wowhead shows no diff for the row
-itself.
+NPC, batch 30). Also watch for more instances of the recurring content-swap pattern first seen
+in batch 29 and confirmed again in batch 31 (two more cases, in a 5-race-variant Hunter
+pet-taming quest chain this time): this DB has several near-identical race/class-variant
+quest-chain templates (priest "Returning Home"/"Desperate Prayer", hunter "The Hunter's Path"
+were two; there are likely equivalent warrior/mage/paladin/etc. chains elsewhere) where one
+row's Details/Objectives can get silently duplicated from a *sibling* row in the same template
+cluster instead of using its own unique English-sourced text — a same-diff-block match to
+another quest in the same template cluster is a red flag worth checking even when wowhead shows
+no diff for the row itself, and it's worth deliberately checking every row in an
+obviously-templated cluster against its own English source even when most rows in it look fine
+on the surface.
 
 **Process reminder from batch 30** (self-caught, not a ground-truth error): when a fix is meant
 to apply to exactly ONE quest row (not a corpus-wide sweep), scope the find-replace to that
