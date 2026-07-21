@@ -14,8 +14,9 @@ vice versa. Expect false positives: ratios ("10 to 1"), percentages,
 org names with digits ("SI:7"), spelled-out number words -- verify each
 against RequiredNpcOrGoCount/RequiredItemCount before "fixing" anything.
 """
-import sys, re
-sys.path.insert(0, "/home/ditcommon/github/azerothcore-wotlk/doc/zhTW-translation/scripts")
+import sys, os, re
+REPO = os.path.expanduser("~/github/azerothcore-wotlk")
+sys.path.insert(0, os.path.join(REPO, "doc/zhTW-translation/scripts"))
 from scan_missing_zhtw import extract_inserts, unquote
 
 if len(sys.argv) != 3:
@@ -23,15 +24,15 @@ if len(sys.argv) != 3:
     sys.exit(1)
 LO, HI = int(sys.argv[1]), int(sys.argv[2])
 
-EN_ROWS = extract_inserts("/home/ditcommon/github/azerothcore-wotlk/data/sql/base/db_world/quest_template.sql", "quest_template")
+EN_ROWS = extract_inserts(os.path.join(REPO, "data/sql/base/db_world/quest_template.sql"), "quest_template")
 EN_BY_ID = {unquote(r[0]): r for r in EN_ROWS}
 
-TARGET = "/home/ditcommon/github/azerothcore-wotlk/data/sql/updates/pending_db_world/rev_1783688290124463491.sql"
+TARGET = os.environ.get("ZHTW_QUEST_SQL", os.path.join(REPO, "data/sql/updates/pending_db_world/rev_1783688290124463491.sql"))
 DB_ROWS = extract_inserts(TARGET, "quest_template_locale")
 DB_BY_ID = {unquote(r[0]): r for r in DB_ROWS}
 
 skip_ids = set()
-with open("/home/ditcommon/github/azerothcore-wotlk/doc/zhTW-translation/skip-list.tsv") as f:
+with open(os.path.join(REPO, "doc/zhTW-translation/skip-list.tsv")) as f:
     for line in f:
         parts = line.rstrip("\n").split("\t")
         if parts and parts[0].isdigit():
