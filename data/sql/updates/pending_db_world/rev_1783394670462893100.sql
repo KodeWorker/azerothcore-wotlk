@@ -2986,7 +2986,7 @@ INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCap
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 184031 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (184031, 'zhTW', '一箱勘探設備', '採集', 0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 184084 AND `locale` = 'zhTW';
-INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (184084,'zhTW','開往秘藍島的船隻','',18019);
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (184084,'zhTW','開往藍謎島的船隻','',18019);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 184161 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (184161,'zhTW','大篝火','',0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 184468 AND `locale` = 'zhTW';

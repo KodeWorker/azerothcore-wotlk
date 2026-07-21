@@ -11289,7 +11289,7 @@ INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Te
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 20098 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (20098, 0, 0, 'zhTW', '我在這裡，爸爸。你睡了一整天了。你一定是太累了！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 20100 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
-INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (20100, 0, 0, 'zhTW', '這……這是夢嗎？秘藍島，秘血島，贊加沼澤，影月……甚至是祖阿曼……傑恩！傑恩你在哪裡！');
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (20100, 0, 0, 'zhTW', '這……這是夢嗎？藍謎島，秘血島，贊加沼澤，影月……甚至是祖阿曼……傑恩！傑恩你在哪裡！');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 20100 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (20100, 1, 0, 'zhTW', '啊，太好了。那一切只是場夢……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 20101 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';

@@ -9582,7 +9582,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9632 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9632,'zhTW','我可以讓你到達奧伯丁。你只要坐一小會兒船就可以到！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9633 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9633,'zhTW','<桑迪斯從你手中接過信並快速地開始閱讀，一邊點著頭。>$B$B德萊尼口中的秘藍島和秘血島，在很久以前都是我的族人居住的地方。學者菲索斯和他的同胞所面臨的一些威脅來自於夜精靈古老的敵人。$B$B我確信奧伯丁的人民願意向我們的新盟友提供協助。等我和我的人民及哨兵談過之後，我就會通知菲索斯。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9633,'zhTW','<桑迪斯從你手中接過信並快速地開始閱讀，一邊點著頭。>$B$B德萊尼口中的藍謎島和秘血島，在很久以前都是我的族人居住的地方。學者菲索斯和他的同胞所面臨的一些威脅來自於夜精靈古老的敵人。$B$B我確信奧伯丁的人民願意向我們的新盟友提供協助。等我和我的人民及哨兵談過之後，我就會通知菲索斯。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9634 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9634,'zhTW','做得好，$N。掠食者數量需要再觀察一陣子，但我們有了個好的開始。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9635 AND `locale` = 'zhTW';
@@ -9646,7 +9646,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9670 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9670,'zhTW','你救了超過一半的隊員！你的英勇行為絕對會傳回秘血崗哨和主教那裡的。再次謝謝你，$N。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9671 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9671,'zhTW','你是$N？是時候了！我正準備要放棄找你了！$B$B郵箱裡有個緊急的訊息在等著你。給我的那個人是一個秘藍島來的人類艦隊司令。艦隊司令·奧迪席什麼的……我忘記名字了。他說你知道他是誰。$B$B<赫米瑟斯聳聳肩。>',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9671,'zhTW','你是$N？是時候了！我正準備要放棄找你了！$B$B郵箱裡有個緊急的訊息在等著你。給我的那個人是一個藍謎島來的人類艦隊司令。艦隊司令·奧迪席什麼的……我忘記名字了。他說你知道他是誰。$B$B<赫米瑟斯聳聳肩。>',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9672 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9672,'zhTW','你聽過血咒嗎，旱鴨子？不，你當然沒聽過。血咒就是讓所有這些船都沉沒的原因。那個蠻橫、令鬼神敬而遠之的水域叫做血咒沙洲……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9673 AND `locale` = 'zhTW';
@@ -9690,7 +9690,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9692 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9692,'zhTW','非常好，$N。材料已經收集完畢。剩下的就是要鑄造武器了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9693 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9693,'zhTW','啊，$N……我聽過你。你就是那個在15分鐘內使在秘藍島跑了個來回的人，對嗎？呃，應該不是。$B$B你準備好以聖光之名拋頭顱灑熱血了嗎？為了維倫？為了阿古斯？$B$B<波魯斯笑了笑。>$B$B我說慢一點好了。',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9693,'zhTW','啊，$N……我聽過你。你就是那個在15分鐘內使在藍謎島跑了個來回的人，對嗎？呃，應該不是。$B$B你準備好以聖光之名拋頭顱灑熱血了嗎？為了維倫？為了阿古斯？$B$B<波魯斯笑了笑。>$B$B我說慢一點好了。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9694 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9694,'zhTW','你回來了——而且平安無事！$B$B我有些好訊息，$N。我們收到了一些新的資訊關於更多生還者可能的所在位置，同時我們發現了一個新的失事地點！等我處理完那些事情，我會再找你來的。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9695 AND `locale` = 'zhTW';
@@ -9802,7 +9802,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9749 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9749,'zhTW','你救了超過一半的隊員！你的英勇行為絕對會傳回秘血崗哨和主教那裡的。再次謝謝你，$N。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9750 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9750,'zhTW','你是$N？是時候了！我正準備要放棄找你了！$B$B郵箱裡有個緊急的訊息在等著你。給我的那個人是一個秘藍島來的人類艦隊司令。艦隊司令·奧迪席什麼的……我忘記名字了。他說你知道他是誰。$B$B<赫米瑟斯聳聳肩。>',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9750,'zhTW','你是$N？是時候了！我正準備要放棄找你了！$B$B郵箱裡有個緊急的訊息在等著你。給我的那個人是一個藍謎島來的人類艦隊司令。艦隊司令·奧迪席什麼的……我忘記名字了。他說你知道他是誰。$B$B<赫米瑟斯聳聳肩。>',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9751 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9751,'zhTW','你聽過血咒嗎，旱鴨子？不，你當然沒聽過。血咒就是讓所有這些船都沉沒的原因。那個蠻橫，褻瀆的水域叫做血咒沙洲……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9752 AND `locale` = 'zhTW';
@@ -9816,7 +9816,7 @@ INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `Verified
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9758 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9758,'zhTW','喔很好，你來了！正好是時候……有很多事要做！',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9759 AND `locale` = 'zhTW';
-INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9759,'zhTW','你拯救了整個秘血島和秘藍島，保衛德萊尼在艾澤拉斯的生命，$N！這樣的行為，沒有什麼樣的感謝，任何獎勵，或是什麼東西足以真正表達我們的感激。$B$B不過，還有很多人被留在德拉諾，無法在此經歷這歷史性的一刻。你一定要找到回去的路。回去外域，阿古斯的英雄。把我們的人民帶回家。那個你拯救的家。在艾澤拉斯的家……',0);
+INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9759,'zhTW','你拯救了整個秘血島和藍謎島，保衛德萊尼在艾澤拉斯的生命，$N！這樣的行為，沒有什麼樣的感謝，任何獎勵，或是什麼東西足以真正表達我們的感激。$B$B不過，還有很多人被留在德拉諾，無法在此經歷這歷史性的一刻。你一定要找到回去的路。回去外域，阿古斯的英雄。把我們的人民帶回家。那個你拯救的家。在艾澤拉斯的家……',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9760 AND `locale` = 'zhTW';
 INSERT INTO `quest_offer_reward_locale` (`ID`, `locale`, `RewardText`, `VerifiedBuild`) VALUES (9760,'zhTW','或許你會是那個帶領我們人民走入一個繁榮和平新世代的人。',0);
 DELETE FROM `quest_offer_reward_locale` WHERE `ID` = 9761 AND `locale` = 'zhTW';
