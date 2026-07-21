@@ -152,10 +152,12 @@ Both phases run on the same small batch before moving to the next.
 
 | 10741–10940 (no skip-listed IDs) | 2026-07-21 | 146 targeted fixes across 146 quest rows (bulk-replaced, 1 reverted post-fix) | Batch 55. High density (75%, 146/154 real out of 196 fetched, 8 bracket, 0 scrape-fail). Terokkar Forest White Bone Wastes/Skettis Auchindoun-lead-in cluster, Shadowmoon Valley Netherwing dragon-rescue chain, the Naaru Trials of the Naaru heroic-dungeon-key questline, and the Darkmoon Faire card-deck completion quests. **Caught a genuine wowhead-wrong-content case via the post-fix count audit**: quest 10842's bulk-applied Objectives no longer matched the true English source ("defeat 5 Vengeful Draenei") at all — wowhead's fetch for this ID actually returned the title/content belonging to a *different*, still-unfinished dev-placeholder quest (10841, literally titled `[The Vengeful Harbinger]` / `[PH] Activate the thingy` in English) rather than 10842's own real, already-correct content; reverted the row to its pre-batch state. Count audit: 4 residual flags after the revert, all established false-positive classes (Chinese-ordinal-numeral pages, Darkmoon deck flavor-count text) — 0 real mismatches remaining. |
 
+| 10941–11140 (no skip-listed IDs) | 2026-07-21 | 40 targeted fixes across 40 quest rows (bulk-replaced) + 2 pre-existing raw-simplified-Chinese rows converted + 1 pre-existing missing-count gap fixed | Batch 56. Moderate density but heavily bracket-skewed (155/187 flagged, only 50 real vs. 105 bracket — a huge Children's Week orphan-quest cluster plus the Shadowmoon Valley Netherwing Dragonmaw-infiltration questline account for most of the bracket count). **Found a new wowhead-fetch failure mode**: quests 11087 and 11116 returned genuine **Simplified** Chinese content (with several proper nouns left entirely untranslated) from the nominally-`/wotlk/tw/` URL, not just wrong or missing content — excluded both entirely from the bulk pass, keeping DB's own already-correct Traditional Chinese. **Found and fixed a second, more subtle `apply_fixes.py` bug** (see updated Tools note): a quest with one field that's genuinely bracket-fallback (no zhTW translation) and a *different* field that came back blank from wowhead was slipping past the "all fields bracket → treat as bracket" classifier (since the blank field isn't bracket-wrapped), landing in `real_ids`, and then having its bracket field wrongly overwritten with raw English — caught via 8 quests showing an unexplained residual diff after the main pass (11006/11013/11020/11027/11054/11070/11097/11107), reverted all 8 to original state (none had any legitimate field to fix), and hardened the script's guard to skip any bracket-wrapped WH field against non-bracket DB content regardless of the quest's overall classification. A full re-scan of the batch's original data confirmed exactly these 8 rows (14 fields) were affected and nothing else. **Converted 2 of the long-known 40 raw-unconverted-simplified-Chinese rows** (flagged since batch 9, never touched since): quests 10999 and 11132, both bracket-fallback with no wowhead translation to lean on, fixed by direct simplified→traditional conversion preserving the existing translation choice (not a re-translation) — updates the Unresolved-items list accordingly. **Caught a genuine pre-existing content gap via the count audit that the text-diff could never have found**: quest 11026's Objectives has been silently missing its required "15" (demons to banish) in *both* DB's text and wowhead's own zhTW fetch independently (byte-identical strict match, so no diff ever triggered) — confirmed against the true English `RequiredNpcOrGoCount`-backing LogDescription and fixed by direct insertion. Proactive WH-vs-English count check flagged 3 candidates pre-fix, all confirmed as flavor/narrative numbers (not required-count fields), applied normally. Count audit: 8 residual flags after all fixes, all established false-positive classes or minor pre-existing bracket-quest gaps left for a future dedicated pass (quest 11122's dropped "3 times" Brewfest repeat-count, quest 11079's flavor-text "35 shards") — 0 further regressions. |
+
 **Total scope**: `quest_template_locale` in this pending file holds **8,861 quest rows** (IDs
 span 1–26034, five fewer than before — quests 7681/7682 removed batch 39, quest 9750 removed
 batch 50, quests 10452/10453 removed batch 53, all to `skip-list.tsv`).
-After batch 55, **6,134 verified**, **2,727 remaining** — roughly 14 more
+After batch 56, **6,321 verified**, **2,540 remaining** — roughly 13 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -662,14 +664,28 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
   instance, including 6 wowhead-no-translation rows fixed directly against DB's own
   pre-existing shared text. Swept within batch 46's own range only.
   ~16 more `馭風者` occurrences remain elsewhere in the corpus, unverified.
-- **40 quest rows contain raw, unconverted simplified Chinese** (found batch 9, only quest 755
-  fixed so far): 3062, 4496, 4507, 8224, 8365, 9852, 10690, 10999, 11132, 11164, 11272, 11435,
-  11452, 11453, 11992, 12024, 12119, 12122, 12123, 12124, 12851, 12918, 13004, 13096, 13108,
-  13109, 13248, 13252, 13372, 13375, 13380, 13423, 13959, 13986, 13997, 14032, 14355, 14409,
-  25055, 25092 — a distinct, larger issue from the zhCN-vocabulary-leak problem this pass
-  otherwise targets (never OpenCC-converted at all, not just translated with zhCN word
-  choices). All well past where any batch has reached so far; needs its own dedicated
-  conversion pass when reached.
+- **Raw, unconverted simplified Chinese in `quest_template_locale`** (found batch 9) — a
+  distinct issue from the zhCN-vocabulary-leak problem this pass otherwise targets (never
+  OpenCC-converted at all, not just translated with zhCN word choices). Batch 9's original list
+  of 40 IDs was **re-verified against live content in batch 56** — 20 of the 40 were already
+  Traditional (fixed as a side effect of other work, note never updated) and 1 (25092) was
+  separately unfinished/placeholder content, skip-listed rather than converted. The remaining
+  **17 were fetched against wowhead-tw first to check for a real translation to bulk-apply —
+  all 17 came back bracket-wrapped (no zhTW translation exists on wowhead for any of them)** —
+  so fixed via direct OpenCC simplified→traditional conversion instead (`s2twp` profile,
+  Taiwan-standard with phrases; called via `ctypes` against
+  `/lib/x86_64-linux-gnu/libopencc.so.1.1` + `/usr/share/opencc/s2twp.json` — the `opencc`
+  apt package needs sudo, unavailable in-session, but the runtime lib was already present from
+  `libopencc1.1`/`libopencc-data`), preserving each existing translation's wording exactly,
+  only fixing the character set: 11164, 11435, 11992, 12024, 12918, 13004, 13096, 13108, 13109,
+  13252, 13380, 13986, 13997, 14032, 14355, 14409, 25055. Verified clean via OpenCC round-trip
+  (re-running `s2twp` over the fixed text is a no-op iff no simplified chars remain — confirmed
+  for all 17) and `audit_quest_counts.py` (no new mismatches). **All 40 of the original batch-9
+  list are now resolved** (3 earlier: quest 755 batch 9, 10999/11132 batch 56, both also
+  bracket-fallback direct conversions; 20 already-Traditional; 1 skip-listed; these 17). If
+  more raw-simplified rows turn up in future batches (this was a corpus-wide grep finding, not
+  guaranteed exhaustive), add them here and follow the same wowhead-first-then-OpenCC-fallback
+  pattern.
 - **`裡`/`里` locative ambiguity** — only the batch-9 container-noun-classifier subset (17
   high-precision matches) has been fixed; broader corpus-wide ambiguity remains unclassified.
 - **Two duplicate `quest_template_locale` rows** (two DELETE+INSERT pairs for the same ID) in
@@ -742,6 +758,21 @@ Reusable scripts live in `scripts/` (generic, not batch-specific):
   Re-scan any older batch's saved `parsed_diff.json`/`real_ids.json` for this exact pattern
   (`wh.strip() == "" and db.strip() != ""` for an ID in `real_ids`) if the guard's absence is
   ever suspected before batch 53's date.
+- **A second, related guard, added batch 56** (found after the batch-53 blank-field guard alone
+  still let 8 rows get corrupted — 11006/11013/11020/11027/11054/11070/11097/11107, all reverted):
+  a quest with one field that's genuinely bracket-fallback (no zhTW translation, wowhead returns
+  `[English]`) and a *different* field that came back blank slips past the classifier the same
+  way — the blank field isn't bracket-wrapped, so "every flagged field is bracket" fails and the
+  quest lands in `real_ids` anyway, and the bracket field (not blank, so the batch-53 guard alone
+  doesn't catch it) gets its raw English bracket text applied verbatim over DB's real Chinese.
+  The fix: skip a field if wowhead's value is bracket-wrapped (`[...]`) while DB's own value for
+  that field is not. Unlike the blank-field case, this one is **silent even in the post-fix
+  verification diff** when it succeeds — a fully bracket-overwritten field now byte-matches
+  wowhead exactly, so no diff shows up. Detecting it requires scanning the *original*
+  `parsed_diff.json` for `real_ids` entries where any field's WH value is bracket-wrapped and
+  DB's isn't, not just eyeballing the post-fix diff residuals — do this check on every batch's
+  original real_ids before trusting the apply step went cleanly, the same way the count audit
+  gets run proactively rather than only after the fact.
 - When writing any one-off script that removes or replaces a specific SQL row by ID, never use
   an unanchored non-greedy regex like `INSERT INTO ...;.*?VALUES \(<id>,.*?;\n` — `.*?` between
   the statement keyword and the target ID will lazily match from the *first* occurrence of that
@@ -762,7 +793,7 @@ established terms/rulings, and move the Next-batch pointer.
 
 ## Next batch
 
-Resume from quest ID 10941 (batch 56), skipping any ID present in `skip-list.tsv`. See the
+Resume from quest ID 11141 (batch 57), skipping any ID present in `skip-list.tsv`. See the
 Total scope note above for the current verified/remaining count. Standing process reminders
 (wowhead-as-default-ground-truth, scoped find/replace + git-diff sanity pass, proactive
 WH-vs-English count cross-check, watch for resurfacing terms) are folded into Methodology and
