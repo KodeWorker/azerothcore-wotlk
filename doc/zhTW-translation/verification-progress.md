@@ -164,11 +164,13 @@ Both phases run on the same small batch before moving to the next.
 
 | 11941–12140 (7 pre-existing skip-listed IDs: 11974, 11992, 11997, 12001, 12015, 12103, 12108) | 2026-07-22 | 0 targeted fixes — everything guard-protected or a false positive | Batch 61. Very low real-diff ratio, heavily bracket-skewed (142/163 flagged, only 7 real vs. 133 bracket + 2 scrape-fail) — the Dragonblight taunka-refugee/Agmar's Hammer/Icemist Village questline (recent-ish content with little wowhead-tw translation coverage yet). **All 7 real-classified quests were bracket-fallback in disguise** (11980/12008/12040/12064/12090/12101/12140 — same classifier gap as batches 56–60, all fully guard-protected, 0 fields touched, no manual intervention needed). Proactive WH-vs-English count check: 0 candidates. Count audit: 1 residual flag, a new false-positive subclass worth naming — quest 12099's Objectives correctly translates English's digit `4` as the Chinese numeral word `四` rather than an arabic digit, which the audit tool's digit-only regex structurally can't match (the mirror-image of the already-documented "spelled-out English number → DB digit" class) — 0 real mismatches. |
 
+| 12141–12340 (1 pre-existing skip-listed ID: 12233) | 2026-07-22 | 0 targeted fixes — everything guard-protected or a false positive | Batch 62. Very low real-diff ratio, heavily bracket/scrape-fail-skewed (85/95 flagged, only 1 real vs. 71 bracket + 13 scrape-fail) — the Dragonblight Wyrmrest Temple magnataur-hunt/Drak'Tharon-cleansing/Wintergarde Mausoleum steam-tank questline, same recent-content-little-wowhead-coverage pattern as batch 61. **The 1 real-classified quest was bracket-fallback in disguise** (12258 — same classifier gap as batches 56–61, fully guard-protected, 0 fields touched). Proactive WH-vs-English count check: 0 candidates. Count audit: 3 residual flags, all already-documented false-positive classes — quest 12149 lists 3 named individual targets by name (no digit anywhere, the "N-named-objects" class from batch 54), quest 12238's Objectives correctly renders English's digit `5` as the Chinese numeral word `五` (batch 61's digit-vs-numeral-word class), and quest 12326's `3` comes from spelled-out "three" (crew count) while its `7` is part of "7th Legion" (`第七軍團`, an ordinal-as-proper-noun, not a count at all) — 0 real mismatches. |
+
 **Total scope**: `quest_template_locale` in this pending file holds **8,858 quest rows** (IDs
 span 1–26034, eight fewer than before — quests 7681/7682 removed batch 39, quest 9750 removed
 batch 50, quests 10452/10453 removed batch 53, quests 11402/11493 removed batch 58, quest 11937
 removed batch 60, all to `skip-list.tsv`).
-After batch 61, **7,171 verified**, **1,687 remaining** — roughly 9 more
+After batch 62, **7,266 verified**, **1,592 remaining** — roughly 9 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -817,7 +819,7 @@ established terms/rulings, and move the Next-batch pointer.
 
 ## Next batch
 
-Resume from quest ID 12141 (batch 62), skipping any ID present in `skip-list.tsv`. See the
+Resume from quest ID 12341 (batch 63), skipping any ID present in `skip-list.tsv`. See the
 Total scope note above for the current verified/remaining count. Standing process reminders
 (wowhead-as-default-ground-truth, scoped find/replace + git-diff sanity pass, proactive
 WH-vs-English count cross-check, watch for resurfacing terms) are folded into Methodology and
