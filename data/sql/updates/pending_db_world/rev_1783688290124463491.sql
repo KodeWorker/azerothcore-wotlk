@@ -13652,13 +13652,13 @@ INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Object
 DELETE FROM `quest_template_locale` WHERE `ID` = 11577 AND `locale` = 'zhTW';
 INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Objectives`, `EndText`, `CompletedText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES (11577, 'zhTW', 'WoW Collector\'s Edition: - DEM - E - FLAG', '', '', '', '', '', '', '', '', 0);
 DELETE FROM `quest_template_locale` WHERE `ID` = 11580 AND `locale` = 'zhTW';
-INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Objectives`, `EndText`, `CompletedText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES (11580, 'zhTW', '褻瀆這些火焰!', '', '', '', '', '', '', '', '', 0);
+INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Objectives`, `EndText`, `CompletedText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES (11580, 'zhTW', '褻瀆這些火焰!', '', '褻瀆部落的銀松營火!。', '', '', '', '', '', '', 0);
 DELETE FROM `quest_template_locale` WHERE `ID` = 11581 AND `locale` = 'zhTW';
 INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Objectives`, `EndText`, `CompletedText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES (11581, 'zhTW', '褻瀆這些火焰!', '', '', '', '', '', '', '', '', 0);
 DELETE FROM `quest_template_locale` WHERE `ID` = 11582 AND `locale` = 'zhTW';
 INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Objectives`, `EndText`, `CompletedText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES (11582, 'zhTW', '監控裂口:破碎裂隙', '你感覺到了嗎?又一個餘震...你真該早幾分鐘來的!$B$B我恐怕又需要你的協助了。我的儀器指出西邊有個巨大的異變，在水面下很深的地方。$B$B就跟之前一樣，我需要你帶著奧能檢測儀下去收集數據。$B$B我會對你施展一道法術，讓你可以在水中呼吸。如果在你找到異變之前法術就耗盡了，回來告訴我，我會替你重新施展。', '琥珀岩臺的加倫要你在破碎裂隙異常處使用奧能檢測儀然後把讀數交給他。', '', '去找北風凍原的圖書管理員加倫。', '已取得裂谷讀數', '', '', '', 0);
 DELETE FROM `quest_template_locale` WHERE `ID` = 11583 AND `locale` = 'zhTW';
-INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Objectives`, `EndText`, `CompletedText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES (11583, 'zhTW', '祭拜這團火焰', '', '', '', '', '', '', '', '', 0);
+INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Objectives`, `EndText`, `CompletedText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES (11583, 'zhTW', '榮耀火焰', '', '榮耀西部荒野的火焰。', '', '', '', '', '', '', 0);
 DELETE FROM `quest_template_locale` WHERE `ID` = 11584 AND `locale` = 'zhTW';
 INSERT INTO `quest_template_locale` (`ID`, `locale`, `Title`, `Details`, `Objectives`, `EndText`, `CompletedText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `VerifiedBuild`) VALUES (11584, 'zhTW', '榮耀火焰', '', '', '', '', '', '', '', '', 0);
 DELETE FROM `quest_template_locale` WHERE `ID` = 11587 AND `locale` = 'zhTW';
