@@ -394,3 +394,4 @@ quest_id	english_title	reason
 24857	Attack on Camp Narache	Attack on Camp Narache -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 781
 24875	Deprogramming	Deprogramming -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 24869
 25092	Elemental Research	Elemental Research -- English source itself contains literal "[ph] log description" / "[ph] I'..." placeholder text (never finished by Blizzard); sibling 25055 has the same issue
+9750	UNUSED Urgent Delivery	English title itself literally marked "UNUSED", Objectives/Details blank in English source -- confirmed unfinished/cut content
