@@ -155,10 +155,12 @@ Both phases run on the same small batch before moving to the next.
 
 | 9941–10140 (no skip-listed IDs in range) | 2026-07-21 | 135 targeted fixes across 135 quest rows (bulk-replaced, 7 with the `objectives` field deliberately withheld) + a corpus-wide `裂石堡`→`碎石堡`/`裂石營地`→`碎石營地` sweep (60 occurrences, 33 quest rows, spanning far outside this batch's own range) | Batch 51. 199 real rows in range; 192 flagged, the highest density yet (96%). Covers the Terokkar Forest Deirom/Dugar rescue questline (arakkoa Veil Shalas/Veil Lithic), the Blood Ring combat-quest cluster, the Nagrand elder-caravan/Ogri'la-adjacent fel orc cluster, and the entire Hellfire Peninsula Path of Glory/Legion Front leveling arc through to the Dark Portal crossing. **Self-discovered a genuine corpus-wide proper-noun bug, not surfaced by the wowhead diff tool itself** (wowhead's own text for the affected quests already had it right, which is what caught the eye during the routine per-quest read-through): DB rendered Stonebreaker Hold as `裂石堡` in 52 places and Stonebreaker Camp as `裂石營地` in 8 — `AreaTable_zhTW.tsv` (AreaID 3683/3902) confirms the correct forms are `碎石堡`/`碎石營地`; swept all 60 occurrences file-wide across 33 quest rows, most of them (10196–11506) well outside this batch's own ID range, same treatment as the Azuremyst Isle/Stonesplinter full-file sweeps earlier this project. See the new Established-terms entry. **7 objectives-field exclusions this batch, one of a new kind**: 6 are the now-familiar wowhead-count-wrong pattern caught by the proactive pre-fix WH-vs-English cross-check (9945: EN 8 vs WH 15; 9948: EN 5 vs WH 15; 9956: EN 10 vs WH 20; 10074: EN 10 vs WH 20; 10076: EN 10 vs WH 20; 10082: EN 8 vs WH 15) — Title/Details applied normally, Objectives withheld, matching the batch-50-established policy. The 7th, quest 10077, is a **new false-positive class**: wowhead's own fetch had *no* `details` key at all, and its `objectives` value was actually that quest's Details prose (a field-alignment scrape error, not a translation difference) — caught by noticing the missing `details` key rather than by content inspection; excluded `objectives`, applied `title` normally (a genuine improvement, matching the corrected sibling quests in this same `沃舒古水晶塵`/`歐夏剛水晶粉末` cluster). 57 wowhead-no-translation (bracketed-English-fallback) quests handled the standard way (left unchanged; DB's existing text for all of them was already coherent). One notation-artifact false positive reconfirmed post-fix (quest 10115, the established apostrophe-escaping class). Count audit: 0 real mismatches after the pass. |
 
+| 10141–10340 (no skip-listed IDs in range) | 2026-07-21 | 169 targeted fixes across 169 quest rows (bulk-replaced, no exclusions needed) + a corpus-wide `斷背崗哨`→`斷脊氏族崗哨`/`斷背山`→`斷脊氏族山脈` sweep (44 occurrences, spanning outside this batch's own range) + a direct-construction fix for a genuine `ObjectiveText1` bug (2 rows) | Batch 52. 198 real rows in range; 193 flagged, the highest density yet (97%). Covers the Hellfire Peninsula Path of Glory/Legion Front wrap-up mirrored into the Expedition Point/Spinebreaker Post questline, the entire Netherstorm Kirin'Var Village/Violet Tower (Kael'thas-curse) questline, the Area 52/Ethereum questline, the Mana-Forge shutdown cluster (Bnaar/Coruu/Duro/Ara), the Old Hillsbrad Caverns of Time instance-lead-in, and the Spinebreaker Ridge/Zangarmarsh Netherwing-adjacent cluster. **A second self-discovered corpus-wide proper-noun bug** (same pattern as batch 51's Stonebreaker Hold find, again not surfaced by the wowhead diff tool itself): `斷背崗哨`/`斷背山` for Spinebreaker Post/Ridge — see the new Established-terms entry for the full writeup, including the genuinely distinct Ridge-vs-Post English-source split this one turned out to have (unlike Stonebreaker Hold, this was not a uniform single-correct-answer sweep). **A first-of-its-kind finding**: while checking the blast radius of that sweep, discovered `quest_template_locale`'s `ObjectiveText1`-`ObjectiveText4` columns have never been in scope for any diff/audit tool this entire project — found one concrete bug living there (quests 10145/10147 misdirecting players to "Spinebreaker Ridge" for Forward Commander Kingston, who is actually always at Expedition Point) and fixed it by direct construction, but the other ~8,800 rows' worth of these columns are completely unaudited. Flagged prominently under Unresolved as a needed tooling extension. 21 wowhead-no-translation (bracketed-English-fallback) quests and 3 wowhead-scrape-failure (WotLK quest-index placeholder) quests handled the standard way, left unchanged. Proactive WH-vs-English count cross-check flagged 6 candidates, all false positives on inspection (5× the "Area 52" place name being misread as a count by the digit regex, 1× a legitimate extra detail in wowhead's fuller prose not present in DB's terser original) — none excluded, all applied normally. Two notation-artifact false positives reconfirmed post-fix (quests 10209/10222, the established apostrophe-escaping class). Count audit: 10 residual flags, all reconfirmed as the two established quirks (Area 52's "52" misread as a count: 10188/10208/10209/10276(sic — checkpoint-ordinal)/10301; spelled-out/character-numeral vs Arabic-digit: 10192/10236/10290/10300/10335) — 0 real mismatches. |
+
 **Total scope**: `quest_template_locale` in this pending file holds **8,863 quest rows** (IDs
 span 1–26034, three fewer than before — quests 7681/7682 removed batch 39, quest 9750 removed
 batch 50, all to `skip-list.tsv`).
-After batch 51, **5,345 verified**, **3,518 remaining** — roughly 18 more
+After batch 52, **5,543 verified**, **3,320 remaining** — roughly 17 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -221,6 +223,17 @@ batch's ID range (a confirmed fix does not mean every occurrence has been swept)
   (batches 3, 11) whenever a single quest's wowhead prose showed `肯瑞托` — that's always the
   zhCN leak, not a correction.
 - **`幽靈崗哨`→`鬼旅崗哨`** (Ghost Walker Post) — `AreaTable_zhTW.tsv` area 597. Swept 16×.
+- **`斷背崗哨`→`斷脊氏族崗哨`** (Spinebreaker Post, near Zeth'Gor in Hellfire Peninsula) and
+  **`斷背山`→`斷脊氏族山脈`** (Spinebreaker Ridge, a *different*, English-source-confirmed-distinct
+  location that a same-NPC quest pair — 10060/10062, Stone Guard Ambelan/Grelag — legitimately
+  turns in at instead of the Post) — self-discovered batch 52, same pattern as the batch-51
+  Stonebreaker Hold find. `AreaTable_zhTW.tsv` confirms tier-1: AreaID 3812 = `斷脊氏族崗哨`,
+  AreaID 3838 = `斷脊氏族山脈` (also 3884 = `斷脊氏族小徑`, not yet encountered in any quest
+  text). Swept all 42 `斷背崗哨` occurrences file-wide; only touched 2 of `斷背山`'s 4
+  occurrences (10060/10062, both confirmed "Ridge" via English `quest_template`) — the other 2
+  (10145/10147) were not a naming-variant case at all, see the new `ObjectiveText1`-4 entry under
+  Unresolved. Do not blind-sweep `斷背山` if it resurfaces — confirm Ridge vs. Post per quest
+  against English first, the DB is not internally reliable here.
 - **`裂石堡`→`碎石堡`** (Stonebreaker Hold, the Horde hub in Terokkar Forest) and
   **`裂石營地`→`碎石營地`** (Stonebreaker Camp) — self-discovered during batch 51's proper-noun
   pass (not from a wowhead diff — wowhead's own text for these quests already said `碎石堡`,
@@ -595,6 +608,19 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
 
 ## Unresolved / open follow-up items
 
+- **`quest_template_locale` has 4 more per-quest text columns
+  (`ObjectiveText1`-`ObjectiveText4`) that no tool in this pass has ever checked.** Discovered
+  batch 52: `diff_quest_text.py`/`audit_quest_counts.py` only ever compared `Title`/`Details`/
+  `Objectives` (columns 2-4); `ObjectiveText1`-4 (columns 7-10, used for multi-stage/sequential
+  quest text) have been sitting outside every batch's scope since batch 1. Found by accident
+  while grep-checking a proper-noun sweep's blast radius, not by any systematic check. Confirmed
+  at least one genuine bug living only in this blind spot: quests 10145/10147's `ObjectiveText1`
+  said `斷背山的前線指揮官金斯頓` (Kingston at "Spinebreaker Ridge") when Kingston is
+  established (by the same rows' own `Details` field, and by sibling quest 10143) to be at
+  Expedition Point (`遠征隊哨塔`) — fixed by direct construction, not a wowhead diff. No idea how
+  many more bugs like this exist in the other ~8,800 rows' `ObjectiveText1`-4 fields across the
+  whole file — this needs its own dedicated tooling (extend `diff_quest_text.py`'s field list) and
+  a pass, ideally sooner rather than later given it's now a known-nonzero-bug field.
 - **`傀儡`/`魔像` (Golem)** — corpus split 58:47 as of batch 18; locale table favors `魔像`,
   only ~7 confirmed occurrences fixed so far (batches 18/20/21), bulk still unswept. Needs a
   dedicated pass.
