@@ -527,7 +527,7 @@ void Player::UpdateLFGChannel()
     for (Channel* channel : m_channels)
         if (channel && channel->GetChannelId() == cce->ChannelID)
         {
-            cUsed = cLFG;
+            cUsed = channel;
             break;
         }
 
