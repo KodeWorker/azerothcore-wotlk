@@ -148,10 +148,12 @@ Both phases run on the same small batch before moving to the next.
 
 | 10341–10540 (no skip-listed IDs prior; 2 removed mid-batch) | 2026-07-21 | 128 targeted fixes across 128 quest rows (bulk-replaced) + 5 same-row established-term touch-ups + 2 skip-listed | Batch 53. High density (81%, 128/164 real + 33 bracket + 3 scrape-fail out of 198 fetched). Netherstorm Area 52/Eco-Dome/mana-forge-shutdown wrap-up, Auchindoun/Terokkar Caverns-of-Time lead-in, Nagrand Garadar cluster. Two dev-placeholder quests (`DON'T USE [PH] Fel Orc 1`/`bread`, literal "PH" placeholder in the English source itself) confirmed unfinished, skip-listed (10452/10453). Resurfacing name-spelling sweeps applied directly to 2 bracket-fallback rows outside the normal bulk path (Deliana `德莉亞娜`→`德莉娜`, Anthion `安泰恩`→`安希恩`, Valthalak `瓦塔拉克`→`瓦薩拉克`, Bodley `伯德雷`→`布德利`). **Found and fixed a real `apply_fixes.py` bug** (see the new Tools note): wowhead returning a genuinely blank fetch for one field of an otherwise-bracket quest (title/details untranslated, but the Objectives fetch itself came back empty) was misclassifying the quest as "real" instead of "bracket," then overwriting Objectives with the empty string and Title/Details with raw bracketed English — caught 2 instances in this batch (10401, 10497) plus 1 already-committed regression from batch 52 (10149, fixed retroactively) via a targeted re-scan of every prior batch's cached diff data. Also self-caught and fixed a separate, more severe bug the same review surfaced: an early row-removal script (for skip-listing 10452/10453) used an unanchored non-greedy regex that matched from the file's very first `INSERT` statement through to the target row, deleting ~11,500 lines instead of 2 — caught immediately via the post-edit row-count check, reverted with `git checkout`, and redone with a row-scoped span-finder. Count audit: 0 mismatches. |
 
+| 10541–10740 (no skip-listed IDs) | 2026-07-21 | 138 targeted fixes across 138 quest rows (bulk-replaced) | Batch 54. High density (73%, 138/143 real out of 197 fetched, 3 bracket, 2 scrape-fail). Netherstorm Area 52/wind-scanner cluster wrap-up, the Shadowmoon Valley Legion Front/Path of Glory mirror (Alliance Wildhammer + Horde Deathforge sides), the Auchindoun/Bash'ir Landing intro, and the Violet Eye reputation-reward chain. Confirmed a genuine same-row internal-consistency bug caught by the diff itself, not by manual inspection: quest 10712's Objectives named the wrong delivery location (`永恆樹林` instead of `魯安曠野`), contradicting its own already-correct, untouched Details field — resolved automatically by the bulk pass since wowhead's Objectives text already matched the Details field's location. No exclusions needed; proactive WH-vs-English count check found 0 candidates. Count audit: 4 residual flags, all reconfirmed as established false-positive classes (spelled-out/character-numeral ordinals, a flavor-text percentage, a 3-named-object objective the audit script's digit scan doesn't parse) — 0 real mismatches. |
+
 **Total scope**: `quest_template_locale` in this pending file holds **8,861 quest rows** (IDs
 span 1–26034, five fewer than before — quests 7681/7682 removed batch 39, quest 9750 removed
 batch 50, quests 10452/10453 removed batch 53, all to `skip-list.tsv`).
-After batch 53, **5,741 verified**, **3,120 remaining** — roughly 16 more
+After batch 54, **5,938 verified**, **2,923 remaining** — roughly 15 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -758,7 +760,7 @@ established terms/rulings, and move the Next-batch pointer.
 
 ## Next batch
 
-Resume from quest ID 10341 (batch 53), skipping any ID present in `skip-list.tsv`. See the
+Resume from quest ID 10741 (batch 55), skipping any ID present in `skip-list.tsv`. See the
 Total scope note above for the current verified/remaining count. Standing process reminders
 (wowhead-as-default-ground-truth, scoped find/replace + git-diff sanity pass, proactive
 WH-vs-English count cross-check, watch for resurfacing terms) are folded into Methodology and
