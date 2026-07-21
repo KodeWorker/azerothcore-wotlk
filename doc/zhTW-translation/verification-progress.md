@@ -150,10 +150,12 @@ Both phases run on the same small batch before moving to the next.
 
 | 10541–10740 (no skip-listed IDs) | 2026-07-21 | 138 targeted fixes across 138 quest rows (bulk-replaced) | Batch 54. High density (73%, 138/143 real out of 197 fetched, 3 bracket, 2 scrape-fail). Netherstorm Area 52/wind-scanner cluster wrap-up, the Shadowmoon Valley Legion Front/Path of Glory mirror (Alliance Wildhammer + Horde Deathforge sides), the Auchindoun/Bash'ir Landing intro, and the Violet Eye reputation-reward chain. Confirmed a genuine same-row internal-consistency bug caught by the diff itself, not by manual inspection: quest 10712's Objectives named the wrong delivery location (`永恆樹林` instead of `魯安曠野`), contradicting its own already-correct, untouched Details field — resolved automatically by the bulk pass since wowhead's Objectives text already matched the Details field's location. No exclusions needed; proactive WH-vs-English count check found 0 candidates. Count audit: 4 residual flags, all reconfirmed as established false-positive classes (spelled-out/character-numeral ordinals, a flavor-text percentage, a 3-named-object objective the audit script's digit scan doesn't parse) — 0 real mismatches. |
 
+| 10741–10940 (no skip-listed IDs) | 2026-07-21 | 146 targeted fixes across 146 quest rows (bulk-replaced, 1 reverted post-fix) | Batch 55. High density (75%, 146/154 real out of 196 fetched, 8 bracket, 0 scrape-fail). Terokkar Forest White Bone Wastes/Skettis Auchindoun-lead-in cluster, Shadowmoon Valley Netherwing dragon-rescue chain, the Naaru Trials of the Naaru heroic-dungeon-key questline, and the Darkmoon Faire card-deck completion quests. **Caught a genuine wowhead-wrong-content case via the post-fix count audit**: quest 10842's bulk-applied Objectives no longer matched the true English source ("defeat 5 Vengeful Draenei") at all — wowhead's fetch for this ID actually returned the title/content belonging to a *different*, still-unfinished dev-placeholder quest (10841, literally titled `[The Vengeful Harbinger]` / `[PH] Activate the thingy` in English) rather than 10842's own real, already-correct content; reverted the row to its pre-batch state. Count audit: 4 residual flags after the revert, all established false-positive classes (Chinese-ordinal-numeral pages, Darkmoon deck flavor-count text) — 0 real mismatches remaining. |
+
 **Total scope**: `quest_template_locale` in this pending file holds **8,861 quest rows** (IDs
 span 1–26034, five fewer than before — quests 7681/7682 removed batch 39, quest 9750 removed
 batch 50, quests 10452/10453 removed batch 53, all to `skip-list.tsv`).
-After batch 54, **5,938 verified**, **2,923 remaining** — roughly 15 more
+After batch 55, **6,134 verified**, **2,727 remaining** — roughly 14 more
 ~200-ID batches at the current pace.
 
 ## Established terms and rulings
@@ -760,7 +762,7 @@ established terms/rulings, and move the Next-batch pointer.
 
 ## Next batch
 
-Resume from quest ID 10741 (batch 55), skipping any ID present in `skip-list.tsv`. See the
+Resume from quest ID 10941 (batch 56), skipping any ID present in `skip-list.tsv`. See the
 Total scope note above for the current verified/remaining count. Standing process reminders
 (wowhead-as-default-ground-truth, scoped find/replace + git-diff sanity pass, proactive
 WH-vs-English count cross-check, watch for resurfacing terms) are folded into Methodology and
