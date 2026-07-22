@@ -67,3 +67,24 @@ DELETE FROM `item_template_locale` WHERE `ID` = 50065 AND `locale` = 'zhTW';
 INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (50065,'zhTW','寒冰皇冠之牆','',15050);
 DELETE FROM `item_template_locale` WHERE `ID` = 50729 AND `locale` = 'zhTW';
 INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (50729,'zhTW','寒冰皇冠之牆','',15050);
+
+-- zhTW item_template_locale gap-fill: masking-bug-style partial gaps
+-- (Name or Description missing/misaligned) found via a full-corpus scan
+DELETE FROM `item_template_locale` WHERE `ID` = 6345 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (6345,'zhTW','公式:浸魔披風 - 防護','教你學會如何永久地為一件披風附魔，使其提高10點護甲。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 6376 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (6376,'zhTW','公式:附魔靴子 - 初級耐力','教你學會如何永久地為一雙靴子附魔，使其提高1點耐力。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 6891 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (6891,'zhTW','食譜:香料烘蛋','教你學會如何烹製香料烘蛋。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 7192 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (7192,'zhTW','結構圖:哥布林火箭靴','教你學會如何製作哥布林火箭靴。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 39153 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (39153,'zhTW','手冊:緻密霜紋繃帶','這本濕透的書上什麼都看不出來。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 1700 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (1700,'zhTW','管理員戰爭領主巨劍','由TBRC製作。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 27002 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (27002,'zhTW','斯波伊卡黑色襯衫','Spojka永遠的驕傲。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 27007 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (27007,'zhTW','斯波伊卡紫紅色襯衫','Spojka永遠的驕傲。',0);
+DELETE FROM `item_template_locale` WHERE `ID` = 33080 AND `locale` = 'zhTW';
+INSERT INTO `item_template_locale` (`ID`, `locale`, `Name`, `Description`, `VerifiedBuild`) VALUES (33080,'zhTW','水元素藥劑','傳言這種藥劑能將飲用者變成一隻小水元素。僅辛迪加成員可用。',0);
