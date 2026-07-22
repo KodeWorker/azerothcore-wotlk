@@ -1009,8 +1009,37 @@ survived from before deprecation (matches the item's own pre-deprecation English
 actually wrong, just permanently hidden from players and not worth completing) or joke/test
 items (`Foror's Crate`, `Dereks Radish Bag`, `Fat Lute` "TEMP Test Vendor Item").
 
+**`gameobject_template_locale`**: full-table scan found 348 fully-missing rows out of 20,659
+(name and/or `castBarCaption`), plus 1 masking-bug partial gap. Categorized the 348 precisely
+using the actual GameObject type enum (`src/server/game/Entities/GameObject/GameObjectData.h`)
+to judge player-visibility rather than guessing from the name alone: **208 `Doodad_`-prefixed**
+internal scenery/art assets (arena decorations, instance-portal visuals — never shown to
+players), **78 `Trap`-type or `-named`** (invisible trigger objects, type `GAMEOBJECT_TYPE_TRAP`
+never displays a name), **44 more `InstancePortal_*_Difficulty_*`** (type 31 =
+`GAMEOBJECT_TYPE_DUNGEON_DIFFICULTY`, same internal-portal-selector category as the Doodad ones
+just without the prefix), and 2 obvious junk markers — leaving **60 ambiguous "other" candidates**
+that needed individual type-based judgment. Fixed the 9 clearest real, player-visible ones:
+`Activate Tram` (type=Button, the Deeprun Tram lever, `礦道地鐵` per an incidental wowhead zone-page
+fetch), 5 Silvermoon City building signs (type=Generic — Auction House/Jewelcrafting
+Trainer/Blood Knights Order/Hunter's Lodge/Sunspire, grounded in established `銀月城`/`血騎士`/
+`聖騎士`/`拍賣行` terms), `Weegli's Barrel` (type=Chest, NPC name `維格利` from
+`creature_template_locale`), `Mysterious Wailing Caverns Chest` (type=QuestGiver despite the
+name, `哀嚎洞穴` established), and `Gold Mine` (type=Generic). Left the rest of the 60 alone —
+type=Trap/Chair/SpellFocus/MiniGame objects conventionally never display a name to players
+regardless of content, and a few (`CavernDoor01`, a gameobject literally named `"0"`) are
+themselves internal-placeholder English names with nothing real to translate. Also fixed the 1
+partial gap (`castBarCaption` for gobj 180574, `使用` — matched the established translation
+already used by 27 sibling objects sharing the same generic "Using" caption). **Self-caught and
+fixed a duplicate-override mistake**: initially appended a second DELETE+INSERT pair for 180574
+instead of editing its existing entry in-place, creating a harmless-but-messy duplicate; caught
+via the same duplicate-ID check used throughout this whole pass, merged into the original entry
+before finalizing. Fix lives in `data/sql/updates/pending_db_world/rev_1783394670462893100.sql`.
+
 **Not yet done**: a masking-bug-style scan for any locale-paired table beyond these — if asked
 to do a similar sweep again, the same generalized scan technique applies to any `X_locale` table
 with a `base/db_world/X.sql` English counterpart (see the `npc_text` scan script for the
 reusable pattern: `get_base_english`/`get_zhtw_ids`/`report` from `scan_missing_zhtw.py`, plus a
-manual per-field masking-bug pass for multi-field tables).
+manual per-field masking-bug pass for multi-field tables). For GameObject-style tables
+specifically, check the actual type enum in the C++ source before guessing player-visibility
+from the name alone — some GO types (Trap, Chair, DungeonDifficulty) structurally never display
+a name no matter how "real" the content looks.
