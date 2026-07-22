@@ -971,7 +971,46 @@ truth, closing out that Unresolved-items entry.
 
 **Validation**: linter clean; `extract_inserts`-based field-count check (18 columns expected:
 `ID`+`Locale`+16 text slots) and duplicate-ID check both clean across all 78 new rows; re-ran
-the gap scan post-fix, confirmed 0 remaining. **Not yet done**: a masking-bug-style scan for
-`quest_greeting_locale`'s sibling tables or other locale-paired tables beyond `npc_text_locale`
-— if asked to do a similar sweep again, the same generalized scan technique applies to any
-`X_locale` table with a `base/db_world/X.sql` English counterpart.
+the gap scan post-fix, confirmed 0 remaining.
+
+## Follow-up scans: `quest_offer_reward_locale`/`quest_request_items_locale`/`item_template_locale`
+
+Same generalized technique applied to the remaining locale-paired tables, per user request.
+
+**`quest_offer_reward_locale`/`quest_request_items_locale`**: both single-text-field tables
+(immune to the masking-bug pattern per `STATUS.md`'s own note). The existing narrow scan
+already tracked these (6 missing each, 12 unique IDs total) — checked every one against
+`skip-list.tsv` and **all 12 are already there**, confirmed unreachable in-game for documented
+reasons (confirmed duplicates, unimplemented server-side events verified against the actual
+C++ source, genuinely unfinished `[ph]`-placeholder Blizzard content, a leftover test quest).
+**No new gap, nothing to fix** — the project's translation coverage for every *reachable* quest
+in these two tables is already complete.
+
+**`item_template_locale`**: a full-table scan (not just quest-referenced items) found 3,152
+fully-missing rows out of 46,096 total, plus 38 masking-bug-style partial gaps (zhTW row exists
+but `Name` or `Description` still blank). Categorized the 3,152: spot-checks and refined
+pattern-matching (`NPC Equip \d+`, `Monster - `, `Deprecated`/`zzOLD`/`UNUSED`/`(OLD)`, `[PH]`,
+`QA`/`QR`-prefixed test items, `DEBUG`, `(DND)`) confirmed **~97% is internal/QA/dev/deprecated
+content never shown to players** (dev item-template leftovers like `BT47`/`LK Arena 6`/
+`CRobinson Plate Helm`, literal test junk like `ggggfg`/`Fishing Pole (JEFFTEST)`) — **not real
+work, left untouched**. The 38 partial gaps were individually reviewed and split into: 5
+genuinely real, live tradeskill recipes with only their `Description` missing (`Name` already
+correctly translated) — fixed using the corpus's own established recipe-description templates
+(`教你學會如何永久地為一{件/雙}X附魔，使其提高N點Y。` for permanent enchants, `教你學會如何
+烹製X。` for cooking, `教你學會如何製作X。` for plans); and 4 genuine data-misalignment bugs
+where the zhTW `Name` field held a completely unrelated item's name/internal-codename
+(`Admin Warlord's Claymore` → had `Deprecated Blood Totem`; `Elixir of Water Elementals` → had
+`Monster - Gun - Outland Raid D04`; two `Spojka X Shirt` items → had other items' internal
+`TEST` codenames) — fixed all 4 with direct, grounded translations (`Syndicate`→`辛迪加` per
+`Faction_zhTW.tsv`; `Claymore`→`巨劍` per existing corpus usage). Fix lives in
+`data/sql/updates/pending_db_world/rev_1783394896221255572.sql`. The remaining ~29 partial gaps
+were left alone — mostly `Deprecated`/`UNUSED`/`Internal Only` items where only the `Description`
+survived from before deprecation (matches the item's own pre-deprecation English exactly, so not
+actually wrong, just permanently hidden from players and not worth completing) or joke/test
+items (`Foror's Crate`, `Dereks Radish Bag`, `Fat Lute` "TEMP Test Vendor Item").
+
+**Not yet done**: a masking-bug-style scan for any locale-paired table beyond these — if asked
+to do a similar sweep again, the same generalized scan technique applies to any `X_locale` table
+with a `base/db_world/X.sql` English counterpart (see the `npc_text` scan script for the
+reusable pattern: `get_base_english`/`get_zhtw_ids`/`report` from `scan_missing_zhtw.py`, plus a
+manual per-field masking-bug pass for multi-field tables).
