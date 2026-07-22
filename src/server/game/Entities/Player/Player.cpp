@@ -5054,6 +5054,14 @@ bool Player::CanJoinConstantChannelInZone(ChatChannelsEntry const* channel, Area
     if (channel->flags & CHANNEL_DBC_FLAG_LFG && sWorld->getBoolConfig(CONFIG_LFG_LOCATION_ALL))
         return true;
 
+    // Restricted LFG channel: don't attempt to join unless actually queued.
+    // Channel::JoinChannel() rejects such a join with CHAT_NOT_IN_LFG_NOTICE,
+    // a notify type the retail 3.3.5a client has no GlobalStrings entry for --
+    // ChatFrame.lua:2802 crashes trying to format() a nil string. Bail out
+    // here so the server never sends that packet.
+    if (channel->flags & CHANNEL_DBC_FLAG_LFG && sWorld->getBoolConfig(CONFIG_RESTRICTED_LFG_CHANNEL) && !IsUsingLfg())
+        return false;
+
     if (channel->flags & CHANNEL_DBC_FLAG_ZONE_DEP && zone->flags & AREA_FLAG_ARENA_INSTANCE)
         return false;
 
