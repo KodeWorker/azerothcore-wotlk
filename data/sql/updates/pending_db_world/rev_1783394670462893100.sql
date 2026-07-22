@@ -2844,7 +2844,7 @@ INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCap
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 180526 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (180526,'zhTW','貝賽克的銅鑼',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 180574 AND `locale` = 'zhTW';
-INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (180574,'zhTW','柳條人守衛餘燼',NULL,0);
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (180574,'zhTW','柳條人守衛餘燼','使用',0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 180671 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (180671,'zhTW','贊迪維斯的惡魔袋',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 180688 AND `locale` = 'zhTW';
@@ -3847,3 +3847,24 @@ DELETE FROM `gameobject_template_locale` WHERE `entry` = 301337 AND `locale` = '
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (301337,'zhTW','準備標記',NULL,0);
 DELETE FROM `gameobject_template_locale` WHERE `entry` = 401007 AND `locale` = 'zhTW';
 INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (401007,'zhTW','降落場',NULL,0);
+
+-- zhTW gameobject_template_locale gap-fill: 9 real player-visible gameobjects
+-- + 1 masking-bug partial gap (castBarCaption), found via a full-corpus scan
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 194438 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (194438,'zhTW','啟動礦道地鐵','',0);
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 190007 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (190007,'zhTW','皇家交易拍賣行','',0);
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 190008 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (190008,'zhTW','珠寶匠貿易與訓練組織','',0);
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 190009 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (190009,'zhTW','聖騎士血騎士團','',0);
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 190010 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (190010,'zhTW','銀月城獵人小屋','',0);
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 190011 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (190011,'zhTW','太陽尖塔','',0);
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 141609 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (141609,'zhTW','維格利的木桶','',0);
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 180055 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (180055,'zhTW','神秘的哀嚎洞穴寶箱','',0);
+DELETE FROM `gameobject_template_locale` WHERE `entry` = 211032 AND `locale` = 'zhTW';
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES (211032,'zhTW','金礦','',0);
