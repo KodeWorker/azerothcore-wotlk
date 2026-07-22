@@ -692,16 +692,19 @@ was corrected; "confirmed correct" means DB was already right and a wowhead diff
 
 ## Unresolved / open follow-up items
 
-- **Quests 11552/11553 ("Rohendor, the Second Gate"/"Archonisus, the Final Gate") have a bogus
-  Title** (`巫妖王之怒 任務`, literally "Wrath of the Lich King Quest") that some earlier,
-  undocumented pass appears to have written from wowhead's own site meta-description tagline
-  rather than real quest content — found batch 59 when the *Objectives* field independently
-  reproduced the exact same tagline-bleed bug this session, but the Title's identical corruption
-  had already been sitting in the DB since before this batch touched the row, undetected because
-  DB and WH matched (both wrong) so no diff ever fired on it. Both quests have entirely blank
-  English `LogDescription`/`QuestDescription`, so there's no ground truth anywhere (English source
-  itself, DBC, or wowhead) to construct a real title from — likely unused/scrapped content, may be
-  a skip-list candidate once someone confirms the quest is genuinely unreachable in-game.
+- **RESOLVED (post-pass, during the `npc_text` gap-fill task): quests 11552/11553's bogus
+  `巫妖王之怒 任務` Title bug is fixed.** While translating the 78 missing `npc_text_locale`
+  rows, the Sunwell gate-opening announcement text (npc_text IDs 12306/12603/12605) led to
+  checking `gameobject_template_locale` for the three gate GameObjects (187764/187765/187766),
+  which already had established zhTW names: `洛罕鐸，次之門` (Rohendor, the Second Gate),
+  `亞坎努斯，參之門` (Archonisus, the Third Gate), `阿格瑪司，初始之門` (Agamath, the First
+  Gate). Quest 11552's title ("Rohendor, the Second Gate") and 11553's title ("Archonisus, the
+  Final Gate" — the quest's own English wording says "Final" where the GameObject's says
+  "Third," same underlying gate) both map directly to these — fixed both titles using the
+  GameObject names. Also caught a related naming conflict in the same investigation: both
+  quests' pre-existing `EndText` already correctly used `奈蘇爾` for "Archmage Ne'thul," which
+  corrected an independent fresh transliteration (`奈圖爾`) just constructed for the same NPC
+  in the npc_text translation — fixed to match.
 - **Quest 12600 ("Upper Deck Promo - Bear Mount") has a bogus Title** (`巫妖王之怒 任務`, the
   same wowhead site-meta-tagline-bleed bug as the still-open 11552/11553 case and the now-resolved
   11937/12693/12694 cases) — found batch 64. Unlike the FLAG/Tracker cases, this one's English
@@ -919,3 +922,56 @@ Total scope note above for the current verified/remaining count. Standing proces
 WH-vs-English count cross-check, watch for resurfacing terms) are folded into Methodology and
 Established terms above rather than repeated here — check those sections, not batch-specific
 addenda, before starting a new batch.
+
+## Related task: `npc_text` gap-fill (2026-07-22, post-pass)
+
+This whole file tracks `quest_template_locale` specifically. **`npc_text`/`npc_text_locale`
+(general NPC gossip/greeting dialogue, not quest-giver greetings — that's the separate
+`quest_greeting_locale` table, already at 0 gaps per `STATUS.md`) is a different table this pass
+never covered.** A full-corpus scan found and filled **78 entirely-untranslated rows** out of
+8,340 rows with real English content (universe = English rows where at least one of the 16
+`text{0-7}_{0,1}` slots is non-blank; 0 partial/"masking-bug"-style gaps found — every row either
+had a complete zhTW entry or none at all). Fix lives in
+`data/sql/updates/pending_db_world/rev_1783688290084275062.sql` (the file already holding the
+rest of `npc_text_locale`'s zhTW rows), appended as 78 new DELETE+INSERT pairs.
+
+**Scan technique**: reused `scan_missing_zhtw.py`'s existing helpers
+(`get_base_english`/`get_zhtw_ids`/`report`) with `npc_text`'s field-index layout
+(`ID` at 0, `text{N}_0`/`text{N}_1` at `1+11N`/`2+11N` for N in 0-7) and `npc_text_locale`'s
+(`ID`=0, `Locale`=1, `Text{N}_0`/`Text{N}_1` at `2+2N`/`3+2N`) — no new scanning infrastructure
+needed, the pattern generalizes cleanly to any locale-paired table.
+
+**Content**: mostly item-flavor/lore text (libram/book-reading flavor, trade-skill
+unlearn-specialization warnings, quest-giver dialogue snippets) plus one substantial cluster —
+the full "Ashbringer" storyline (High Inquisitor Fairbanks recounting Highlord Mograine's
+betrayal and death, npc_text IDs 8595-8612, ~13 rows) — and the Zul'Gurub god-avatar flavor
+text (Hazza'rah/Renataki/Wushoolay, IDs 100117-100119). Every proper noun was grounded before
+translating, per user instruction to check names/zones against
+`doc/zhTW-translation/wowhead-client-ground-truth/` or wowhead — almost everything resolved via
+**tier-2 canonical tables** (`creature_template_locale`/`item_template_locale`/
+`gameobject_template_locale`) since nearly every named character/item/gate in this set already
+had an established zhTW name from unrelated prior translation work; a handful of zone/faction
+names resolved via tier-1 DBC (`Faction_zhTW.tsv` for Scarlet Crusade/Argent Dawn,
+`LFGDungeons_zhTW.tsv`/`Map_zhTW.tsv`/`Achievement_Name_zhTW.tsv` for Trial of the Crusader).
+Only 4 minor one-off names (Trebor, Zaetar himself, Tirth, and the initial Ne'thul attempt) had
+no findable ground truth anywhere and were constructed by direct phonetic transliteration.
+
+**Found and fixed a naming conflict discovered by this cross-check**: constructed `奈圖爾` for
+"Archmage Ne'thul" (npc_text 12602) before discovering the *already-established* `奈蘇爾`
+sitting in quest 11552/11553's own pre-existing `EndText` field — fixed to match.
+
+**Retroactively resolved a long-standing open item from the quest pass itself**: the Sunwell
+gate-opening npc_text entries (12306/12603/12605) reference the same three gates —
+"Agamath/Rohendor/Archonisus, the N-th Gate" — that quests 11552/11553 (left unresolved since
+batch 59, no ground truth found for their bogus-tagline Titles at the time) also name. Checking
+`gameobject_template_locale` for the actual gate GameObjects (187764/187765/187766) turned up
+established names (`洛罕鐸，次之門` / `亞坎努斯，參之門` / `阿格瑪司，初始之門`) that were
+never checked during the original quest batches — fixed both quest titles using this ground
+truth, closing out that Unresolved-items entry.
+
+**Validation**: linter clean; `extract_inserts`-based field-count check (18 columns expected:
+`ID`+`Locale`+16 text slots) and duplicate-ID check both clean across all 78 new rows; re-ran
+the gap scan post-fix, confirmed 0 remaining. **Not yet done**: a masking-bug-style scan for
+`quest_greeting_locale`'s sibling tables or other locale-paired tables beyond `npc_text_locale`
+— if asked to do a similar sweep again, the same generalized scan technique applies to any
+`X_locale` table with a `base/db_world/X.sql` English counterpart.
