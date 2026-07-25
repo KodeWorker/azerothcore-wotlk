@@ -348,26 +348,38 @@ batch's ID range (a confirmed fix does not mean every occurrence has been swept)
   hierarchy, then the user overrode this in favor of wowhead's spelling as phonetically closer
   to English "Aurius." Same override pattern as Felhunter, triggered by sound rather than
   semantic fit.
-- **Blackfathom Deeps = `黑澗深淵`, kept as DB already had it — final answer, user
-  semantic-preference override (batch 34).** Initially swept DB's `黑澗深淵`→`黑暗深淵` project-wide
+- **Blackfathom Deeps = `黑暗深淵` — CURRENT final answer, user reversed their own batch-34
+  override (2026-07-25).** History: originally swept DB's `黑澗深淵`→`黑暗深淵` project-wide
   (25×) on `AreaTable_zhTW.tsv` tier-1 DBC grounds (ids 719/2797 = `黑暗深淵`, also corroborated
   independently by `Map_zhTW.tsv`, `LFGDungeons_zhTW.tsv`, `Faction_zhTW.tsv`, and
-  `Achievement_Name_zhTW.tsv` — five separate DBC files all agreeing, and the files
-  cross-checked as genuinely zhTW-sourced via two already-settled spot checks, Kirin Tor and
-  Un'Goro). User then supplied a genuinely fascinating wrinkle: wowhead's own
-  expansion-tagged pages show this zone was **renamed by Blizzard between eras** —
+  `Achievement_Name_zhTW.tsv` — five separate DBC files all agreeing). User then pointed out
+  wowhead's expansion-tagged pages show this zone was **renamed by Blizzard between eras** —
   `wotlk/tw/zone=719` and `tbc/tw/zone=719` both show `黑暗深淵` (matching the DBC, since this
   project's ground truth is extracted from the WotLK-era client specifically), while
   `classic/tw/zone=719`, `cata/tw/zone=719`, `mop-classic/tw/zone=719`, and current
   `tw/zone=719` (retail) all show `黑澗深淵` — a rename introduced then later reverted, not a
-  zhCN/zhTW split. So `黑暗深淵` genuinely was the era-accurate, DBC-confirmed WotLK name.
-  **Despite that, the user's final call is `黑澗深淵`** on a semantic-fit preference ("more
-  fitting for blackfathom") — reverted all 25 occurrences back. Same override pattern as
-  Felhunter/Aurius: even solid, multiply-corroborated tier-1 DBC evidence for the *WotLK-era*
-  name doesn't automatically win when the user has a deliberate semantic/preference call to
-  make about which era's name to use for this project. **Re-flagged and swept backwards by
-  mistake in batch 60** (found `creature_template_locale.sql`'s `黑暗深淵` again, didn't check
-  here first) — caught and reverted same-batch. If this surfaces again, it is not a new bug.
+  zhCN/zhTW split. Batch 34 then reverted all 25 occurrences to `黑澗深淵` on a stated
+  semantic-fit preference ("more fitting for blackfathom"), and batch 60's independent
+  re-discovery of the same question was reverted back to match that call. **2026-07-25: the
+  user explicitly revisited and reversed the batch-34 call** ("I regret that early decision...
+  use wotlk-era translation 黑暗深淵") — `黑暗深淵` is now the standing answer, matching the
+  DBC/tier-1 evidence after all. Swept all 26 occurrences in `rev_1783688290124463491.sql`
+  (25 `黑澗深淵` instances + 1 previously-unswept same-zone outlier spelling `黑色深淵` in quest
+  1198's `ObjectiveText1`, sibling to the `Details`/`Objectives` fields in the same row already
+  using `黑暗深淵`). **If this resurfaces again, `黑暗深淵` is correct — do not revert to
+  `黑澗深淵` without a fresh, explicit user instruction to do so**, since this is now the second
+  reversal of the same term.
+- **Gakin the Darkbinder (npc 6122) = `黑暗縛靈者加科因`, unified across
+  `quest_template_locale` (2026-07-25, user-directed, ad-hoc single-NPC fix outside the normal
+  batch flow).** Quest text (quests 1685/1688/1689/1715/1717/1738/1739) used the
+  outdated bracketed title-form `『黑暗縛靈師』加金` for full-name mentions and bare `加金` for
+  short mentions; `creature_template_locale` entry 6122 already established `黑暗縛靈者加科因`
+  as the current name (`data/sql/updates/db_world/2026_03_13_04.sql`, already-merged/immutable).
+  Confirmed the English identity first (`creature_template.sql` entry 6122 = "Gakin the
+  Darkbinder") before replacing. Swept all 12 bracketed + 6 bare occurrences to
+  `加科因`/`黑暗縛靈者加科因` as appropriate (title fields like `加金的召喚` became
+  `加科因的召喚`, full-name-context fields got the complete `黑暗縛靈者加科因`). Fix lives in
+  `data/sql/updates/pending_db_world/rev_1783688290124463491.sql`, committed `f320b2869`.
 - **Icecrown Citadel Skybreaker-cluster proper nouns, DBC-confirmed (batch 67)**: `伊米海姆`→`依米海姆` (Ymirheim, `AreaTable_zhTW.tsv` area 4513), `莫德雷薩`→`默德雷薩` (Mord'rethar, area 4508), `破天號`→`破天者號` (Skybreaker, area 4511 + `Map_zhTW.tsv` teleport-menu entries) — all three reversed the DB's own prior corpus majority. `寇普雷薩` (Corp'rethar, area 4518) was already the corpus's 29:2 majority and confirmed correct, not reversed — only 2 outlier rows fixed. Also swept via corroborating (non-DBC) evidence in the same pass: Thassarian `薩薩里安`→`薩沙理安` (cross-page wowhead fetch consistency, no locale-table entry exists), Absalan the Pious `阿布薩蘭`→`亞柏薩倫` (matches corpus's own pre-existing 3:1 majority).
 - **`一 萬鬼節 任務.。` Hallow's End "Candy Bucket" wowhead-tagline scrape-fail baked into DB
   (self-discovered and RESOLVED, 0 remaining corpus-wide, batch 63).** A 69-quest Candy Bucket
