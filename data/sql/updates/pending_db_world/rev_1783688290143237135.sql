@@ -2242,7 +2242,7 @@ INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES 
 DELETE FROM `page_text_locale` WHERE `ID` = 2511 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2511,'zhTW','親愛的札爾夫：B$B你送來的肉片很不錯。燒烤的火候很好，切片也恰到好處，還包在肥得流油的野豬肉裡！這正是我夢寐以求的美食。當我吃肉片的時候，我會想起你的。我會閉上眼睛想像你那雙強壯而佈滿傷疤的手正在笨拙地剁著肉塊……$B$B哈哈！這讓我想起你上次不小心剁了自己的手指……哦，札爾夫！想想那天你把我逗得像個小女孩一樣咯咯大笑。$B$B你流血的時候看起來真可愛！$B$B——格雷什卡',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2512 AND `locale` = 'zhTW';
-INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2512,'zhTW','奧斯瑞克，$B$B以下是我們所需要的護甲列表：$B$B10件鍊甲襯衣$B$B20頂頭盔$B$B30塊護甲片$B$B15雙鏈甲靴$B$B我們總是欠你的情。一旦西部荒野不再受到盜賊的威脅，我就可以請你來我家裡做客，這樣也能讓我心裡好過一些，這個地區的菜餚以前可是遠近聞名的。$B$B——劉易斯$B哨兵嶺軍需官',0);
+INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2512,'zhTW','奧斯瑞克，$B$B以下是我們所需要的護甲列表：$B$B10件鍊甲襯衣$B$B20頂頭盔$B$B30塊護甲片$B$B15雙鏈甲靴$B$B我們總是欠你的情。一旦西部荒野不再受到盜賊的威脅，我就可以請你來我家裡做客，這樣也能讓我心裡好過一些，這個地區的菜餚以前可是遠近聞名的。$B$B——路易斯$B哨兵嶺軍需官',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2513 AND `locale` = 'zhTW';
 INSERT INTO `page_text_locale` (`ID`, `locale`, `Text`, `VerifiedBuild`) VALUES (2513,'zhTW','尼莎：$B$B很高興收到你的信。$B$B你送給我的那些骨頭和鱗片真是讓人難以置信。我從來沒有在主大陸這邊看見過這種尺寸的魚，魯瑟蘭村每天是不是都可以輕鬆地打到一噸的魚啊？$B$B我羨慕這種魚的尺寸，但是我同樣有些疑惑。我們的新的世界之樹可以培養出那麼大的魚嗎？如果是的話，有沒有什麼副作用？$B$B這些問題值得我們思考。$B——賴爾德',0);
 DELETE FROM `page_text_locale` WHERE `ID` = 2514 AND `locale` = 'zhTW';
