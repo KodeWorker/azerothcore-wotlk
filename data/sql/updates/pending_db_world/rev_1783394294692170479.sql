@@ -1788,6 +1788,14 @@ DELETE FROM `creature_text_locale` WHERE `CreatureID` = 3843 AND `GroupID` = 3 A
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (3843, 3, 0, 'zhTW', '再見了，塞瑞利恩，我的愛人。我們終能再見……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 3843 AND `GroupID` = 4 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (3843, 4, 0, 'zhTW', '%s柔和的聲音在薄霧中輕輕迴響，“我永遠愛你……”');
+DELETE FROM `creature_text_locale` WHERE `CreatureID` = 3846 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (3846, 0, 0, 'zhTW', '這尊雕像裡一定藏著什麼夾層……');
+DELETE FROM `creature_text_locale` WHERE `CreatureID` = 3846 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (3846, 1, 0, 'zhTW', '%s搜尋著這尊古老的雕像。');
+DELETE FROM `creature_text_locale` WHERE `CreatureID` = 3846 AND `GroupID` = 2 AND `ID` = 0 AND `Locale` = 'zhTW';
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (3846, 2, 0, 'zhTW', '鎖住了！不——！！');
+DELETE FROM `creature_text_locale` WHERE `CreatureID` = 3846 AND `GroupID` = 3 AND `ID` = 0 AND `Locale` = 'zhTW';
+INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (3846, 3, 0, 'zhTW', '$n，現在我又需要你的幫助了。');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 3849 AND `GroupID` = 0 AND `ID` = 0 AND `Locale` = 'zhTW';
 INSERT INTO `creature_text_locale` (`CreatureID`, `GroupID`, `ID`, `Locale`, `Text`) VALUES (3849, 0, 0, 'zhTW', '終於從這個骯髒的房間逃了出來！讓我帶你到院子裡去……');
 DELETE FROM `creature_text_locale` WHERE `CreatureID` = 3849 AND `GroupID` = 1 AND `ID` = 0 AND `Locale` = 'zhTW';
