@@ -37,7 +37,7 @@ The SQL style linter doesn't catch two bug classes:
 
 | Category | File | Count |
 |---|---|---:|
-| Skip list | `skip-list.tsv` | 390 quest IDs |
+| Skip list | `skip-list.tsv` | 389 quest IDs |
 | Manual/original-translation backlog | `quests-no-wowhead-reference.tsv` | **0** (retired) |
 | Title-only body gaps | `quest_template_locale-gaps.tsv` | **0** |
 | Turn-in dialogue | `quest_request_items_locale-gaps.tsv` | **0** |

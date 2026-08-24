@@ -371,7 +371,6 @@ quest_id	english_title	reason
 13916	Poached, Scrambled, Or Raw?	Poached, Scrambled, Or Raw? -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 13904
 13917	Gorishi Grub	Gorishi Grub -- duplicate of already-translated quest 13903 (identical content). Wowhead confirms deprecated (此任務被暴雪標記為過期) despite having a starter/ender in our DB -- same false-positive-reachability pattern as the Thunderfury/Krastinov's duplicates
 14106	Na Kada\'s Quest Test	Na Kada's Quest Test -- unreachable, English-only wowhead slug
-14111	Relic of the Earthen Ring	Relic of the Earthen Ring -- unreachable, Wowhead confirms deprecated, duplicate concept of already-translated 14100
 14119	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
 14147	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
 14148	Blank [PH]	Blank [PH] -- unreachable, English-only wowhead slug (blank-ph)
