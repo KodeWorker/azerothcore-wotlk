@@ -701,6 +701,14 @@ struct boss_malygos : public BossAI
                             if (Player* player = passenger->ToPlayer())
                                 Talk(EMOTE_SURGE_OF_POWER_WARNING_P3, player);
 
+                    // 10man has no queryable equivalent of the 25man warn-selector spell (that
+                    // path drives its own OnObjectAreaTargetSelect target pick, unusable for a
+                    // single fixed target here) -- only this Talk() emote, invisible to
+                    // anything but the one player's chat window. AddAura() applies the same
+                    // marker aura the 25man riders get directly, bypassing spell-cast target
+                    // selection entirely, so addons/bots can react the same way on both sizes.
+                    me->AddAura(SPELL_SURGE_OF_POWER_WARN_SELECTOR_25, target);
+
                     SetGUID(target->GetGUID(), DATA_FIRST_SURGE_TARGET_GUID);
                     me->m_Events.AddEventAtOffset([this]
                     {
